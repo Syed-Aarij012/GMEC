@@ -1,0 +1,124 @@
+import { NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/backend/lib/auth";
+import { prisma } from "@/backend/lib/prisma";
+import { getStripe, isStripeConfigured } from "@/backend/lib/stripe";
+import { checkoutSchema } from "@/backend/lib/validation";
+
+const FREE_DELIVERY_THRESHOLD = 100;
+const SHIPPING_COST = 4.99;
+
+export async function POST(req: Request) {
+  const body = await req.json().catch(() => null);
+  const parsed = checkoutSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error.issues[0]?.message ?? "Invalid request" }, { status: 400 });
+  }
+  const { items, shipping } = parsed.data;
+
+  const session = await getServerSession(authOptions);
+
+  const products = await prisma.product.findMany({
+    where: { id: { in: items.map((i) => i.productId) } },
+  });
+
+  if (products.length !== items.length) {
+    return NextResponse.json({ error: "One or more items are no longer available" }, { status: 400 });
+  }
+
+  const orderItemsData = items.map((item) => {
+    const product = products.find((p) => p.id === item.productId)!;
+    if (product.stock < item.quantity) {
+      throw new Error(`Insufficient stock for ${product.name}`);
+    }
+    return {
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: item.quantity,
+    };
+  });
+
+  const subtotal = orderItemsData.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const shippingCost = subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : SHIPPING_COST;
+  const total = subtotal + shippingCost;
+
+  let order;
+  try {
+    order = await prisma.$transaction(async (tx) => {
+      const created = await tx.order.create({
+        data: {
+          userId: session?.user?.id,
+          guestEmail: session?.user?.id ? undefined : shipping.email,
+          subtotal,
+          shippingCost,
+          total,
+          shippingName: shipping.fullName,
+          shippingLine1: shipping.line1,
+          shippingLine2: shipping.line2,
+          shippingCity: shipping.city,
+          shippingPostcode: shipping.postcode,
+          shippingCountry: shipping.country,
+          items: { create: orderItemsData },
+        },
+      });
+
+      for (const item of orderItemsData) {
+        await tx.product.update({
+          where: { id: item.productId },
+          data: { stock: { decrement: item.quantity } },
+        });
+      }
+
+      return created;
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Could not place order";
+    return NextResponse.json({ error: message }, { status: 400 });
+  }
+
+  const origin = req.headers.get("origin") ?? new URL(req.url).origin;
+
+  if (!isStripeConfigured()) {
+    await prisma.order.update({ where: { id: order.id }, data: { status: "PAID" } });
+    return NextResponse.json({ url: `/checkout/success?order=${order.id}` });
+  }
+
+  const stripe = getStripe()!;
+  const stripeSession = await stripe.checkout.sessions.create({
+    mode: "payment",
+    customer_email: shipping.email,
+    line_items: [
+      ...orderItemsData.map((item) => ({
+        price_data: {
+          currency: "gbp",
+          product_data: { name: item.name },
+          unit_amount: Math.round(item.price * 100),
+        },
+        quantity: item.quantity,
+      })),
+      ...(shippingCost > 0
+        ? [
+            {
+              price_data: {
+                currency: "gbp",
+                product_data: { name: "Shipping" },
+                unit_amount: Math.round(shippingCost * 100),
+              },
+              quantity: 1,
+            },
+          ]
+        : []),
+    ],
+    success_url: `${origin}/checkout/success?order=${order.id}`,
+    cancel_url: `${origin}/cart`,
+    metadata: { orderId: order.id },
+  });
+
+  await prisma.order.update({
+    where: { id: order.id },
+    data: { stripeSessionId: stripeSession.id },
+  });
+
+  return NextResponse.json({ url: stripeSession.url });
+}
