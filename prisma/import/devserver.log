@@ -512,3 +512,6 @@ https://react.dev/link/hydration-mismatch
  GET / 200 in 203ms (next.js: 10ms, application-code: 193ms)
  GET /shop/led-candle-bulbs 200 in 127ms (next.js: 31ms, application-code: 96ms)
  GET / 200 in 109ms (next.js: 10ms, application-code: 99ms)
+[browser] Image with src "/hero/security-alarms.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/hero/b22-bulbs.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+ GET /shop/warm-white-color 200 in 377ms (next.js: 18ms, application-code: 359ms)

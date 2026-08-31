@@ -117,7 +117,7 @@ async function processFile(filePath) {
   if (ext === ".webp") {
     outBuffer = await pipeline.webp({ lossless: true }).toBuffer();
   } else if (ext === ".jpg" || ext === ".jpeg") {
-    outBuffer = await pipeline.jpeg({ quality: 92 }).toBuffer();
+    outBuffer = await pipeline.jpeg({ quality: 100, chromaSubsampling: "4:4:4" }).toBuffer();
   } else {
     outBuffer = await pipeline.png({ compressionLevel: 9 }).toBuffer();
   }
