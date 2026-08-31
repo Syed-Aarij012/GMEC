@@ -3,6 +3,17 @@ import type { Prisma } from "@prisma/client";
 
 export const PAGE_SIZE = 12;
 
+// These two "categories" are colour-temperature collections on the real site,
+// not a bulb shape — WooCommerce cross-lists every cool/warm white product
+// there regardless of its shape category (frosted, filament, candle, etc.).
+// Our schema only stores one categoryId per product, but the `colour`
+// attribute is independent of that, so we can reproduce the same cross-cutting
+// listing by filtering on colour instead of categoryId for just these two.
+const COLOUR_CATEGORY_SLUGS: Record<string, string> = {
+  "cool-white-color": "Cool White",
+  "warm-white-color": "Warm White",
+};
+
 export interface ShopSearchParams {
   q?: string;
   category?: string;
@@ -19,7 +30,10 @@ export async function getFilteredProducts(
   const where: Prisma.ProductWhereInput = {};
 
   const categorySlug = forcedCategorySlug ?? params.category;
-  if (categorySlug) {
+  const colourCollection = categorySlug ? COLOUR_CATEGORY_SLUGS[categorySlug] : undefined;
+  if (colourCollection) {
+    where.colour = colourCollection;
+  } else if (categorySlug) {
     where.category = { slug: categorySlug };
   }
   if (params.fitting) {
@@ -46,6 +60,12 @@ export async function getFilteredProducts(
 
   const page = Math.max(1, Number(params.page) || 1);
 
+  const categoryScope: Prisma.ProductWhereInput = colourCollection
+    ? { colour: colourCollection }
+    : categorySlug
+      ? { category: { slug: categorySlug } }
+      : {};
+
   const [products, total, fittings, colours] = await Promise.all([
     prisma.product.findMany({
       where,
@@ -55,12 +75,12 @@ export async function getFilteredProducts(
     }),
     prisma.product.count({ where }),
     prisma.product.findMany({
-      where: categorySlug ? { category: { slug: categorySlug } } : {},
+      where: categoryScope,
       distinct: ["fitting"],
       select: { fitting: true },
     }),
     prisma.product.findMany({
-      where: categorySlug ? { category: { slug: categorySlug } } : {},
+      where: categoryScope,
       distinct: ["colour"],
       select: { colour: true },
     }),

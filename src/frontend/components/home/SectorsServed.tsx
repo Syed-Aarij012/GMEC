@@ -1,33 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import { HardHat, Building2, Hotel } from "lucide-react";
-import { motion } from "framer-motion";
+import Image from "next/image";
 import Reveal from "@/frontend/components/motion/Reveal";
-import StaggerGrid, { staggerItem } from "@/frontend/components/motion/StaggerGrid";
+
+function unsplash(id: string) {
+  return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=75`;
+}
 
 const sectors = [
-  {
-    icon: HardHat,
-    title: "Electrical Contractors",
-    desc: "Trade pricing and bulk availability on fittings, downlights and bulbs for every job.",
-  },
-  {
-    icon: Building2,
-    title: "Property Developers",
-    desc: "Reliable stock and consistent quality for new-build and refurbishment projects.",
-  },
-  {
-    icon: Hotel,
-    title: "Hotels & Hospitality",
-    desc: "Ambient and fire-rated lighting solutions built to run around the clock.",
-  },
+  { title: "Electrical Contractors", image: unsplash("1645449781249-27c94448f6f7") },
+  { title: "Property Developers", image: unsplash("1684966693180-45b9e18aff8d") },
+  { title: "Property Management", image: unsplash("1758448721134-1798533ae917") },
+  { title: "Hotels & Hospitality", image: unsplash("1758193783649-13371d7fb8dd") },
+  { title: "Retail Stores", image: unsplash("1761090617068-f1b3257d27ad") },
+  { title: "Offices & Workspaces", image: unsplash("1758518727707-b023e285b709") },
+  { title: "Landlords & Lettings", image: unsplash("1741156386380-0236c72eb6f9") },
+  { title: "Schools & Colleges", image: unsplash("1652305500057-0fcb348b62aa") },
 ];
 
 export default function SectorsServed() {
+  const cards = [...sectors, ...sectors];
+
   return (
     <section className="bg-ink-900">
-      <div className="container-page py-16">
+      <div className="container-page pt-16">
         <Reveal className="mb-10 max-w-xl">
           <h2 className="text-2xl font-extrabold text-white sm:text-3xl">Who We Serve</h2>
           <p className="mt-2 text-cream-100/70">
@@ -35,23 +32,32 @@ export default function SectorsServed() {
             lighting they can depend on.
           </p>
         </Reveal>
-        <StaggerGrid className="grid grid-cols-1 gap-5 sm:grid-cols-3">
-          {sectors.map(({ icon: Icon, title, desc }) => (
-            <motion.div
-              key={title}
-              variants={staggerItem}
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.2 }}
-              className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10"
+      </div>
+
+      <div className="group overflow-hidden py-2">
+        <div className="flex w-max animate-marquee-slow items-center gap-5 group-hover:[animation-play-state:paused]">
+          {cards.map(({ title, image }, i) => (
+            <div
+              key={`${title}-${i}`}
+              className="relative h-56 w-72 shrink-0 overflow-hidden rounded-2xl ring-1 ring-white/10 sm:h-64 sm:w-80"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500 text-ink-950">
-                <Icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-4 text-lg font-bold text-white">{title}</h3>
-              <p className="mt-2 text-sm text-cream-100/70">{desc}</p>
-            </motion.div>
+              <Image
+                src={image}
+                alt={title}
+                fill
+                sizes="320px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-transparent" />
+              <h3 className="absolute bottom-4 left-4 right-4 text-lg font-bold text-white">
+                {title}
+              </h3>
+            </div>
           ))}
-        </StaggerGrid>
+        </div>
+      </div>
+
+      <div className="container-page pb-16">
         <Reveal delay={0.15} className="mt-10 text-center">
           <Link
             href="/contact"
