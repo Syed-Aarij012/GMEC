@@ -13,11 +13,39 @@ const FITTINGS = [
   { fitting: "E27", image: "/fittings/e27.png" },
 ];
 
+// One product per category (rather than a flat "featured" query) so Trending
+// Now stays visually varied instead of surfacing several near-identical
+// variants of the same fixture (e.g. the 2-pin/4-pin 2D fluorescent tubes,
+// which were all flagged "featured" together in the old WooCommerce data).
+const TRENDING_CATEGORY_SLUGS = [
+  "led-frosted-bulbs",
+  "led-filament-bulbs",
+  "led-candle-bulbs",
+  "led-ceiling-lights",
+  "led-3-colours-in-1",
+  "cool-white-color",
+  "warm-white-color",
+  "gu10-downlights",
+];
+
 export default async function Home() {
-  const [featured, newArrivals] = await Promise.all([
-    prisma.product.findMany({ where: { featured: true }, take: 8 }),
+  const [trendingByCategory, newArrivals, gadgets] = await Promise.all([
+    Promise.all(
+      TRENDING_CATEGORY_SLUGS.map((slug) =>
+        prisma.product.findFirst({
+          where: { category: { slug } },
+          orderBy: [{ featured: "desc" }, { name: "asc" }],
+        })
+      )
+    ),
     prisma.product.findMany({ orderBy: { createdAt: "desc" }, take: 4 }),
+    prisma.product.findMany({
+      where: { category: { slug: "smart-gadgets" } },
+      take: 6,
+    }),
   ]);
+
+  const trending = trendingByCategory.filter((p): p is NonNullable<typeof p> => p !== null);
 
   return (
     <>
@@ -27,8 +55,14 @@ export default async function Home() {
       <ProductShowcase
         title="Trending Now"
         subtitle="Our most popular lighting and smart home picks."
-        products={featured}
+        products={trending}
         viewAllHref="/shop"
+      />
+      <ProductShowcase
+        title="Smart Scales | Alarms | Gadgets"
+        subtitle="Beyond lighting — smart devices for everyday home life."
+        products={gadgets}
+        viewAllHref="/shop/smart-gadgets"
       />
       <SectorsServed />
       <ProductShowcase
