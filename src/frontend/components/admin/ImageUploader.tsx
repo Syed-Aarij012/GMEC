@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { UploadCloud, X, Loader2, ImageOff } from "lucide-react";
+import { UploadCloud, X, Loader2, ImageOff, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 interface Props {
   images: string[];
@@ -63,6 +63,22 @@ export default function ImageUploader({ images, onChange }: Props) {
     onChange(images.filter((img) => img !== url));
   }
 
+  function moveImage(index: number, direction: -1 | 1) {
+    const target = index + direction;
+    if (target < 0 || target >= images.length) return;
+    const next = [...images];
+    [next[index], next[target]] = [next[target], next[index]];
+    onChange(next);
+  }
+
+  function setAsMain(index: number) {
+    if (index === 0) return;
+    const next = [...images];
+    const [img] = next.splice(index, 1);
+    next.unshift(img);
+    onChange(next);
+  }
+
   return (
     <div className="space-y-3">
       <div
@@ -118,19 +134,55 @@ export default function ImageUploader({ images, onChange }: Props) {
                 className="group relative aspect-square overflow-hidden rounded-xl bg-canvas-muted"
               >
                 <Image src={img} alt={`Product image ${i + 1}`} fill sizes="120px" className="object-cover" />
-                {i === 0 && (
-                  <span className="absolute bottom-1 left-1 rounded-full bg-ink-950/80 px-2 py-0.5 text-[10px] font-semibold text-white">
-                    Main
-                  </span>
-                )}
-                <button
-                  type="button"
-                  onClick={() => removeImage(img)}
-                  aria-label="Remove image"
-                  className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-ink-950/70 text-white opacity-0 transition-opacity hover:bg-red-600 group-hover:opacity-100"
-                >
-                  <X className="h-3.5 w-3.5" />
-                </button>
+
+                <div className="absolute inset-x-1 top-1 flex items-start justify-between">
+                  {i === 0 ? (
+                    <span className="rounded-full bg-ink-950/80 px-2 py-0.5 text-[10px] font-semibold text-white">
+                      Main
+                    </span>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setAsMain(i)}
+                      aria-label="Set as main image"
+                      title="Set as main image"
+                      className="flex h-6 w-6 items-center justify-center rounded-full bg-ink-950/70 text-white opacity-0 transition-opacity hover:bg-gold-600 group-hover:opacity-100"
+                    >
+                      <Star className="h-3.5 w-3.5" />
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => removeImage(img)}
+                    aria-label="Remove image"
+                    className="flex h-6 w-6 items-center justify-center rounded-full bg-ink-950/70 text-white opacity-0 transition-opacity hover:bg-red-600 group-hover:opacity-100"
+                  >
+                    <X className="h-3.5 w-3.5" />
+                  </button>
+                </div>
+
+                <div className="absolute inset-x-1 bottom-1 flex justify-center gap-1 opacity-0 transition-opacity group-hover:opacity-100">
+                  <button
+                    type="button"
+                    onClick={() => moveImage(i, -1)}
+                    disabled={i === 0}
+                    aria-label="Move image earlier"
+                    title="Move earlier"
+                    className="flex h-6 w-6 items-center justify-center rounded-full bg-ink-950/70 text-white disabled:pointer-events-none disabled:opacity-30 hover:bg-gold-600"
+                  >
+                    <ChevronLeft className="h-3.5 w-3.5" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => moveImage(i, 1)}
+                    disabled={i === images.length - 1}
+                    aria-label="Move image later"
+                    title="Move later"
+                    className="flex h-6 w-6 items-center justify-center rounded-full bg-ink-950/70 text-white disabled:pointer-events-none disabled:opacity-30 hover:bg-gold-600"
+                  >
+                    <ChevronRight className="h-3.5 w-3.5" />
+                  </button>
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>

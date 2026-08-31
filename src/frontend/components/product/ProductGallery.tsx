@@ -32,7 +32,7 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
         </AnimatePresence>
       </div>
       {images.length > 1 && (
-        <div className="mt-3 flex gap-3">
+        <div className="scrollbar-none mt-3 flex snap-x gap-2 overflow-x-auto pb-1">
           {images.map((img, i) => (
             <motion.button
               key={img + i}
@@ -40,11 +40,11 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={cn(
-                "relative h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-canvas-muted ring-2 transition-shadow",
+                "relative h-14 w-14 shrink-0 snap-start overflow-hidden rounded-lg bg-canvas-muted ring-2 transition-shadow",
                 active === i ? "ring-gold-500" : "ring-transparent"
               )}
             >
-              <Image src={img} alt={`${name} thumbnail ${i + 1}`} fill sizes="80px" className="object-cover" />
+              <Image src={img} alt={`${name} thumbnail ${i + 1}`} fill sizes="56px" className="object-cover" />
             </motion.button>
           ))}
         </div>

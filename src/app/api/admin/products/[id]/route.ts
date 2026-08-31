@@ -29,10 +29,8 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
       colour: data.colour || null,
       stock: data.stock,
       featured: data.featured,
+      images: JSON.stringify(data.images ?? []),
     };
-    if (data.images && data.images.length > 0) {
-      updateData.images = JSON.stringify(data.images);
-    }
 
     const product = await prisma.product.update({ where: { id }, data: updateData });
     return NextResponse.json({ product });

@@ -32,6 +32,14 @@ export const contactSchema = z.object({
   message: z.string().min(10, "Please add a little more detail"),
 });
 
+export const reviewSchema = z.object({
+  productId: z.string().min(1),
+  name: z.string().min(2, "Enter your name"),
+  email: z.string().email("Enter a valid email"),
+  rating: z.number().int().min(1).max(5),
+  comment: z.string().min(10, "Please add a little more detail"),
+});
+
 export const registerSchema = z.object({
   name: z.string().min(2, "Enter your name"),
   email: z.string().email("Enter a valid email"),
