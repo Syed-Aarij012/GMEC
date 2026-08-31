@@ -515,3 +515,6 @@ https://react.dev/link/hydration-mismatch
 [browser] Image with src "/hero/security-alarms.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
 [browser] Image with src "/hero/b22-bulbs.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
  GET /shop/warm-white-color 200 in 377ms (next.js: 18ms, application-code: 359ms)
+ GET /shop/warm-white-color 200 in 397ms (next.js: 18ms, application-code: 379ms)
+ GET /api/auth/session 200 in 58ms (next.js: 23ms, application-code: 36ms)
+ GET /api/auth/session 200 in 49ms (next.js: 10ms, application-code: 39ms)
