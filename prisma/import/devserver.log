@@ -27,3 +27,6 @@
 [browser] Image with src "/hero/gu10-lights.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
 [browser] Image with src "/hero/e27-lights.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
  GET /shop/led-frosted-bulbs 200 in 2.7s (next.js: 2.5s, application-code: 186ms)
+ GET /shop/led-frosted-bulbs 200 in 563ms (next.js: 34ms, application-code: 530ms)
+ GET /api/auth/session 200 in 69ms (next.js: 20ms, application-code: 49ms)
+ GET /api/auth/session 200 in 39ms (next.js: 9ms, application-code: 30ms)

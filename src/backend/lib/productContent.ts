@@ -29,24 +29,24 @@ export function getKeyFeatures(product: ProductLike, categoryName: string): stri
   const features: string[] = [];
 
   if (product.wattage && product.fitting) {
-    features.push(`${product.wattage} ${product.fitting} LED — energy-efficient illumination with low running costs.`);
+    features.push(`${product.wattage} ${product.fitting} LED, energy-efficient illumination with low running costs.`);
   } else if (product.wattage) {
-    features.push(`${product.wattage} LED — energy-efficient illumination with low running costs.`);
+    features.push(`${product.wattage} LED, energy-efficient illumination with low running costs.`);
   }
 
   if (product.colour) {
     features.push(
-      `${product.colour} light${colourTemp ? ` (${colourTemp})` : ""} — consistent, even colour suited to everyday use.`
+      `${product.colour} light${colourTemp ? ` (${colourTemp})` : ""}, consistent, even colour suited to everyday use.`
     );
   }
 
   if (lumens) {
-    features.push(`${lumens} output — bright, dependable illumination for the space it's fitted in.`);
+    features.push(`${lumens} output, bright and dependable illumination for the space it's fitted in.`);
   }
 
-  features.push(`${categoryName} design — built to fit standard UK fixtures without modification.`);
-  features.push("Instant full brightness — switches on immediately, with no warm-up delay.");
-  features.push("Long-lasting LED — built for reliable, low-maintenance everyday performance.");
+  features.push(`${categoryName} design, built to fit standard UK fixtures without modification.`);
+  features.push("Instant full brightness, switches on immediately with no warm-up delay.");
+  features.push("Long-lasting LED, built for reliable, low-maintenance everyday performance.");
 
   return features;
 }
