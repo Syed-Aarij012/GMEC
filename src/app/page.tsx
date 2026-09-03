@@ -6,6 +6,8 @@ import ProductShowcase from "@/frontend/components/home/ProductShowcase";
 import SectorsServed from "@/frontend/components/home/SectorsServed";
 import Newsletter from "@/frontend/components/home/Newsletter";
 
+export const dynamic = "force-dynamic";
+
 const FITTINGS = [
   { fitting: "GU10", image: "/fittings/gu10.png" },
   { fitting: "E14", image: "/fittings/e14.png" },
