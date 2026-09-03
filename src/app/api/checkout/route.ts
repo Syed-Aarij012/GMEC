@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/backend/lib/auth";
 import { prisma } from "@/backend/lib/prisma";
 import { getStripe, isStripeConfigured } from "@/backend/lib/stripe";
+import { createPaypalOrder, isPaypalConfigured } from "@/backend/lib/paypal";
 import { checkoutSchema } from "@/backend/lib/validation";
 
 const FREE_DELIVERY_THRESHOLD = 100;
@@ -14,7 +15,7 @@ export async function POST(req: Request) {
   if (!parsed.success) {
     return NextResponse.json({ error: parsed.error.issues[0]?.message ?? "Invalid request" }, { status: 400 });
   }
-  const { items, shipping } = parsed.data;
+  const { items, shipping, paymentMethod } = parsed.data;
 
   const session = await getServerSession(authOptions);
 
@@ -78,6 +79,33 @@ export async function POST(req: Request) {
   }
 
   const origin = req.headers.get("origin") ?? new URL(req.url).origin;
+
+  if (paymentMethod === "paypal") {
+    if (!isPaypalConfigured()) {
+      return NextResponse.json({ error: "PayPal is not configured" }, { status: 400 });
+    }
+
+    const paypalOrder = await createPaypalOrder({
+      orderId: order.id,
+      items: orderItemsData,
+      shippingCost,
+      currency: "GBP",
+      returnUrl: `${origin}/api/paypal/capture?order=${order.id}`,
+      cancelUrl: `${origin}/cart`,
+    });
+
+    await prisma.order.update({
+      where: { id: order.id },
+      data: { paypalOrderId: paypalOrder.id },
+    });
+
+    const approveUrl = paypalOrder.links.find((link) => link.rel === "approve")?.href;
+    if (!approveUrl) {
+      return NextResponse.json({ error: "Could not start PayPal checkout" }, { status: 502 });
+    }
+
+    return NextResponse.json({ url: approveUrl });
+  }
 
   if (!isStripeConfigured()) {
     await prisma.order.update({ where: { id: order.id }, data: { status: "PAID" } });

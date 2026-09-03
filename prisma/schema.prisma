@@ -106,6 +106,7 @@ model Order {
   shippingPostcode String
   shippingCountry String      @default("United Kingdom")
   stripeSessionId String?     @unique
+  paypalOrderId   String?     @unique
   items           OrderItem[]
   createdAt       DateTime    @default(now())
 }

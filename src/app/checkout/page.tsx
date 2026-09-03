@@ -20,6 +20,8 @@ export default function CheckoutPage() {
   const mounted = useMounted();
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
+  const [paymentMethod, setPaymentMethod] = useState<"stripe" | "paypal">("stripe");
+  const paypalAvailable = Boolean(process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID);
 
   const items = useCartStore((s) => s.items);
   const subtotal = useCartStore((s) => s.subtotal());
@@ -58,6 +60,7 @@ export default function CheckoutPage() {
         body: JSON.stringify({
           items: items.map((i) => ({ productId: i.productId, quantity: i.quantity })),
           shipping: data,
+          paymentMethod,
         }),
       });
       const result = await res.json();
@@ -110,6 +113,48 @@ export default function CheckoutPage() {
             <input {...register("phone")} className={inputClass} />
           </Field>
 
+          {paypalAvailable && (
+            <div>
+              <span className="mb-1.5 block text-sm font-medium text-text">Payment Method</span>
+              <div className="grid grid-cols-2 gap-3">
+                <label
+                  className={`flex cursor-pointer items-center justify-center rounded-lg border px-3.5 py-2.5 text-sm font-medium ${
+                    paymentMethod === "stripe"
+                      ? "border-gold-500 ring-1 ring-gold-500 text-text"
+                      : "border-line/15 text-text/70"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="stripe"
+                    checked={paymentMethod === "stripe"}
+                    onChange={() => setPaymentMethod("stripe")}
+                    className="sr-only"
+                  />
+                  Card (Stripe)
+                </label>
+                <label
+                  className={`flex cursor-pointer items-center justify-center rounded-lg border px-3.5 py-2.5 text-sm font-medium ${
+                    paymentMethod === "paypal"
+                      ? "border-gold-500 ring-1 ring-gold-500 text-text"
+                      : "border-line/15 text-text/70"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="paypal"
+                    checked={paymentMethod === "paypal"}
+                    onChange={() => setPaymentMethod("paypal")}
+                    className="sr-only"
+                  />
+                  PayPal
+                </label>
+              </div>
+            </div>
+          )}
+
           {serverError && (
             <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600 dark:bg-red-500/10 dark:text-red-400">{serverError}</p>
           )}
@@ -120,10 +165,12 @@ export default function CheckoutPage() {
             className="flex w-full items-center justify-center gap-2 rounded-full bg-ink-900 px-6 py-3.5 text-sm font-bold text-white hover:bg-gold-600 hover:text-ink-950 disabled:opacity-60"
           >
             <Lock className="h-4 w-4" />
-            {submitting ? "Processing..." : `Pay ${formatPrice(total)}`}
+            {submitting
+              ? "Processing..."
+              : `Pay ${formatPrice(total)}${paymentMethod === "paypal" ? " with PayPal" : ""}`}
           </button>
           <p className="text-center text-xs text-text/50">
-            Payments are processed securely by Stripe.
+            Payments are processed securely by {paymentMethod === "paypal" ? "PayPal" : "Stripe"}.
           </p>
         </form>
 

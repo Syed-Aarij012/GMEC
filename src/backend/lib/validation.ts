@@ -23,6 +23,7 @@ export const checkoutSchema = z.object({
     )
     .min(1, "Your basket is empty"),
   shipping: shippingSchema,
+  paymentMethod: z.enum(["stripe", "paypal"]).default("stripe"),
 });
 
 export const contactSchema = z.object({
