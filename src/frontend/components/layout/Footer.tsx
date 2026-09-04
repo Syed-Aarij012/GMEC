@@ -17,7 +17,7 @@ export default function Footer({ categories }: { categories: CategoryLink[] }) {
         style={{ backgroundImage: "url(/footer/bulbs-bg.jpg)" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink-950/45 via-ink-950/60 to-ink-950/85" />
-      <div className="container-page relative grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container-page relative grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
         <div>
           <Logo dark />
           <p className="mt-4 text-sm leading-relaxed text-cream-100/70">
@@ -80,12 +80,35 @@ export default function Footer({ categories }: { categories: CategoryLink[] }) {
             </li>
             <li>
               <Link href="/contact" className="hover:text-gold-400">
-                Delivery &amp; Returns
+                Trade Accounts
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="mb-4 text-sm font-semibold tracking-wide text-gold-400">
+            POLICIES
+          </h3>
+          <ul className="space-y-2.5 text-sm text-cream-100/80">
+            <li>
+              <Link href="/privacy-policy" className="hover:text-gold-400">
+                Privacy Policy
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-gold-400">
-                Trade Accounts
+              <Link href="/payment-policy" className="hover:text-gold-400">
+                Payment Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms-and-conditions" className="hover:text-gold-400">
+                Terms &amp; Conditions
+              </Link>
+            </li>
+            <li>
+              <Link href="/refund-returns-policy" className="hover:text-gold-400">
+                Refund &amp; Returns Policy
               </Link>
             </li>
           </ul>

@@ -11,13 +11,37 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gmeccorporation.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "GMEC Corporation | LED Lighting & Smart Gadgets",
     template: "%s | GMEC Corporation",
   },
   description:
     "GMEC Corporation supplies LED bulbs, fittings, ceiling lights and smart home gadgets to homeowners and trade customers across the UK. Free delivery over £100.",
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "GMEC Corporation",
+  url: SITE_URL,
+  logo: `${SITE_URL}/brand/gmec-logo.png`,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "GMEC House, Keppel Road",
+    addressLocality: "London",
+    postalCode: "E6 2BD",
+    addressCountry: "GB",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+44-7951-282482",
+    email: "info@gmeccorporation.com",
+    contactType: "customer service",
+  },
 };
 
 export default async function RootLayout({
@@ -36,6 +60,10 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <ThemeScript />
         <AuthSessionProvider>
           <SiteChrome categories={categories}>{children}</SiteChrome>
