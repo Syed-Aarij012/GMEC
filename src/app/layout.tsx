@@ -5,13 +5,14 @@ import SiteChrome from "@/frontend/components/layout/SiteChrome";
 import AuthSessionProvider from "@/frontend/components/providers/AuthSessionProvider";
 import ThemeScript from "@/frontend/components/providers/ThemeScript";
 import { prisma } from "@/backend/lib/prisma";
+import { getSiteUrl } from "@/backend/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gmeccorporation.com";
+const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

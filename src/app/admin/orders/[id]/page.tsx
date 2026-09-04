@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronLeft, User as UserIcon, CreditCard } from "lucide-react";
+import { ChevronLeft, User as UserIcon, CreditCard, Truck } from "lucide-react";
 import { prisma } from "@/backend/lib/prisma";
 import { formatPrice } from "@/frontend/lib/utils";
 import OrderStatusSelect from "@/frontend/components/admin/OrderStatusSelect";
+import RoyalMailShipment from "@/frontend/components/admin/RoyalMailShipment";
 import Reveal from "@/frontend/components/motion/Reveal";
 
 export default async function AdminOrderDetailPage({
@@ -46,7 +47,15 @@ export default async function AdminOrderDetailPage({
             at {order.createdAt.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}
           </p>
         </div>
-        <OrderStatusSelect orderId={order.id} status={order.status} />
+        <div className="flex items-center gap-3">
+          <Link
+            href={`/invoice/${order.id}`}
+            className="rounded-full border border-line/15 px-4 py-2 text-sm font-semibold text-text hover:border-gold-500 hover:text-gold-600"
+          >
+            View Invoice
+          </Link>
+          <OrderStatusSelect orderId={order.id} status={order.status} />
+        </div>
       </Reveal>
 
       <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_320px]">
@@ -125,6 +134,17 @@ export default async function AdminOrderDetailPage({
               {order.shippingCity}, {order.shippingPostcode}
             </p>
             <p>{order.shippingCountry}</p>
+          </Reveal>
+
+          <Reveal delay={0.25} className="rounded-2xl border border-line/10 bg-canvas p-6 shadow-sm">
+            <h2 className="mb-3 flex items-center gap-2 text-lg font-bold text-text">
+              <Truck className="h-4 w-4 text-text/40" /> Royal Mail
+            </h2>
+            <RoyalMailShipment
+              orderId={order.id}
+              royalMailOrderId={order.royalMailOrderId}
+              trackingNumber={order.royalMailTrackingNumber}
+            />
           </Reveal>
         </div>
       </div>

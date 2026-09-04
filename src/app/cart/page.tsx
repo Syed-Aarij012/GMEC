@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
@@ -7,17 +8,44 @@ import { Minus, Plus, Trash2, ArrowRight, ShoppingBag } from "lucide-react";
 import { useCartStore } from "@/frontend/store/cart";
 import { formatPrice } from "@/frontend/lib/utils";
 import { useMounted } from "@/frontend/hooks/useMounted";
+import { FREE_DELIVERY_THRESHOLD } from "@/backend/lib/shipping";
 
-const FREE_DELIVERY_THRESHOLD = 100;
-const SHIPPING_COST = 4.99;
+const ESTIMATED_SHIPPING_FALLBACK = 4.99;
+
+interface ShippingQuote {
+  subtotal: number;
+  shippingCost: number;
+  total: number;
+}
 
 export default function CartPage() {
   const mounted = useMounted();
+  const [quote, setQuote] = useState<ShippingQuote | null>(null);
 
   const items = useCartStore((s) => s.items);
   const removeItem = useCartStore((s) => s.removeItem);
   const setQuantity = useCartStore((s) => s.setQuantity);
   const subtotal = useCartStore((s) => s.subtotal());
+  const itemsKey = items.map((i) => `${i.productId}:${i.quantity}`).join(",");
+
+  useEffect(() => {
+    if (items.length === 0) return;
+    let cancelled = false;
+    fetch("/api/shipping/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: items.map((i) => ({ productId: i.productId, quantity: i.quantity })) }),
+    })
+      .then((res) => res.json())
+      .then((data: ShippingQuote) => {
+        if (!cancelled) setQuote(data);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [itemsKey]);
 
   if (!mounted) return null;
 
@@ -37,8 +65,9 @@ export default function CartPage() {
     );
   }
 
-  const shipping = subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : SHIPPING_COST;
-  const total = subtotal + shipping;
+  const shipping =
+    quote?.shippingCost ?? (subtotal > FREE_DELIVERY_THRESHOLD ? 0 : ESTIMATED_SHIPPING_FALLBACK);
+  const total = quote?.total ?? subtotal + shipping;
   const remainingForFreeShipping = Math.max(0, FREE_DELIVERY_THRESHOLD - subtotal);
 
   return (
@@ -103,7 +132,7 @@ export default function CartPage() {
         <div className="h-fit rounded-2xl border border-line/10 p-6">
           <h2 className="text-lg font-bold text-text">Order Summary</h2>
 
-          {remainingForFreeShipping > 0 ? (
+          {subtotal <= FREE_DELIVERY_THRESHOLD ? (
             <p className="mt-3 rounded-lg bg-canvas-muted p-3 text-xs text-text/70">
               Add {formatPrice(remainingForFreeShipping)} more to get free UK delivery.
             </p>

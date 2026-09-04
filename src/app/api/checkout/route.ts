@@ -4,10 +4,10 @@ import { authOptions } from "@/backend/lib/auth";
 import { prisma } from "@/backend/lib/prisma";
 import { getStripe, isStripeConfigured } from "@/backend/lib/stripe";
 import { createPaypalOrder, isPaypalConfigured } from "@/backend/lib/paypal";
+import { sendOrderConfirmationEmail } from "@/backend/lib/emails/sendOrderConfirmation";
+import { calculateRoyalMailShipping, FREE_DELIVERY_THRESHOLD } from "@/backend/lib/shipping";
+import { roundMoney } from "@/backend/lib/money";
 import { checkoutSchema } from "@/backend/lib/validation";
-
-const FREE_DELIVERY_THRESHOLD = 100;
-const SHIPPING_COST = 4.99;
 
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
@@ -40,9 +40,23 @@ export async function POST(req: Request) {
     };
   });
 
-  const subtotal = orderItemsData.reduce((sum, i) => sum + i.price * i.quantity, 0);
-  const shippingCost = subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : SHIPPING_COST;
-  const total = subtotal + shippingCost;
+  const subtotal = roundMoney(orderItemsData.reduce((sum, i) => sum + i.price * i.quantity, 0));
+  const shippingCost =
+    subtotal > FREE_DELIVERY_THRESHOLD
+      ? 0
+      : calculateRoyalMailShipping(
+          items.map((item) => {
+            const product = products.find((p) => p.id === item.productId)!;
+            return {
+              weightLbs: product.weightLbs,
+              lengthIn: product.lengthIn,
+              widthIn: product.widthIn,
+              heightIn: product.heightIn,
+              quantity: item.quantity,
+            };
+          })
+        );
+  const total = roundMoney(subtotal + shippingCost);
 
   let order;
   try {
@@ -60,6 +74,7 @@ export async function POST(req: Request) {
           shippingCity: shipping.city,
           shippingPostcode: shipping.postcode,
           shippingCountry: shipping.country,
+          shippingPhone: shipping.phone,
           items: { create: orderItemsData },
         },
       });
@@ -109,6 +124,7 @@ export async function POST(req: Request) {
 
   if (!isStripeConfigured()) {
     await prisma.order.update({ where: { id: order.id }, data: { status: "PAID" } });
+    await sendOrderConfirmationEmail(order.id);
     return NextResponse.json({ url: `/checkout/success?order=${order.id}` });
   }
 

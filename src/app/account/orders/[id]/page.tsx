@@ -28,13 +28,23 @@ export default async function OrderDetailPage({
         <ChevronLeft className="h-4 w-4" /> Back to account
       </Link>
 
-      <h1 className="text-2xl font-extrabold text-text">
-        Order #{order.id.slice(-8).toUpperCase()}
-      </h1>
-      <p className="mt-1 text-sm text-text/50">
-        Placed on {order.createdAt.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
-        {" · "}Status: <span className="font-semibold">{order.status}</span>
-      </p>
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <h1 className="text-2xl font-extrabold text-text">
+            Order #{order.id.slice(-8).toUpperCase()}
+          </h1>
+          <p className="mt-1 text-sm text-text/50">
+            Placed on {order.createdAt.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+            {" · "}Status: <span className="font-semibold">{order.status}</span>
+          </p>
+        </div>
+        <Link
+          href={`/invoice/${order.id}`}
+          className="rounded-full border border-line/15 px-4 py-2 text-sm font-semibold text-text hover:border-gold-500 hover:text-gold-600"
+        >
+          View Invoice
+        </Link>
+      </div>
 
       <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_320px]">
         <div className="rounded-2xl border border-line/10 p-6">

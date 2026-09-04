@@ -72,6 +72,10 @@ model Product {
   wattage         String?
   colour          String?
   sku             String      @unique
+  weightLbs       Float?
+  lengthIn        Float?
+  widthIn         Float?
+  heightIn        Float?
   categoryId      String
   category        Category    @relation(fields: [categoryId], references: [id])
   orderItems      OrderItem[]
@@ -105,8 +109,11 @@ model Order {
   shippingCity    String
   shippingPostcode String
   shippingCountry String      @default("United Kingdom")
+  shippingPhone   String?
   stripeSessionId String?     @unique
   paypalOrderId   String?     @unique
+  royalMailOrderId       String? @unique
+  royalMailTrackingNumber String?
   items           OrderItem[]
   createdAt       DateTime    @default(now())
 }

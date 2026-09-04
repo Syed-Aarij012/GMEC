@@ -11,7 +11,7 @@ const socialLinks = ["f", "IG", "X"];
 
 export default function Footer({ categories }: { categories: CategoryLink[] }) {
   return (
-    <footer className="relative overflow-hidden bg-ink-950 text-cream-100">
+    <footer className="relative overflow-hidden bg-ink-950 text-cream-100 print:hidden">
       <div
         className="absolute inset-0 bg-cover bg-bottom opacity-90"
         style={{ backgroundImage: "url(/footer/bulbs-bg.jpg)" }}

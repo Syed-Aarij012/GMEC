@@ -10,9 +10,15 @@ import { useCartStore } from "@/frontend/store/cart";
 import { formatPrice } from "@/frontend/lib/utils";
 import { shippingSchema, type ShippingInput } from "@/backend/lib/validation";
 import { useMounted } from "@/frontend/hooks/useMounted";
+import { FREE_DELIVERY_THRESHOLD } from "@/backend/lib/shipping";
 
-const FREE_DELIVERY_THRESHOLD = 100;
-const SHIPPING_COST = 4.99;
+const ESTIMATED_SHIPPING_FALLBACK = 4.99;
+
+interface ShippingQuote {
+  subtotal: number;
+  shippingCost: number;
+  total: number;
+}
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -21,10 +27,31 @@ export default function CheckoutPage() {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const [paymentMethod, setPaymentMethod] = useState<"stripe" | "paypal">("stripe");
+  const [quote, setQuote] = useState<ShippingQuote | null>(null);
   const paypalAvailable = Boolean(process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID);
 
   const items = useCartStore((s) => s.items);
   const subtotal = useCartStore((s) => s.subtotal());
+  const itemsKey = items.map((i) => `${i.productId}:${i.quantity}`).join(",");
+
+  useEffect(() => {
+    if (items.length === 0) return;
+    let cancelled = false;
+    fetch("/api/shipping/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: items.map((i) => ({ productId: i.productId, quantity: i.quantity })) }),
+    })
+      .then((res) => res.json())
+      .then((data: ShippingQuote) => {
+        if (!cancelled) setQuote(data);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [itemsKey]);
 
   const {
     register,
@@ -47,8 +74,9 @@ export default function CheckoutPage() {
 
   if (!mounted || items.length === 0) return null;
 
-  const shippingCost = subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : SHIPPING_COST;
-  const total = subtotal + shippingCost;
+  const shippingCost =
+    quote?.shippingCost ?? (subtotal > FREE_DELIVERY_THRESHOLD ? 0 : ESTIMATED_SHIPPING_FALLBACK);
+  const total = quote?.total ?? subtotal + shippingCost;
 
   async function onSubmit(data: ShippingInput) {
     setSubmitting(true);
@@ -90,7 +118,7 @@ export default function CheckoutPage() {
             <input {...register("fullName")} className={inputClass} />
           </Field>
           <Field label="Email" error={errors.email?.message}>
-            <input type="email" {...register("email")} className={inputClass} />
+            <input type="email" {...register("email")} className={inputClass} suppressHydrationWarning />
           </Field>
           <Field label="Address Line 1" error={errors.line1?.message}>
             <input {...register("line1")} className={inputClass} />

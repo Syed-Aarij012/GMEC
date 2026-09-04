@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/backend/lib/prisma";
 import { getStripe } from "@/backend/lib/stripe";
+import { sendOrderConfirmationEmail } from "@/backend/lib/emails/sendOrderConfirmation";
 
 export async function POST(req: Request) {
   const stripe = getStripe();
@@ -29,6 +30,7 @@ export async function POST(req: Request) {
         where: { id: orderId },
         data: { status: "PAID" },
       });
+      await sendOrderConfirmationEmail(orderId);
     }
   }
 

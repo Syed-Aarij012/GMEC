@@ -44,6 +44,7 @@ export default function ContactForm() {
           <span className="mb-1.5 block text-sm font-medium text-text">Email</span>
           <input
             type="email"
+            suppressHydrationWarning
             required
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}

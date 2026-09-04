@@ -71,9 +71,15 @@ export default async function CheckoutSuccessPage({
         </div>
       </Reveal>
 
-      <div className="mt-8 text-center">
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
         <Link href="/shop" className="inline-block rounded-full bg-ink-900 px-7 py-3 text-sm font-bold text-white transition-transform hover:scale-105 hover:bg-gold-600 hover:text-ink-950">
           Continue Shopping
+        </Link>
+        <Link
+          href={`/invoice/${order.id}`}
+          className="inline-block rounded-full border border-line/15 px-7 py-3 text-sm font-bold text-text hover:border-gold-500 hover:text-gold-600"
+        >
+          View Invoice
         </Link>
       </div>
     </div>

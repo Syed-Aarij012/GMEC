@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/backend/lib/prisma";
 import { capturePaypalOrder } from "@/backend/lib/paypal";
+import { sendOrderConfirmationEmail } from "@/backend/lib/emails/sendOrderConfirmation";
 
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -19,6 +20,7 @@ export async function GET(req: Request) {
     const capture = await capturePaypalOrder(order.paypalOrderId);
     if (capture.status === "COMPLETED") {
       await prisma.order.update({ where: { id: orderId }, data: { status: "PAID" } });
+      await sendOrderConfirmationEmail(orderId);
       return NextResponse.redirect(`${url.origin}/checkout/success?order=${orderId}`);
     }
   } catch {

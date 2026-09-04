@@ -34,7 +34,7 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
   }
 
   return (
-    <header className="relative z-50 bg-canvas shadow-sm">
+    <header className="relative z-50 bg-canvas shadow-sm print:hidden">
       <div className="hidden bg-ink-950 text-cream-100 md:block">
         <div className="container-page flex h-9 items-center justify-between text-xs">
           <p>Free UK delivery on orders over £100 +VAT · 14-day returns</p>
