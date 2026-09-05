@@ -1,9 +1,10 @@
 import { prisma } from "@/backend/lib/prisma";
 import { getResend, isEmailConfigured, getEmailFrom } from "@/backend/lib/resend";
+import { getSmtpTransport, isSmtpConfigured, getSmtpFrom } from "@/backend/lib/smtp";
 import { buildOrderConfirmationEmail } from "@/backend/lib/emails/orderConfirmation";
 
 export async function sendOrderConfirmationEmail(orderId: string): Promise<void> {
-  if (!isEmailConfigured()) return;
+  if (!isSmtpConfigured() && !isEmailConfigured()) return;
 
   try {
     const order = await prisma.order.findUnique({
@@ -23,6 +24,17 @@ export async function sendOrderConfirmationEmail(orderId: string): Promise<void>
       shippingCost: order.shippingCost,
       total: order.total,
     });
+
+    if (isSmtpConfigured()) {
+      const transport = getSmtpTransport()!;
+      await transport.sendMail({
+        from: getSmtpFrom(),
+        to: recipient,
+        subject,
+        html,
+      });
+      return;
+    }
 
     const resend = getResend()!;
     await resend.emails.send({
