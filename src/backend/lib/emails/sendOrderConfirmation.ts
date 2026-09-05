@@ -1,10 +1,9 @@
 import { prisma } from "@/backend/lib/prisma";
-import { getResend, isEmailConfigured, getEmailFrom } from "@/backend/lib/resend";
-import { getSmtpTransport, isSmtpConfigured, getSmtpFrom } from "@/backend/lib/smtp";
+import { sendEmail, isMailerConfigured } from "@/backend/lib/mailer";
 import { buildOrderConfirmationEmail } from "@/backend/lib/emails/orderConfirmation";
 
 export async function sendOrderConfirmationEmail(orderId: string): Promise<void> {
-  if (!isSmtpConfigured() && !isEmailConfigured()) return;
+  if (!isMailerConfigured()) return;
 
   try {
     const order = await prisma.order.findUnique({
@@ -25,24 +24,7 @@ export async function sendOrderConfirmationEmail(orderId: string): Promise<void>
       total: order.total,
     });
 
-    if (isSmtpConfigured()) {
-      const transport = getSmtpTransport()!;
-      await transport.sendMail({
-        from: getSmtpFrom(),
-        to: recipient,
-        subject,
-        html,
-      });
-      return;
-    }
-
-    const resend = getResend()!;
-    await resend.emails.send({
-      from: getEmailFrom(),
-      to: recipient,
-      subject,
-      html,
-    });
+    await sendEmail({ to: recipient, subject, html });
   } catch (err) {
     console.error("Failed to send order confirmation email:", err);
   }
