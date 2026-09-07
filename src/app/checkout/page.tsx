@@ -75,7 +75,7 @@ export default function CheckoutPage() {
   if (!mounted || items.length === 0) return null;
 
   const shippingCost =
-    quote?.shippingCost ?? (subtotal > FREE_DELIVERY_THRESHOLD ? 0 : ESTIMATED_SHIPPING_FALLBACK);
+    quote?.shippingCost ?? (subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : ESTIMATED_SHIPPING_FALLBACK);
   const total = quote?.total ?? subtotal + shippingCost;
 
   async function onSubmit(data: ShippingInput) {

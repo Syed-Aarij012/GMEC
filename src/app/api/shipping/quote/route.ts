@@ -28,7 +28,7 @@ export async function POST(req: Request) {
   );
 
   const shippingCost =
-    subtotal > FREE_DELIVERY_THRESHOLD
+    subtotal >= FREE_DELIVERY_THRESHOLD
       ? 0
       : calculateRoyalMailShipping(
           items

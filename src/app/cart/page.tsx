@@ -66,7 +66,7 @@ export default function CartPage() {
   }
 
   const shipping =
-    quote?.shippingCost ?? (subtotal > FREE_DELIVERY_THRESHOLD ? 0 : ESTIMATED_SHIPPING_FALLBACK);
+    quote?.shippingCost ?? (subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : ESTIMATED_SHIPPING_FALLBACK);
   const total = quote?.total ?? subtotal + shipping;
   const remainingForFreeShipping = Math.max(0, FREE_DELIVERY_THRESHOLD - subtotal);
 
@@ -132,7 +132,7 @@ export default function CartPage() {
         <div className="h-fit rounded-2xl border border-line/10 p-6">
           <h2 className="text-lg font-bold text-text">Order Summary</h2>
 
-          {subtotal <= FREE_DELIVERY_THRESHOLD ? (
+          {subtotal < FREE_DELIVERY_THRESHOLD ? (
             <p className="mt-3 rounded-lg bg-canvas-muted p-3 text-xs text-text/70">
               Add {formatPrice(remainingForFreeShipping)} more to get free UK delivery.
             </p>

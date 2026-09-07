@@ -42,7 +42,7 @@ export async function POST(req: Request) {
 
   const subtotal = roundMoney(orderItemsData.reduce((sum, i) => sum + i.price * i.quantity, 0));
   const shippingCost =
-    subtotal > FREE_DELIVERY_THRESHOLD
+    subtotal >= FREE_DELIVERY_THRESHOLD
       ? 0
       : calculateRoyalMailShipping(
           items.map((item) => {

@@ -15,8 +15,7 @@ export type ParcelFormat = "SMALL" | "MEDIUM" | "LARGE";
 
 // Product prices on this site are VAT-inclusive ("Inc. VAT"), so the customer-facing
 // free-delivery threshold of "£100+VAT" is £120 against our (already inc.-VAT)
-// subtotal. Orders totalling exactly £120 still pay for delivery — only orders
-// strictly above £120 are free.
+// subtotal. Orders totalling exactly £120 qualify for free delivery.
 export const FREE_DELIVERY_THRESHOLD = 120;
 
 const LBS_TO_KG = 0.453592;
