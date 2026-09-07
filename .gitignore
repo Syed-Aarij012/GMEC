@@ -45,6 +45,4 @@ next-env.d.ts
 /prisma/dev.db
 /prisma/dev.db-journal
 
-# uploaded product images (local disk storage, not committed)
-/public/uploads/*
-!/public/uploads/.gitkeep
+# uploaded product images committed so they deploy with the site (see /public/uploads/products)
