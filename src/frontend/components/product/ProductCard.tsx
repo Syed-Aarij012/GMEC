@@ -14,7 +14,7 @@ export default function ProductCard({ product }: { product: Product }) {
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-line/5 bg-canvas shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
       <Link href={`/product/${product.slug}`} className="relative block aspect-square overflow-hidden bg-canvas-muted">
         {onSale && (
-          <span className="absolute left-3 top-3 z-10 rounded-full bg-gold-500 px-2.5 py-1 text-xs font-bold text-ink-950">
+          <span className="absolute bottom-3 left-3 z-10 rounded-full bg-gold-500 px-2.5 py-1 text-xs font-bold text-ink-950">
             SALE
           </span>
         )}
