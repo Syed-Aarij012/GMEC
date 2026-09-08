@@ -18,6 +18,9 @@ export async function POST(req: Request) {
   const { items, shipping, paymentMethod } = parsed.data;
 
   const session = await getServerSession(authOptions);
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "Please sign in to place an order" }, { status: 401 });
+  }
 
   const products = await prisma.product.findMany({
     where: { id: { in: items.map((i) => i.productId) } },
