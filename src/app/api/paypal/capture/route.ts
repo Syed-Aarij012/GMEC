@@ -11,15 +11,27 @@ export async function GET(req: Request) {
     return NextResponse.redirect(`${url.origin}/cart`);
   }
 
-  const order = await prisma.order.findUnique({ where: { id: orderId } });
+  const order = await prisma.order.findUnique({ where: { id: orderId }, include: { items: true } });
   if (!order?.paypalOrderId) {
     return NextResponse.redirect(`${url.origin}/cart`);
+  }
+
+  if (order.status === "PAID") {
+    return NextResponse.redirect(`${url.origin}/checkout/success?order=${orderId}`);
   }
 
   try {
     const capture = await capturePaypalOrder(order.paypalOrderId);
     if (capture.status === "COMPLETED") {
-      await prisma.order.update({ where: { id: orderId }, data: { status: "PAID" } });
+      await prisma.$transaction([
+        prisma.order.update({ where: { id: orderId }, data: { status: "PAID" } }),
+        ...order.items.map((item) =>
+          prisma.product.update({
+            where: { id: item.productId },
+            data: { stock: { decrement: item.quantity } },
+          })
+        ),
+      ]);
       await sendOrderConfirmationEmail(orderId);
       return NextResponse.redirect(`${url.origin}/checkout/success?order=${orderId}`);
     }

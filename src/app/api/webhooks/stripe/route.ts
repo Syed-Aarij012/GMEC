@@ -26,11 +26,19 @@ export async function POST(req: Request) {
     const orderId = stripeSession.metadata?.orderId;
 
     if (orderId) {
-      await prisma.order.update({
-        where: { id: orderId },
-        data: { status: "PAID" },
-      });
-      await sendOrderConfirmationEmail(orderId);
+      const order = await prisma.order.findUnique({ where: { id: orderId }, include: { items: true } });
+      if (order && order.status !== "PAID") {
+        await prisma.$transaction([
+          prisma.order.update({ where: { id: orderId }, data: { status: "PAID" } }),
+          ...order.items.map((item) =>
+            prisma.product.update({
+              where: { id: item.productId },
+              data: { stock: { decrement: item.quantity } },
+            })
+          ),
+        ]);
+        await sendOrderConfirmationEmail(orderId);
+      }
     }
   }
 

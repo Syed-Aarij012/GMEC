@@ -61,35 +61,27 @@ export async function POST(req: Request) {
         );
   const total = roundMoney(subtotal + shippingCost);
 
+  // Stock is validated above but only decremented once payment is actually confirmed
+  // (Stripe webhook / PayPal capture), so an abandoned or never-paid checkout never
+  // reserves inventory.
   let order;
   try {
-    order = await prisma.$transaction(async (tx) => {
-      const created = await tx.order.create({
-        data: {
-          userId: session?.user?.id,
-          guestEmail: session?.user?.id ? undefined : shipping.email,
-          subtotal,
-          shippingCost,
-          total,
-          shippingName: shipping.fullName,
-          shippingLine1: shipping.line1,
-          shippingLine2: shipping.line2,
-          shippingCity: shipping.city,
-          shippingPostcode: shipping.postcode,
-          shippingCountry: shipping.country,
-          shippingPhone: shipping.phone,
-          items: { create: orderItemsData },
-        },
-      });
-
-      for (const item of orderItemsData) {
-        await tx.product.update({
-          where: { id: item.productId },
-          data: { stock: { decrement: item.quantity } },
-        });
-      }
-
-      return created;
+    order = await prisma.order.create({
+      data: {
+        userId: session?.user?.id,
+        guestEmail: session?.user?.id ? undefined : shipping.email,
+        subtotal,
+        shippingCost,
+        total,
+        shippingName: shipping.fullName,
+        shippingLine1: shipping.line1,
+        shippingLine2: shipping.line2,
+        shippingCity: shipping.city,
+        shippingPostcode: shipping.postcode,
+        shippingCountry: shipping.country,
+        shippingPhone: shipping.phone,
+        items: { create: orderItemsData },
+      },
     });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Could not place order";
@@ -126,7 +118,15 @@ export async function POST(req: Request) {
   }
 
   if (!isStripeConfigured()) {
-    await prisma.order.update({ where: { id: order.id }, data: { status: "PAID" } });
+    await prisma.$transaction([
+      prisma.order.update({ where: { id: order.id }, data: { status: "PAID" } }),
+      ...orderItemsData.map((item) =>
+        prisma.product.update({
+          where: { id: item.productId },
+          data: { stock: { decrement: item.quantity } },
+        })
+      ),
+    ]);
     await sendOrderConfirmationEmail(order.id);
     return NextResponse.json({ url: `/checkout/success?order=${order.id}` });
   }
