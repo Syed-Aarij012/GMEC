@@ -9,14 +9,46 @@ function unsplash(id: string) {
 }
 
 const sectors = [
-  { title: "Electrical Contractors", image: unsplash("1645449781249-27c94448f6f7") },
-  { title: "Property Developers", image: unsplash("1684966693180-45b9e18aff8d") },
-  { title: "Property Management", image: unsplash("1758448721134-1798533ae917") },
-  { title: "Hotels & Hospitality", image: unsplash("1758193783649-13371d7fb8dd") },
-  { title: "Retail Stores", image: unsplash("1761090617068-f1b3257d27ad") },
-  { title: "Offices & Workspaces", image: unsplash("1758518727707-b023e285b709") },
-  { title: "Landlords & Lettings", image: unsplash("1741156386380-0236c72eb6f9") },
-  { title: "Schools & Colleges", image: unsplash("1652305500057-0fcb348b62aa") },
+  {
+    title: "Electrical Contractors",
+    alt: "Electrical contractor fitting a GMEC GU10 downlight during a rewire",
+    image: unsplash("1645449781249-27c94448f6f7"),
+  },
+  {
+    title: "Property Developers",
+    alt: "GMEC LED lighting installed throughout a new-build property development",
+    image: unsplash("1684966693180-45b9e18aff8d"),
+  },
+  {
+    title: "Property Management",
+    alt: "GMEC LED lighting maintained across a managed residential property",
+    image: unsplash("1758448721134-1798533ae917"),
+  },
+  {
+    title: "Hotels & Hospitality",
+    alt: "GMEC LED downlights installed in a hotel corridor",
+    image: unsplash("1758193783649-13371d7fb8dd"),
+  },
+  {
+    title: "Retail Stores",
+    alt: "GMEC LED lighting fitted out in a retail store",
+    image: unsplash("1761090617068-f1b3257d27ad"),
+  },
+  {
+    title: "Offices & Workspaces",
+    alt: "GMEC LED panel lighting installed in an office workspace",
+    image: unsplash("1758518727707-b023e285b709"),
+  },
+  {
+    title: "Landlords & Lettings",
+    alt: "GMEC LED fittings installed in a rental property by a landlord",
+    image: unsplash("1741156386380-0236c72eb6f9"),
+  },
+  {
+    title: "Schools & Colleges",
+    alt: "GMEC LED lighting installed in a school classroom",
+    image: unsplash("1652305500057-0fcb348b62aa"),
+  },
 ];
 
 export default function SectorsServed() {
@@ -36,14 +68,14 @@ export default function SectorsServed() {
 
       <div className="group overflow-hidden py-2">
         <div className="flex w-max animate-marquee-slow items-center gap-5 group-hover:[animation-play-state:paused]">
-          {cards.map(({ title, image }, i) => (
+          {cards.map(({ title, alt, image }, i) => (
             <div
               key={`${title}-${i}`}
               className="relative h-56 w-72 shrink-0 overflow-hidden rounded-2xl ring-1 ring-white/10 sm:h-64 sm:w-80"
             >
               <Image
                 src={image}
-                alt={title}
+                alt={alt}
                 fill
                 sizes="320px"
                 className="object-cover"
