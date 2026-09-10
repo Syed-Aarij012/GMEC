@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { prisma } from "@/backend/lib/prisma";
-import { getFilteredProducts, type ShopSearchParams } from "@/backend/lib/shop";
+import { getFilteredProducts, buildShopCanonical, type ShopSearchParams } from "@/backend/lib/shop";
 import CategorySidebar from "@/frontend/components/shop/CategorySidebar";
 import ShopFilters from "@/frontend/components/shop/ShopFilters";
 import ProductGrid from "@/frontend/components/product/ProductGrid";
@@ -9,11 +9,19 @@ import Reveal from "@/frontend/components/motion/Reveal";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
-  title: "LED Bulbs, Downlights & Smart Home Products UK | GMEC Shop",
-  description:
-    "Shop GU10, E14, B22 & E27 LED bulbs, fire-rated downlights, smart smoke detectors & more. Energy-efficient lighting with free UK delivery over £100.",
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<ShopSearchParams>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  return {
+    title: "LED Bulbs, Downlights & Smart Home Products UK | GMEC Shop",
+    description:
+      "Shop GU10, E14, B22 & E27 LED bulbs, fire-rated downlights, smart smoke detectors & more. Energy-efficient lighting with free UK delivery over £100.",
+    alternates: { canonical: buildShopCanonical("/shop", params) },
+  };
+}
 
 export default async function ShopPage({
   searchParams,

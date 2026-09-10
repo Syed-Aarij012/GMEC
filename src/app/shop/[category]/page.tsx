@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { prisma } from "@/backend/lib/prisma";
-import { getFilteredProducts, type ShopSearchParams } from "@/backend/lib/shop";
+import { getFilteredProducts, buildShopCanonical, type ShopSearchParams } from "@/backend/lib/shop";
 import { categorySeo } from "@/backend/lib/categorySeo";
 import CategorySidebar from "@/frontend/components/shop/CategorySidebar";
 import ShopFilters from "@/frontend/components/shop/ShopFilters";
@@ -14,14 +14,18 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string }>;
+  searchParams: Promise<ShopSearchParams>;
 }): Promise<Metadata> {
   const { category: slug } = await params;
+  const sp = await searchParams;
+  const canonical = buildShopCanonical(`/shop/${slug}`, sp);
   const seo = categorySeo[slug];
-  if (seo) return { title: seo.title, description: seo.description };
+  if (seo) return { title: seo.title, description: seo.description, alternates: { canonical } };
   const category = await prisma.category.findUnique({ where: { slug } });
-  return { title: category?.name ?? "Shop" };
+  return { title: category?.name ?? "Shop", alternates: { canonical } };
 }
 
 export default async function CategoryPage({

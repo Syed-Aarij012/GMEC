@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PolicyLayout, { PolicySection } from "@/frontend/components/policy/PolicyLayout";
 
-export const metadata: Metadata = { title: "Terms & Conditions" };
+export const metadata: Metadata = { title: "Terms & Conditions", alternates: { canonical: "/terms-and-conditions" } };
 
 export default function TermsAndConditionsPage() {
   return (

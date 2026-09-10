@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import ContactForm from "@/frontend/components/contact/ContactForm";
 import Reveal from "@/frontend/components/motion/Reveal";
 
-export const metadata: Metadata = { title: "Contact Us" };
+export const metadata: Metadata = { title: "Contact Us", alternates: { canonical: "/contact" } };
 
 const details = [
   { icon: MapPin, label: "Address", value: "GMEC House, Keppel Road, London E6 2BD" },

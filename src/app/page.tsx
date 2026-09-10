@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { prisma } from "@/backend/lib/prisma";
 import Hero from "@/frontend/components/home/Hero";
 import TrustBadges from "@/frontend/components/home/TrustBadges";
@@ -7,6 +8,10 @@ import SectorsServed from "@/frontend/components/home/SectorsServed";
 import Newsletter from "@/frontend/components/home/Newsletter";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const FITTINGS = [
   { fitting: "GU10", image: "/fittings/gu10.png" },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PolicyLayout, { PolicySection } from "@/frontend/components/policy/PolicyLayout";
 
-export const metadata: Metadata = { title: "Payment Policy" };
+export const metadata: Metadata = { title: "Payment Policy", alternates: { canonical: "/payment-policy" } };
 
 export default function PaymentPolicyPage() {
   return (

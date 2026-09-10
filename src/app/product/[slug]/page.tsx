@@ -21,7 +21,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const product = await prisma.product.findUnique({ where: { slug } });
-  return { title: product?.name ?? "Product" };
+  return { title: product?.name ?? "Product", alternates: { canonical: `/product/${slug}` } };
 }
 
 export default async function ProductPage({

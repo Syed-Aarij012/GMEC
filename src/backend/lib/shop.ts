@@ -23,6 +23,17 @@ export interface ShopSearchParams {
   page?: string;
 }
 
+// Self-referencing canonical for a listing page: includes only the params that
+// actually change the result set, sorted for a stable URL, and drops page=1
+// since that's the same content as no page param at all.
+export function buildShopCanonical(basePath: string, params: ShopSearchParams): string {
+  const entries = Object.entries(params)
+    .filter(([key, value]) => value && !(key === "page" && value === "1"))
+    .sort(([a], [b]) => a.localeCompare(b)) as [string, string][];
+  if (entries.length === 0) return basePath;
+  return `${basePath}?${new URLSearchParams(entries).toString()}`;
+}
+
 export async function getFilteredProducts(
   params: ShopSearchParams,
   forcedCategorySlug?: string

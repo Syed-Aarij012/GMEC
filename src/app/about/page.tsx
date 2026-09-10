@@ -4,7 +4,7 @@ import { Lightbulb, Truck, Users, Award } from "lucide-react";
 import Reveal from "@/frontend/components/motion/Reveal";
 import StaggerGrid, { StaggerItem } from "@/frontend/components/motion/StaggerGrid";
 
-export const metadata: Metadata = { title: "About Us" };
+export const metadata: Metadata = { title: "About Us", alternates: { canonical: "/about" } };
 
 const stats = [
   { value: "10,000+", label: "Orders Delivered" },

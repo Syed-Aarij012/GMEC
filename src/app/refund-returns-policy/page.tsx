@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PolicyLayout, { PolicySection } from "@/frontend/components/policy/PolicyLayout";
 
-export const metadata: Metadata = { title: "Refund & Returns Policy" };
+export const metadata: Metadata = { title: "Refund & Returns Policy", alternates: { canonical: "/refund-returns-policy" } };
 
 export default function RefundReturnsPolicyPage() {
   return (
