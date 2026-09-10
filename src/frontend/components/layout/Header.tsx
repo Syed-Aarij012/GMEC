@@ -119,7 +119,7 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
 
           <ThemeToggle className="hidden md:flex" />
 
-          <Link href="/wishlist" className="relative hidden items-center text-text hover:text-gold-600 md:flex">
+          <Link href="/wishlist" aria-label="Wishlist" className="relative hidden items-center text-text hover:text-gold-600 md:flex">
             <Heart className="h-6 w-6" />
             <AnimatePresence>
               {mounted && wishlistItems > 0 && (
@@ -137,7 +137,7 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
             </AnimatePresence>
           </Link>
 
-          <Link href="/cart" className="relative flex items-center text-text hover:text-gold-600">
+          <Link href="/cart" aria-label="Cart" className="relative flex items-center text-text hover:text-gold-600">
             <ShoppingCart className="h-6 w-6" />
             <AnimatePresence>
               {mounted && totalItems > 0 && (

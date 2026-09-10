@@ -95,19 +95,21 @@ export default function Hero() {
                 aria-label={`Go to slide ${i + 1}`}
                 onClick={() => handleDot(i)}
                 suppressHydrationWarning
-                className="group relative h-2.5 w-2.5"
+                className="group flex h-6 w-6 items-center justify-center"
               >
-                <span
-                  className={`absolute inset-0 rounded-full transition-colors ${
-                    i === index ? "bg-gold-500" : "bg-white/50 group-hover:bg-white/70"
-                  }`}
-                />
-                {i === index && (
-                  <motion.span
-                    layoutId="hero-dot-ring"
-                    className="absolute -inset-1 rounded-full ring-2 ring-gold-500/40"
+                <span className="relative h-2.5 w-2.5">
+                  <span
+                    className={`absolute inset-0 rounded-full transition-colors ${
+                      i === index ? "bg-gold-500" : "bg-white/50 group-hover:bg-white/70"
+                    }`}
                   />
-                )}
+                  {i === index && (
+                    <motion.span
+                      layoutId="hero-dot-ring"
+                      className="absolute -inset-1 rounded-full ring-2 ring-gold-500/40"
+                    />
+                  )}
+                </span>
               </button>
             ))}
           </div>
