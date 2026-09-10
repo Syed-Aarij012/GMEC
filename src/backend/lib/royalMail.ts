@@ -65,13 +65,13 @@ export async function createRoyalMailShipment(
           address: {
             fullName: params.recipientName,
             addressLine1: params.addressLine1,
-            addressLine2: params.addressLine2 ?? undefined,
+            addressLine2: params.addressLine2 || undefined,
             city: params.city,
             postcode: params.postcode,
             countryCode: params.countryCode,
           },
-          phoneNumber: params.phone ?? undefined,
-          emailAddress: params.email ?? undefined,
+          phoneNumber: params.phone || undefined,
+          emailAddress: params.email || undefined,
         },
         packages: [
           {
