@@ -148,7 +148,7 @@ export async function getRoyalMailLabelPdf(orderIdentifier: string): Promise<Buf
   if (!apiKey) throw new Error("Royal Mail is not configured");
 
   const res = await fetch(
-    `${API_BASE}/orders/${encodeURIComponent(orderIdentifier)}/label?documentType=postageLabel`,
+    `${API_BASE}/orders/${encodeURIComponent(orderIdentifier)}/label?documentType=postageLabel&includeReturnsLabel=false`,
     { headers: { Authorization: `Bearer ${apiKey}` } }
   );
 
