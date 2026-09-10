@@ -7,8 +7,6 @@ interface CategoryLink {
   name: string;
 }
 
-const socialLinks = ["f", "IG", "X"];
-
 export default function Footer({ categories }: { categories: CategoryLink[] }) {
   return (
     <footer className="relative overflow-hidden bg-ink-950 text-cream-100 print:hidden">
@@ -26,15 +24,19 @@ export default function Footer({ categories }: { categories: CategoryLink[] }) {
             developers and the hospitality industry across the UK.
           </p>
           <div className="mt-5 flex gap-3">
-            {socialLinks.map((label) => (
-              <a
-                key={label}
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-xs font-bold text-cream-100 hover:bg-gold-500 hover:text-ink-950"
-              >
-                {label}
-              </a>
-            ))}
+            <a
+              href="https://www.instagram.com/gmec_corporation/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GMEC Corporation on Instagram"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cream-100 hover:bg-gold-500 hover:text-ink-950"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
           </div>
         </div>
 
