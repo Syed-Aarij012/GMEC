@@ -159,12 +159,25 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
 
       <nav className="hidden border-t border-line/10 bg-ink-900 md:block">
         <div className="container-page flex h-11 items-center gap-2 text-sm font-medium text-cream-100">
-          <Link
-            href="/shop"
-            className="flex shrink-0 items-center gap-1 whitespace-nowrap pr-6 hover:text-gold-400"
-          >
-            Shop All <ChevronDown className="h-3.5 w-3.5" />
-          </Link>
+          <div className="group relative shrink-0 pr-6">
+            <Link
+              href="/shop"
+              className="flex items-center gap-1 whitespace-nowrap py-2.5 hover:text-gold-400"
+            >
+              Shop All <ChevronDown className="h-3.5 w-3.5" />
+            </Link>
+            <div className="invisible absolute left-0 top-full z-50 w-56 -translate-y-1 rounded-lg border border-line/10 bg-canvas py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+              {categories.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/shop/${c.slug}`}
+                  className="block px-4 py-2 text-sm text-text hover:bg-canvas-muted"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+          </div>
           <div className="group flex-1 overflow-hidden">
             <div className="flex w-max animate-marquee items-center gap-10 group-hover:[animation-play-state:paused]">
               {[...categories, ...categories].map((c, i) => (
