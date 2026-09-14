@@ -27,12 +27,22 @@ const nextConfig: NextConfig = {
       })),
       {
         source: "/shop/cool-white-color",
-        destination: "/shop/led-cool-white-bulbs",
+        destination: "/shop/cool-white-led-bulbs",
         permanent: true,
       },
       {
         source: "/shop/warm-white-color",
-        destination: "/shop/led-warm-white-bulbs",
+        destination: "/shop/warm-white-led-bulbs",
+        permanent: true,
+      },
+      {
+        source: "/shop/led-cool-white-bulbs",
+        destination: "/shop/cool-white-led-bulbs",
+        permanent: true,
+      },
+      {
+        source: "/shop/led-warm-white-bulbs",
+        destination: "/shop/warm-white-led-bulbs",
         permanent: true,
       },
     ];

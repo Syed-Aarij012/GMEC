@@ -185,7 +185,7 @@ export const categorySeo: Record<string, CategorySeo> = {
       },
     ],
   },
-  "led-cool-white-bulbs": {
+  "cool-white-led-bulbs": {
     h1: "Cool White LED Bulbs",
     title: "Cool White LED Bulbs in UK | GU10, E27, E14 & B22",
     description:
@@ -228,7 +228,7 @@ export const categorySeo: Record<string, CategorySeo> = {
       },
     ],
   },
-  "led-warm-white-bulbs": {
+  "warm-white-led-bulbs": {
     h1: "Warm White LED Bulbs",
     title: "Warm White LED Bulbs in UK | GU10, E27, E14 & B22",
     description:
