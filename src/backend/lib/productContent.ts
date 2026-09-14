@@ -104,13 +104,13 @@ const APPLICATIONS_BY_CATEGORY: Record<string, string[]> = {
     "Kitchens and dining areas",
     "Anywhere you want flexible warm-to-cool lighting",
   ],
-  "cool-white-color": [
+  "led-cool-white-bulbs": [
     "Kitchens and workspaces",
     "Bathrooms and utility rooms",
     "Offices and commercial units",
     "Garages and workshops",
   ],
-  "warm-white-color": [
+  "led-warm-white-bulbs": [
     "Living rooms and bedrooms",
     "Dining areas",
     "Hallways and entrances",

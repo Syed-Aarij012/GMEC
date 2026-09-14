@@ -185,88 +185,88 @@ export const categorySeo: Record<string, CategorySeo> = {
       },
     ],
   },
-  "cool-white-color": {
-    h1: "Cool White Color",
-    title: "Cool White LED Bulbs & Lights UK | 6500K, 7000K | GMEC",
+  "led-cool-white-bulbs": {
+    h1: "Cool White LED Bulbs",
+    title: "Cool White LED Bulbs in UK | GU10, E27, E14 & B22",
     description:
-      "Shop GMEC's Cool White Colour range, LED bulbs, filament bulbs & bulkhead ceiling lights in 6500K/7000K. Bright, crisp light for kitchens, offices & workspaces.",
+      "Shop Cool White LED Bulbs (6000K–6500K) in GU10, E27, E14 & B22 fittings. Bright, daylight-style lighting for kitchens, offices & retail. Fast UK delivery.",
     intro:
-      "Cool White (6500K–7000K) delivers a bright, crisp light closer to daylight, ideal wherever visibility and accuracy matter most. Available across frosted bulbs, filament bulbs, and bulkhead ceiling lights, perfect for kitchens, bathrooms, offices, and workshops.",
+      "Bright, crisp 6000K–6500K daylight-style lighting for kitchens, offices, workshops and retail spaces. Available across GU10, E14, E27 and B22 fittings in a range of wattages. Fast UK delivery, 14-day returns, 24/7 support.",
     content: [
       {
-        heading: "Our Cool White Colour Range",
+        heading: "Our Cool White LED Bulb Range",
         paragraphs: [
-          "Cool White is the colour temperature to reach for when a space needs to look bright, sharp, and properly lit, not cosy, but clear. Sitting at the 6500K–7000K end of the scale, Cool White light has a crisp, slightly blue-toned quality that's closer to daylight than the amber glow of a Warm White bulb, which is exactly why it's the go-to choice for kitchens, bathrooms, offices, garages, and workspaces.",
-          "GMEC's Cool White Colour range spans several bulb styles, all built around that same bright, functional light output. Our Frosted LED Bulbs in Cool White come in a choice of finishes, A70, A80, and A95, across E27 and B22 fittings, giving you an even, glare-free spread of light without the bulb itself standing out. For a more decorative option, our Cool White Filament Bulbs pair the same crisp 6500K output with a clear glass, visible-filament design, so the bulb becomes part of the look rather than disappearing into the fitting. And for larger spaces or outdoor use, our Cool White Bulkhead Ceiling Lights deliver a strong 7000K output built for durability as much as brightness.",
-          "Whichever style you choose, it's worth checking the fitting type and wattage of your existing setup so your replacement is a straightforward, like-for-like swap.",
+          "Cool White LED Bulbs combine the low running costs of modern LED technology with a crisp, daylight-style tone that keeps spaces feeling bright, sharp, and alert. Sitting between 6000K and 6500K, this tone brings out true colours and fine detail far better than a warmer bulb, making it the natural choice for spaces built around focus and function rather than relaxation.",
+          "At GMEC, our Cool White LED Bulbs are available across the most popular fittings, GU10, E14, E27 and B22, in a range of wattages to suit different room sizes and fixture types. Whether you're lighting a kitchen worktop, an office desk, or a workshop bench, there's a cool white option matched to the job.",
+          "Always check the base fitting and wattage equivalent against your existing fixture before ordering, to make sure you get a like-for-like swap with no surprises.",
         ],
       },
       {
-        heading: "Why Choose Cool White Colour Lighting?",
+        heading: "Why Choose Cool White LED Bulbs?",
         paragraphs: [
-          "Cool White lighting is chosen for one simple reason: visibility. The higher colour temperature makes fine detail easier to see, colours read more true-to-life, and the overall feel of a room is more alert and functional. That's why it's the standard choice anywhere accuracy and clarity matter more than atmosphere, chopping vegetables at a kitchen counter, reading labels in a garage, or working at a desk for hours at a time.",
+          "Cool White LED Bulbs mimic natural daylight, making colours appear truer and details easier to spot, exactly what you want when reading, cooking, working, or inspecting fine work. Their brighter, whiter tone also improves alertness and concentration, which is why they're the standard choice for task-focused spaces rather than relaxation areas. For businesses managing multiple sites, cool white is also a consistent, reliable choice that keeps commercial spaces looking clean, modern, and well-lit.",
         ],
       },
       {
-        heading: "Where Is Cool White Colour Lighting Used?",
+        heading: "Where Are Cool White LED Bulbs Used?",
         paragraphs: [
-          "Cool White suits any space where the priority is seeing clearly rather than setting a relaxed mood:",
+          "Cool white lighting suits any space where focus, hygiene, or visibility comes first:",
         ],
         list: [
-          "Kitchens: Cool White frosted or filament bulbs give clear, accurate light for food prep, cooking, and cleaning.",
-          "Bathrooms: A crisp, even light makes grooming and getting ready easier, without the yellow cast of a warmer bulb.",
-          "Offices & Workspaces: Cool White keeps concentration levels up over long working hours and reduces eye strain from dim or overly warm lighting.",
-          "Garages & Workshops: Bulkhead ceiling lights in Cool White 7000K give strong, dependable illumination for practical, hands-on spaces.",
-          "Shops & Retail Units: A bright, modern-feeling Cool White helps products and displays stand out clearly.",
+          "Kitchens & Bathrooms: Clear, bright light for food prep, grooming, and cleaning.",
+          "Offices & Workspaces: Supports concentration and reduces the drowsy feel of warmer lighting.",
+          "Garages & Workshops: Daylight-level brightness for detailed or technical work.",
+          "Retail & Commercial Units: Makes products, signage, and displays look sharp and true to colour.",
+          "Security & Exterior Areas: A brighter, more attention-grabbing tone for entrances, car parks, and outdoor fittings.",
         ],
       },
       {
-        heading: "How Much Can You Save with Cool White LED Lighting?",
+        heading: "How Much Can You Save with Cool White LED Bulbs?",
         paragraphs: [
-          "Every bulb and fitting in GMEC's Cool White Colour range is built on efficient LED technology, using significantly less energy than the halogen and incandescent lighting it replaces, while lasting many times longer. For busy, frequently-used spaces like kitchens and workshops, where the lights are often on for hours at a stretch, that combination of low running costs and long service life adds up to real savings over time.",
+          "As with every LED bulb in our range, Cool White LED Bulbs use up to 90% less energy than the incandescent and halogen equivalents they replace, while lasting many times longer. That means lower running costs from day one, and for landlords, contractors, or businesses replacing lighting across multiple properties or units, those savings add up quickly alongside far fewer replacement callouts.",
         ],
       },
     ],
   },
-  "warm-white-color": {
-    h1: "Warm White Colour",
-    title: "Warm White LED Bulbs & Lights UK | 2700K, 3000K | GMEC",
+  "led-warm-white-bulbs": {
+    h1: "Warm White LED Bulbs",
+    title: "Warm White LED Bulbs in UK | GU10, E27, E14 & B22",
     description:
-      "Shop GMEC's Warm White Colour range, GU10, Frosted & Filament LED bulbs in 2700K/3000K. A soft, relaxing glow for bedrooms, living rooms & dining spaces.",
+      "Shop Warm White LED Bulbs (2700K–3000K) in GU10, E27, E14 & B22 fittings. Soft, cosy lighting for homes, hotels & restaurants. Fast UK delivery.",
     intro:
-      "Warm White (2700K–3000K) gives a soft, relaxed glow perfect for spaces built around comfort rather than function. Available in GU10, frosted, and filament bulb styles, ideal for bedrooms, living rooms, and dining areas.",
+      "Soft, cosy 2700K–3000K lighting for living rooms, bedrooms, restaurants and hotels. Available across GU10, E14, E27 and B22 fittings in a range of wattages. Fast UK delivery, 14-day returns, 24/7 support.",
     content: [
       {
-        heading: "Our Warm White Colour Range",
+        heading: "Our Warm White LED Bulb Range",
         paragraphs: [
-          "Warm White is the colour temperature that makes a room feel like somewhere you actually want to spend time. Sitting at the 2700K–3000K end of the scale, it has that soft, slightly golden quality closest to a traditional incandescent bulb, a world away from the crisp, blue-toned light of Cool White. It's this relaxed, welcoming glow that makes Warm White the natural choice for bedrooms, living rooms, dining areas, and anywhere else the goal is comfort rather than clinical brightness.",
-          "GMEC's Warm White Colour range covers several bulb styles, all built around that same soft 2700K–3000K output. Our GU10 LED Bulbs in Warm White 3000K are a popular choice for spotlight fittings and downlights. Our Frosted LED Bulbs, available in A70, A80, and A95 finishes across E27 and B22 fittings, give an even, glare-free glow ideal for lamps and pendant fittings. And for a more decorative option, our Warm White Filament Bulbs bring the same relaxed 2700K tone to a clear glass, visible-filament design, perfect for fittings where the bulb itself is on show.",
-          "As always, check the fitting type and wattage of your existing bulb before ordering, so your Warm White replacement is a simple, like-for-like swap.",
+          "Warm White LED Bulbs bring together the efficiency of modern LED technology with the cosy, golden glow that clear halogen and incandescent bulbs are known for. Sitting between 2700K and 3000K, this softer tone recreates a familiar, relaxed atmosphere, without the energy costs or short lifespan of older lighting.",
+          "At GMEC, our Warm White LED Bulbs are available across the most popular fittings, GU10, E14, E27 and B22, in a range of wattages to suit different rooms and fixture types. Whether you're lighting a bedroom lamp, a hotel corridor, or a restaurant dining area, there's a warm white option built for the setting.",
+          "Always check the base fitting and wattage equivalent against your existing fixture before ordering, to make sure you get a like-for-like swap with no surprises.",
         ],
       },
       {
-        heading: "Why Choose Warm White Colour Lighting?",
+        heading: "Why Choose Warm White LED Bulbs?",
         paragraphs: [
-          "Warm White lighting is chosen for the atmosphere. The lower colour temperature is easier on the eyes in the evening, helps a room feel settled and relaxed, and pairs naturally with the kind of soft furnishings and finishes found in most living spaces. Where Cool White is about clarity, Warm White is about comfort; it's the difference between a space that feels functional and one that feels lived-in.",
+          "Warm White LED Bulbs give off a soft, amber-toned light that feels familiar and inviting, closer to candlelight or a traditional filament bulb than the clinical brightness of daylight tones. This makes them the natural choice for spaces designed around comfort rather than task focus, helping rooms feel calmer and more lived-in. For hospitality and hotel settings especially, warm white lighting plays a big part in creating the relaxed, premium feel guests expect.",
         ],
       },
       {
-        heading: "Where Is Warm White Colour Lighting Used?",
+        heading: "Where Are Warm White LED Bulbs Used?",
         paragraphs: [
-          "Warm White suits any space where the priority is comfort and atmosphere rather than sharp, functional light:",
+          "Warm white lighting is the go-to choice wherever comfort and atmosphere come first:",
         ],
         list: [
-          "Bedrooms: A soft Warm White glow from GU10 spotlights or frosted bulbs helps create a calm, restful feel for winding down in the evening.",
-          "Living Rooms: Frosted or filament bulbs in table lamps and pendant fittings give a warm, inviting light that suits relaxed evenings in.",
-          "Dining Areas: Warm White lighting flatters food and faces alike, making it a natural choice above dining tables.",
-          "Restaurants & Hotels: A relaxed, welcoming glow is exactly what hospitality spaces are aiming for, whether in guest rooms, lounges, or dining areas.",
-          "Decorative Fittings: Warm White filament bulbs suit any fitting where the bulb is visible, adding a traditional, glowing character to the room.",
+          "Living Rooms & Bedrooms: A soft, relaxing glow suited to evenings and downtime.",
+          "Restaurants & Hospitality: Creates a warm, inviting mood for dining and guest areas.",
+          "Hotels & Guest Rooms: A flattering, homely tone that improves guest experience.",
+          "Hallways & Entranceways: A welcoming first impression without harsh brightness.",
+          "Reading & Feature Lighting: Comfortable, low-glare light for lamps and accent fittings.",
         ],
       },
       {
-        heading: "How Much Can You Save with Warm White LED Lighting?",
+        heading: "How Much Can You Save with Warm White LED Bulbs?",
         paragraphs: [
-          "Every bulb in GMEC's Warm White Colour range runs on efficient LED technology, using significantly less energy than the halogen and incandescent bulbs it replaces, while lasting many times longer before it needs swapping out. For rooms where the lights are on every evening, such as bedrooms, living rooms, and dining areas, that adds up to a genuine reduction in running costs over the life of the bulb.",
+          "Like every LED bulb in our range, Warm White LED Bulbs use up to 90% less energy than the incandescent and halogen bulbs they replace, while lasting significantly longer. Over a full property that means noticeable savings on energy bills each year, and for hotels, landlords, or contractors fitting out multiple rooms or units, those savings scale up fast alongside fewer replacement call-outs.",
         ],
       },
     ],

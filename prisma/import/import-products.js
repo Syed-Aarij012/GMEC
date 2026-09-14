@@ -52,8 +52,8 @@ function resolveCategorySlug(categoriesRaw, name, fitting) {
     if (re.test(hay)) return slug;
   }
   const colourHay = hay.toLowerCase();
-  if (colourHay.includes("cool white")) return "cool-white-color";
-  if (colourHay.includes("warm white")) return "warm-white-color";
+  if (colourHay.includes("cool white")) return "led-cool-white-bulbs";
+  if (colourHay.includes("warm white")) return "led-warm-white-bulbs";
   if (fitting === "GU10") return "gu10-downlights";
   return "led-frosted-bulbs";
 }

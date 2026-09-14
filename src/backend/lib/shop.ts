@@ -10,8 +10,8 @@ export const PAGE_SIZE = 12;
 // attribute is independent of that, so we can reproduce the same cross-cutting
 // listing by filtering on colour instead of categoryId for just these two.
 const COLOUR_CATEGORY_SLUGS: Record<string, string> = {
-  "cool-white-color": "Cool White",
-  "warm-white-color": "Warm White",
+  "led-cool-white-bulbs": "Cool White",
+  "led-warm-white-bulbs": "Warm White",
 };
 
 export interface ShopSearchParams {

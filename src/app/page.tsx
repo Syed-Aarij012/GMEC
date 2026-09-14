@@ -30,8 +30,8 @@ const TRENDING_CATEGORY_SLUGS = [
   "led-candle-bulbs",
   "led-ceiling-lights",
   "led-3-colours-in-1",
-  "cool-white-color",
-  "warm-white-color",
+  "led-cool-white-bulbs",
+  "led-warm-white-bulbs",
   "gu10-downlights",
 ];
 

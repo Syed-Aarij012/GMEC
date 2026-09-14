@@ -25,6 +25,16 @@ const nextConfig: NextConfig = {
         destination: `/product/${slug.replace("chorme", "chrome")}`,
         permanent: true,
       })),
+      {
+        source: "/shop/cool-white-color",
+        destination: "/shop/led-cool-white-bulbs",
+        permanent: true,
+      },
+      {
+        source: "/shop/warm-white-color",
+        destination: "/shop/led-warm-white-bulbs",
+        permanent: true,
+      },
     ];
   },
   images: {

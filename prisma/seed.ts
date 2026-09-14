@@ -31,13 +31,13 @@ const categories = [
     description: "Switchable warm white, cool white and daylight in a single bulb or fitting.",
   },
   {
-    slug: "cool-white-color",
-    name: "Cool White Colour",
+    slug: "led-cool-white-bulbs",
+    name: "Cool White LED Bulbs",
     description: "Crisp, energising cool white lighting for kitchens, bathrooms and workspaces.",
   },
   {
-    slug: "warm-white-color",
-    name: "Warm White Colour",
+    slug: "led-warm-white-bulbs",
+    name: "Warm White LED Bulbs",
     description: "Soft, inviting warm white lighting for living spaces and bedrooms.",
   },
   {
@@ -106,16 +106,16 @@ const products: SeedProduct[] = [
   { slug: "gu10-3-cct-fire-rated-downlight-5w", name: "GU10 3-CCT Fire-Rated Downlight 5W", sku: "GMC-3C1-DL-5W", description: "A fire-rated downlight with switchable colour temperature, built into a fully fire-rated housing.", price: 9.99, category: "led-3-colours-in-1", fitting: "GU10", wattage: "5W", colour: "3 Colours in 1" },
 
   // Cool White Colour
-  { slug: "gu10-led-spotlight-7w-cool-white", name: "GU10 LED Spotlight Bulb 7W", sku: "GMC-CW-GU10-7W", description: "A brighter 7W GU10 LED spotlight with crisp cool white light, perfect for task lighting in kitchens and bathrooms.", price: 3.99, category: "cool-white-color", fitting: "GU10", wattage: "7W", colour: "Cool White", featured: true },
-  { slug: "b22-led-gls-9w-cool-white", name: "B22 LED GLS Bulb 9W", sku: "GMC-CW-B22-9W", description: "A bayonet-cap B22 LED GLS bulb with cool white light output, suited to everyday living areas.", price: 3.29, category: "cool-white-color", fitting: "B22", wattage: "9W", colour: "Cool White" },
-  { slug: "e27-led-gls-12w-cool-white", name: "E27 LED GLS Bulb 12W", sku: "GMC-CW-E27-12W", description: "A high-output 12W E27 LED bulb with cool white tone, equivalent to a 100W traditional bulb.", price: 4.49, category: "cool-white-color", fitting: "E27", wattage: "12W", colour: "Cool White" },
-  { slug: "square-led-panel-light-18w-cool-white", name: "Square LED Panel Light 18W", sku: "GMC-CW-PANEL-18W", description: "A slimline cool white LED panel light, ideal for kitchens, offices and workspaces.", price: 21.99, category: "cool-white-color", wattage: "18W", colour: "Cool White" },
+  { slug: "gu10-led-spotlight-7w-cool-white", name: "GU10 LED Spotlight Bulb 7W", sku: "GMC-CW-GU10-7W", description: "A brighter 7W GU10 LED spotlight with crisp cool white light, perfect for task lighting in kitchens and bathrooms.", price: 3.99, category: "led-cool-white-bulbs", fitting: "GU10", wattage: "7W", colour: "Cool White", featured: true },
+  { slug: "b22-led-gls-9w-cool-white", name: "B22 LED GLS Bulb 9W", sku: "GMC-CW-B22-9W", description: "A bayonet-cap B22 LED GLS bulb with cool white light output, suited to everyday living areas.", price: 3.29, category: "led-cool-white-bulbs", fitting: "B22", wattage: "9W", colour: "Cool White" },
+  { slug: "e27-led-gls-12w-cool-white", name: "E27 LED GLS Bulb 12W", sku: "GMC-CW-E27-12W", description: "A high-output 12W E27 LED bulb with cool white tone, equivalent to a 100W traditional bulb.", price: 4.49, category: "led-cool-white-bulbs", fitting: "E27", wattage: "12W", colour: "Cool White" },
+  { slug: "square-led-panel-light-18w-cool-white", name: "Square LED Panel Light 18W", sku: "GMC-CW-PANEL-18W", description: "A slimline cool white LED panel light, ideal for kitchens, offices and workspaces.", price: 21.99, category: "led-cool-white-bulbs", wattage: "18W", colour: "Cool White" },
 
   // Warm White Colour
-  { slug: "gu10-led-spotlight-5w-warm-white", name: "GU10 LED Spotlight Bulb 5W", sku: "GMC-WW-GU10-5W", description: "A compact GU10 LED spotlight bulb delivering warm, inviting light with instant full brightness and no flicker.", price: 3.49, compareAtPrice: 5.99, category: "warm-white-color", fitting: "GU10", wattage: "5W", colour: "Warm White", featured: true },
-  { slug: "e27-led-gls-9w-warm-white", name: "E27 LED GLS Bulb 9W", sku: "GMC-WW-E27-9W", description: "A classic-shaped E27 LED bulb replacing 60W incandescent bulbs, using a fraction of the energy.", price: 3.29, category: "warm-white-color", fitting: "E27", wattage: "9W", colour: "Warm White" },
-  { slug: "e14-led-golf-ball-5w-warm-white", name: "E14 LED Golf Ball Bulb 5W", sku: "GMC-WW-E14-5W", description: "A small-screw E14 golf ball LED bulb, ideal for decorative fittings, wall lights and chandeliers.", price: 2.99, category: "warm-white-color", fitting: "E14", wattage: "5W", colour: "Warm White" },
-  { slug: "flush-mount-ceiling-light-24w-warm-white", name: "Flush Mount Ceiling Light 24W", sku: "GMC-WW-CL-24W", description: "A warm white flush-mount ceiling light for a cosy, inviting glow in bedrooms and living rooms.", price: 24.99, category: "warm-white-color", wattage: "24W", colour: "Warm White" },
+  { slug: "gu10-led-spotlight-5w-warm-white", name: "GU10 LED Spotlight Bulb 5W", sku: "GMC-WW-GU10-5W", description: "A compact GU10 LED spotlight bulb delivering warm, inviting light with instant full brightness and no flicker.", price: 3.49, compareAtPrice: 5.99, category: "led-warm-white-bulbs", fitting: "GU10", wattage: "5W", colour: "Warm White", featured: true },
+  { slug: "e27-led-gls-9w-warm-white", name: "E27 LED GLS Bulb 9W", sku: "GMC-WW-E27-9W", description: "A classic-shaped E27 LED bulb replacing 60W incandescent bulbs, using a fraction of the energy.", price: 3.29, category: "led-warm-white-bulbs", fitting: "E27", wattage: "9W", colour: "Warm White" },
+  { slug: "e14-led-golf-ball-5w-warm-white", name: "E14 LED Golf Ball Bulb 5W", sku: "GMC-WW-E14-5W", description: "A small-screw E14 golf ball LED bulb, ideal for decorative fittings, wall lights and chandeliers.", price: 2.99, category: "led-warm-white-bulbs", fitting: "E14", wattage: "5W", colour: "Warm White" },
+  { slug: "flush-mount-ceiling-light-24w-warm-white", name: "Flush Mount Ceiling Light 24W", sku: "GMC-WW-CL-24W", description: "A warm white flush-mount ceiling light for a cosy, inviting glow in bedrooms and living rooms.", price: 24.99, category: "led-warm-white-bulbs", wattage: "24W", colour: "Warm White" },
 
   // GU10 Downlights
   { slug: "fire-rated-gu10-downlight-5w-white", name: "Fire-Rated GU10 Downlight 5W", sku: "GMC-DL-GU10-5W-FR", description: "A fully fire-rated recessed GU10 downlight offering 30 minutes of fire protection, with a clean white bezel finish.", price: 8.99, category: "gu10-downlights", fitting: "GU10", wattage: "5W", colour: "Warm White", featured: true },

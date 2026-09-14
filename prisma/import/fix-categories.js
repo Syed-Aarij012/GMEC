@@ -31,8 +31,8 @@ const TYPE_RULES = [
 ];
 
 const COLOUR_RULES = [
-  [/cool white color/i, "cool-white-color"],
-  [/warm white color/i, "warm-white-color"],
+  [/cool white color/i, "led-cool-white-bulbs"],
+  [/warm white color/i, "led-warm-white-bulbs"],
 ];
 
 function resolveCategorySlug(categoriesRaw, name, fitting) {
