@@ -11,6 +11,7 @@ export default function Logo({ dark = false }: { dark?: boolean }) {
           width={600}
           height={193}
           priority
+          sizes="150px"
           className={dark ? "h-10 w-auto sm:h-12" : "h-9 w-auto sm:h-11"}
         />
       </span>

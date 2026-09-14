@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail } from "lucide-react";
 import Logo from "./Logo";
 
@@ -10,9 +11,13 @@ interface CategoryLink {
 export default function Footer({ categories }: { categories: CategoryLink[] }) {
   return (
     <footer className="relative overflow-hidden bg-ink-950 text-cream-100 print:hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-bottom opacity-90"
-        style={{ backgroundImage: "url(/footer/bulbs-bg.jpg)" }}
+      <Image
+        src="/footer/bulbs-bg.jpg"
+        alt=""
+        aria-hidden="true"
+        fill
+        sizes="100vw"
+        className="object-cover object-bottom opacity-90"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink-950/45 via-ink-950/60 to-ink-950/85" />
       <div className="container-page relative grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
