@@ -180,15 +180,28 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
           </div>
           <div className="group flex-1 overflow-hidden">
             <div className="flex w-max animate-marquee items-center gap-10 group-hover:[animation-play-state:paused]">
-              {[...categories, ...categories].map((c, i) => (
+              {categories.map((c) => (
                 <Link
-                  key={`${c.slug}-${i}`}
+                  key={c.slug}
                   href={`/shop/${c.slug}`}
                   className="shrink-0 whitespace-nowrap hover:text-gold-400"
                 >
                   {c.name}
                 </Link>
               ))}
+              {/* Visual-only repeat for the seamless scroll loop; hidden from crawlers/AT so links aren't triplicated in the DOM's semantic content. */}
+              <div className="flex shrink-0 items-center gap-10" aria-hidden="true">
+                {categories.map((c) => (
+                  <Link
+                    key={c.slug}
+                    href={`/shop/${c.slug}`}
+                    tabIndex={-1}
+                    className="shrink-0 whitespace-nowrap hover:text-gold-400"
+                  >
+                    {c.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
           <div className="flex shrink-0 items-center gap-6 pl-4">
