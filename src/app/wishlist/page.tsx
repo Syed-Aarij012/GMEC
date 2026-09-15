@@ -52,7 +52,7 @@ export default function WishlistPage() {
               className="flex flex-col overflow-hidden rounded-2xl border border-line/10 bg-canvas shadow-sm"
             >
               <Link href={`/product/${item.slug}`} className="relative block aspect-square bg-canvas-muted">
-                <Image src={item.image} alt={item.name} fill sizes="25vw" className="object-cover" />
+                <Image src={item.image} alt={item.name} fill unoptimized sizes="25vw" className="object-cover" />
               </Link>
               <div className="flex flex-1 flex-col gap-2 p-4">
                 <Link href={`/product/${item.slug}`} className="line-clamp-2 text-sm font-semibold text-text hover:text-gold-600">

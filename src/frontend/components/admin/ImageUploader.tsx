@@ -133,7 +133,7 @@ export default function ImageUploader({ images, onChange }: Props) {
                 transition={{ duration: 0.2 }}
                 className="group relative aspect-square overflow-hidden rounded-xl bg-canvas-muted"
               >
-                <Image src={img} alt={`Product image ${i + 1}`} fill sizes="120px" className="object-cover" />
+                <Image src={img} alt={`Product image ${i + 1}`} fill unoptimized sizes="120px" className="object-cover" />
 
                 <div className="absolute inset-x-1 top-1 flex items-start justify-between">
                   {i === 0 ? (

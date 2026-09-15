@@ -25,6 +25,7 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
               alt={name}
               fill
               priority
+              unoptimized
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover"
             />
@@ -44,7 +45,7 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
                 active === i ? "ring-gold-500" : "ring-transparent"
               )}
             >
-              <Image src={img} alt={`${name} thumbnail ${i + 1}`} fill sizes="56px" className="object-cover" />
+              <Image src={img} alt={`${name} thumbnail ${i + 1}`} fill unoptimized sizes="56px" className="object-cover" />
             </motion.button>
           ))}
         </div>

@@ -58,7 +58,7 @@ export default async function AdminProductsPage() {
                   <AnimatedTableRow key={product.id}>
                     <td className="flex items-center gap-3 px-4 py-3">
                       <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-canvas-muted ring-1 ring-line/10">
-                        <Image src={getProductImages(product.images)[0]} alt={product.name} fill sizes="44px" className="object-cover" />
+                        <Image src={getProductImages(product.images)[0]} alt={product.name} fill unoptimized sizes="44px" className="object-cover" />
                       </div>
                       <div>
                         <p className="font-medium text-text">{product.name}</p>

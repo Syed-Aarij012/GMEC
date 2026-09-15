@@ -88,7 +88,7 @@ export default function CartPage() {
               className="flex gap-4 rounded-2xl border border-line/10 p-4"
             >
               <Link href={`/product/${item.slug}`} className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-canvas-muted">
-                <Image src={item.image} alt={item.name} fill sizes="96px" className="object-cover" />
+                <Image src={item.image} alt={item.name} fill unoptimized sizes="96px" className="object-cover" />
               </Link>
               <div className="flex flex-1 flex-col justify-between">
                 <div className="flex items-start justify-between gap-3">
