@@ -105,3 +105,14 @@ Deploys cleanly to Vercel. Before deploying:
    env vars in your hosting provider's environment settings.
 3. Add a Stripe webhook endpoint pointing at `https://yourdomain.com/api/webhooks/stripe`
    for the `checkout.session.completed` event.
+
+After deploying the blog migration, sync the intended published posts to the
+production database once:
+
+```bash
+npm run db:seed:blog
+```
+
+This command removes blog posts not listed in
+`prisma/import/seed-blog-posts.js` and upserts the listed posts. Run it with the
+production `DATABASE_URL`, not the local database URL.
