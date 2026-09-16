@@ -208,6 +208,9 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
             <Link href="/about" className="whitespace-nowrap hover:text-gold-400">
               About Us
             </Link>
+            <Link href="/blog" className="whitespace-nowrap hover:text-gold-400">
+              Blog
+            </Link>
             <Link href="/contact" className="whitespace-nowrap hover:text-gold-400">
               Contact Us
             </Link>
@@ -281,6 +284,9 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
               ))}
               <Link href="/about" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 hover:bg-canvas-muted">
                 About Us
+              </Link>
+              <Link href="/blog" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 hover:bg-canvas-muted">
+                Blog
               </Link>
               <Link href="/contact" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 hover:bg-canvas-muted">
                 Contact Us

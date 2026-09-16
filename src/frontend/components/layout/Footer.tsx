@@ -81,6 +81,11 @@ export default function Footer({ categories }: { categories: CategoryLink[] }) {
               </Link>
             </li>
             <li>
+              <Link href="/blog" className="hover:text-gold-400">
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link href="/account" className="hover:text-gold-400">
                 Track My Order
               </Link>

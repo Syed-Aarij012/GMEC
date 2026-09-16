@@ -63,6 +63,16 @@ export const productSchema = z.object({
   images: z.array(z.string()).optional(),
 });
 
+export const blogPostSchema = z.object({
+  title: z.string().min(2, "Enter a title"),
+  slug: z.string().min(2, "Enter a URL slug"),
+  excerpt: z.string().min(10, "Enter a short excerpt"),
+  content: z.string().min(20, "Enter the post content"),
+  coverImage: z.string().min(1, "Add a cover image"),
+  author: z.string().min(1).optional(),
+  published: z.boolean(),
+});
+
 export const categorySchema = z.object({
   name: z.string().min(2, "Enter a category name"),
   slug: z.string().min(2, "Enter a URL slug"),
