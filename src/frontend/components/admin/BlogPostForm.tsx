@@ -1,15 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import type { BlogPost } from "@prisma/client";
-import { Save, Loader2 } from "lucide-react";
+import { Save, Loader2, Link2, X } from "lucide-react";
 import { slugify } from "@/frontend/lib/utils";
 import ImageUploader from "@/frontend/components/admin/ImageUploader";
 
 interface Props {
   post?: BlogPost;
+}
+
+interface LinkOption {
+  label: string;
+  url: string;
 }
 
 export default function BlogPostForm({ post }: Props) {
@@ -27,9 +32,49 @@ export default function BlogPostForm({ post }: Props) {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const contentRef = useRef<HTMLTextAreaElement>(null);
+  const [linkOptions, setLinkOptions] = useState<LinkOption[]>([]);
+  const [linkPicker, setLinkPicker] = useState<{ start: number; end: number; text: string; url: string } | null>(null);
+
+  useEffect(() => {
+    fetch("/api/admin/blog/link-options")
+      .then((res) => res.json())
+      .then((data) => setLinkOptions(data.options ?? []))
+      .catch(() => {});
+  }, []);
+
   function handleTitleChange(value: string) {
     setTitle(value);
     if (!slugTouched) setSlug(slugify(value));
+  }
+
+  function openLinkPicker() {
+    const el = contentRef.current;
+    if (!el) return;
+    const { selectionStart: start, selectionEnd: end } = el;
+    if (start === end) {
+      setError("Select the words you want to turn into a link first, then click Insert Link.");
+      return;
+    }
+    setError(null);
+    setLinkPicker({ start, end, text: content.slice(start, end), url: "" });
+  }
+
+  function confirmLinkPicker() {
+    if (!linkPicker) return;
+    const { start, end, text, url } = linkPicker;
+    if (!url.trim()) return;
+    const markdown = `[${text}](${url.trim()})`;
+    const next = content.slice(0, start) + markdown + content.slice(end);
+    setContent(next);
+    setLinkPicker(null);
+    requestAnimationFrame(() => {
+      const el = contentRef.current;
+      if (!el) return;
+      el.focus();
+      const cursor = start + markdown.length;
+      el.setSelectionRange(cursor, cursor);
+    });
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -93,7 +138,25 @@ export default function BlogPostForm({ post }: Props) {
             />
           </Field>
           <Field label="Content" className="mt-4">
-            <textarea required rows={16} value={content} onChange={(e) => setContent(e.target.value)} className={inputClass} />
+            <div className="mb-2 flex items-center justify-between">
+              <p className="text-xs text-text/50">Select some text below, then click Insert Link to make it clickable.</p>
+              <button
+                type="button"
+                onClick={openLinkPicker}
+                className="flex shrink-0 items-center gap-1.5 rounded-lg border border-line/15 px-3 py-1.5 text-xs font-semibold text-text hover:border-gold-500 hover:text-gold-600"
+              >
+                <Link2 className="h-3.5 w-3.5" />
+                Insert Link
+              </button>
+            </div>
+            <textarea
+              ref={contentRef}
+              required
+              rows={16}
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              className={inputClass}
+            />
           </Field>
         </Card>
       </div>
@@ -136,6 +199,56 @@ export default function BlogPostForm({ post }: Props) {
           </motion.button>
         </Card>
       </div>
+
+      {linkPicker && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => setLinkPicker(null)}>
+          <div
+            className="w-full max-w-md rounded-2xl border border-line/10 bg-canvas p-5 shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mb-4 flex items-center justify-between">
+              <h3 className="text-sm font-bold text-text">Insert Link</h3>
+              <button type="button" onClick={() => setLinkPicker(null)} className="text-text/50 hover:text-text">
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+
+            <Field label="Link text">
+              <input
+                value={linkPicker.text}
+                onChange={(e) => setLinkPicker({ ...linkPicker, text: e.target.value })}
+                className={inputClass}
+              />
+            </Field>
+
+            <Field label="Link to" className="mt-4">
+              <input
+                list="blog-link-options"
+                autoFocus
+                value={linkPicker.url}
+                onChange={(e) => setLinkPicker({ ...linkPicker, url: e.target.value })}
+                placeholder="/shop/cool-white-led-bulbs or https://..."
+                className={inputClass}
+              />
+              <datalist id="blog-link-options">
+                {linkOptions.map((opt) => (
+                  <option key={opt.url} value={opt.url} label={opt.label} />
+                ))}
+              </datalist>
+              <p className="mt-1.5 text-xs text-text/50">Start typing to pick a page on the site, or paste a full URL.</p>
+            </Field>
+
+            <button
+              type="button"
+              onClick={confirmLinkPicker}
+              disabled={!linkPicker.url.trim()}
+              className="mt-5 w-full rounded-full bg-ink-900 px-6 py-2.5 text-sm font-bold text-white transition-colors hover:bg-gold-600 hover:text-ink-950 disabled:opacity-40"
+            >
+              Insert
+            </button>
+          </div>
+        </div>
+      )}
     </form>
   );
 }
