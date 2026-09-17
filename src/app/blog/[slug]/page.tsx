@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -26,30 +27,74 @@ function formatDate(date: Date) {
   return new Date(date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 }
 
+// Parses "[text](url)" markdown-lite links inside a block of text into
+// real <Link>/<a> elements, leaving the rest as plain text.
+const LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+function renderInline(text: string) {
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+
+  LINK_PATTERN.lastIndex = 0;
+  while ((match = LINK_PATTERN.exec(text))) {
+    const [full, label, href] = match;
+    if (match.index > lastIndex) {
+      nodes.push(text.slice(lastIndex, match.index));
+    }
+    if (href.startsWith("/")) {
+      nodes.push(
+        <Link key={key++} href={href} className="font-medium text-primary underline underline-offset-2 hover:text-primary/80">
+          {label}
+        </Link>
+      );
+    } else {
+      nodes.push(
+        <a
+          key={key++}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-primary underline underline-offset-2 hover:text-primary/80"
+        >
+          {label}
+        </a>
+      );
+    }
+    lastIndex = match.index + full.length;
+  }
+  if (lastIndex < text.length) {
+    nodes.push(text.slice(lastIndex));
+  }
+  return nodes;
+}
+
 // Lightweight markdown-lite: "## " / "### " lines become headings, blank
-// lines separate paragraphs. Keeps BlogPost.content a plain text field
-// (no HTML/markdown renderer dependency) while still supporting the
-// section structure long-form guides need.
+// lines separate paragraphs, "[text](url)" becomes a link. Keeps
+// BlogPost.content a plain text field (no HTML/markdown renderer
+// dependency) while still supporting the section structure and internal
+// linking long-form guides need.
 function renderContent(content: string) {
   const blocks = content.split(/\n+/).filter(Boolean);
   return blocks.map((block, i) => {
     if (block.startsWith("### ")) {
       return (
         <h3 key={i} className="mb-4 mt-8 text-xl font-bold text-text">
-          {block.slice(4)}
+          {renderInline(block.slice(4))}
         </h3>
       );
     }
     if (block.startsWith("## ")) {
       return (
         <h2 key={i} className="mb-4 mt-10 text-2xl font-extrabold text-text">
-          {block.slice(3)}
+          {renderInline(block.slice(3))}
         </h2>
       );
     }
     return (
       <p key={i} className="mb-5 leading-relaxed text-text/80">
-        {block}
+        {renderInline(block)}
       </p>
     );
   });
