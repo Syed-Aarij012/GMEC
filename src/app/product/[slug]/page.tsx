@@ -172,6 +172,14 @@ export default async function ProductPage({
             </p>
           </div>
 
+          <p className="mt-4 text-xs text-text/50">
+            Sold and shipped by{" "}
+            <Link href="https://www.gmeccorporation.com/" className="font-medium text-text/70 underline underline-offset-2 hover:text-gold-600">
+              GMEC Corporation
+            </Link>
+            .
+          </p>
+
         </Reveal>
       </div>
 

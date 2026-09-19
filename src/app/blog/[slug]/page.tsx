@@ -31,7 +31,31 @@ function formatDate(date: Date) {
 // real <Link>/<a> elements, leaving the rest as plain text.
 const LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/g;
 
-function renderInline(text: string) {
+// Auto-links the first mention of the brand name in a post to the homepage.
+// `state` is shared across every block of a single post so only the very
+// first occurrence in the whole article gets linked, however many times
+// the phrase appears.
+const BRAND_PATTERN = /gmec corporation/i;
+
+function linkifyBrandMention(text: string, state: { linked: boolean }): ReactNode[] {
+  if (state.linked) return [text];
+  const match = BRAND_PATTERN.exec(text);
+  if (!match) return [text];
+  state.linked = true;
+  const start = match.index;
+  const end = start + match[0].length;
+  const before = text.slice(0, start);
+  const after = text.slice(end);
+  return [
+    ...(before ? [before] : []),
+    <Link key="brand-mention" href="https://www.gmeccorporation.com/" className="font-medium text-primary underline underline-offset-2 hover:text-primary/80">
+      {match[0]}
+    </Link>,
+    ...(after ? [after] : []),
+  ];
+}
+
+function renderInline(text: string, brandState: { linked: boolean }) {
   const nodes: ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
@@ -67,7 +91,10 @@ function renderInline(text: string) {
   if (lastIndex < text.length) {
     nodes.push(text.slice(lastIndex));
   }
-  return nodes;
+
+  // Only plain-text segments are eligible: text already turned into a
+  // manual link above is left alone so we never nest an <a> inside an <a>.
+  return nodes.flatMap((node) => (typeof node === "string" ? linkifyBrandMention(node, brandState) : node));
 }
 
 // Lightweight markdown-lite: "## " / "### " lines become headings, blank
@@ -77,24 +104,28 @@ function renderInline(text: string) {
 // linking long-form guides need.
 function renderContent(content: string) {
   const blocks = content.split(/\n+/).filter(Boolean);
+  // Shared across every paragraph in this post so only the first mention
+  // of the brand name in the body copy is linked, not headings.
+  const brandState = { linked: false };
+  const headingState = { linked: true };
   return blocks.map((block, i) => {
     if (block.startsWith("### ")) {
       return (
         <h3 key={i} className="mb-4 mt-8 text-xl font-bold text-text">
-          {renderInline(block.slice(4))}
+          {renderInline(block.slice(4), headingState)}
         </h3>
       );
     }
     if (block.startsWith("## ")) {
       return (
         <h2 key={i} className="mb-4 mt-10 text-2xl font-extrabold text-text">
-          {renderInline(block.slice(3))}
+          {renderInline(block.slice(3), headingState)}
         </h2>
       );
     }
     return (
       <p key={i} className="mb-5 leading-relaxed text-text/80">
-        {renderInline(block)}
+        {renderInline(block, brandState)}
       </p>
     );
   });

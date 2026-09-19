@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PolicyLayout, { PolicySection } from "@/frontend/components/policy/PolicyLayout";
 
 export const metadata: Metadata = { title: "Payment Policy", alternates: { canonical: "/payment-policy" } };
@@ -7,7 +8,7 @@ export default function PaymentPolicyPage() {
   return (
     <PolicyLayout title="Payment Policy" updated="4 September 2026">
       <p>
-        At GMEC Corporation, we are committed to providing a safe and
+        At <Link href="https://www.gmeccorporation.com/">GMEC Corporation</Link>, we are committed to providing a safe and
         reliable shopping experience. This Payment Policy explains how
         payments are handled on our website. By placing an order, you agree
         to the terms outlined below.

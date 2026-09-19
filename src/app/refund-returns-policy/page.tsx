@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PolicyLayout, { PolicySection } from "@/frontend/components/policy/PolicyLayout";
 
 export const metadata: Metadata = { title: "Refund & Returns Policy", alternates: { canonical: "/refund-returns-policy" } };
@@ -7,7 +8,7 @@ export default function RefundReturnsPolicyPage() {
   return (
     <PolicyLayout title="Refund &amp; Returns Policy" updated="4 September 2026">
       <p>
-        At GMEC Corporation, we want you to be fully satisfied with every
+        At <Link href="https://www.gmeccorporation.com/">GMEC Corporation</Link>, we want you to be fully satisfied with every
         purchase. This Refund and Returns Policy outlines the terms under
         which you may return products and request a refund. By shopping with
         us, you agree to the conditions explained below.

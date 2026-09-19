@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PolicyLayout, { PolicySection } from "@/frontend/components/policy/PolicyLayout";
 
 export const metadata: Metadata = { title: "Privacy Policy", alternates: { canonical: "/privacy-policy" } };
@@ -7,7 +8,7 @@ export default function PrivacyPolicyPage() {
   return (
     <PolicyLayout title="Privacy Policy" updated="4 September 2026">
       <p>
-        At GMEC Corporation, we respect your privacy and are committed to
+        At <Link href="https://www.gmeccorporation.com/">GMEC Corporation</Link>, we respect your privacy and are committed to
         protecting your personal information. This Privacy Policy explains
         how we collect, use, and safeguard the data you provide when using
         our website. By accessing or purchasing from our site, you agree to

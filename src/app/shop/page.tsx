@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { prisma } from "@/backend/lib/prisma";
 import { getFilteredProducts, buildShopCanonical, type ShopSearchParams } from "@/backend/lib/shop";
 import CategorySidebar from "@/frontend/components/shop/CategorySidebar";
@@ -58,6 +59,13 @@ export default async function ShopPage({
           </p>
         )}
         <p className="mt-3 text-text/60">{total} products</p>
+        <p className="mt-1 text-xs text-text/50">
+          Curated and supplied by{" "}
+          <Link href="https://www.gmeccorporation.com/" className="font-medium text-text/70 underline underline-offset-2 hover:text-gold-600">
+            GMEC Corporation
+          </Link>
+          .
+        </p>
       </Reveal>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[240px_1fr]">

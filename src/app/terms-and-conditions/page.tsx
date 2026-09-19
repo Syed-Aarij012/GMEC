@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PolicyLayout, { PolicySection } from "@/frontend/components/policy/PolicyLayout";
 
 export const metadata: Metadata = { title: "Terms & Conditions", alternates: { canonical: "/terms-and-conditions" } };
@@ -7,7 +8,7 @@ export default function TermsAndConditionsPage() {
   return (
     <PolicyLayout title="Terms &amp; Conditions" updated="4 September 2026">
       <p>
-        Welcome to GMEC Corporation. These Terms and Conditions govern the
+        Welcome to <Link href="https://www.gmeccorporation.com/">GMEC Corporation</Link>. These Terms and Conditions govern the
         use of our website and the purchase of products through our online
         store. By accessing or using our site, you agree to comply with the
         terms outlined below.

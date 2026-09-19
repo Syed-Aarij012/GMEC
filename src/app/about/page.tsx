@@ -48,7 +48,7 @@ export default function AboutPage() {
             Lighting solutions built for real homes and real projects
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-cream-100/70">
-            GMEC Corporation supplies LED lighting, fittings and smart home
+            <Link href="https://www.gmeccorporation.com/">GMEC Corporation</Link> supplies LED lighting, fittings and smart home
             gadgets to homeowners and trade professionals across the UK ,
             combining everyday essentials with the latest connected tech.
           </p>
