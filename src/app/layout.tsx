@@ -4,6 +4,7 @@ import "./globals.css";
 import SiteChrome from "@/frontend/components/layout/SiteChrome";
 import AuthSessionProvider from "@/frontend/components/providers/AuthSessionProvider";
 import ThemeScript from "@/frontend/components/providers/ThemeScript";
+import MetaPixel from "@/frontend/components/providers/MetaPixel";
 import { prisma } from "@/backend/lib/prisma";
 import { getSiteUrl } from "@/backend/lib/site";
 
@@ -66,6 +67,7 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <ThemeScript />
+        <MetaPixel />
         <AuthSessionProvider>
           <SiteChrome categories={categories}>{children}</SiteChrome>
         </AuthSessionProvider>
