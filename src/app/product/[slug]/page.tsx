@@ -129,7 +129,7 @@ export default async function ProductPage({
           </div>
           <p className="mt-1 text-xs text-text/50">Inc. VAT</p>
 
-          <p className="mt-6 leading-relaxed text-text/70">{product.description}</p>
+          <p className="mt-6 whitespace-pre-line leading-relaxed text-text/70">{product.description}</p>
 
           <ul className="mt-6 space-y-2 text-sm text-text/80">
             {keyFeatures.map((feature) => (
@@ -186,7 +186,7 @@ export default async function ProductPage({
       <div className="mx-auto mt-16 max-w-3xl">
         <Reveal>
           <h2 className="mb-4 text-2xl font-extrabold text-text">Product Description</h2>
-          <p className="leading-relaxed text-text/70">{product.description}</p>
+          <p className="whitespace-pre-line leading-relaxed text-text/70">{product.description}</p>
         </Reveal>
 
         <Reveal delay={0.05} className="mt-6">
