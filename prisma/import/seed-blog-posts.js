@@ -271,7 +271,7 @@ Published by GMEC Corporation, London. Visit gmeccorporation.com for the full ra
     title: "GU10 Downlights Buying Guide: Sizes, Brightness and Fitting for UK Homes",
     excerpt:
       "Complete GU10 downlights UK buying guide. Learn sizes, brightness levels, fire-rated options, and fitting types. GMEC explains recessed downlights for every room.",
-    coverImage: "/hero/gu10-lights.webp",
+    coverImage: "/uploads/products/die_cast_downlight_revised-gold.webp",
     author: "GMEC Team",
     content: `When you're looking to upgrade your home lighting, GU10 downlights are one of the best investments you can make. They're modern, efficient, and transform how your space looks and feels. But choosing the right ones isn't straightforward. You need to understand sizes, brightness levels, fitting types, and whether fire-rated options are necessary for your space.
 

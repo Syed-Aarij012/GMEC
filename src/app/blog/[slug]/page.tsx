@@ -217,10 +217,9 @@ export default async function BlogPostPage({
     return (
       <div>
         {jsonLd}
-        <header className="relative isolate overflow-hidden bg-neutral-900">
-          <Image src={post.coverImage} alt="" fill unoptimized priority sizes="100vw" className="-z-10 object-cover opacity-40" />
-          <div className="container-page py-14 sm:py-20">
-            <Reveal className="max-w-3xl">
+        <header className="bg-neutral-900">
+          <div className="container-page grid items-center gap-10 py-14 sm:py-20 lg:grid-cols-[1fr_380px]">
+            <Reveal>
               <div className="mb-5 flex items-center gap-1.5 text-sm text-white/60">
                 <Link href="/blog" className="hover:text-gold-400">
                   Blog
@@ -244,6 +243,9 @@ export default async function BlogPostPage({
                   <Clock className="h-3.5 w-3.5" /> {minutes} min read
                 </span>
               </div>
+            </Reveal>
+            <Reveal delay={0.1} className="relative mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-2xl bg-white shadow-2xl lg:max-w-none">
+              <Image src={post.coverImage} alt={post.title} fill unoptimized priority sizes="(max-width: 1024px) 384px, 380px" className="object-cover" />
             </Reveal>
           </div>
         </header>
