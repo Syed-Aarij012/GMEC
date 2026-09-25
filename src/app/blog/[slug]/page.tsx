@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ChevronRight, CalendarDays, User } from "lucide-react";
+import { ChevronRight, CalendarDays, Clock, User } from "lucide-react";
 import { prisma } from "@/backend/lib/prisma";
 import { getSiteUrl } from "@/backend/lib/site";
 import Reveal from "@/frontend/components/motion/Reveal";
@@ -102,7 +102,21 @@ function renderInline(text: string, brandState: { linked: boolean }) {
 // BlogPost.content a plain text field (no HTML/markdown renderer
 // dependency) while still supporting the section structure and internal
 // linking long-form guides need.
-function renderContent(content: string) {
+function slugifyHeading(text: string) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+// Posts listed here render with the "guide" layout: a full-width cover hero,
+// a sticky "In this guide" contents list, numbered section headings and a
+// closing call-to-action card. Every other post keeps the classic layout.
+const GUIDE_LAYOUT: Record<string, { ctaHref: string; ctaLabel: string }> = {
+  "gu10-downlights-buying-guide-sizes-brightness-fitting": {
+    ctaHref: "/shop/gu10-downlights",
+    ctaLabel: "Shop GU10 downlights",
+  },
+};
+
+function renderContent(content: string, guide = false) {
   const blocks = content.split(/\n+/).filter(Boolean);
   // Shared across every paragraph in this post so only the first mention
   // of the brand name in the body copy is linked, not headings.
@@ -117,9 +131,21 @@ function renderContent(content: string) {
       );
     }
     if (block.startsWith("## ")) {
+      const title = block.slice(3);
+      if (guide) {
+        return (
+          <h2
+            key={i}
+            id={slugifyHeading(title)}
+            className="mb-4 mt-12 scroll-mt-24 border-l-4 border-gold-500 pl-4 text-2xl font-extrabold text-text"
+          >
+            {renderInline(title, headingState)}
+          </h2>
+        );
+      }
       return (
         <h2 key={i} className="mb-4 mt-10 text-2xl font-extrabold text-text">
-          {renderInline(block.slice(3), headingState)}
+          {renderInline(title, headingState)}
         </h2>
       );
     }
@@ -170,6 +196,103 @@ export default async function BlogPostPage({
       "@id": articleUrl,
     },
   };
+
+  const guide = GUIDE_LAYOUT[post.slug];
+  const jsonLd = (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
+
+  if (guide) {
+    const toc = post.content
+      .split(/\n+/)
+      .filter((l) => l.startsWith("## "))
+      .map((l) => l.slice(3));
+    const minutes = Math.max(1, Math.round(post.content.split(/\s+/).length / 220));
+
+    return (
+      <div>
+        {jsonLd}
+        <header className="relative isolate overflow-hidden bg-neutral-900">
+          <Image src={post.coverImage} alt="" fill unoptimized priority sizes="100vw" className="-z-10 object-cover opacity-40" />
+          <div className="container-page py-14 sm:py-20">
+            <Reveal className="max-w-3xl">
+              <div className="mb-5 flex items-center gap-1.5 text-sm text-white/60">
+                <Link href="/blog" className="hover:text-gold-400">
+                  Blog
+                </Link>
+                <ChevronRight className="h-3.5 w-3.5" />
+                <span>Buying guide</span>
+              </div>
+              <span className="inline-block rounded-full bg-gold-500 px-3 py-1 text-xs font-bold uppercase tracking-wider text-black">
+                Buying guide
+              </span>
+              <h1 className="mt-4 text-3xl font-extrabold text-white sm:text-5xl">{post.title}</h1>
+              <p className="mt-4 text-base text-white/75 sm:text-lg">{post.excerpt}</p>
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-white/60">
+                <span className="flex items-center gap-1.5">
+                  <User className="h-3.5 w-3.5" /> {post.author}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CalendarDays className="h-3.5 w-3.5" /> {formatDate(post.createdAt)}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Clock className="h-3.5 w-3.5" /> {minutes} min read
+                </span>
+              </div>
+            </Reveal>
+          </div>
+        </header>
+
+        <div className="container-page grid gap-10 py-12 lg:grid-cols-[260px_1fr]">
+          <aside className="lg:sticky lg:top-24 lg:self-start">
+            <nav aria-label="In this guide" className="rounded-2xl border border-line/10 bg-canvas-muted p-5">
+              <p className="mb-3 text-xs font-bold uppercase tracking-wider text-text/50">In this guide</p>
+              <ol className="space-y-2 text-sm">
+                {toc.map((t, n) => (
+                  <li key={t} className="flex gap-2">
+                    <span className="font-bold text-gold-600">{n + 1}.</span>
+                    <a href={`#${slugifyHeading(t)}`} className="text-text/70 hover:text-gold-600">
+                      {t}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </aside>
+
+          <article className="max-w-3xl">
+            <Reveal>{renderContent(post.content, true)}</Reveal>
+
+            <Reveal className="mt-12 rounded-2xl bg-neutral-900 p-8 text-white">
+              <h2 className="text-2xl font-extrabold">Ready to choose your lights?</h2>
+              <p className="mt-2 text-white/70">
+                Free UK delivery over £100, 14-day returns and 24/7 support. Not sure whether you need fire-rated? Ask our team.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href={guide.ctaHref} className="rounded-full bg-gold-500 px-5 py-2.5 text-sm font-bold text-black hover:bg-gold-400">
+                  {guide.ctaLabel}
+                </Link>
+                <Link href="/contact" className="rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold hover:bg-white/10">
+                  Contact our team
+                </Link>
+              </div>
+            </Reveal>
+
+            <div className="mt-10 border-t border-line/10 pt-6">
+              <Link href="/blog" className="text-sm font-semibold text-gold-600 hover:text-gold-700">
+                ← Back to all posts
+              </Link>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container-page py-10">
