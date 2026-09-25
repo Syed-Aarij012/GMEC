@@ -23,6 +23,7 @@ export default function ProductForm({ categories, product }: Props) {
   const [slugTouched, setSlugTouched] = useState(isEdit);
   const [sku, setSku] = useState(product?.sku ?? "");
   const [description, setDescription] = useState(product?.description ?? "");
+  const [shortDescription, setShortDescription] = useState(product?.shortDescription ?? "");
   const [price, setPrice] = useState(product?.price?.toString() ?? "");
   const [compareAtPrice, setCompareAtPrice] = useState(product?.compareAtPrice?.toString() ?? "");
   const [categoryId, setCategoryId] = useState(product?.categoryId ?? categories[0]?.id ?? "");
@@ -50,6 +51,7 @@ export default function ProductForm({ categories, product }: Props) {
       slug,
       sku,
       description,
+      shortDescription: shortDescription || null,
       price: parseFloat(price),
       compareAtPrice: compareAtPrice ? parseFloat(compareAtPrice) : null,
       categoryId,
@@ -112,7 +114,10 @@ export default function ProductForm({ categories, product }: Props) {
               </select>
             </Field>
           </div>
-          <Field label="Description" className="mt-4">
+          <Field label="Short description (shown beside the product image; one line, or bullet points starting with •)" className="mt-4">
+            <textarea rows={4} value={shortDescription} onChange={(e) => setShortDescription(e.target.value)} className={inputClass} />
+          </Field>
+          <Field label="Full description (shown in the Product Description section)" className="mt-4">
             <textarea required rows={4} value={description} onChange={(e) => setDescription(e.target.value)} className={inputClass} />
           </Field>
         </Card>

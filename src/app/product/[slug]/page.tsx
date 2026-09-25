@@ -129,7 +129,7 @@ export default async function ProductPage({
           </div>
           <p className="mt-1 text-xs text-text/50">Inc. VAT</p>
 
-          <p className="mt-6 whitespace-pre-line leading-relaxed text-text/70">{product.description}</p>
+          <p className="mt-6 whitespace-pre-line leading-relaxed text-text/70">{product.shortDescription || product.description}</p>
 
           <ul className="mt-6 space-y-2 text-sm text-text/80">
             {keyFeatures.map((feature) => (

@@ -21,6 +21,7 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
       slug: data.slug,
       sku: data.sku,
       description: data.description,
+      shortDescription: data.shortDescription?.trim() || null,
       price: data.price,
       compareAtPrice: data.compareAtPrice ?? null,
       categoryId: data.categoryId,

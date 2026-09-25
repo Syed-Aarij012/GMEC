@@ -34,16 +34,16 @@ model User {
 }
 
 model Address {
-  id       String  @id @default(cuid())
-  userId   String
-  user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-  fullName String
-  line1    String
-  line2    String?
-  city     String
-  postcode String
-  country  String  @default("United Kingdom")
-  phone    String?
+  id        String  @id @default(cuid())
+  userId    String
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fullName  String
+  line1     String
+  line2     String?
+  city      String
+  postcode  String
+  country   String  @default("United Kingdom")
+  phone     String?
   isDefault Boolean @default(false)
 }
 
@@ -60,28 +60,29 @@ model Category {
 }
 
 model Product {
-  id              String      @id @default(cuid())
-  slug            String      @unique
-  name            String
-  description     String
-  price           Float
-  compareAtPrice  Float?
-  images          String
-  stock           Int         @default(100)
-  featured        Boolean     @default(false)
-  fitting         String?
-  wattage         String?
-  colour          String?
-  sku             String      @unique
-  weightLbs       Float?
-  lengthIn        Float?
-  widthIn         Float?
-  heightIn        Float?
-  categoryId      String
-  category        Category    @relation(fields: [categoryId], references: [id])
-  orderItems      OrderItem[]
-  reviews         Review[]
-  createdAt       DateTime    @default(now())
+  id               String      @id @default(cuid())
+  slug             String      @unique
+  name             String
+  description      String
+  shortDescription String?
+  price            Float
+  compareAtPrice   Float?
+  images           String
+  stock            Int         @default(100)
+  featured         Boolean     @default(false)
+  fitting          String?
+  wattage          String?
+  colour           String?
+  sku              String      @unique
+  weightLbs        Float?
+  lengthIn         Float?
+  widthIn          Float?
+  heightIn         Float?
+  categoryId       String
+  category         Category    @relation(fields: [categoryId], references: [id])
+  orderItems       OrderItem[]
+  reviews          Review[]
+  createdAt        DateTime    @default(now())
 }
 
 model Review {
@@ -96,27 +97,27 @@ model Review {
 }
 
 model Order {
-  id              String      @id @default(cuid())
-  userId          String?
-  user            User?       @relation(fields: [userId], references: [id])
-  guestEmail      String?
-  status          OrderStatus @default(PENDING)
-  subtotal        Float
-  shippingCost    Float
-  total           Float
-  shippingName    String
-  shippingLine1   String
-  shippingLine2   String?
-  shippingCity    String
-  shippingPostcode String
-  shippingCountry String      @default("United Kingdom")
-  shippingPhone   String?
-  stripeSessionId String?     @unique
-  paypalOrderId   String?     @unique
-  royalMailOrderId       String? @unique
+  id                      String      @id @default(cuid())
+  userId                  String?
+  user                    User?       @relation(fields: [userId], references: [id])
+  guestEmail              String?
+  status                  OrderStatus @default(PENDING)
+  subtotal                Float
+  shippingCost            Float
+  total                   Float
+  shippingName            String
+  shippingLine1           String
+  shippingLine2           String?
+  shippingCity            String
+  shippingPostcode        String
+  shippingCountry         String      @default("United Kingdom")
+  shippingPhone           String?
+  stripeSessionId         String?     @unique
+  paypalOrderId           String?     @unique
+  royalMailOrderId        String?     @unique
   royalMailTrackingNumber String?
-  items           OrderItem[]
-  createdAt       DateTime    @default(now())
+  items                   OrderItem[]
+  createdAt               DateTime    @default(now())
 }
 
 model OrderItem {

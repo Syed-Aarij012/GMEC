@@ -24,6 +24,7 @@ export async function POST(req: Request) {
         slug: data.slug,
         sku: data.sku,
         description: data.description,
+        shortDescription: data.shortDescription?.trim() || null,
         price: data.price,
         compareAtPrice: data.compareAtPrice ?? null,
         categoryId: data.categoryId,

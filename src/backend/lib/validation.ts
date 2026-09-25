@@ -52,6 +52,7 @@ export const productSchema = z.object({
   slug: z.string().min(2, "Enter a URL slug"),
   sku: z.string().min(2, "Enter a SKU"),
   description: z.string().min(10, "Enter a description"),
+  shortDescription: z.string().optional().nullable(),
   price: z.number().positive("Price must be greater than 0"),
   compareAtPrice: z.number().positive().optional().nullable(),
   categoryId: z.string().min(1, "Choose a category"),
