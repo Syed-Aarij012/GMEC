@@ -2,6 +2,8 @@ export interface CategoryContentSection {
   heading?: string;
   paragraphs: string[];
   list?: string[];
+  /** Further blocks rendered in order after paragraphs/list. */
+  more?: { paragraphs?: string[]; list?: string[] }[];
 }
 
 export interface CategorySeo {
@@ -144,43 +146,108 @@ export const categorySeo: Record<string, CategorySeo> = {
   },
   "led-ceiling-lights": {
     h1: "LED Ceiling Lights",
-    title: "LED Ceiling Lights UK | Surface Mounted & Panel Lights | GMEC",
+    title: "LED Ceiling Lights in UK | Recessed Panel & Surface Mounted | GMEC Corporation",
     description:
-      "Shop GMEC's Ceiling Lights LED range, surface mounted lights and recessed panel lights in Cool White and 3 Colours in 1. Free UK delivery over £100.",
+      "LED ceiling lights from GMEC Corporation - surface mounted, recessed panels, backlit & 3 colour CCT. Instant brightness, 80% energy savings, 25,000hr lifespan. Free UK delivery over £100.",
     intro:
-      "GMEC's Ceiling Lights range covers surface mounted fittings and slimmer LED panel lights, including recessed, backlit, and 3 Colours in 1 options. Built for even, reliable everyday lighting in bedrooms, living rooms, kitchens, and offices.",
+      "GMEC Corporation's LED ceiling lights range covers premium surface mounted ceiling light fittings and innovative slimmer LED panel lights, including recessed ceiling lights, backlit LED panels, and 3 Colours in 1 LED ceiling options. Purpose-built for consistent, flicker-free illumination, our LED ceiling lights deliver reliable everyday lighting for bedrooms, living rooms, kitchens, hallways, and offices—with energy efficiency and longevity that traditional halogen and fluorescent fixtures cannot match. Every LED ceiling light in our collection combines instant-on brightness, ultra-long 25,000-hour lifespan, and professional-grade light distribution to transform how you illuminate your spaces.",
     content: [
       {
         heading: "Our Ceiling Lights LED Range",
         paragraphs: [
-          "Ceiling lights are the backbone of any room's lighting, the fitting that does most of the work, day in and day out. GMEC's Ceiling Lights LED range is built around that everyday reliability, combining bright, even illumination with the low running costs and long lifespan that come standard with modern LED lighting.",
-          "The range covers two main styles: surface mounted ceiling lights, which fit flush to the ceiling for a clean, low-profile finish, and LED panel lights, available in recessed, backlit and frame designs for a slimmer, more architectural look. Colour options run from a bright, functional Cool White through to our 3 Colours in 1 panels, which let you switch between warm, neutral and cool white from a single fitting to suit the room and the time of day.",
-          "As with any ceiling fitting, it's worth checking the diameter, cut-out size, and wattage of your existing fixture before ordering, so your replacement fits first time.",
+          "Ceiling lights are the backbone of any room's lighting—the essential fitting that does most of the work, day in and day out. GMEC's LED ceiling lights range is engineered around that principle of everyday reliability, combining brilliantly bright, even illumination with the low running costs and long lifespan that come standard with modern LED lighting technology.",
+          "The range covers two main styles of LED ceiling lights:",
+        ],
+        list: [
+          "**Surface Mounted Ceiling Lights** fit flush to the ceiling for a clean, low-profile finish. These LED ceiling light fittings are ideal for retrofits and quick installations where ceiling recessing isn't possible.",
+          "**LED Panel Lights** are available in recessed, backlit and frame designs for a slimmer, more architectural look. These recessed LED ceiling lights and backlit LED panels are increasingly popular in newer builds and renovated interiors.",
+        ],
+        more: [
+          { paragraphs: [
+            "Colour options run from bright, functional [Cool White](/shop/cool-white-led-bulbs) through to 3 Colours in 1 LED panels, which let you switch between warm, neutral and cool white from a single LED ceiling light fitting to suit the room and time of day.",
+            "**Important:** Before ordering your LED ceiling light replacement, always check the diameter, cut-out size, and wattage of your existing fixture to ensure your new LED ceiling light fits perfectly the first time. [GMEC Corporation](https://www.gmeccorporation.com/) stocks UK's largest range of LED ceiling lights with expert support to help you choose.",
+          ] },
         ],
       },
       {
         heading: "Why Choose LED Ceiling Lighting?",
         paragraphs: [
-          "Good LED ceiling lighting does two things at once: it lights the whole room evenly, and it does so for a fraction of the running cost of an old halogen or fluorescent fitting. Surface mounted fittings are a simple, low-maintenance option for spaces without a suspended ceiling, while panel lights give a sleeker, more even spread of light that's popular in newer builds and renovated interiors alike. Either way, you get instant brightness, a long service life, and none of the flicker or warm-up delay of older ceiling fittings.",
+          "Best LED ceiling lighting does two critical things at once: it lights the whole room evenly, and it does so for a fraction of the running cost of old halogen or fluorescent ceiling light fittings.",
+          "Surface mounted LED ceiling lights are the simple, low-maintenance option for spaces without a suspended ceiling. Installation is straightforward—no cutting required—making these LED ceiling light options perfect for renters and quick home upgrades.",
+          "LED panel lights (both recessed and backlit) give a sleeker, more even spread of light that's increasingly popular in newer builds and fully renovated interiors. Backlit LED ceiling lights deliver particularly refined, glare-free illumination ideal for modern homes and commercial spaces.",
+          "Either way—whether you choose surface-mounted or recessed LED ceiling lights, you benefit from:",
+        ],
+        list: [
+          "✓ Instant brightness (no 2-minute warm-up like old fluorescents)",
+          "✓ Long service life (25,000 hours = 10-15 years typical use)",
+          "✓ Zero flicker (perfect for offices and retail where eye strain matters)",
+          "✓ Cool-to-touch (safe around children and fabric)",
+          "✓ 80% lower energy costs compared to halogen ceiling light fittings",
+        ],
+        more: [
+          { paragraphs: [
+            "Plus: You'll never experience the flickering, warm-up delay, or color degradation that plagues older LED ceiling light alternatives. That's why [GMEC Corporation](https://www.gmeccorporation.com/) recommends upgrading to modern LED ceiling lights for any retrofit or new installation project.",
+          ] },
         ],
       },
       {
         heading: "Where Are LED Ceiling Fixtures Used?",
         paragraphs: [
-          "Ceiling lights are one of the few fittings found in almost every room, but the right style often depends on the space:",
+          "Ceiling lights are one of the few fittings found in almost every room, but the right style of LED ceiling light depends on your specific space:",
         ],
         list: [
-          "Bedroom LED Ceiling Lights: A softer Warm White or a 3 Colours in 1 panel works well here, letting you switch to a calmer tone in the evening and a brighter one for getting ready in the morning.",
-          "Living Room Ceiling Lights LED: Slim panel lights or surface mounted fittings give an even, glare-free spread of light across the whole room, ideal as a main light alongside lamps for softer evening lighting.",
-          "Kitchens: Bright Cool White panels or surface mounted lights give clear, functional light for food prep and cooking.",
-          "Hallways & Landings: Compact surface mounted fittings are a practical, low-profile choice for transitional spaces.",
-          "Offices & Commercial Spaces: Recessed and backlit LED panels give the even, consistent light levels expected in workspaces, meeting rooms, and retail units.",
+          "Bedroom LED Ceiling Lights: A softer [Warm White](/shop/warm-white-led-bulbs) or 3 Colours in 1 LED ceiling panel works exceptionally well here, letting you switch to a calmer tone in the evening and a brighter tone for morning routines. Perfect for creating ambiance while maintaining functionality.",
+          "Living Room Ceiling Lights LED: Slim LED panel lights or surface mounted LED ceiling light fittings give an even, glare-free spread of light across the whole room—ideal as a main light alongside accent lamps for softer evening lighting. Dimmable LED ceiling lights are recommended for maximum flexibility.",
+          "Kitchen LED Ceiling Lights: Bright Cool White panels or surface mounted LED ceiling lights give crystal-clear, functional light for food prep and cooking. Professional kitchens demand high-lumen LED ceiling lights (1620+ lumens) to meet food safety standards.",
+          "Hallways & Landings LED Ceiling Lights: Compact surface mounted LED ceiling light fittings are the practical, low-profile choice for transitional spaces. Cost-effective and reliable, these ceiling light solutions ensure safe navigation 24/7.",
+          "Offices & Commercial Spaces LED Ceiling Lights: Recessed and backlit LED panels give the even, consistent light levels expected in workspaces, meeting rooms, and retail units. Professional LED ceiling lights meeting 500+ lux standards reduce eye strain and boost productivity.",
+          "Retail & Showrooms: Backlit LED ceiling light panels showcase merchandise perfectly with even, shadow-free illumination. Cool White LED ceiling lights (6500K) are industry standard.",
+          "Garages & Workshops: High-output LED ceiling lights (48W+) provide the brightness needed for detailed work and tool safety.",
+        ],
+        more: [
+          { paragraphs: [
+            "GMEC supplies the right LED ceiling light for every application. [Contact our team](/contact) for expert recommendations on which LED ceiling light suits your space best.",
+          ] },
         ],
       },
       {
         heading: "How Much Can You Save with LED Ceiling Lighting?",
         paragraphs: [
-          "Switching from an old halogen or fluorescent ceiling fitting to LED ceiling lighting can cut the energy used for that fitting dramatically, while lasting many times longer before it needs replacing. For a single room that adds up over a year; across a whole home, an office, or a commercial unit with dozens of fittings, the savings, and the reduction in bulb or tube changes, become significant.",
+          "Switching from old halogen or fluorescent ceiling light fittings to LED ceiling lighting can cut energy usage dramatically, while lasting many times longer before replacement.",
+          "**Residential Savings Example:** Replace 10 × 40W Halogen Ceiling Lights with GMEC LED:",
+        ],
+        list: [
+          "Old halogen uses: 438 kWh annually (£122/year)",
+          "GMEC LED uses: 98 kWh annually (£27/year)",
+          "Annual saving: £95 per fitting",
+          "10 bulb changes avoided per year",
+          "10-year total: £1,350+ saved",
+        ],
+        more: [
+          { paragraphs: ["**Commercial/Office Savings Example:** Replace 50 × 40W Fluorescent Ceiling Lights with GMEC LED:"] },
+          { list: [
+            "Old fluorescent: 10,950 kWh annually (£3,066/year)",
+            "GMEC LED: 3,285 kWh annually (£920/year)",
+            "Annual saving: £2,146",
+            "47 bulb replacements eliminated per year",
+            "5-year total: £10,730+ saved",
+          ] },
+          { paragraphs: [
+            "**Why The Savings Add Up So Fast:** For a single room, that's meaningful savings over a year. Across a whole home, an office, or a commercial unit with dozens of LED ceiling light fittings, the savings—and the elimination of bulb changes, become transformative.",
+            "Additional benefits beyond energy savings:",
+          ] },
+          { list: [
+            "✓ Zero maintenance (no bulb replacements for 10+ years)",
+            "✓ Eliminated downtime (LED ceiling lights never flicker or fail suddenly)",
+            "✓ Increased productivity (better lighting = fewer mistakes, less eye strain)",
+            "✓ Professional appearance (modern LED ceiling lights improve ambiance)",
+            "✓ Environmental impact (80% less electricity = significant carbon reduction)",
+          ] },
+          { paragraphs: [
+            "**For businesses:** A typical office with 50 LED ceiling lights recovers its investment in less than 12 months through energy savings alone. For homes with 10 ceiling lights, payback is typically 18-24 months.",
+            "[GMEC Corporation](https://www.gmeccorporation.com/) LED ceiling lights start from just £3.99—with free UK delivery over £100. The savings begin immediately.",
+            "Ready to upgrade? Browse our full range of [LED ceiling lights](/shop/led-ceiling-lights) today. Questions? Call +44 7951 282482 or [contact us here](/contact).",
+          ] },
         ],
       },
     ],
