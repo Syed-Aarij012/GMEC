@@ -7,9 +7,29 @@ import { getProductImages } from "@/frontend/lib/product";
 import DeleteButton from "@/frontend/components/admin/DeleteButton";
 import Reveal from "@/frontend/components/motion/Reveal";
 import { AnimatedTableBody, AnimatedTableRow } from "@/frontend/components/admin/AnimatedTable";
+import ProductSearchBar from "@/frontend/components/admin/ProductSearchBar";
+import type { Prisma } from "@prisma/client";
 
-export default async function AdminProductsPage() {
+export default async function AdminProductsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}) {
+  const { q } = await searchParams;
+
+  const where: Prisma.ProductWhereInput = {};
+  const keywords = q?.trim().split(/\s+/).filter(Boolean) ?? [];
+  if (keywords.length > 0) {
+    where.AND = keywords.map((word) => ({
+      OR: [
+        { name: { contains: word, mode: "insensitive" } },
+        { sku: { contains: word, mode: "insensitive" } },
+      ],
+    }));
+  }
+
   const products = await prisma.product.findMany({
+    where,
     include: { category: true },
     orderBy: { createdAt: "desc" },
   });
@@ -29,16 +49,20 @@ export default async function AdminProductsPage() {
         </Link>
       </Reveal>
 
+      <ProductSearchBar />
+
       {products.length === 0 ? (
         <div className="flex flex-col items-center rounded-2xl border border-dashed border-line/15 bg-canvas py-16 text-center">
           <PackageSearch className="h-10 w-10 text-text/20" />
-          <p className="mt-3 text-text/60">No products yet.</p>
-          <Link
-            href="/admin/products/new"
-            className="mt-4 rounded-full bg-ink-900 px-6 py-2.5 text-sm font-bold text-white hover:bg-gold-600 hover:text-ink-950"
-          >
-            Add your first product
-          </Link>
+          <p className="mt-3 text-text/60">{q ? "No products match this search." : "No products yet."}</p>
+          {!q && (
+            <Link
+              href="/admin/products/new"
+              className="mt-4 rounded-full bg-ink-900 px-6 py-2.5 text-sm font-bold text-white hover:bg-gold-600 hover:text-ink-950"
+            >
+              Add your first product
+            </Link>
+          )}
         </div>
       ) : (
         <div className="overflow-hidden rounded-2xl border border-line/10 bg-canvas shadow-sm">
