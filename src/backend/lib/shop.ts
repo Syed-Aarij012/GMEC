@@ -53,11 +53,14 @@ export async function getFilteredProducts(
   if (params.colour) {
     where.colour = params.colour;
   }
-  if (params.q) {
-    where.OR = [
-      { name: { contains: params.q } },
-      { description: { contains: params.q } },
-    ];
+  const keywords = params.q?.trim().split(/\s+/).filter(Boolean) ?? [];
+  if (keywords.length > 0) {
+    where.AND = keywords.map((word) => ({
+      OR: [
+        { name: { contains: word, mode: "insensitive" } },
+        { description: { contains: word, mode: "insensitive" } },
+      ],
+    }));
   }
 
   const orderBy: Prisma.ProductOrderByWithRelationInput =
