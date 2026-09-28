@@ -89,7 +89,7 @@
   </url>
   <url>
        <loc>https://www.gmeccorporation.com/blog</loc>
-       <lastmod>2026-09-25T00:00:00+00:00</lastmod>
+       <lastmod>2026-09-28T00:00:00+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
@@ -100,6 +100,11 @@
   <url>
        <loc>https://www.gmeccorporation.com/blog/gu10-downlights-buying-guide-sizes-brightness-fitting</loc>
        <lastmod>2026-09-25T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/blog/how-to-install-gu10-downlights-diy-guide</loc>
+       <lastmod>2026-09-28T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
