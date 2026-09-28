@@ -1,9 +1,16 @@
+export interface CategoryTable {
+  caption?: string;
+  headers: string[];
+  rows: string[][];
+}
+
 export interface CategoryContentSection {
   heading?: string;
   paragraphs: string[];
   list?: string[];
+  table?: CategoryTable;
   /** Further blocks rendered in order after paragraphs/list. */
-  more?: { paragraphs?: string[]; list?: string[] }[];
+  more?: { paragraphs?: string[]; list?: string[]; table?: CategoryTable }[];
 }
 
 export interface CategorySeo {
@@ -136,37 +143,45 @@ export const categorySeo: Record<string, CategorySeo> = {
         heading: "How Much Can You Save with LED Filament Bulbs?",
         paragraphs: [
           "LED filament bulbs deliver the vintage look you love without the vintage electricity bill. Compared to traditional incandescent filament bulbs, GMEC's LED filament range uses dramatically less energy while lasting 25 times longer before replacement.",
-          "**Residential Savings Example:** replace 5 old 60W incandescent filament bulbs with GMEC 18W LED filament bulbs:",
+          "**Residential Savings Example:** replace 5 old 60W incandescent filament bulbs with GMEC 18W LED filament bulbs.",
         ],
-        list: [
-          "Power per bulb: 60W old incandescent vs 18W GMEC LED, 42W saved",
-          "Total power (5 bulbs): 300W vs 90W, 210W saved",
-          "Annual usage (4hrs/day): 438 kWh vs 131 kWh, 307 kWh saved",
-          "Cost per kWh: £0.28 for both, £86 annual saving",
-          "Bulb lifespan: 1,000 hours vs 25,000 hours, 24,000 extra hours",
-          "Bulb replacements: 4-5 bulbs a year vs none, 5 fewer replacements",
-        ],
+        table: {
+          headers: ["Metric", "Old Incandescent", "GMEC LED", "Annual Saving"],
+          rows: [
+            ["Power per bulb", "60W", "18W", "42W saved"],
+            ["Total power (5 bulbs)", "300W", "90W", "210W saved"],
+            ["Annual usage (4hrs/day)", "438 kWh", "131 kWh", "307 kWh"],
+            ["Cost per kWh", "£0.28", "£0.28", "£86"],
+            ["Bulb lifespan", "1,000 hours", "25,000 hours", "24,000 extra hours"],
+            ["Bulb replacements/year", "4-5 bulbs", "None", "5 fewer replacements"],
+            ["10-year total saving", "—", "—", "£860+ energy, £150 bulbs"],
+          ],
+        },
         more: [
           {
             paragraphs: [
-              "10-year total saving: £860+ on energy plus £150 on bulbs, £1,010+ saved over 10 years on just 5 bulbs.",
-              "**Restaurant/Hospitality Savings Example:** 20 pendant lights with 60W incandescent, running 12hrs/day:",
+              "Result: £1,010+ saved over 10 years on just 5 bulbs.",
+              "**Restaurant/Hospitality Savings Example:** 20 pendant lights with 60W incandescent, running 12hrs/day.",
             ],
           },
           {
-            list: [
-              "Power per bulb: 60W old incandescent vs 18W GMEC LED, 42W saved per bulb",
-              "Total power (20 bulbs): 1,200W vs 360W, 840W saved",
-              "Annual usage (12hrs/day): 4,380 kWh vs 1,314 kWh, 3,066 kWh saved",
-              "Annual cost: £1,226 vs £368, £858 saved",
-              "Monthly cost: £102 vs £31, £71/month saved",
-              "Bulb replacements: 20 bulbs a year vs 0, 20 replacements avoided",
-              "Labor & downtime: high vs none, staff productivity gained",
-            ],
+            table: {
+              headers: ["Metric", "Old Incandescent", "GMEC LED", "Annual Saving"],
+              rows: [
+                ["Power per bulb", "60W", "18W", "42W per bulb"],
+                ["Total power (20 bulbs)", "1,200W", "360W", "840W saved"],
+                ["Annual usage (12hrs/day)", "4,380 kWh", "1,314 kWh", "3,066 kWh"],
+                ["Annual cost", "£1,226", "£368", "£858"],
+                ["Monthly cost", "£102", "£31", "£71/month saved"],
+                ["Bulb replacements/year", "20 bulbs", "0", "20 replacements avoided"],
+                ["Labor & downtime", "High", "None", "Staff productivity gained"],
+                ["5-year total savings", "£6,130", "£1,840", "£4,290 saved"],
+              ],
+            },
           },
           {
             paragraphs: [
-              "5-year total savings: £6,130 old incandescent vs £1,840 GMEC LED, £4,290 saved. Plus no flickering during service, no dark tables, consistent ambiance, and better photos for social media.",
+              "Plus: no flickering during service, no dark tables, consistent ambiance, better photos for social media.",
               "**Why the savings add up so fast:** massive power reduction, LED filament uses 70% less electricity than incandescent. A 25,000-hour lifespan means no bulb changes for 10+ years and zero replacement costs. 24/7 reliability means no mid-service burnouts and no customer disappointment. Dimmable function allows full brightness when needed and reduced power when ambiance is the goal. Maintenance-free with no ladder work, no inventory management, and no lost productivity, all with a professional look and authentic vintage aesthetic at modern operating costs.",
               "GMEC LED filament bulbs pay for themselves within 6-8 months through energy savings alone.",
             ],
