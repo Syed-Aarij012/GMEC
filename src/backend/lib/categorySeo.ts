@@ -59,44 +59,205 @@ export const categorySeo: Record<string, CategorySeo> = {
     ],
   },
   "led-filament-bulbs": {
-    h1: "Led Filament Bulbs",
-    title: "LED Filament Bulbs UK | B22 & E27 Filament Bulb – GMEC",
+    h1: "LED Filament Bulbs",
+    title: "LED Filament Bulbs UK | B22 & E27 | Warm White | GMEC Corporation",
     description:
-      "Shop LED filament bulbs in B22 and E27, classic vintage-style design with modern efficiency. Warm ambient light for every room, from £2.49 + free UK delivery.",
+      "Premium LED filament bulbs from GMEC: B22, E27, E14 warm & cool white. Vintage Edison style, 80% energy savings, 25,000hr lifespan. From £1.89. Free UK delivery over £100.",
     intro:
-      "Our LED filament bulbs combine the warm, vintage charm of traditional filament design with the efficiency and longevity of modern LED technology. Available in B22 and E27 fittings across a range of wattages, they're perfect for pendant lights, lamps, and exposed fixtures where the bulb itself is part of the look. Enjoy authentic amber glow, low energy use, and reliable performance in every filament bulb.",
+      "Our LED filament bulbs blend vintage Edison-style aesthetics with modern efficiency. Available in B22, E27, and E14 fittings with warm white (2700K) and cool white (6500K) options, they deliver 80% energy savings and a 25,000-hour lifespan while adding character to any space. From £1.89, free UK delivery over £100, 14-day returns.",
     content: [
       {
         heading: "Our LED Filament Bulb Range",
         paragraphs: [
-          "LED Filament Bulbs bring back the warm, classic look of old-school incandescent bulbs, the glowing wire filament, the clear glass, the nostalgic Edison-bulb charm, but built on modern LED technology underneath. Rather than a single diode hidden behind a diffuser, filament bulbs use a series of tiny LED strips arranged to mimic a traditional filament, giving a 360° glow that looks just like the bulbs of decades past, at a fraction of the running cost.",
-          "GMEC's Filament Bulb range spans the fittings you need most, E14, E27, B22 and GU10, across a choice of wattages and colour temperatures, from a warm, amber-toned glow to a brighter daylight finish. Their clear glass design means the bulb itself is part of the look, which is exactly why they've become so popular in exposed fittings.",
-          "As with any bulb swap, it's worth checking the base type and dimmer compatibility of your existing fitting before you order, to make sure everything lines up first time.",
+          "LED filament bulbs bring back the warm, nostalgic charm of vintage incandescent bulbs, but with modern LED efficiency and reliability underneath. Unlike standard frosted or opal bulbs that hide the light source, LED filament bulbs feature tiny LED strips arranged to mimic a traditional wire filament, creating an authentic 360° glow that's instantly recognizable.",
+          "**Why filament LED bulbs look so good:** the secret is in the design. Traditional filament bulbs glowed from a single heated wire. Our LED filament bulbs use multiple micro-LEDs arranged in the same pattern, giving you that characteristic warm amber glow without the heat or energy waste. The clear glass design means the bulb itself becomes part of your interior aesthetic, which is exactly why LED filament bulbs have exploded in popularity for exposed fittings.",
+          "GMEC's LED filament bulb range covers:",
+        ],
+        list: [
+          "**B22 Filament Bulbs** (Bayonet cap, most common in UK homes): 18W B22 LED Filament, 1,710 lumens, £2.79 (save £1.20); 24W B22 LED Filament, 2,280 lumens, £2.99 (save £1.50). Available in Warm White (2700K) for cosy ambiance and Cool White (6500K) for bright, crisp light. Perfect for kitchen pendants, hallway lights, and statement lamps.",
+          "**E27 Filament Bulbs** (Edison screw, standard European fitting): 18W E27 LED Filament, 1,710 lumens, £2.79; 24W E27 LED Filament, 2,280 lumens, £2.99. Both Warm White (2700K) and Cool White (6500K) available. Perfect for table lamps, wall lights, and restaurant/café fixtures.",
+          "**E14 Filament Bulbs** (Small Edison screw, delicate fixtures): 8W E14 LED Filament, 1,050 lumens, £1.89. Warm White (3000K) for warm, intimate lighting. Perfect for bedside lamps, small wall sconces, and chandelier-style fixtures.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Important Fitting Guide:** before ordering your LED filament bulb, check your fixture's base type. B22 uses a twist-lock cap (most common UK), E27 uses a threaded screw cap (European standard), and E14 uses a smaller threaded cap (delicate fixtures). All GMEC LED filament bulbs are dimmable when used with compatible dimmers, check your existing dimmer's LED compatibility, most modern dimmers work perfectly with our filament bulbs.",
+              "We also stock [LED candle bulbs](/shop/led-candle-bulbs) for vintage-style options and [LED ceiling lights](/shop/led-ceiling-lights) for additional lighting solutions.",
+            ],
+          },
         ],
       },
       {
         heading: "Why Choose LED Filament Bulbs?",
         paragraphs: [
-          "Filament bulbs are the choice for anyone who wants character as well as efficiency. They're most at home in fittings where the bulb is on show, pendant lights, wall lights, exposed ceiling fittings, and statement lamps, because unlike a standard frosted or opal bulb, the filament design is a feature in its own right. You get the warm, decorative aesthetic that suits industrial, vintage, and rustic interiors, combined with the low energy use and long lifespan you'd expect from any modern LED.",
+          "LED filament bulbs are the choice for anyone who wants decorative beauty and energy efficiency. They're specifically designed for exposed fittings where the bulb itself is visible: pendant lights, wall lights, lamps, chandeliers, and feature fixtures. Unlike a standard frosted or opal bulb, the filament design IS the decoration.",
+          "Here's why architects, interior designers, and hospitality venues choose LED filament bulbs:",
+        ],
+        list: [
+          "**Authentic Vintage Aesthetics:** the glowing filament pattern replicates classic Edison bulbs perfectly. Whether you love industrial, steampunk, rustic, farmhouse, or vintage modern interiors, LED filament bulbs are the authentic choice. No plastic diffuser, no fake look, just genuine vintage charm.",
+          "**80% Lower Energy Costs:** a traditional 60W incandescent filament bulb costs £12 per year to run. Our 18W LED filament bulb costs just £2.40 per year, saving you £9.60 annually per bulb. Over 10 bulbs (typical home), that's £96 per year saved. Over 5 years: £480+ saved.",
+          "**25,000-Hour Lifespan (10-15 Years):** traditional incandescent filament bulbs last 1,000 hours and need replacing constantly. GMEC LED filament bulbs last 25,000 hours, typically 10-15 years of normal use. That means fewer replacements, less time on ladders, more money in your pocket, and peace of mind.",
+          "**Instant Full Brightness:** no warm-up delay. GMEC LED filament bulbs reach full brightness instantly, perfect for hallways, bathrooms, and entryways where instant light matters.",
+          "**Available in Warm & Cool White:** [warm white LED bulbs](/shop/warm-white-led-bulbs) create a cosy, intimate golden glow perfect for living rooms, bedrooms, and restaurants. [Cool white LED bulbs](/shop/cool-white-led-bulbs) provide bright, crisp daylight perfect for kitchens, offices, and retail displays.",
+          "**Perfect for Dimming:** all GMEC LED filament bulbs are fully dimmable when used with compatible dimmers. Create ambiance by adjusting brightness from intimate lighting to full brilliance.",
+          "**No Flicker, Safe for All Settings:** flicker-free, perfect for restaurants, bars, and retail where flicker ruins the ambiance. Cool to touch and safe around children, pets, and fabric. No mercury, eco-friendly disposal. Suitable for open fixtures that stay beautiful as they age.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Result:** LED filament bulbs are now the preferred choice for hospitality design, residential interiors, and retail environments where vintage aesthetics meet modern efficiency.",
+            ],
+          },
         ],
       },
       {
         heading: "Where Are LED Filament Bulbs Used?",
         paragraphs: [
-          "Because of their decorative, on-show design, filament bulbs tend to be chosen for spaces where the fitting is as much a design feature as a light source:",
+          "Because of their decorative, on-display design, LED filament bulbs are chosen specifically for spaces where the bulb itself is a design feature:",
         ],
         list: [
-          "Pendant Lights: Exposed bulb pendants are the classic home for filament LEDs, especially over kitchen islands and dining tables.",
-          "Wall Lights & Sconces: Filament bulbs add a warm, characterful glow to hallways, entryways, and feature walls.",
-          "Table & Floor Lamps: A popular choice for open lamp shades and lantern-style fixtures where the bulb stays visible.",
-          "Bars, Cafes & Restaurants: The vintage look of filament bulbs is a favourite for hospitality venues going for an industrial or rustic feel.",
-          "Retail Displays: Used to create a warm, inviting glow in shop fittings and window displays.",
+          "**Pendant Lights (Most Popular Use):** best for kitchen islands, dining tables, and living room focal points. Exposed Edison-style filament bulbs are the classic choice for statement pendants. Warm white (2700K) creates intimate dining ambiance, cool white (6500K) works for bright, modern kitchens. Recommended: 18W to 24W B22 or E27 warm white LED filament bulbs.",
+          "**Wall Lights & Sconces:** best for hallways, entryways, feature walls, and bedside. Filament design adds character to any corridor or feature wall. Warm white (2700K) ideal for cosy bedroom lighting, dimmable versions perfect for mood lighting. Recommended: 18W E27 or 8W E14 warm white dimmable LED filament bulbs.",
+          "**Table & Floor Lamps:** best for open lampshade fixtures, lantern-style designs, and reading nooks. Works beautifully in vintage, mid-century, and industrial lamps. Recommended: 18W E27 or 8W E14 warm white LED filament bulbs for cosy reading.",
+          "**Restaurants, Cafes & Bars (Hospitality):** best for creating warm, inviting ambiance and vintage or industrial themes. LED filament bulbs are industry standard in hospitality venues, with an authentic vintage look at a fraction of incandescent cost, no flicker, and no dark tables. Recommended: 24W B22 or E27 warm white dimmable LED filament bulbs.",
+          "**Retail Displays & Showrooms:** best for window displays, boutique lighting, and product showcases. Creates a warm, inviting glow that draws customers in, with clear glass showing off the bulb design. Cool white (6500K) for bright product displays. Recommended: 24W E27 cool white LED filament bulbs for retail.",
+          "**Statement Fixtures & Designer Interiors:** best for industrial décor, steampunk themes, loft conversions, and farmhouse style. Works with exposed brick, wood beams, and metal fixtures, dimmable for versatility. Recommended: a mix of warm and cool white E27 LED filament bulbs for flexibility.",
+          "**Entertainment Venues & Events:** best for temporary installations, pop-up spaces, and festival lighting. Vintage aesthetic without the power consumption of incandescent, dimmable for effect control. Recommended: 24W E27 warm white dimmable LED filament bulbs.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "For ceiling lighting solutions, explore our [LED ceiling lights range](/shop/led-ceiling-lights), which complements filament bulbs perfectly in many spaces.",
+            ],
+          },
         ],
       },
       {
         heading: "How Much Can You Save with LED Filament Bulbs?",
         paragraphs: [
-          "Filament bulbs give you the traditional look without the traditional running cost. Compared to old-style incandescent bulbs, GMEC's LED Filament range uses significantly less energy for the same brightness, and lasts many times longer before needing a replacement, meaning fewer bulb changes and lower bills, even in fittings that are switched on for hours at a time.",
+          "LED filament bulbs deliver the vintage look you love without the vintage electricity bill. Compared to traditional incandescent filament bulbs, GMEC's LED filament range uses dramatically less energy while lasting 25 times longer before replacement.",
+          "**Residential Savings Example:** replace 5 old 60W incandescent filament bulbs with GMEC 18W LED filament bulbs:",
+        ],
+        list: [
+          "Power per bulb: 60W old incandescent vs 18W GMEC LED, 42W saved",
+          "Total power (5 bulbs): 300W vs 90W, 210W saved",
+          "Annual usage (4hrs/day): 438 kWh vs 131 kWh, 307 kWh saved",
+          "Cost per kWh: £0.28 for both, £86 annual saving",
+          "Bulb lifespan: 1,000 hours vs 25,000 hours, 24,000 extra hours",
+          "Bulb replacements: 4-5 bulbs a year vs none, 5 fewer replacements",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "10-year total saving: £860+ on energy plus £150 on bulbs, £1,010+ saved over 10 years on just 5 bulbs.",
+              "**Restaurant/Hospitality Savings Example:** 20 pendant lights with 60W incandescent, running 12hrs/day:",
+            ],
+          },
+          {
+            list: [
+              "Power per bulb: 60W old incandescent vs 18W GMEC LED, 42W saved per bulb",
+              "Total power (20 bulbs): 1,200W vs 360W, 840W saved",
+              "Annual usage (12hrs/day): 4,380 kWh vs 1,314 kWh, 3,066 kWh saved",
+              "Annual cost: £1,226 vs £368, £858 saved",
+              "Monthly cost: £102 vs £31, £71/month saved",
+              "Bulb replacements: 20 bulbs a year vs 0, 20 replacements avoided",
+              "Labor & downtime: high vs none, staff productivity gained",
+            ],
+          },
+          {
+            paragraphs: [
+              "5-year total savings: £6,130 old incandescent vs £1,840 GMEC LED, £4,290 saved. Plus no flickering during service, no dark tables, consistent ambiance, and better photos for social media.",
+              "**Why the savings add up so fast:** massive power reduction, LED filament uses 70% less electricity than incandescent. A 25,000-hour lifespan means no bulb changes for 10+ years and zero replacement costs. 24/7 reliability means no mid-service burnouts and no customer disappointment. Dimmable function allows full brightness when needed and reduced power when ambiance is the goal. Maintenance-free with no ladder work, no inventory management, and no lost productivity, all with a professional look and authentic vintage aesthetic at modern operating costs.",
+              "GMEC LED filament bulbs pay for themselves within 6-8 months through energy savings alone.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "LED Filament Bulbs Buying Guide: B22 vs E27",
+        paragraphs: ["Confused about which fitting to choose? Here's the simple guide:"],
+        list: [
+          "**B22 (Bayonet Cap):** push into the socket and twist clockwise until it clicks and locks. Most common in UK homes, especially older properties, with a secure, stable twist-lock fit. GMEC options: 18W and 24W in Warm White and Cool White. Perfect for kitchen pendants, hallway lights, and classic fixtures. Recommended: 18W B22 Warm White LED Filament (£2.79).",
+          "**E27 (Edison Screw):** screw into the socket counterclockwise, hand-tightened until snug. European standard, used in modern homes and international fixtures, with universal, simple installation. GMEC options: 18W and 24W in Warm White and Cool White. Perfect for table lamps, wall lights, and design fixtures. Recommended: 18W E27 Warm White LED Filament (£2.79).",
+          "**E14 (Small Edison Screw):** a smaller screw cap for delicate fixtures such as chandeliers, small wall sconces, and bedside lamps. Compact design, perfect for tight spaces. GMEC options: 8W Warm White LED Filament. Perfect for intimate lighting and decorative fixtures. Recommended: 8W E14 Warm White LED Filament (£1.89).",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Unsure which you need? Look at your existing bulb's base or measure the socket opening. If in doubt, [contact us](/contact) for personalized recommendations or call +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Frequently Asked Questions About LED Filament Bulbs",
+        paragraphs: [
+          "**Q: Are LED filament bulbs dimmable?**",
+          "A: Yes! All GMEC LED filament bulbs are fully dimmable when used with compatible LED-rated dimmer switches. Check your existing dimmer's instructions or upgrade to an LED-compatible dimmer for seamless dimming control.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: What's the difference between Warm White (2700K) and Cool White (6500K)?**",
+              "A: Warm White (2700K) produces a golden, cosy glow ideal for living rooms, bedrooms, and restaurants. Cool White (6500K) is bright and crisp, perfect for kitchens, offices, and retail displays. Browse our [warm white LED bulbs](/shop/warm-white-led-bulbs) and [cool white LED bulbs](/shop/cool-white-led-bulbs) for more options in both colour temperatures.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do LED filament bulbs actually last?**",
+              "A: GMEC LED filament bulbs are rated for 25,000 hours, which equals 10-15 years of typical use (assuming 3-4 hours daily). That means you might install a bulb and never replace it for over a decade.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use LED filament bulbs with my old dimmer switch?**",
+              "A: Older dimmer switches (pre-2010) may flicker with LED filament bulbs. Modern LED-rated dimmers work perfectly. If you experience flickering, upgrade to an LED-compatible dimmer switch (£5-15).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Which wattage LED filament bulb replaces my old incandescent?**",
+              "A: As a rough guide: 40W incandescent equals 8W to 12W LED filament (800-1,200 lumens), 60W incandescent equals 18W LED filament (1,700 lumens), 100W incandescent equals 24W LED filament (2,300 lumens). Check the lumens rating as that's the real brightness measure.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do LED filament bulbs work in all light fixtures?**",
+              "A: Yes, but check three compatibility factors: correct base type (B22, E27, or E14), a dimmable switch if your fixture has one, and heat tolerance (sealed fixtures may restrict airflow, but our LED filament bulbs run cool anyway). All GMEC LED filament bulbs work in exposed fixtures. For enclosed or recessed fixtures, confirm compatibility before purchasing.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Why do LED filament bulbs cost more than regular LED bulbs?**",
+              "A: The filament design is more complex. Multiple tiny LEDs are arranged to mimic traditional filament patterns and create a 360° glow. You're paying for authentic vintage aesthetics plus modern efficiency. It's worth it.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are GMEC LED filament bulbs actually warm/cosy?**",
+              "A: Yes. Our 2700K Warm White LED filament bulbs produce a genuine golden glow identical to old incandescent bulbs. The 3000K E14 model is even warmer. See photos on product pages to confirm the colour matches your style.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use LED filament bulbs in bathroom/kitchen (moisture)?**",
+              "A: Yes. GMEC LED filament bulbs don't have moisture issues like old halogens. However, check the fixture's IP rating if it's directly in a shower spray. For general bathroom and kitchen use above splash zones, no problem.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What's your returns policy on LED filament bulbs?**",
+              "A: 14-day money-back guarantee. If your LED filament bulbs aren't right for your space, return them for a full refund. See our [refund and returns policy](/refund-returns-policy) for complete details.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to LED Filament Bulbs?",
+        paragraphs: [
+          "Get authentic vintage styling with modern efficiency. GMEC's LED filament bulbs combine nostalgic Edison design with 80% energy savings and 25,000-hour lifespans.",
+          "Featuring B22 & E27 fittings, warm & cool white options, fully dimmable, from £1.89, free UK delivery over £100, 14-day returns.",
+          "Browse our full range of [LED filament bulbs](/shop/led-filament-bulbs) today. Questions? Call our lighting experts on +44 7951 282482 or [contact us here](/contact).",
         ],
       },
     ],
