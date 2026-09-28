@@ -4,7 +4,15 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Trash2 } from "lucide-react";
 
-export default function DeleteButton({ url, confirmText }: { url: string; confirmText: string }) {
+export default function DeleteButton({
+  url,
+  confirmText,
+  redirectTo,
+}: {
+  url: string;
+  confirmText: string;
+  redirectTo?: string;
+}) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -14,7 +22,8 @@ export default function DeleteButton({ url, confirmText }: { url: string; confir
     const res = await fetch(url, { method: "DELETE" });
     setLoading(false);
     if (res.ok) {
-      router.refresh();
+      if (redirectTo) router.push(redirectTo);
+      else router.refresh();
     } else {
       const data = await res.json().catch(() => ({}));
       alert(data.error ?? "Could not delete");

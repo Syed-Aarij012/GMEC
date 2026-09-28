@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import { formatPrice } from "@/frontend/lib/utils";
 import OrderStatusSelect from "@/frontend/components/admin/OrderStatusSelect";
+import DeleteButton from "@/frontend/components/admin/DeleteButton";
 import { AnimatedTableBody, AnimatedTableRow } from "@/frontend/components/admin/AnimatedTable";
 
 const STATUSES = ["PENDING", "PAID", "FULFILLED", "CANCELLED"];
@@ -134,13 +135,19 @@ export default function OrdersTable({ orders }: { orders: OrderRow[] }) {
                 <td className="px-4 py-3">
                   <OrderStatusSelect orderId={order.id} status={order.status} />
                 </td>
-                <td className="px-4 py-3 text-right">
-                  <Link
-                    href={`/admin/orders/${order.id}`}
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-text/50 hover:text-gold-600"
-                  >
-                    View <ChevronRight className="h-3.5 w-3.5" />
-                  </Link>
+                <td className="px-4 py-3">
+                  <div className="flex items-center justify-end gap-1">
+                    <Link
+                      href={`/admin/orders/${order.id}`}
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-text/50 hover:text-gold-600"
+                    >
+                      View <ChevronRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <DeleteButton
+                      url={`/api/admin/orders/${order.id}`}
+                      confirmText={`Delete order #${order.id.slice(-8).toUpperCase()}? This cannot be undone.`}
+                    />
+                  </div>
                 </td>
               </AnimatedTableRow>
             ))}

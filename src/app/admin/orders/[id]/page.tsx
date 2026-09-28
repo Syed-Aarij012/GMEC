@@ -5,6 +5,7 @@ import { prisma } from "@/backend/lib/prisma";
 import { formatPrice } from "@/frontend/lib/utils";
 import OrderStatusSelect from "@/frontend/components/admin/OrderStatusSelect";
 import RoyalMailShipment from "@/frontend/components/admin/RoyalMailShipment";
+import DeleteButton from "@/frontend/components/admin/DeleteButton";
 import Reveal from "@/frontend/components/motion/Reveal";
 
 export default async function AdminOrderDetailPage({
@@ -55,6 +56,11 @@ export default async function AdminOrderDetailPage({
             View Invoice
           </Link>
           <OrderStatusSelect orderId={order.id} status={order.status} />
+          <DeleteButton
+            url={`/api/admin/orders/${order.id}`}
+            confirmText={`Delete order #${order.id.slice(-8).toUpperCase()}? This cannot be undone.`}
+            redirectTo="/admin/orders"
+          />
         </div>
       </Reveal>
 

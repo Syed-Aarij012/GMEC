@@ -23,3 +23,16 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
 
   return NextResponse.json({ order });
 }
+
+export async function DELETE(_req: Request, { params }: { params: Promise<{ id: string }> }) {
+  const admin = await getAdminSession();
+  if (!admin) return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
+
+  const { id } = await params;
+  try {
+    await prisma.order.delete({ where: { id } });
+    return NextResponse.json({ success: true });
+  } catch {
+    return NextResponse.json({ error: "Could not delete this order" }, { status: 400 });
+  }
+}
