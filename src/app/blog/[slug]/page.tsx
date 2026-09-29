@@ -134,6 +134,26 @@ const HOWTO_LAYOUT: Record<
   },
 };
 
+// Posts listed here render with the "mood" layout: a spectrum-gradient
+// category pill and image frame (no sidebar or chip nav), with each
+// section cycling through a colour accent that carries into its
+// sub-headings and bullets. Used for colour/mood-lighting content, as
+// distinct from both layouts above.
+const MOOD_LAYOUT: Record<string, { ctaHref: string; ctaLabel: string }> = {
+  "colour-changing-led-bulbs-mood-lighting-guide": {
+    ctaHref: "/shop/led-rgb-lights",
+    ctaLabel: "Shop colour-changing LED bulbs",
+  },
+};
+
+const MOOD_ACCENTS = [
+  { bar: "bg-gold-500", text: "text-gold-600" },
+  { bar: "bg-sky-500", text: "text-sky-600" },
+  { bar: "bg-fuchsia-500", text: "text-fuchsia-600" },
+  { bar: "bg-emerald-500", text: "text-emerald-600" },
+  { bar: "bg-rose-500", text: "text-rose-600" },
+];
+
 type ContentBlock =
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
@@ -177,13 +197,17 @@ function parseContentBlocks(content: string): ContentBlock[] {
   return blocks;
 }
 
-function renderContent(content: string, variant: "classic" | "guide" | "howto" = "classic") {
+function renderContent(content: string, variant: "classic" | "guide" | "howto" | "mood" = "classic") {
   const blocks = parseContentBlocks(content);
   // Shared across every paragraph in this post so only the first mention
   // of the brand name in the body copy is linked, not headings.
   const brandState = { linked: false };
   const headingState = { linked: true };
   let h2Index = 0;
+  // "mood" variant only: the accent of the section currently in progress,
+  // carried from each h2 into its own sub-headings and bullets so colour
+  // changes section by section, echoing the article's subject.
+  let moodAccent = MOOD_ACCENTS[0];
 
   return blocks.map((block, i) => {
     if (block.type === "h3") {
@@ -191,6 +215,14 @@ function renderContent(content: string, variant: "classic" | "guide" | "howto" =
         return (
           <h3 key={i} className="mb-4 mt-8 flex items-center gap-2.5 text-lg font-bold text-text">
             <span className="h-2 w-2 shrink-0 rounded-full bg-gold-500" />
+            {renderInline(block.text, headingState)}
+          </h3>
+        );
+      }
+      if (variant === "mood") {
+        return (
+          <h3 key={i} className="mb-4 mt-8 flex items-center gap-2.5 text-lg font-bold text-text">
+            <span className={`h-2 w-2 shrink-0 rounded-full ${moodAccent.bar}`} />
             {renderInline(block.text, headingState)}
           </h3>
         );
@@ -229,6 +261,18 @@ function renderContent(content: string, variant: "classic" | "guide" | "howto" =
           </h2>
         );
       }
+      if (variant === "mood") {
+        moodAccent = MOOD_ACCENTS[h2Index % MOOD_ACCENTS.length];
+        h2Index += 1;
+        return (
+          <div key={i} className="mt-14 mb-5">
+            <span className={`block h-1 w-12 rounded-full ${moodAccent.bar}`} />
+            <h2 id={slugifyHeading(block.text)} className="mt-3 scroll-mt-24 text-2xl font-extrabold text-text">
+              {renderInline(block.text, headingState)}
+            </h2>
+          </div>
+        );
+      }
       return (
         <h2 key={i} className="mb-4 mt-10 text-2xl font-extrabold text-text">
           {renderInline(block.text, headingState)}
@@ -243,6 +287,8 @@ function renderContent(content: string, variant: "classic" | "guide" | "howto" =
             <li key={j} className="flex gap-2.5 leading-relaxed text-text/80">
               {variant === "howto" ? (
                 <CheckCircle2 className="mt-0.5 h-[18px] w-[18px] shrink-0 text-gold-600" />
+              ) : variant === "mood" ? (
+                <CheckCircle2 className={`mt-0.5 h-[18px] w-[18px] shrink-0 ${moodAccent.text}`} />
               ) : (
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" />
               )}
@@ -506,6 +552,79 @@ export default async function BlogPostPage({
                   {howto.ctaLabel}
                 </Link>
                 <Link href="/contact" className="rounded-full border border-line/20 px-5 py-2.5 text-sm font-semibold text-text hover:bg-canvas">
+                  Contact our team
+                </Link>
+              </div>
+            </Reveal>
+
+            <div className="mt-10 border-t border-line/10 pt-6">
+              <Link href="/blog" className="text-sm font-semibold text-gold-600 hover:text-gold-700">
+                ← Back to all posts
+              </Link>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
+
+  const mood = MOOD_LAYOUT[post.slug];
+  if (mood) {
+    return (
+      <div>
+        {jsonLd}
+        <header className="bg-canvas">
+          <div className="container-page py-12 sm:py-16">
+            <Reveal className="mx-auto max-w-3xl text-center">
+              <div className="mb-5 flex items-center justify-center gap-1.5 text-sm text-text/50">
+                <Link href="/blog" className="hover:text-gold-600">
+                  Blog
+                </Link>
+                <ChevronRight className="h-3.5 w-3.5" />
+                <span>Mood lighting</span>
+              </div>
+              <span className="inline-block rounded-full bg-gradient-to-r from-gold-500 via-fuchsia-500 to-sky-500 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+                Mood Lighting
+              </span>
+              <h1 className="mt-4 text-3xl font-extrabold text-text sm:text-4xl">{post.title}</h1>
+              <p className="mx-auto mt-4 max-w-2xl text-base text-text/60">{post.excerpt}</p>
+              <div className="mt-6 flex items-center justify-center gap-x-5 gap-y-2 text-sm text-text/50">
+                <span className="flex items-center gap-1.5">
+                  <User className="h-3.5 w-3.5" /> {post.author}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CalendarDays className="h-3.5 w-3.5" /> {formatDate(post.createdAt)}
+                </span>
+              </div>
+            </Reveal>
+
+            <Reveal
+              delay={0.05}
+              className="relative mx-auto mt-8 max-w-3xl overflow-hidden rounded-2xl bg-gradient-to-r from-gold-500 via-fuchsia-500 to-sky-500 p-[3px] shadow-sm"
+            >
+              <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[14px] bg-canvas">
+                <Image src={post.coverImage} alt={post.title} fill unoptimized priority sizes="(max-width: 1024px) 100vw, 768px" className="object-cover" />
+              </div>
+            </Reveal>
+          </div>
+        </header>
+
+        <div className="container-page py-12">
+          <article className="mx-auto max-w-3xl">
+            <Reveal>{renderContent(post.content, "mood")}</Reveal>
+
+            <Reveal className="mt-12 rounded-2xl border border-fuchsia-500/20 bg-gradient-to-r from-gold-500/10 via-fuchsia-500/10 to-sky-500/10 p-8">
+              <h2 className="bg-gradient-to-r from-gold-600 via-fuchsia-600 to-sky-600 bg-clip-text text-2xl font-extrabold text-transparent">
+                Ready to set your own mood?
+              </h2>
+              <p className="mt-2 text-text/60">
+                Free UK delivery over £100, 14-day returns and 24/7 support. Not sure which fitting or system suits your home? Ask our team.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href={mood.ctaHref} className="rounded-full bg-gold-500 px-5 py-2.5 text-sm font-bold text-black hover:bg-gold-400">
+                  {mood.ctaLabel}
+                </Link>
+                <Link href="/contact" className="rounded-full border border-line/20 px-5 py-2.5 text-sm font-semibold text-text hover:bg-canvas-muted">
                   Contact our team
                 </Link>
               </div>
