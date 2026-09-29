@@ -60,6 +60,21 @@ function List({ items }: { items: string[] }) {
   );
 }
 
+function NumberedList({ items }: { items: string[] }) {
+  return (
+    <ol className="space-y-2.5 text-sm leading-relaxed text-text/70">
+      {items.map((item, k) => (
+        <li key={k} className="flex gap-3">
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-canvas-muted text-xs font-bold text-text/70">
+            {k + 1}
+          </span>
+          <span>{renderInline(item)}</span>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
 function DataTable({ table }: { table: CategoryTable }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-line/10">
@@ -107,11 +122,13 @@ export default function CategoryContent({ sections }: { sections: CategoryConten
           <div className="space-y-4">
             <Paragraphs items={section.paragraphs} />
             {section.list && <List items={section.list} />}
+            {section.numberedList && <NumberedList items={section.numberedList} />}
             {section.table && <DataTable table={section.table} />}
             {section.more?.map((block, b) => (
               <div key={b} className="space-y-4">
                 {block.paragraphs && <Paragraphs items={block.paragraphs} />}
                 {block.list && <List items={block.list} />}
+                {block.numberedList && <NumberedList items={block.numberedList} />}
                 {block.table && <DataTable table={block.table} />}
               </div>
             ))}

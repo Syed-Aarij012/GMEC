@@ -8,9 +8,10 @@ export interface CategoryContentSection {
   heading?: string;
   paragraphs: string[];
   list?: string[];
+  numberedList?: string[];
   table?: CategoryTable;
   /** Further blocks rendered in order after paragraphs/list. */
-  more?: { paragraphs?: string[]; list?: string[]; table?: CategoryTable }[];
+  more?: { paragraphs?: string[]; list?: string[]; numberedList?: string[]; table?: CategoryTable }[];
 }
 
 export interface CategorySeo {
@@ -516,48 +517,230 @@ export const categorySeo: Record<string, CategorySeo> = {
   },
   "gu10-downlights": {
     h1: "GU10 Downlights",
-    title: "GU10 Downlights UK | Fire Rated & Bathroom IP65 | GMEC",
+    title: "GU10 Downlights UK | Fire Rated, IP65 Bathroom & Adjustable | GMEC",
     description:
-      "Shop GMEC's GU10 downlight fittings, including fire rated and IP65 bathroom versions. Compact die-cast twist & lock design. Free UK delivery over £100.",
+      "Buy GU10 downlights from GMEC: fire-rated fittings, IP65 bathroom models, adjustable & fixed options. Over 15 variants. Free UK delivery over £100, 14-day returns.",
     intro:
-      "GMEC's GU10 Downlight range includes compact, fire rated fittings built for safe, straightforward installation. Choose fire rated versions for ceilings with a void above, and IP65-rated options for bathroom zones 1 and 2.",
+      "[GMEC Corporation](/) supplies premium GU10 downlight fittings for homes and businesses across the UK. Our range includes fire-rated fittings for safety, IP65-rated bathroom downlights for moisture zones, adjustable tilt options for accent lighting, and compact fixed models for general illumination. Every GU10 downlight fitting is mains voltage (no transformer needed), built for easy installation, and compatible with a wide range of GU10 LED bulbs for brightness, colour temperature, and dimmable options you choose. Over 15 GU10 downlight variants in stock, from £4.99, free UK delivery over £100, 14-day returns.",
     content: [
       {
         heading: "Our GU10 Downlight Fitting Range",
         paragraphs: [
-          "A GU10 downlight fitting is one of the most straightforward ways to add recessed lighting to a home or workplace. The fitting itself is a simple recessed housing that takes a standard GU10 bulb, so if a lamp ever fails, you just swap the bulb rather than replacing the whole unit. It's this simplicity, combined with the fact that GU10 fittings run straight off mains voltage with no transformer needed, that's made them one of the most widely used downlight types in the UK.",
-          "GMEC's GU10 downlight range includes our Compact Fire Rated Downlight, built with a die-cast twist & lock design (GM-DTS004) that makes fitting and bulb changes quick and straightforward. As with any downlight, it's worth checking the ceiling cut-out size and depth of your existing fitting before ordering, so your replacement fits cleanly first time.",
+          "A GU10 downlight fitting is one of the most straightforward ways to add recessed lighting to a home or workplace, and it's why they're the most popular downlight type in UK homes today. The fitting itself is a simple recessed housing that takes a standard GU10 bulb, so if a lamp ever fails, you just swap the bulb rather than replacing the whole unit. It's this simplicity, combined with the fact that GU10 fittings run straight off mains voltage with no transformer needed, that has made them ideal for bedrooms, kitchens, bathrooms, living rooms, and commercial spaces.",
+          "**Why GU10 downlights are so popular:** unlike integrated LED downlights where the entire unit is built-in, a GU10 downlight gives you complete flexibility. If you want to change the brightness, switch from cool white to warm white, or upgrade to dimmable bulbs later, you simply swap out the GU10 lamp. This flexibility makes GU10 fittings perfect for future-proofing your lighting.",
+          "**GMEC's GU10 downlight range:** our range includes fire rated fittings built with die-cast twist & lock designs (like our GM-DTS004 Compact Fire Rated Downlight), bathroom IP65-rated models for moisture zones, adjustable tilt versions for accent lighting, and fixed recessed options for general illumination. All GMEC GU10 downlights are mains voltage 230V AC, requiring no separate LED driver or transformer installation.",
+          "**Before you order:** check three specifications of your existing fitting: the ceiling cut-out size (diameter in millimetres, typically 60-80mm), the depth of the void above your ceiling, and whether fire rating is required. This ensures your new GU10 downlight fits cleanly first time. All GMEC GU10 downlights are clearly marked with these specifications.",
+          "**Compatible LED bulbs:** every GMEC downlight fitting in this range is compatible with standard GU10 bulbs available in warm white (2700K), cool white (6500K), dimmable, and smart home options. Browse our full range of [warm white LED bulbs](/shop/warm-white-led-bulbs), [cool white LED bulbs](/shop/cool-white-led-bulbs), and [LED 3 colours in 1](/shop/led-3-colours-in-1) for GU10 downlights throughout your home.",
         ],
       },
       {
         heading: "Why Choose Fire Rated GU10 Downlights?",
         paragraphs: [
-          "Fire-rated GU10 downlights are built to do more than just hold a bulb: the fire-rated housing is designed to seal the hole cut into the ceiling in the event of a fire, helping to restore the ceiling's fire barrier rather than leaving a gap for flames or smoke to pass through. For most homes with a ceiling void above (a loft space, or a floor above), a fire rated downlight is the safer, building-regulation-friendly choice compared to a standard, non-fire-rated fitting, and the compact die-cast design means it fits into the same tight ceiling voids a standard downlight would.",
+          "Fire-rated GU10 downlights are built to do far more than hold a bulb. The fire-rated housing is specifically engineered to seal the hole cut into your ceiling in the event of a fire, maintaining the ceiling's fire barrier and preventing flames or smoke from spreading through that opening. This is why building regulations across the UK require fire-rated downlights in almost every residential property with a ceiling void above.",
+          "**Why fire rating matters:** when a fire starts, unprotected holes in ceilings become pathways for flames and smoke to spread rapidly between floors. Fire-rated downlights contain special materials and designs that resist high temperatures, preventing this spread and buying crucial time for escape. This isn't optional in the UK, building regulations specifically mandate fire-rated downlights in domestic properties with a void above the ceiling.",
+          "**Compact design for tight spaces:** GMEC's fire-rated GU10 downlights feature compact die-cast construction, meaning they fit into the same tight ceiling voids that standard downlights would occupy. These fittings typically require a 60-80mm cut-out and can sit in voids as shallow as 50-70mm deep, making them ideal for properties with limited loft or attic access.",
+          "**Non-fire-rated vs fire-rated:** non-fire-rated GU10 downlights are cheaper (often £2-3 less per fitting) but are designed only for enclosed ceilings with no void above. For residential homes with loft spaces, floor voids, or ceiling cavities above, fire-rated is mandatory and essential for safety and insurance compliance.",
+        ],
+        list: [
+          "Rated for residential fire safety standards (BS EN 60598)",
+          "Suitable for loft insulation placement directly above",
+          "Compatible with all standard GU10 LED bulbs",
+          "Mains voltage (no LED driver required)",
+          "Available in chrome, satin nickel, and white finishes",
         ],
       },
       {
         heading: "GU10 Bathroom Downlights: What to Look For",
         paragraphs: [
-          "Bathrooms bring an extra consideration: moisture. A downlight installed in a bathroom needs the right IP (Ingress Protection) rating for the zone it's going into, particularly zones 1 and 2, which cover the areas around a bath or shower where water exposure is more likely. An IP65-rated GU10 downlight is sealed against dust and water jets, making it suitable for these zones, whereas a standard IP20 fitting is designed for dry, general-purpose rooms only. Always check the IP rating of a downlight against the specific bathroom zone it's going into before installing.",
+          "Bathrooms require extra consideration: moisture and water exposure. A downlight installed in a bathroom needs the correct IP (Ingress Protection) rating for the specific zone it's going into, particularly zones 1 and 2, which cover the areas directly around a bath or shower. Using the wrong IP rating can lead to electrical damage, short circuits, and safety hazards.",
+          "**Understanding IP ratings:** an IP rating has two digits, the first rates dust protection, the second rates water protection.",
+        ],
+        table: {
+          headers: ["IP Rating", "Protection", "Suitable For"],
+          rows: [
+            ["IP20", "No water protection", "Dry rooms only, not suitable for bathrooms"],
+            ["IP44", "Splash protection", "Bathroom zones 2-3 (away from direct spray)"],
+            ["IP65", "High water and dust protection", "Bathroom zones 1-2 (facing water spray)"],
+          ],
+        },
+        more: [
+          {
+            paragraphs: ["**Bathroom zone guide:**"],
+          },
+          {
+            table: {
+              headers: ["Zone", "Coverage", "Minimum IP Rating"],
+              rows: [
+                ["Zone 1", "Above the bath or within 60cm of shower cubicle edge", "IP65 minimum"],
+                ["Zone 2", "Within 60cm horizontally of Zone 1", "IP44 minimum, IP65 recommended"],
+                ["Zone 3", "The rest of the bathroom", "IP20 acceptable, IP44 recommended"],
+              ],
+            },
+          },
+          {
+            paragraphs: [
+              "**Why this matters:** moisture rises rapidly in bathrooms during hot showers. A standard IP20 downlight in a moisture zone allows water vapour into the fitting, corroding electrical connections and creating a fire or electrocution risk. An IP65-rated GU10 downlight has sealed housing that resists water jets from every angle, keeping moisture out completely.",
+              "**GMEC GU10 bathroom downlights:** our IP65-rated models are specifically designed for bathroom zones 1 and 2. They combine water-resistant housing with full compatibility for all standard GU10 bulbs, including LED options. This means you get safe, efficient lighting plus the flexibility to choose your bulb brightness and colour temperature.",
+            ],
+          },
         ],
       },
       {
         heading: "GU10 Downlight Fitting: Installation Basics",
         paragraphs: [
-          "A GU10 downlight fitting is designed to be one of the simpler downlights to install, but a few basics make the difference between a clean finish and a fitting that sits awkwardly in the ceiling:",
+          "A GU10 downlight fitting is designed to be one of the simpler types of downlight to install. However, a few critical basics make the difference between a professional-looking installation and a fitting that sits awkwardly in the ceiling.",
         ],
         list: [
-          "Cut-out size: Check the diameter of the hole your fitting needs before cutting into the ceiling.",
-          "Depth: Compact, low-profile fittings, like GMEC's die-cast twist & lock design, suit shallower ceiling voids where a deeper fitting wouldn't fit.",
-          "Fire rating: Choose a fire rated fitting wherever there's a ceiling void above, to comply with building regulations.",
-          "IP rating: Match the fitting's IP rating to the room: IP65 for bathrooms and other damp areas, standard IP20 for dry living spaces.",
-          "Bulb choice: GU10 downlights work with a wide range of GU10 LED bulbs, so you can choose the wattage, colour temperature, and beam angle that suits the room.",
+          "**Step 1, measure your existing hole:** measure the diameter of your existing downlight's hole with a ruler. Common sizes are 60mm (most compact), 75mm (standard), and 90mm (larger adjustable models). GMEC specifies the exact cut-out size for every GU10 downlight, so match this measurement precisely to avoid gaps around the bezel.",
+          "**Step 2, check your ceiling void depth:** GU10 downlights require a certain depth above the ceiling. Measure from the top of your finished ceiling to the underside of whatever's above (loft, joists, floor above). GMEC GU10 downlights are typically 50-75mm deep, so confirm your void is deep enough.",
+          "**Step 3, confirm fire rating requirements:** if there's a void above (loft space, attic, or room above), you need fire-rated downlights. Check your building's plans or, when in doubt, use fire-rated, it's the legal requirement for residential properties and only costs a few pounds more per fitting.",
+          "**Step 4, verify IP rating for the room:** IP20 standard for bedrooms, living rooms and offices; IP44 minimum for bathroom zones 2-3; IP65 required for bathroom zone 1 (beside shower/bath); IP44 recommended for kitchens and utility rooms.",
+          "**Step 5, wiring:** GU10 downlights are mains voltage (230V AC), so they connect directly to your circuit. There's no separate LED driver or transformer needed. Most GMEC GU10 downlights feature push-fit or screwless terminals, making wiring quicker than older twist-terminal models.",
+          "**Step 6, choose your GU10 bulb:** once the fitting is installed, choose from a wide range of GU10 LED bulbs, 5W to 10W brightness (equivalent to 35-80W halogen), warm white (2700K), neutral (4000K), cool white (6500K), and dimmable options.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Professional installation:** unsure about installation? Electrical work should always be carried out by a qualified electrician. They'll ensure the wiring is safe and fire and building regulations are met. GMEC provides full technical specs for any electrician, and we recommend [contacting us](/contact) if you have specific installation questions.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Types of GU10 Downlights",
+        paragraphs: [
+          "GU10 downlights come in several distinct types, each designed for specific applications.",
+        ],
+        list: [
+          "**Fixed GU10 Downlights:** direct light straight downward in a consistent beam. They're the most common, most affordable, and simplest to install. Ideal for general room illumination (bedrooms, hallways, offices), kitchens where you need bright, even light, and any room where you don't need adjustable angles.",
+          "**Adjustable/Tilt GU10 Downlights:** tilt up to 30-40 degrees, allowing you to direct light toward specific areas like artwork, kitchen worktops, or feature walls. Ideal for accent lighting on paintings or wall features, kitchen islands where you need flexible work lighting, and living rooms where you want to highlight design elements.",
+          "**Bathroom/IP65 GU10 Downlights:** sealed against moisture and essential for bathroom installations, particularly around showers and baths. Available in both fixed and adjustable options. GMEC stocks multiple IP65 models suitable for residential bathroom installations.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Choosing your type:** consider, do you need to highlight specific areas (adjustable)? Are you in a bathroom with water exposure (IP65)? Do you have a ceiling void above (fire-rated)? Is this new build or retrofit (both work, fire-rated is mandatory for new builds)? [Contact our team](/contact) for personalized recommendations.",
+            ],
+          },
         ],
       },
       {
         heading: "How Much Can You Save with GU10 LED Downlights?",
         paragraphs: [
-          "Because GU10 downlight fittings simply hold a replaceable GU10 bulb, upgrading to LED is one of the easiest energy-saving swaps available, no rewiring, no new fitting, just a lower-wattage LED bulb in place of an old halogen one. Combined with the long lifespan of modern LED bulbs, that means fewer bulb changes and a noticeably lower running cost for every downlight in the room.",
+          "Upgrading to LED is one of the easiest energy-saving swaps available. No rewiring, no new fitting, just a lower-wattage LED bulb in place of an old halogen one. The savings add up quickly, especially if you have multiple downlights throughout your home.",
+          "**Real savings example:** replace 10 old 50W halogen GU10 bulbs with 7W LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Halogen (50W)", "New LED (7W)", "Annual Saving"],
+          rows: [["Annual energy use (10 bulbs)", "912 kWh (£255/year)", "128 kWh (£36/year)", "£219/year"]],
+        },
+        numberedList: [
+          "**80% less energy:** LED uses only 15-20% of the power of halogen bulbs.",
+          "**25,000-hour lifespan:** halogen lasts 1,000-2,000 hours, LED lasts 10-15 years.",
+          "**No heat:** LED bulbs stay cool to the touch, halogen gets extremely hot.",
+          "**Instant brightness:** no warm-up time.",
+          "**Better light quality:** modern LED GU10 bulbs produce warm, natural light.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "5-year total: £1,295+ (energy savings £1,195 + labour/bulb cost savings £100).",
+              "**The bottom line:** every GU10 downlight you upgrade to LED pays for itself within 6-12 months through energy savings alone. Over 10 years, each LED bulb saves you £100-150 compared to halogen.",
+              "Browse our [complete GU10 LED bulb range](/shop/cool-white-led-bulbs) to find the perfect brightness, colour temperature, and dimmable options for your space.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQs",
+        paragraphs: [
+          "**What's the difference between fire-rated and non-fire-rated GU10 downlights?**",
+          "Fire-rated downlights seal the ceiling hole in a fire, preventing flames or smoke spread. Required for residential properties with ceiling voids. Non-fire-rated is cheaper but only acceptable in ground-floor ceilings with no void above.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Can I use IP20 downlights in my bathroom?**",
+              "Not recommended. IP20 has no water protection. Use IP44 for bathrooms zone 2-3, IP65 for zone 1 (beside shower/bath).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Do GU10 downlights need a transformer?**",
+              "No. GU10 downlights are mains voltage (230V AC). They connect directly with no LED driver or transformer required.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**What wattage LED bulb replaces my old halogen?**",
+              "50W halogen is roughly equivalent to a 7W LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Are dimmable GU10 LED bulbs compatible with old dimmer switches?**",
+              "Older dimmers (pre-2010) may flicker with LED bulbs. Modern LED-rated dimmers work perfectly. Upgrade to an LED-compatible dimmer if needed (£5-20).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**What's the hole size for a GU10 downlight?**",
+              "Most GU10 downlights require a 60-80mm cut-out diameter. Always check your fitting's exact specification before cutting.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Can GU10 downlights be adjusted?**",
+              "Fixed versions shine straight down. Adjustable/tilt versions angle 30-40 degrees for accent lighting. Check product specifications.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**How many GU10 downlights do I need for a room?**",
+              "General rule: one 50W halogen (or 7W LED) per 2-3 square metres for general lighting.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Are GMEC GU10 downlights fire-rated?**",
+              "Our range includes both fire-rated and non-fire-rated options. Check each product listing for fire rating.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Ready to Upgrade Your Lighting?",
+        paragraphs: [
+          "GMEC stocks over 15 GU10 downlight variants covering every installation type. All are mains voltage (no transformer needed), compatible with all standard GU10 LED bulbs, and available from £4.99 per fitting.",
+        ],
+        list: [
+          "Fire-rated for safety",
+          "IP65 for bathrooms",
+          "Adjustable for accent lighting",
+          "Fixed for general illumination",
+          "Chrome, satin nickel, white finishes",
+          "Free UK delivery over £100",
+          "14-day returns",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "**Also browse:**",
+            ],
+          },
+          {
+            list: [
+              "[GU10 LED bulbs in warm & cool white](/shop/cool-white-led-bulbs)",
+              "[LED ceiling lights](/shop/led-ceiling-lights)",
+              "[3 colours in 1 lighting](/shop/led-3-colours-in-1)",
+            ],
+          },
         ],
       },
     ],
