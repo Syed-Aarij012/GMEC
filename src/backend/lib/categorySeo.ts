@@ -515,6 +515,278 @@ export const categorySeo: Record<string, CategorySeo> = {
       },
     ],
   },
+  "cool-white-e27-led-bulbs": {
+    h1: "Cool White E27 LED Bulbs",
+    title: "Cool White E27 LED Bulbs UK | 6500K | Bright Daylight | GMEC Corporation",
+    description:
+      "Buy E27 cool white LED bulbs from GMEC: 6500K bright daylight lighting for kitchens, offices, workshops. Energy-efficient, 25,000-hour lifespan. From £3.49. Free UK delivery over £100.",
+    intro:
+      "[GMEC Corporation](/) supplies premium cool white (6500K) E27 LED bulbs for homes, offices, and businesses across the UK. Cool white E27 bulbs are perfect for kitchens, bathrooms, workspaces, and any room where bright, crisp daylight-like lighting matters. Our range combines the standard E27 Edison screw fitting with a cool white 6500K colour temperature, delivering clear visibility, energy efficiency, and precision lighting for tasks that demand brightness. Every cool white E27 LED bulb delivers 80% energy savings, lasts 25,000 hours (10-15 years), and is instantly compatible with your existing E27 fixtures. Over 12 cool white E27 LED bulb variants in stock, from £3.49, free UK delivery over £100, 14-day returns.",
+    content: [
+      {
+        heading: "Why Choose Cool White E27 LED Bulbs?",
+        paragraphs: [
+          "Cool white (6500K) is the colour temperature that most closely mimics natural daylight. It's bright, crisp, and energizing, perfect for spaces where clarity and visibility are essential. Unlike warm white, which creates ambiance, cool white prioritizes function and clarity, making it the professional choice for kitchens, bathrooms, home offices, workshops, and retail spaces.",
+          "**When cool white E27 bulbs are perfect:**",
+        ],
+        list: [
+          "**Kitchens:** clear visibility for cooking, food preparation, and reading recipes.",
+          "**Bathrooms:** bright task lighting for grooming, makeup application, and shaving.",
+          "**Home Offices:** alert, focused lighting for screen work and concentration.",
+          "**Workshops:** precise visibility for detailed work, repairs, and hobbies.",
+          "**Retail/Commercial:** professional, inviting lighting that makes colours appear true.",
+          "**Garages:** bright work lighting for tools, repairs, and projects.",
+          "**Utility Rooms:** practical lighting for laundry and storage.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**E27 cool white vs other fittings:** E27 is the standard screw fitting for table lamps, pendant lights, wall lights, floor lamps, and most general home fixtures. If you're upgrading a lamp or fixture that currently uses a screw-in bulb, E27 cool white is your solution. For ceiling lights, look at [B22 cool white bulbs](/shop/cool-white-b22-led-bulbs). For decorative fixtures, explore [E14 cool white candle bulbs](/shop/cool-white-e14-led-bulbs).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cool White (6500K) vs Warm White (2700K) E27 Bulbs",
+        paragraphs: [
+          "**Cool White (6500K), daylight:** produces bright, crisp light that mimics natural daylight. Clear, professional, energizing. Best for task-oriented spaces where visibility is critical. Makes colours appear true and accurate, ideal for kitchens, offices, and workspaces. Cool white can feel clinical in living spaces but is perfect for functional areas.",
+          "**Warm White (2700K), cosy glow:** produces a golden, intimate glow identical to traditional incandescent bulbs. Relaxing, welcoming, intimate. Best for living rooms, bedrooms, and decorative spaces where ambiance matters. Warm white makes people feel at home but isn't bright enough for detailed tasks.",
+          "**Quick decision guide:**",
+        ],
+        table: {
+          headers: ["Room", "Best Choice", "Why"],
+          rows: [
+            ["Kitchen", "Cool White", "Need clear visibility for cooking & food prep"],
+            ["Bedroom", "Warm White", "Want cosy, intimate lighting"],
+            ["Bathroom", "Cool White", "Need brightness for grooming & makeup"],
+            ["Living Room", "Warm White", "Want a relaxing, welcoming atmosphere"],
+            ["Home Office", "Cool White", "Need focus and alertness for work"],
+            ["Dining Room", "Warm White", "Want ambiance for meals"],
+            ["Garage/Workshop", "Cool White", "Need precise visibility for tasks"],
+            ["Hallway", "Either", "Cool White if needed for visibility, Warm White for ambiance"],
+          ],
+        },
+        more: [
+          {
+            paragraphs: [
+              "**Browse:** [Warm White E27 LED Bulbs](/shop/warm-white-e27-led-bulbs) | [Cool White LED Bulbs (All Fittings)](/shop/cool-white-led-bulbs)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Energy Savings: Cool White E27 LED Bulbs",
+        paragraphs: [
+          "Replace 5 old 60W incandescent E27 bulbs (kitchen & office fixtures) with 9W cool white LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Incandescent (60W)", "New LED (9W)", "Annual Saving"],
+          rows: [["Annual usage (5 bulbs)", "110 kWh (£30/year)", "16 kWh (£5/year)", "£25/year"]],
+        },
+        more: [
+          {
+            paragraphs: [
+              "10-year total: £250+ (energy £250 + no bulb replacements = £100+ saved).",
+              "**Multi-room home (15 cool white E27 bulbs):**",
+            ],
+          },
+          {
+            table: {
+              headers: ["Metric", "Old Incandescent (60W)", "New LED (9W)", "Annual Saving"],
+              rows: [["Annual usage (15 bulbs)", "328 kWh (£92/year)", "49 kWh (£14/year)", "£78/year"]],
+            },
+          },
+          {
+            paragraphs: ["10-year saving: £780+.", "**Why cool white LED saves money:**"],
+          },
+          {
+            numberedList: [
+              "**85% less energy:** LED uses 15% of incandescent power.",
+              "**25,000-hour lifespan:** incandescent lasts 1,000 hours, LED lasts 10-15 years.",
+              "**No replacement costs:** professional spaces that need bright lighting benefit most, reducing maintenance costs and downtime.",
+              "**Instant brightness:** no warm-up time (important for work spaces requiring immediate visibility).",
+              "**Better productivity:** bright, clear lighting in offices and workshops means better focus and fewer errors.",
+            ],
+          },
+          {
+            paragraphs: [
+              "Cool white LED bulbs are an investment in both comfort and efficiency. A typical home upgrading 15 cool white E27 fixtures saves £780+ over 10 years, plus gains the benefit of better visibility and professional lighting quality.",
+              "Browse our [complete cool white E27 LED bulb range](/shop/cool-white-e27-led-bulbs) and start saving today.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dimmable Cool White E27 LED Bulbs",
+        paragraphs: [
+          "**Can you dim cool white bulbs?** Yes! Dimmable cool white E27 LED bulbs allow you to adjust brightness while maintaining the bright, crisp 6500K colour temperature. This is valuable in kitchens where you might want bright light for cooking but softer light for dining.",
+          "**Non-dimmable vs dimmable:** non-dimmable cool white E27 bulbs are cheaper and sufficient for fixtures with regular on/off switches. Dimmable versions cost £1-2 more but give you complete brightness control. Most kitchens and offices benefit from dimmable cool white bulbs for flexibility.",
+          "**When to choose dimmable cool white:**",
+        ],
+        list: [
+          "Kitchen pendant lights (bright for cooking, softer for dining)",
+          "Home office desk lamps (full brightness for work, dimmed for breaks)",
+          "Workshop lights (full brightness for precision work, dimmed for storage)",
+          "Bathroom mirror lights (bright for grooming, softer for evening)",
+          "Bathroom exhaust fan lights (full brightness for ventilation, dimmed after)",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Check [dimmable cool white LED bulbs](/shop/cool-white-led-bulbs) for complete flexibility.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQ: Cool White E27 LED Bulbs",
+        paragraphs: [
+          "**Q: What does 6500K cool white mean?**",
+          "A: 6500K is the colour temperature that matches natural daylight. It's bright, crisp, and energizing. Higher numbers mean cooler/bluer light, lower numbers mean warmer/more yellow light. 2700K is warm white (cosy), 6500K is cool white (daylight).",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: Can I use cool white E27 bulbs in my living room?**",
+              "A: Technically yes, but it's not recommended. Cool white is clinical and can feel cold in living spaces. Most people prefer warm white in bedrooms and living rooms. Save cool white for kitchens, bathrooms, and offices.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are cool white E27 LED bulbs bright enough for kitchens?**",
+              "A: Yes, absolutely. A 9W cool white LED (equivalent to 60W incandescent) produces 750+ lumens of bright, clear light, perfect for kitchen task lighting. This is one of the best uses for cool white bulbs.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What wattage cool white E27 LED replaces my old 60W incandescent?**",
+              "A: 60W incandescent is roughly equivalent to a 9W cool white LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts. GMEC bulb listings show both old-style wattage equivalents and actual lumens.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do cool white E27 LED bulbs work with old dimmer switches?**",
+              "A: Older dimmers (pre-2010) may flicker with LED bulbs. Modern LED-rated dimmers work perfectly. If flickering, upgrade to an LED-compatible dimmer (£5-20).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do cool white E27 LED bulbs last?**",
+              "A: GMEC cool white E27 LED bulbs are rated for 25,000 hours, which equals 10-15 years of typical use (assuming 5-6 hours daily). After that, they gradually dim but rarely fail completely.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I mix cool white and warm white bulbs in the same room?**",
+              "A: Yes, strategically. Many kitchens use cool white for task lighting (pendant lights over islands) and warm white for ambient lighting (ceiling fixtures). This gives both visibility and warmth.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Is cool white good for reading and close work?**",
+              "A: Yes, cool white is ideal for reading and detailed work. The bright, crisp light reduces eye strain and provides the visibility needed for precision tasks. Great for home offices, craft rooms, and hobbies.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cool White E27 Bulb Specifications",
+        paragraphs: ["**GMEC cool white E27 LED bulbs deliver:**"],
+        list: [
+          "**6500K colour temperature:** bright, crisp daylight-like illumination.",
+          "**E27 Edison screw fitting:** standard size, fits most lamps and fixtures.",
+          "**80% energy savings:** uses only 15% of incandescent power.",
+          "**25,000-hour lifespan:** 10-15 years of use.",
+          "**Instant brightness:** no warm-up time.",
+          "**Dimmable options available:** for mood control when needed.",
+          "**CRI 80+:** accurate colour rendering.",
+          "**Available in multiple wattages:** 5W, 9W, 12W, 15W equivalents.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Compatible fixtures:** cool white E27 bulbs work in table lamps, floor lamps, wall lights, pendant lights, desk lamps, bathroom mirrors, kitchen fixtures, workshop lights, and any fixture with an E27 screw socket.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Related Cool White Products",
+        paragraphs: ["**Complete your cool white lighting:**"],
+        list: [
+          "[Cool White B22 LED Bulbs](/shop/cool-white-b22-led-bulbs) — for UK ceiling lights",
+          "[Cool White E14 LED Bulbs](/shop/cool-white-e14-led-bulbs) — for chandeliers and small fixtures",
+          "[Cool White GU10 LED Bulbs](/shop/cool-white-gu10-led-bulbs) — for downlights and spot lights",
+          "[Cool White LED Bulbs (All Types)](/shop/cool-white-led-bulbs) — browse entire cool white range",
+          "[Warm White E27 LED Bulbs](/shop/warm-white-e27-led-bulbs) — for cosy ambient lighting",
+          "[LED Ceiling Lights](/shop/led-ceiling-lights) — complete fixtures",
+          "[GU10 Downlights](/shop/gu10-downlights) — for modern lighting",
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to Cool White E27 LED Bulbs?",
+        paragraphs: [
+          "GMEC stocks 12+ cool white E27 LED bulb variants perfect for kitchens, offices, bathrooms, and workspaces. All deliver bright, clear 6500K daylight-like lighting with 80% energy savings.",
+          "**Why choose GMEC cool white E27 LED bulbs:**",
+        ],
+        list: [
+          "Bright, crisp 6500K daylight colour",
+          "E27 standard screw fitting",
+          "80% energy savings vs incandescent",
+          "25,000-hour lifespan (10-15 years)",
+          "Dimmable options available",
+          "From £3.49 per bulb",
+          "Free UK delivery over £100",
+          "14-day money-back guarantee",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "Browse all cool white E27 bulbs above and brighten your workspace today.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  "cool-white-b22-led-bulbs": {
+    h1: "Cool White B22 LED Bulbs",
+    title: "Cool White B22 LED Bulbs UK | 6500K | Bright Daylight | GMEC Corporation",
+    description:
+      "Shop cool white (6500K) B22 LED bulbs from GMEC: bright daylight lighting for UK bayonet ceiling fittings. Energy-efficient, 25,000-hour lifespan. Free UK delivery over £100.",
+    intro:
+      "[GMEC Corporation](/) supplies cool white (6500K) B22 LED bulbs for the bayonet fitting found in most UK ceiling roses and lamp holders. Bright, crisp daylight-style light for kitchens, offices, and workspaces where clarity and visibility matter, with 80% energy savings and a 25,000-hour lifespan.",
+  },
+  "cool-white-e14-led-bulbs": {
+    h1: "Cool White E14 LED Bulbs",
+    title: "Cool White E14 LED Bulbs UK | 6500K | Bright Daylight | GMEC Corporation",
+    description:
+      "Shop cool white (6500K) E14 LED bulbs from GMEC: bright daylight lighting for small-screw fittings, chandeliers and wall lights. Free UK delivery over £100.",
+    intro:
+      "[GMEC Corporation](/) supplies cool white (6500K) E14 LED bulbs for small-screw fittings, chandeliers, and wall lights. Bright, crisp daylight-style light wherever a compact bulb needs to deliver clear, functional visibility, with 80% energy savings and a 25,000-hour lifespan.",
+  },
+  "cool-white-gu10-led-bulbs": {
+    h1: "Cool White GU10 LED Bulbs",
+    title: "Cool White GU10 LED Bulbs UK | 6500K | Bright Daylight | GMEC Corporation",
+    description:
+      "Shop cool white (6500K) GU10 LED bulbs from GMEC: bright daylight lighting for downlights and spotlights. Energy-efficient, 25,000-hour lifespan. Free UK delivery over £100.",
+    intro:
+      "[GMEC Corporation](/) supplies cool white (6500K) GU10 LED bulbs for downlights and spotlight fittings. Bright, crisp daylight-style light for kitchens, bathrooms, and workspaces where clarity and visibility matter, with 80% energy savings and a 25,000-hour lifespan.",
+  },
+  "warm-white-e27-led-bulbs": {
+    h1: "Warm White E27 LED Bulbs",
+    title: "Warm White E27 LED Bulbs UK | 2700K | Cosy Ambient Light | GMEC Corporation",
+    description:
+      "Shop warm white (2700K) E27 LED bulbs from GMEC: cosy ambient lighting for table lamps, floor lamps and pendant lights. Free UK delivery over £100.",
+    intro:
+      "[GMEC Corporation](/) supplies warm white (2700K) E27 LED bulbs for table lamps, floor lamps, pendant lights, and wall lights. A soft, cosy glow for living rooms, bedrooms, and hospitality spaces, with 80% energy savings and a 25,000-hour lifespan.",
+  },
   "gu10-downlights": {
     h1: "GU10 Downlights",
     title: "GU10 Downlights UK | Fire Rated, IP65 Bathroom & Adjustable | GMEC",

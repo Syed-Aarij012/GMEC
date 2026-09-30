@@ -33,6 +33,26 @@
        <priority>0.8000</priority>
   </url>
   <url>
+       <loc>https://www.gmeccorporation.com/shop/cool-white-e27-led-bulbs</loc>
+       <lastmod>2026-09-30T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/shop/cool-white-b22-led-bulbs</loc>
+       <lastmod>2026-09-30T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/shop/cool-white-e14-led-bulbs</loc>
+       <lastmod>2026-09-30T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/shop/cool-white-gu10-led-bulbs</loc>
+       <lastmod>2026-09-30T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
        <loc>https://www.gmeccorporation.com/shop/gu10-downlights</loc>
        <lastmod>2026-09-08T05:02:38+00:00</lastmod>
        <priority>0.8000</priority>
@@ -76,6 +96,11 @@
        <loc>https://www.gmeccorporation.com/shop/warm-white-led-bulbs</loc>
        <lastmod>2026-09-08T05:02:38+00:00</lastmod>
        <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/shop/warm-white-e27-led-bulbs</loc>
+       <lastmod>2026-09-30T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://www.gmeccorporation.com/about</loc>

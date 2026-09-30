@@ -3,16 +3,62 @@ import type { Prisma } from "@prisma/client";
 
 export const PAGE_SIZE = 12;
 
-// These two "categories" are colour-temperature collections on the real site,
-// not a bulb shape — WooCommerce cross-lists every cool/warm white product
-// there regardless of its shape category (frosted, filament, candle, etc.).
-// Our schema only stores one categoryId per product, but the `colour`
-// attribute is independent of that, so we can reproduce the same cross-cutting
-// listing by filtering on colour instead of categoryId for just these two.
-const COLOUR_CATEGORY_SLUGS: Record<string, string> = {
-  "cool-white-led-bulbs": "Cool White",
-  "warm-white-led-bulbs": "Warm White",
+interface VirtualCategory {
+  colour?: string;
+  fitting?: string;
+}
+
+// These "categories" are colour-temperature (and colour+fitting) collections
+// on the real site, not a bulb shape — WooCommerce cross-lists every
+// cool/warm white product there regardless of its shape category (frosted,
+// filament, candle, etc.), and further splits each colour out per fitting
+// (e.g. "Cool White E27 LED Bulbs") for its own dedicated SEO landing page.
+// Our schema only stores one categoryId per product, but `colour` and
+// `fitting` are independent attributes, so we reproduce the same
+// cross-cutting listings by filtering on those instead of categoryId for
+// just these slugs, which have no real Category row of their own.
+export const VIRTUAL_CATEGORY_SLUGS: Record<string, VirtualCategory> = {
+  "cool-white-led-bulbs": { colour: "Cool White" },
+  "warm-white-led-bulbs": { colour: "Warm White" },
+  "cool-white-e27-led-bulbs": { colour: "Cool White", fitting: "E27" },
+  "cool-white-b22-led-bulbs": { colour: "Cool White", fitting: "B22" },
+  "cool-white-e14-led-bulbs": { colour: "Cool White", fitting: "E14" },
+  "cool-white-gu10-led-bulbs": { colour: "Cool White", fitting: "GU10" },
+  "warm-white-e27-led-bulbs": { colour: "Warm White", fitting: "E27" },
 };
+
+export interface FittingNav {
+  /** Every fitting in this colour family that has its own dedicated page,
+   * mapped to that page's URL (e.g. "E27" -> "/shop/cool-white-e27-led-bulbs"). */
+  fittingPages: Record<string, string>;
+  /** Set only when `slug` itself is a fitting-locked page, so its pill row
+   * can offer a way back to the unfiltered colour page. */
+  allFittingsHref?: string;
+}
+
+// Describes the fitting-navigation pills for any slug in a colour family
+// (the colour-only page and each of its per-fitting pages), so every page
+// in the family can show the same "All Fittings / E27 / B22 / …" row and
+// link straight to a sibling page instead of just filtering in place.
+// Returns null for a real (non-virtual) category, which keeps its existing
+// query-string-only fitting filter untouched.
+export function getFittingNav(slug: string): FittingNav | null {
+  const entry = VIRTUAL_CATEGORY_SLUGS[slug];
+  if (!entry?.colour) return null;
+
+  const fittingPages: Record<string, string> = {};
+  let parentSlug: string | undefined;
+  for (const [candidateSlug, candidate] of Object.entries(VIRTUAL_CATEGORY_SLUGS)) {
+    if (candidate.colour !== entry.colour) continue;
+    if (candidate.fitting) fittingPages[candidate.fitting] = `/shop/${candidateSlug}`;
+    else parentSlug = candidateSlug;
+  }
+
+  return {
+    fittingPages,
+    allFittingsHref: entry.fitting && parentSlug ? `/shop/${parentSlug}` : undefined,
+  };
+}
 
 export interface ShopSearchParams {
   q?: string;
@@ -41,13 +87,17 @@ export async function getFilteredProducts(
   const where: Prisma.ProductWhereInput = {};
 
   const categorySlug = forcedCategorySlug ?? params.category;
-  const colourCollection = categorySlug ? COLOUR_CATEGORY_SLUGS[categorySlug] : undefined;
-  if (colourCollection) {
-    where.colour = colourCollection;
+  const virtual = categorySlug ? VIRTUAL_CATEGORY_SLUGS[categorySlug] : undefined;
+  if (virtual) {
+    if (virtual.colour) where.colour = virtual.colour;
+    if (virtual.fitting) where.fitting = virtual.fitting;
   } else if (categorySlug) {
     where.category = { slug: categorySlug };
   }
-  if (params.fitting) {
+  // A locked fitting from the slug itself (e.g. /cool-white-e27-led-bulbs)
+  // takes precedence over a stray ?fitting= query param, so the dedicated
+  // per-fitting SEO page can't be filtered into showing a different fitting.
+  if (params.fitting && !virtual?.fitting) {
     where.fitting = params.fitting;
   }
   if (params.colour) {
@@ -74,8 +124,11 @@ export async function getFilteredProducts(
 
   const page = Math.max(1, Number(params.page) || 1);
 
-  const categoryScope: Prisma.ProductWhereInput = colourCollection
-    ? { colour: colourCollection }
+  const categoryScope: Prisma.ProductWhereInput = virtual
+    ? {
+        ...(virtual.colour ? { colour: virtual.colour } : {}),
+        ...(virtual.fitting ? { fitting: virtual.fitting } : {}),
+      }
     : categorySlug
       ? { category: { slug: categorySlug } }
       : {};
