@@ -757,27 +757,720 @@ export const categorySeo: Record<string, CategorySeo> = {
   },
   "cool-white-b22-led-bulbs": {
     h1: "Cool White B22 LED Bulbs",
-    title: "Cool White B22 LED Bulbs UK | 6500K | Bright Daylight | GMEC Corporation",
+    title: "Cool White B22 LED Bulbs UK | 6500K | Bright Ceiling Lights | GMEC",
     description:
-      "Shop cool white (6500K) B22 LED bulbs from GMEC: bright daylight lighting for UK bayonet ceiling fittings. Energy-efficient, 25,000-hour lifespan. Free UK delivery over £100.",
+      "Buy cool white B22 LED bulbs from GMEC: 6500K bright daylight for UK ceiling lights, kitchens, bathrooms. Bayonet cap, energy-efficient, 25,000-hour lifespan. From £3.49. Free UK delivery.",
     intro:
-      "[GMEC Corporation](/) supplies cool white (6500K) B22 LED bulbs for the bayonet fitting found in most UK ceiling roses and lamp holders. Bright, crisp daylight-style light for kitchens, offices, and workspaces where clarity and visibility matter, with 80% energy savings and a 25,000-hour lifespan.",
+      "[GMEC Corporation](/) offers premium cool white (6500K) B22 LED bulbs for homes and businesses across the UK. The B22 bayonet cap fitting is the standard ceiling light bulb in UK homes, and cool white 6500K delivers bright, crisp daylight-like lighting perfect for kitchens, bathrooms, hallways, and any space where clarity matters. Each cool white B22 LED bulb delivers 80% energy savings, lasts 25,000 hours (10-15 years), and works instantly with your existing B22 ceiling fixtures. Over 15 cool white B22 LED bulb variants in stock, from £3.49, free UK delivery over £100, 14-day returns.",
+    content: [
+      {
+        heading: "Why Choose Cool White B22 LED Bulbs?",
+        paragraphs: [
+          "Cool white (6500K) is the colour temperature that most closely mimics natural daylight. It's bright, crisp, and energizing, perfect for spaces where visibility and clarity are essential. Unlike warm white which creates a cosy ambiance, cool white prioritizes function and precision, making it the professional choice for kitchens, bathrooms, hallways, and workspaces.",
+          "**When cool white B22 bulbs are perfect:**",
+        ],
+        list: [
+          "**Kitchens:** clear visibility for food preparation, reading recipes, and cooking.",
+          "**Bathrooms:** bright task lighting for grooming, makeup application, and shaving.",
+          "**Hallways:** professional, bright lighting that provides security and visibility.",
+          "**Landings/Stairs:** clear visibility for safety when moving between levels.",
+          "**Workshops:** precise visibility for detailed work, repairs, and projects.",
+          "**Utility Rooms:** practical lighting for laundry, storage, and organization.",
+          "**Home Offices:** alert, focused lighting for screen work and concentration.",
+          "**Retail/Commercial:** professional lighting that makes products look appealing.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**B22 cool white vs other fittings:** B22 is the standard bayonet cap fitting for UK ceiling lights. If your ceiling fixture requires a twist-lock bulb, B22 cool white is your solution. For lamp fixtures, look at [E27 cool white bulbs](/shop/cool-white-e27-led-bulbs). For decorative fixtures, explore [E14 cool white candle bulbs](/shop/cool-white-e14-led-bulbs). For downlights, see [GU10 cool white bulbs](/shop/cool-white-gu10-led-bulbs).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cool White (6500K) vs Warm White (2700K) B22 Bulbs",
+        paragraphs: [
+          "**Cool White (6500K), daylight:** produces bright, crisp light matching natural daylight. Clear, professional, alert. Best for task-oriented spaces where visibility is critical. Makes colours appear true and accurate, ideal for kitchens, bathrooms, and practical spaces. Cool white can feel clinical in living spaces but is perfect for functional areas.",
+          "**Warm White (2700K), cosy glow:** produces a golden, intimate glow identical to traditional incandescent bulbs. Relaxing, welcoming, intimate. Best for living rooms, bedrooms, and decorative spaces. Warm white creates atmosphere but isn't bright enough for detailed tasks or safety-critical areas.",
+          "**Quick decision guide:**",
+        ],
+        table: {
+          headers: ["Room", "Best Choice", "Why"],
+          rows: [
+            ["Kitchen Ceiling", "Cool White", "Need clear visibility for cooking & food prep"],
+            ["Bedroom Ceiling", "Warm White", "Want cosy, intimate sleeping environment"],
+            ["Bathroom Ceiling", "Cool White", "Need brightness for grooming & morning routine"],
+            ["Living Room", "Warm White", "Want a relaxing, welcoming atmosphere"],
+            ["Hallway/Landing", "Cool White", "Need visibility and security for safe movement"],
+            ["Dining Room", "Warm White", "Want a warm ambiance for meals"],
+            ["Utility Room", "Cool White", "Need practical, bright task lighting"],
+            ["Home Office", "Cool White", "Need focus and alertness for work"],
+          ],
+        },
+      },
+      {
+        heading: "Energy Savings: Cool White B22 LED Bulbs",
+        paragraphs: [
+          "**Real savings example:** replace 10 old 60W incandescent B22 bulbs (typical UK home ceiling lights) with 9W cool white LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Incandescent (60W)", "New LED (9W)", "Annual Saving"],
+          rows: [["Annual usage (10 bulbs)", "219 kWh (£61/year)", "33 kWh (£9/year)", "£52/year"]],
+        },
+        more: [
+          {
+            paragraphs: [
+              "10-year total: £520+ (energy £520 + no bulb replacements = £150+ saved).",
+              "**Large Home (20 cool white B22 bulbs):**",
+            ],
+          },
+          {
+            table: {
+              headers: ["Metric", "Old Incandescent (60W)", "New LED (9W)", "Annual Saving"],
+              rows: [["Annual usage (20 bulbs)", "438 kWh (£122/year)", "66 kWh (£19/year)", "£103/year"]],
+            },
+          },
+          {
+            paragraphs: ["10-year saving: £1,030+.", "**Why cool white LED saves money:**"],
+          },
+          {
+            numberedList: [
+              "**85% less energy:** LED uses 15% of incandescent power.",
+              "**25,000-hour lifespan:** incandescent lasts 1,000 hours, LED lasts 10-15 years.",
+              "**No replacement costs:** a typical UK home needs 15-20 B22 bulbs, LED eliminates constant replacements.",
+              "**Instant brightness:** no warm-up time (especially valuable in hallways/bathrooms).",
+              "**Better safety:** bright, clear lighting in hallways and stairs reduces accident risk.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**The bottom line:** cool white LED B22 bulbs are an investment in comfort, safety, and efficiency. A typical UK home upgrading 15-20 B22 ceiling lights to cool white LED saves £750-1,500+ over 10 years, while gaining better visibility and reduced maintenance.",
+              "Browse our [complete cool white B22 LED bulb range](/shop/cool-white-b22-led-bulbs) and start saving today.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dimmable Cool White B22 LED Bulbs",
+        paragraphs: [
+          "**Can you dim cool white B22 bulbs?** Yes! Dimmable cool white B22 LED bulbs allow you to adjust brightness while maintaining the bright, crisp 6500K colour temperature. This is valuable in kitchens where you might want full bright light for cooking but softer light for dining.",
+          "**Non-dimmable vs dimmable:** non-dimmable cool white B22 bulbs are cheaper and sufficient for fixtures with regular on/off switches. Dimmable versions cost £1-2 more but give you complete brightness control. Many kitchens and hallways benefit from dimmable cool white B22 bulbs for flexibility.",
+          "**When to choose dimmable cool white B22:**",
+        ],
+        list: [
+          "Kitchen ceiling lights (full brightness for cooking, softer for dining)",
+          "Hallway lights (bright for daytime, dimmed for evening/night)",
+          "Bathroom ceiling lights (full brightness for morning routine, softer after)",
+          "Landing lights (full brightness for visibility, dimmed for evening comfort)",
+          "Home office ceiling lights (full brightness for work, dimmed for breaks)",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Browse [dimmable cool white LED bulbs](/shop/cool-white-led-bulbs) for complete flexibility.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQ: Cool White B22 LED Bulbs",
+        paragraphs: [
+          "**Q: What does 6500K cool white mean?**",
+          "A: 6500K is the colour temperature that matches natural daylight. It's bright, crisp, and energizing. Higher numbers mean cooler/bluer light. 2700K is warm white (cosy), 6500K is cool white (daylight).",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: Can I use cool white B22 bulbs in my bedroom?**",
+              "A: Technically yes, but not recommended. Cool white is clinical and can feel cold for sleeping. Most people prefer warm white in bedrooms for a cosy, relaxing environment. Use cool white in bathrooms and kitchens instead.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are cool white B22 LED bulbs bright enough for kitchens?**",
+              "A: Yes, absolutely. A 9W cool white LED B22 (equivalent to 60W incandescent) produces 750+ lumens of bright, clear light, perfect for kitchen ceiling task lighting. This is one of the best uses for cool white bulbs.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What wattage cool white B22 LED replaces my old 60W incandescent?**",
+              "A: 60W incandescent is roughly equivalent to a 9W cool white LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts. GMEC bulb listings show both old-style wattage equivalents and actual lumens.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do cool white B22 LED bulbs work with old dimmer switches?**",
+              "A: Older dimmers (pre-2010) may flicker with LED bulbs. Modern LED-rated dimmers work perfectly. If flickering occurs, upgrade to an LED-compatible dimmer (£5-20).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do cool white B22 LED bulbs last?**",
+              "A: GMEC cool white B22 LED bulbs are rated for 25,000 hours, which equals 10-15 years of typical use. After that, they gradually dim but rarely fail.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How do I install a cool white B22 LED bulb?**",
+              "A: Push the bulb into the ceiling socket and twist clockwise about a quarter turn until it locks in place. To remove, twist counterclockwise. Much simpler than screw fittings.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I mix cool white and warm white B22 bulbs in the same home?**",
+              "A: Yes, strategically. Many homes use cool white for kitchens and bathrooms (task lighting) and warm white for living rooms and bedrooms (ambiance). This creates the best lighting for each space's purpose.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cool White B22 Bulb Specifications",
+        paragraphs: ["**GMEC cool white B22 LED bulbs deliver:**"],
+        list: [
+          "**6500K colour temperature:** bright, crisp daylight-like illumination.",
+          "**B22 bayonet cap fitting:** standard UK ceiling light fitting.",
+          "**80% energy savings:** uses only 15% of incandescent power.",
+          "**25,000-hour lifespan:** 10-15 years of use.",
+          "**Instant brightness:** no warm-up time.",
+          "**Dimmable options available:** for mood control when needed.",
+          "**CRI 80+:** accurate colour rendering.",
+          "**Available in multiple wattages:** 5W, 9W, 12W, 15W equivalents.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Compatible fixtures:** cool white B22 bulbs work in UK ceiling lights, kitchen lights, bathroom ceiling fixtures, hallway lights, landing lights, and any fixture with a standard B22 bayonet socket.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Related Cool White Products",
+        paragraphs: ["**Complete your cool white lighting:**"],
+        list: [
+          "[Cool White E27 LED Bulbs](/shop/cool-white-e27-led-bulbs) — for table lamps and pendant lights",
+          "[Cool White E14 LED Bulbs](/shop/cool-white-e14-led-bulbs) — for chandeliers and small fixtures",
+          "[Cool White GU10 LED Bulbs](/shop/cool-white-gu10-led-bulbs) — for downlights and spot lights",
+          "[Cool White LED Bulbs (All Types)](/shop/cool-white-led-bulbs) — browse entire cool white range",
+          "[Warm White B22 LED Bulbs](/shop/warm-white-led-bulbs) — for cosy ambient ceiling lighting",
+          "[LED Ceiling Lights](/shop/led-ceiling-lights) — complete fixtures",
+          "[GU10 Downlights](/shop/gu10-downlights) — for modern recessed lighting",
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to Cool White B22 LED Bulbs?",
+        paragraphs: [
+          "GMEC stocks 15+ cool white B22 LED bulb variants perfect for kitchens, bathrooms, hallways, and workspaces. All deliver bright, clear 6500K daylight-like lighting with 80% energy savings.",
+          "**Why choose GMEC cool white B22 LED bulbs:**",
+        ],
+        list: [
+          "Bright, crisp 6500K daylight colour",
+          "B22 standard bayonet fitting",
+          "80% energy savings vs incandescent",
+          "25,000-hour lifespan (10-15 years)",
+          "Dimmable options available",
+          "From £3.49 per bulb",
+          "Free UK delivery over £100",
+          "14-day money-back guarantee",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "Browse all cool white B22 bulbs above and brighten your home today.",
+            ],
+          },
+        ],
+      },
+    ],
   },
   "cool-white-e14-led-bulbs": {
     h1: "Cool White E14 LED Bulbs",
-    title: "Cool White E14 LED Bulbs UK | 6500K | Bright Daylight | GMEC Corporation",
+    title: "Cool White E14 LED Bulbs UK | 6500K | Bright Candle | GMEC",
     description:
-      "Shop cool white (6500K) E14 LED bulbs from GMEC: bright daylight lighting for small-screw fittings, chandeliers and wall lights. Free UK delivery over £100.",
+      "Buy cool white E14 LED bulbs from GMEC: 6500K candle bulbs for chandeliers and retail displays. Small screw fitting, energy-efficient, 25,000-hour lifespan. From £2.99. Free UK delivery.",
     intro:
-      "[GMEC Corporation](/) supplies cool white (6500K) E14 LED bulbs for small-screw fittings, chandeliers, and wall lights. Bright, crisp daylight-style light wherever a compact bulb needs to deliver clear, functional visibility, with 80% energy savings and a 25,000-hour lifespan.",
+      "[GMEC](/) provides premium cool white (6500K) E14 LED bulbs for homes and businesses across the UK. The E14 is the smallest screw fitting, perfect for chandeliers, wall sconces, retail displays, and decorative fixtures. Our range combines cool white 6500K bright daylight lighting with authentic E14 candle-style bulb design, delivering both visual appeal and professional illumination. Each cool white E14 LED bulb delivers 80% energy savings, lasts 25,000 hours (10-15 years), and works instantly with your existing E14 fixtures. Over 10 cool white E14 LED bulb variants in stock, from £2.99, free UK delivery over £100, 14-day returns.",
+    content: [
+      {
+        heading: "Why Choose Cool White E14 LED Bulbs?",
+        paragraphs: [
+          "Cool white (6500K) is the colour temperature that most closely mimics natural daylight. It's bright, crisp, and professional, perfect for retail spaces, commercial displays, and settings where accurate colour rendering matters. While warm white E14 candle bulbs create cosy, intimate ambiance, cool white E14 bulbs deliver clarity and visual impact.",
+          "**When cool white E14 bulbs are perfect:**",
+        ],
+        list: [
+          "**Retail Shops/Boutiques:** professional, inviting lighting that makes merchandise look appealing.",
+          "**Art Galleries:** bright, neutral lighting that shows colours accurately.",
+          "**Restaurant Accent Lighting:** modern, professional ambient lighting.",
+          "**Hotel Chandeliers:** contemporary, sophisticated lighting aesthetic.",
+          "**Office Decorative Fixtures:** professional, alert lighting in stylish fittings.",
+          "**Craft/Workshop:** bright task lighting for detailed work.",
+          "**Modern Interior Design:** cool white candle bulbs in contemporary chandeliers.",
+          "**Commercial Displays:** product showcase lighting that highlights colour and detail.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**E14 cool white vs other fittings:** E14 is the smallest screw fitting for decorative and delicate fixtures. If your chandelier, wall sconce, or decorative fixture requires a small screw bulb, E14 cool white is your solution. For table lamps, look at [E27 cool white bulbs](/shop/cool-white-e27-led-bulbs). For ceiling lights, explore [B22 cool white bulbs](/shop/cool-white-b22-led-bulbs). For downlights, see [GU10 cool white bulbs](/shop/cool-white-gu10-led-bulbs).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cool White (6500K) vs Warm White (2700K) E14 Candle Bulbs",
+        paragraphs: [
+          "**Cool White (6500K), professional daylight:** produces bright, crisp light matching natural daylight. Clear, professional, modern. Best for commercial spaces, retail displays, and settings where accuracy matters. Makes colours appear true and vibrant, ideal for art, merchandise, and modern design. Creates sophisticated, contemporary lighting in decorative fixtures.",
+          "**Warm White (2700K), classic ambiance:** produces a golden, intimate glow identical to traditional candle/incandescent lighting. Cosy, welcoming, traditional. Best for residential chandeliers, classic décor, and spaces prioritizing ambiance. Creates the nostalgic, elegant atmosphere of traditional candle-lit fixtures.",
+          "**Quick decision guide:**",
+        ],
+        table: {
+          headers: ["Use Case", "Best Choice", "Why"],
+          rows: [
+            ["Residential Chandelier", "Warm White", "Want classic, elegant ambiance"],
+            ["Retail/Shop Chandelier", "Cool White", "Need professional product lighting"],
+            ["Art Gallery Fixture", "Cool White", "Want accurate colour rendering"],
+            ["Restaurant Ambiance", "Warm White", "Want cosy, intimate dining atmosphere"],
+            ["Modern/Contemporary Design", "Cool White", "Want a sleek, contemporary aesthetic"],
+            ["Traditional/Classic Décor", "Warm White", "Want period-appropriate warmth"],
+            ["Retail Wall Sconces", "Cool White", "Need professional display lighting"],
+            ["Bedroom Wall Sconces", "Warm White", "Want intimate, relaxing lighting"],
+          ],
+        },
+      },
+      {
+        heading: "Energy Savings: Cool White E14 LED Bulbs",
+        paragraphs: [
+          "**Real savings example:** replace 8 old 40W incandescent E14 candle bulbs (typical chandelier) with 5W cool white LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+          rows: [["Annual usage (8 bulbs)", "146 kWh (£41/year)", "18 kWh (£5/year)", "£36/year"]],
+        },
+        more: [
+          {
+            paragraphs: [
+              "10-year total: £360+ (energy £360 + no bulb replacements = £100+ saved).",
+              "**Retail/Commercial Space (20 cool white E14 bulbs):**",
+            ],
+          },
+          {
+            table: {
+              headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+              rows: [["Annual usage (20 bulbs)", "365 kWh (£102/year)", "46 kWh (£13/year)", "£89/year"]],
+            },
+          },
+          {
+            paragraphs: ["10-year saving: £890+.", "**Why cool white LED saves money:**"],
+          },
+          {
+            numberedList: [
+              "**85% less energy:** LED uses 15% of incandescent power.",
+              "**25,000-hour lifespan:** incandescent lasts 1,000 hours, LED lasts 10-15 years.",
+              "**No replacement costs:** candle bulbs are more expensive and frequent replacements are disruptive.",
+              "**Professional appearance:** cool white maintains a sophisticated look while reducing operating costs.",
+              "**Instant brightness:** no warm-up time (important for retail and commercial spaces).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**The bottom line:** cool white LED E14 candle bulbs are smart investments for retail and commercial spaces. They combine professional, contemporary lighting with significant energy savings and reduced maintenance costs.",
+              "Browse our complete cool white E14 LED bulb range and start saving today.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dimmable Cool White E14 LED Bulbs",
+        paragraphs: [
+          "**Can you dim cool white E14 bulbs?** Yes! Dimmable cool white E14 LED bulbs allow you to adjust brightness while maintaining the bright, crisp 6500K colour temperature. This is valuable in retail displays where you want bright lighting during business hours but softer lighting after hours.",
+          "**Non-dimmable vs dimmable:** non-dimmable cool white E14 bulbs are cheaper and sufficient for fixtures with regular on/off switches. Dimmable versions cost £1-2 more but give you complete brightness control. Retail and commercial spaces benefit from dimmable cool white E14 bulbs for flexibility.",
+          "**When to choose dimmable cool white E14:**",
+        ],
+        list: [
+          "Retail display chandeliers (bright during shopping hours, dimmed after closing)",
+          "Restaurant accent lighting (full brightness for events, dimmed for intimate evenings)",
+          "Hotel lobby fixtures (adjustable for different times of day)",
+          "Art gallery wall sconces (brightness control for optimal artwork lighting)",
+          "Office decorative fixtures (full brightness for work hours, dimmed for ambiance)",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Browse [dimmable cool white LED bulbs](/shop/cool-white-led-bulbs) for complete flexibility.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQ: Cool White E14 LED Bulbs",
+        paragraphs: [
+          "**Q: What does 6500K cool white mean?**",
+          "A: 6500K is the colour temperature that matches natural daylight. It's bright, crisp, and professional. Higher numbers mean cooler/bluer light. 2700K is warm white (cosy), 6500K is cool white (daylight).",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: Are cool white E14 candle bulbs good for home chandeliers?**",
+              "A: Depends on your style. Warm white is traditional for home chandeliers (classic elegance). Cool white is better for modern/contemporary designs. Commercial spaces almost always prefer cool white for professional appearance.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use cool white E14 bulbs in a retail chandelier?**",
+              "A: Yes, absolutely. Cool white E14 bulbs are ideal for retail chandeliers, they make merchandise and colours appear true and professional. Better customer appeal than warm white in commercial settings.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What wattage cool white E14 LED replaces my old 40W incandescent?**",
+              "A: 40W incandescent is roughly equivalent to a 5W cool white LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts. GMEC bulb listings show both old-style equivalents and actual lumens.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do cool white E14 LED bulbs work with old dimmer switches?**",
+              "A: Older dimmers (pre-2010) may flicker with LED bulbs. Modern LED-rated dimmers work perfectly. If flickering occurs, upgrade to an LED-compatible dimmer (£5-20).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do cool white E14 LED bulbs actually last?**",
+              "A: GMEC cool white E14 LED bulbs are rated for 25,000 hours, which equals 10-15 years of typical use. You'll likely never need to replace them during your time with that fixture.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I mix cool white E14 candle bulbs with warm white in the same chandelier?**",
+              "A: Technically yes, but it looks unbalanced. For the best aesthetic, use all the same colour temperature. If you want mixed ambiance, use cool white for all bulbs and add a dimmer for mood control.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are cool white E14 candle bulbs really as bright as old incandescent candles?**",
+              "A: Cool white LED is brighter than warm white LED, but \"bright\" is relative for candle-style bulbs. E14 candles provide ambient/decorative lighting, not main illumination. Cool white E14 provides the brightest, clearest E14 option.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cool White E14 Candle Bulb Specifications",
+        paragraphs: ["**GMEC cool white E14 LED bulbs deliver:**"],
+        list: [
+          "**6500K colour temperature:** bright, crisp professional daylight.",
+          "**E14 small screw fitting:** decorative and delicate fixture standard.",
+          "**Authentic candle-style design:** beautiful in visible fixtures.",
+          "**80% energy savings:** uses only 15% of incandescent power.",
+          "**25,000-hour lifespan:** 10-15 years of use.",
+          "**Instant brightness:** no warm-up time.",
+          "**Dimmable options available:** for mood control when needed.",
+          "**CRI 80+:** accurate colour rendering.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Compatible fixtures:** cool white E14 bulbs work in chandeliers, wall sconces, bedside lamps, decorative pendant lights, candle-style fixtures, retail displays, and any fixture with an E14 small screw socket.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Related Cool White Products",
+        paragraphs: ["**Complete your cool white lighting:**"],
+        list: [
+          "[Cool White E27 LED Bulbs](/shop/cool-white-e27-led-bulbs) — for table lamps and pendant lights",
+          "[Cool White B22 LED Bulbs](/shop/cool-white-b22-led-bulbs) — for UK ceiling lights",
+          "[Cool White GU10 LED Bulbs](/shop/cool-white-gu10-led-bulbs) — for downlights and spotlights",
+          "[Cool White LED Bulbs (All Types)](/shop/cool-white-led-bulbs) — browse entire cool white range",
+          "[Warm White E14 LED Bulbs](/shop/warm-white-led-bulbs) — for traditional candle ambiance",
+          "[LED Ceiling Lights](/shop/led-ceiling-lights) — complete fixtures",
+          "[GU10 Downlights](/shop/gu10-downlights) — for modern accent lighting",
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to Cool White E14 LED Bulbs?",
+        paragraphs: [
+          "GMEC stocks 10+ cool white E14 LED candle bulb variants perfect for retail, commercial spaces, and modern home design. All deliver bright, crisp 6500K professional lighting with 80% energy savings.",
+          "**Why choose GMEC cool white E14 LED candle bulbs:**",
+        ],
+        list: [
+          "Bright, crisp 6500K daylight colour",
+          "E14 small screw fitting",
+          "Authentic candle-style appearance",
+          "80% energy savings vs. incandescent",
+          "25,000-hour lifespan (10-15 years)",
+          "Dimmable options available",
+          "From £2.99 per bulb",
+          "Free UK delivery over £100",
+          "14-day money-back guarantee",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "Browse all cool white E14 candle bulbs above and upgrade your fixtures today.",
+            ],
+          },
+        ],
+      },
+    ],
   },
   "cool-white-gu10-led-bulbs": {
     h1: "Cool White GU10 LED Bulbs",
-    title: "Cool White GU10 LED Bulbs UK | 6500K | Bright Daylight | GMEC Corporation",
+    title: "Cool White GU10 LED Bulbs UK | 6500K | Bright Downlights | GMEC",
     description:
-      "Shop cool white (6500K) GU10 LED bulbs from GMEC: bright daylight lighting for downlights and spotlights. Energy-efficient, 25,000-hour lifespan. Free UK delivery over £100.",
+      "Buy cool white GU10 LED bulbs from GMEC: 6500K bright daylight for downlights and spotlights. Energy-efficient, instant brightness, 25,000-hour lifespan. From £2.99. Free UK delivery.",
     intro:
-      "[GMEC Corporation](/) supplies cool white (6500K) GU10 LED bulbs for downlights and spotlight fittings. Bright, crisp daylight-style light for kitchens, bathrooms, and workspaces where clarity and visibility matter, with 80% energy savings and a 25,000-hour lifespan.",
+      "[GMEC Corporation](/) offers premium cool white (6500K) GU10 LED bulbs for homes, offices, and businesses across the UK. GU10 bulbs fit into recessed downlights, spotlights, track lighting, and accent fixtures, delivering precise, directional lighting. Our cool white 6500K range combines bright daylight-like illumination with the directional control that makes GU10 perfect for task lighting, accent lighting, and retail displays. Every cool white GU10 LED bulb delivers 90% energy savings compared to halogen, reaches full brightness instantly, lasts 25,000 hours (10-15 years), and is instantly compatible with your existing GU10 downlight fittings.",
+    content: [
+      {
+        heading: "Why Choose Cool White GU10 LED Bulbs?",
+        paragraphs: [
+          "Cool white (6500K) is the colour temperature that most closely mimics natural daylight. It's bright, crisp, and professional, perfect for spaces where visibility and clarity are essential. GU10 bulbs are directional, making cool white the ideal choice for accent lighting on artwork, retail displays, task lighting, and professional environments where both brightness and precision matter.",
+          "**When cool white GU10 bulbs are perfect:**",
+        ],
+        list: [
+          "**Kitchen Downlights:** bright task lighting for food preparation and cooking.",
+          "**Bathroom Accent Lighting:** crisp lighting for grooming and shower areas.",
+          "**Home Office/Study:** alert, focused lighting for screen work and concentration.",
+          "**Picture Lighting:** professional accent lighting on artwork, displays, or features.",
+          "**Retail/Shop Lighting:** bright, accurate colour rendering for merchandise.",
+          "**Restaurant/Cafe:** professional ambient lighting highlighting interior design.",
+          "**Retail Display Counters:** precise lighting showcasing products.",
+          "**Workshops:** bright, clear visibility for detailed work.",
+          "**Art Galleries:** neutral daylight for accurate artwork viewing.",
+          "**Museum Displays:** professional museum-quality lighting.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**GU10 cool white vs other fittings:** GU10 is the standard bulb for recessed downlights and directional spot lights. If your fixture uses a push-fit pin base (not a screw), GU10 cool white is your solution. For lamp fixtures, look at [E27 cool white bulbs](/shop/cool-white-e27-led-bulbs). For ceiling lights, explore [B22 cool white bulbs](/shop/cool-white-b22-led-bulbs). For decorative fixtures, see [E14 cool white candle bulbs](/shop/cool-white-e14-led-bulbs).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cool White (6500K) vs Warm White (2700K) GU10 Bulbs",
+        paragraphs: [
+          "**Cool White (6500K), professional daylight:** produces bright, crisp light matching natural daylight. Clear, professional, sharp. Best for task lighting, accent lighting, and retail spaces where accuracy matters. Makes colours appear true and vibrant, ideal for products, artwork, and professional environments. Creates sharp, precise illumination for detailed work.",
+          "**Warm White (2700K), cosy ambient:** produces a golden, intimate glow perfect for residential ambiance. Relaxing, welcoming, warm. Best for living rooms and decorative accent lighting. Creates atmosphere but isn't bright enough for task-oriented spaces or retail displays.",
+          "**Quick decision guide:**",
+        ],
+        table: {
+          headers: ["Use Case", "Best Choice", "Why"],
+          rows: [
+            ["Kitchen Task Lighting", "Cool White", "Need clear visibility for cooking & food prep"],
+            ["Living Room Ambiance", "Warm White", "Want cosy, intimate atmosphere"],
+            ["Artwork/Picture Lighting", "Cool White", "Want accurate colour and dramatic effect"],
+            ["Bedroom Accent", "Warm White", "Want soft, relaxing ambient lighting"],
+            ["Retail Shop Lighting", "Cool White", "Need professional product presentation"],
+            ["Retail Accent on Features", "Either", "Cool white for accuracy, warm white for ambiance"],
+            ["Restaurant/Cafe Ambient", "Warm White", "Want welcoming, intimate dining"],
+            ["Restaurant Task Lighting", "Cool White", "Need visibility for waitstaff and bar areas"],
+            ["Home Office Lighting", "Cool White", "Need focus and alertness for work"],
+            ["Bathroom Task Lighting", "Cool White", "Need brightness for grooming"],
+          ],
+        },
+      },
+      {
+        heading: "Energy Savings: Cool White GU10 LED Bulbs",
+        paragraphs: [
+          "**Real savings example:** replace 12 old 50W halogen GU10 bulbs (typical large home downlights) with 5W cool white LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Halogen (50W)", "New LED (5W)", "Annual Saving"],
+          rows: [["Annual usage (12 bulbs)", "219 kWh (£61/year)", "22 kWh (£6/year)", "£55/year"]],
+        },
+        more: [
+          {
+            paragraphs: [
+              "10-year total: £550+ (energy £550 + no bulb replacements = £100+ saved).",
+              "**Retail/Commercial Space (30 cool white GU10 bulbs):**",
+            ],
+          },
+          {
+            table: {
+              headers: ["Metric", "Old Halogen (50W)", "New LED (5W)", "Annual Saving"],
+              rows: [["Annual usage (30 bulbs)", "548 kWh (£153/year)", "55 kWh (£15/year)", "£138/year"]],
+            },
+          },
+          {
+            paragraphs: ["10-year saving: £1,380+.", "**Why cool white LED saves money:**"],
+          },
+          {
+            numberedList: [
+              "**90% less energy:** LED uses only 10% of halogen power (the biggest saving of any conversion).",
+              "**25,000-hour lifespan:** halogen lasts 1,000-2,000 hours, LED lasts 10-15 years.",
+              "**No replacement costs:** halogen needs replacing frequently, LED lasts a decade with no changes.",
+              "**Instant brightness:** no warm-up time (important for retail and task lighting).",
+              "**Professional appearance:** cool white maintains high-end aesthetic while reducing costs.",
+            ],
+          },
+          {
+            paragraphs: [
+              "Cool white LED GU10 bulbs deliver the biggest energy savings of any LED conversion. A typical home upgrading 12-20 GU10 downlights to cool white LED saves £550-1,500+ over 10 years. Retail and commercial spaces see even greater savings.",
+              "Browse our [complete cool white GU10 LED bulb range](/shop/cool-white-gu10-led-bulbs) and start saving today.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dimmable Cool White GU10 LED Bulbs",
+        paragraphs: [
+          "**Can you dim cool white GU10 bulbs?** Yes! Dimmable cool white GU10 LED bulbs allow you to adjust brightness while maintaining the bright, crisp 6500K colour temperature. This is valuable in retail displays where you want bright lighting during shopping hours but can soften light after closing.",
+          "**Non-dimmable vs dimmable:** non-dimmable cool white GU10 bulbs are cheaper and sufficient for fixtures with regular on/off switches. Dimmable versions cost £1-2 more but give you complete brightness control. Retail and commercial spaces benefit from dimmable cool white GU10 bulbs for flexible lighting scenarios.",
+          "**When to choose dimmable cool white GU10:**",
+        ],
+        list: [
+          "Kitchen downlights (full brightness for cooking, dimmed for dining)",
+          "Retail displays (bright during shopping hours, dimmed after closing)",
+          "Restaurant accent lighting (bright for events, softer for intimate dining)",
+          "Art gallery wall lights (brightness control for optimal viewing)",
+          "Museum displays (adjustable for different viewing scenarios)",
+          "Home office desk lighting (full brightness for work, dimmed for meetings)",
+          "Workspace downlights (bright for detailed work, dimmed for breaks)",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Browse [dimmable cool white LED bulbs](/shop/cool-white-led-bulbs) for complete flexibility.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQ: Cool White GU10 LED Bulbs",
+        paragraphs: [
+          "**Q: What does 6500K cool white mean?**",
+          "A: 6500K is the colour temperature that matches natural daylight. It's bright, crisp, and professional. Higher numbers mean cooler/bluer light. 2700K is warm white (cosy), 6500K is cool white (daylight).",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: Can I use cool white GU10 bulbs in my living room downlights?**",
+              "A: Technically yes, but not recommended. Cool white can feel clinical in living spaces. Most people prefer warm white GU10 for living rooms and cool white for kitchens/bathrooms/offices. Save cool white for task areas.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are cool white GU10 LED bulbs bright enough for kitchens?**",
+              "A: Yes, absolutely. A 5W cool white LED GU10 (equivalent to 50W halogen) produces 400+ lumens of bright, clear light, perfect for kitchen task lighting. Cool white is ideal for kitchens.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What wattage cool white GU10 LED replaces my old 50W halogen?**",
+              "A: 50W halogen is roughly equivalent to a 5W cool white LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts. GMEC bulb listings show both old-style wattage equivalents and actual lumens.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do cool white GU10 LED bulbs work with old dimmer switches?**",
+              "A: Older dimmers (pre-2010) may flicker with LED bulbs. Modern LED-rated dimmers work perfectly. If flickering occurs, upgrade to an LED-compatible dimmer (£5-20).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do cool white GU10 LED bulbs last?**",
+              "A: GMEC cool white GU10 LED bulbs are rated for 25,000 hours, which equals 10-15 years of typical use (assuming 5-6 hours daily). After that, they gradually dim but rarely fail completely.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How do I install a cool white GU10 LED bulb?**",
+              "A: Push the bulb straight into the downlight socket until it clicks into place. A gentle twist adjusts the beam direction. Much simpler than replacing halogen bulbs.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use cool white GU10 LED bulbs in track lighting?**",
+              "A: Yes, absolutely. Cool white GU10 bulbs are ideal for track lighting in retail shops, galleries, and accent lighting applications. The bright, crisp light shows colours accurately.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are cool white GU10 LED bulbs good for retail shops?**",
+              "A: Yes, perfect. Cool white makes colours appear true and accurate, making merchandise look more appealing to customers. Professional retail lighting standard.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Cool White GU10 Bulb Specifications",
+        paragraphs: ["**GMEC cool white GU10 LED bulbs deliver:**"],
+        list: [
+          "**6500K colour temperature:** bright, crisp professional daylight.",
+          "**GU10 pin base fitting:** standard downlight and spot light fitting.",
+          "**90% energy savings vs halogen:** uses only 10% of halogen power.",
+          "**25,000-hour lifespan:** 10-15 years of use.",
+          "**Instant full brightness:** no warm-up time (unlike halogen).",
+          "**Dimmable options available:** for mood and flexibility control.",
+          "**CRI 90+:** excellent colour rendering (better than most LED).",
+          "**Available in multiple beam angles:** 40°, 60°, 120° options.",
+          "**Cool to touch:** no heat (unlike halogen's extreme heat).",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Compatible fixtures:** cool white GU10 bulbs work in recessed downlights, spot lights, track lighting, accent fixtures, picture lights, display cases, and any fixture with a standard GU10 socket.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Related Cool White Products",
+        paragraphs: ["**Complete your cool white lighting:**"],
+        list: [
+          "[Cool White E27 LED Bulbs](/shop/cool-white-e27-led-bulbs) — for table lamps and pendant lights",
+          "[Cool White B22 LED Bulbs](/shop/cool-white-b22-led-bulbs) — for UK ceiling lights",
+          "[Cool White E14 LED Bulbs](/shop/cool-white-e14-led-bulbs) — for chandeliers and wall sconces",
+          "[Cool White LED Bulbs (All Types)](/shop/cool-white-led-bulbs) — browse entire cool white range",
+          "[Warm White GU10 LED Bulbs](/shop/warm-white-led-bulbs) — for cosy ambient downlights",
+          "[GU10 Downlights](/shop/gu10-downlights) — complete fixtures and fittings",
+          "[LED Ceiling Lights](/shop/led-ceiling-lights) — complete lighting systems",
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to Cool White GU10 LED Bulbs?",
+        paragraphs: [
+          "GMEC stocks 18+ cool white GU10 LED bulb variants perfect for downlights, spot lights, retail displays, and accent lighting. All deliver bright, crisp 6500K professional lighting with 90% energy savings.",
+          "**Why choose GMEC cool white GU10 LED bulbs:**",
+        ],
+        list: [
+          "Bright, crisp 6500K daylight colour",
+          "GU10 pin base fitting",
+          "90% energy savings vs. halogen",
+          "25,000-hour lifespan (10-15 years)",
+          "Dimmable options available",
+          "Instant full brightness",
+          "From £2.99 per bulb",
+          "Free UK delivery over £100",
+          "14-day money-back guarantee",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "Browse all cool white GU10 bulbs above and upgrade your downlights today.",
+            ],
+          },
+        ],
+      },
+    ],
   },
   "warm-white-e27-led-bulbs": {
     h1: "Warm White E27 LED Bulbs",
