@@ -23,6 +23,20 @@ export default async function CheckoutSuccessPage({
 
   return (
     <div className="container-page py-16">
+      {/* Google Ads Purchase conversion. transaction_id is order.id, so Google
+       * dedupes repeat conversions if the customer refreshes this page. */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18486543483/0WofCJLT2owdEPuIie9E',
+              'value': ${JSON.stringify(order.total)},
+              'currency': 'GBP',
+              'transaction_id': ${JSON.stringify(order.id)}
+            });
+          `,
+        }}
+      />
       <ClearCartOnMount />
       <div className="mx-auto max-w-2xl text-center">
         <SuccessCheck />
