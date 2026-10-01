@@ -1,4 +1,4 @@
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID ?? "AW-18480322920";
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID ?? "AW-18486543483";
 
 // Plain native <script> tags, not next/script's <Script> component: next/script
 // always loads scripts via its own client-side JS loader, so even its
