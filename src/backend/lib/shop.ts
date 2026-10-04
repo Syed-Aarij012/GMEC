@@ -5,6 +5,9 @@ export const PAGE_SIZE = 12;
 
 interface VirtualCategory {
   colour?: string;
+  /** Real Category slug to scope to, for a per-fitting split of an actual
+   * shape category (e.g. candle bulbs) rather than a colour collection. */
+  category?: string;
   fitting?: string;
 }
 
@@ -25,6 +28,11 @@ export const VIRTUAL_CATEGORY_SLUGS: Record<string, VirtualCategory> = {
   "cool-white-e14-led-bulbs": { colour: "Cool White", fitting: "E14" },
   "cool-white-gu10-led-bulbs": { colour: "Cool White", fitting: "GU10" },
   "warm-white-e27-led-bulbs": { colour: "Warm White", fitting: "E27" },
+  "candle-e14-led-bulbs": { category: "led-candle-bulbs", fitting: "E14" },
+  "candle-b22-led-bulbs": { category: "led-candle-bulbs", fitting: "B22" },
+  "filament-e27-led-bulbs": { category: "led-filament-bulbs", fitting: "E27" },
+  "filament-e14-led-bulbs": { category: "led-filament-bulbs", fitting: "E14" },
+  "filament-b22-led-bulbs": { category: "led-filament-bulbs", fitting: "B22" },
 };
 
 export interface FittingNav {
@@ -44,12 +52,16 @@ export interface FittingNav {
 // query-string-only fitting filter untouched.
 export function getFittingNav(slug: string): FittingNav | null {
   const entry = VIRTUAL_CATEGORY_SLUGS[slug];
-  if (!entry?.colour) return null;
+  if (!entry || (!entry.colour && !entry.category)) return null;
 
   const fittingPages: Record<string, string> = {};
-  let parentSlug: string | undefined;
+  // A category-based family (e.g. candle bulbs) has a real page of its own
+  // to fall back to; a colour-based family's "parent" is itself virtual and
+  // found in the loop below.
+  let parentSlug: string | undefined = entry.category;
   for (const [candidateSlug, candidate] of Object.entries(VIRTUAL_CATEGORY_SLUGS)) {
-    if (candidate.colour !== entry.colour) continue;
+    const sameFamily = entry.colour ? candidate.colour === entry.colour : candidate.category === entry.category;
+    if (!sameFamily) continue;
     if (candidate.fitting) fittingPages[candidate.fitting] = `/shop/${candidateSlug}`;
     else parentSlug = candidateSlug;
   }
@@ -90,6 +102,7 @@ export async function getFilteredProducts(
   const virtual = categorySlug ? VIRTUAL_CATEGORY_SLUGS[categorySlug] : undefined;
   if (virtual) {
     if (virtual.colour) where.colour = virtual.colour;
+    if (virtual.category) where.category = { slug: virtual.category };
     if (virtual.fitting) where.fitting = virtual.fitting;
   } else if (categorySlug) {
     where.category = { slug: categorySlug };
@@ -127,6 +140,7 @@ export async function getFilteredProducts(
   const categoryScope: Prisma.ProductWhereInput = virtual
     ? {
         ...(virtual.colour ? { colour: virtual.colour } : {}),
+        ...(virtual.category ? { category: { slug: virtual.category } } : {}),
         ...(virtual.fitting ? { fitting: virtual.fitting } : {}),
       }
     : categorySlug

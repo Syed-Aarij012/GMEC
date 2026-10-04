@@ -1480,6 +1480,1276 @@ export const categorySeo: Record<string, CategorySeo> = {
     intro:
       "[GMEC Corporation](/) supplies warm white (2700K) E27 LED bulbs for table lamps, floor lamps, pendant lights, and wall lights. A soft, cosy glow for living rooms, bedrooms, and hospitality spaces, with 80% energy savings and a 25,000-hour lifespan.",
   },
+  "candle-e14-led-bulbs": {
+    h1: "Candle E14 LED Bulbs",
+    title: "Candle E14 LED Bulbs UK | Warm White | Vintage Style | GMEC",
+    description:
+      "Buy E14 candle LED bulbs from GMEC: warm white, vintage-style bulbs for chandeliers and wall sconces. Energy-efficient, 25,000-hour lifespan. From £1.99. Free UK delivery.",
+    intro:
+      "GMEC supplies premium candle E14 LED bulbs for homes and businesses across the UK. Candle E14 bulbs are the most popular choice for chandeliers, wall sconces, and decorative fixtures where the bulb itself becomes part of the design. Our E14 candle bulbs combine authentic vintage-style tapered design with warm white (2700K) lighting, delivering the nostalgic glow of traditional candle-lit fixtures without the heat or energy waste. Every candle E14 LED bulb delivers 80% energy savings, lasts 25,000 hours (10-15 years), dimmable options are available, and is instantly compatible with your existing E14 fixtures. Over 18 candle E14 LED bulb variants in stock, from £1.99, free UK delivery over £100, 14-day returns.",
+    content: [
+      {
+        heading: "Why Choose Candle E14 LED Bulbs?",
+        paragraphs: [
+          "Candle E14 LED bulbs are the most popular choice for decorative and elegant lighting. The E14 is the smallest screw fitting, perfect for chandeliers, wall sconces, bedside lamps, and delicate fixtures. Candle-style bulbs mimic the tapered shape of traditional wax candles, creating authentic vintage aesthetics that make any fixture look beautiful and timeless.",
+          "**Why candle E14 bulbs are so popular:** E14 candle bulbs are chosen specifically for spaces where the bulb itself is visible and contributes to the room's design. Unlike hidden bulbs in ceiling fixtures, candle bulbs in chandeliers and sconces are on display, they need to look good, not just provide light. GMEC candle E14 bulbs deliver the nostalgic elegance of traditional candles with modern LED efficiency.",
+          "**Perfect for:**",
+        ],
+        list: [
+          "**Chandeliers:** classic, elegant lighting for dining rooms and entryways.",
+          "**Wall Sconces:** bedside lighting, hallway ambiance, bathroom mirrors.",
+          "**Table Lamps:** decorative accent lighting on side tables and dressers.",
+          "**Pendant Lights:** small decorative pendant fixtures in kitchens or bedrooms.",
+          "**Vintage/Traditional Interiors:** period-appropriate lighting for classic homes.",
+          "**Modern/Contemporary Design:** sleek E14 candle bulbs in modern fixtures.",
+          "**Commercial/Retail:** boutique lighting, restaurants, hotel lobbies.",
+          "**Decorative Fixtures:** any fixture where the bulb's appearance matters.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Candle style benefits:** unlike standard round bulbs, candle E14 bulbs have an elegant, tapered shape that mirrors traditional wax candles. This distinctive appearance adds character to any fixture. When the bulb is visible (chandeliers, sconces), candle-style is the professional, timeless choice.",
+              "**Browse:** [Candle B22 LED Bulbs](/shop/candle-b22-led-bulbs) | [Candle LED Bulbs (All Types)](/shop/led-candle-bulbs)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Candle E14 Warm White vs Cool White LED Bulbs",
+        paragraphs: [
+          "**Warm White (2700K), classic ambiance (most popular):** produces the golden, intimate glow identical to traditional wax candles. This is the authentic candlelit aesthetic that makes chandeliers and sconces beautiful. Warm white E14 candles create cosy, welcoming, elegant atmospheres. Best for residential chandeliers, bedside sconces, and decorative fixtures where ambiance is paramount.",
+          "**Cool White (6500K), modern/bright (rare for candles):** produces bright, crisp daylight-like light. Not traditional for candle bulbs, but sometimes chosen for modern minimalist design or retail displays. Cool white candle bulbs sacrifice the nostalgic warmth for contemporary brightness.",
+          "**Quick decision guide:**",
+        ],
+        table: {
+          headers: ["Use Case", "Best Choice", "Why"],
+          rows: [
+            ["Residential Chandelier", "Warm White (2700K)", "Authentic candlelit ambiance"],
+            ["Bedroom Wall Sconce", "Warm White (2700K)", "Intimate, relaxing lighting"],
+            ["Dining Room", "Warm White (2700K)", "Elegant, welcoming dining"],
+            ["Entryway Chandelier", "Warm White (2700K)", "Classic first impression"],
+            ["Modern/Contemporary Fixture", "Either", "Depends on aesthetic preference"],
+            ["Retail/Commercial Chandelier", "Warm White (2700K)", "Professional elegance"],
+            ["Bathroom Sconce", "Warm White (2700K)", "Flattering, warm light"],
+            ["Bedside Table Lamp", "Warm White (2700K)", "Cosy, intimate reading"],
+          ],
+        },
+        more: [
+          {
+            paragraphs: [
+              "**Browse:** [Warm White E14 LED Bulbs](/shop/warm-white-e14-led-bulbs) | [Cool White E14 LED Bulbs](/shop/cool-white-e14-led-bulbs)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Energy Savings: Candle E14 LED Bulbs",
+        paragraphs: [
+          "**Real savings example:** replace 8 old 40W incandescent E14 candle bulbs (typical 2-arm chandelier) with 5W LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+          rows: [["Annual usage (8 bulbs)", "146 kWh (£41/year)", "18 kWh (£5/year)", "£36/year"]],
+        },
+        more: [
+          {
+            paragraphs: [
+              "10-year total: £360+ (energy £360 + no bulb replacements = £100+ saved).",
+              "**Typical Home (3 chandeliers = 24 candle bulbs):**",
+            ],
+          },
+          {
+            table: {
+              headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+              rows: [["Annual usage (24 bulbs)", "438 kWh (£122/year)", "55 kWh (£15/year)", "£107/year"]],
+            },
+          },
+          {
+            paragraphs: ["10-year saving: £1,070+.", "**Why candle LED saves so much money:**"],
+          },
+          {
+            numberedList: [
+              "**85% less energy:** LED uses only 15% of incandescent power.",
+              "**25,000-hour lifespan:** incandescent lasts 1,000 hours, LED lasts 10-15 years.",
+              "**No replacement costs:** candle bulbs are expensive and frequent replacements are annoying.",
+              "**No heat:** incandescent candles get dangerously hot, LED stays cool.",
+              "**Always on display:** since you see them (chandeliers), LED's better aesthetics matter.",
+            ],
+          },
+          {
+            paragraphs: [
+              "A typical home with 3 chandeliers (24 E14 candle bulbs) saves £107/year or £1,070+ over 10 years. Plus you never climb a ladder to replace burnt-out candles in chandeliers again, pure convenience.",
+              "Browse our [complete candle E14 LED bulb range](/shop/candle-e14-led-bulbs) and start saving today.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dimmable Candle E14 LED Bulbs",
+        paragraphs: [
+          "**Can you dim candle E14 bulbs?** Yes! Dimmable candle E14 LED bulbs allow you to adjust brightness from 10% to 100% using a dimmer switch. This gives you complete control over ambiance, bright for entertaining, dimmed for intimate evenings. Perfect for chandeliers and sconces where mood control matters.",
+          "**Non-dimmable vs dimmable:** non-dimmable candle E14 bulbs are cheaper and work fine with regular on/off switches. Dimmable versions cost £1-2 more but give you complete brightness control, creating different moods throughout the day/evening.",
+          "**Dimmer compatibility:** modern LED-rated dimmer switches (post-2010) work perfectly with GMEC dimmable E14 candle bulbs. Older dimmer switches (pre-2010) may flicker. If flickering occurs, upgrade to an LED-compatible dimmer switch (£5-20) for seamless dimming.",
+          "**When to choose dimmable E14 candles:**",
+        ],
+        list: [
+          "Dining room chandeliers (bright for cooking, dimmed for dining)",
+          "Bedroom wall sconces (full brightness for dressing, dimmed for bedtime)",
+          "Living room decorative fixtures (bright for entertaining, soft for relaxation)",
+          "Entryway chandeliers (bright for guests, dimmed for evening)",
+          "Bathroom vanity sconces (bright for grooming, softer for evening)",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Browse [dimmable candle LED bulbs](/shop/led-candle-bulbs) for complete flexibility.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQ: Candle E14 LED Bulbs",
+        paragraphs: [
+          "**Q: What makes a \"candle\" LED bulb different from a standard bulb?**",
+          "A: Candle bulbs have an authentic tapered shape that mimics traditional wax candles. This decorative shape makes them perfect for visible fixtures like chandeliers and sconces. Standard bulbs are round and less decorative.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: Are candle E14 LED bulbs really as warm as old incandescent candles?**",
+              "A: Yes. GMEC warm white E14 candle LED bulbs produce a genuine golden glow identical to traditional incandescent candles at 2700K colour temperature. You get authentic candlelit ambiance without the heat.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use candle E14 LED bulbs in any chandelier?**",
+              "A: Yes, any chandelier with E14 sockets. E14 is the small screw fitting, if your chandelier uses small screw bulbs, candle E14 is your solution. Check your existing bulb's base to confirm E14 (14mm diameter).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What wattage candle E14 LED replaces my old 40W incandescent?**",
+              "A: 40W incandescent is roughly equivalent to a 5W candle LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts. GMEC bulb listings show both old-style equivalents and actual lumens.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do candle E14 LED bulbs work with old dimmer switches?**",
+              "A: Older dimmers (pre-2010) may flicker with LED bulbs. Modern LED-rated dimmers work perfectly. If flickering occurs, upgrade to an LED-compatible dimmer (£5-20).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do candle E14 LED bulbs last?**",
+              "A: GMEC candle E14 LED bulbs are rated for 25,000 hours, which equals 10-15 years of typical use. After that, they gradually dim but rarely fail completely. You'll likely never replace them.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I mix candle and standard bulbs in the same chandelier?**",
+              "A: Yes, you can, but aesthetically it looks unbalanced. For best appearance, use all the same bulb style. If you want variety, use candles and add a dimmer for mood control.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are candle E14 LED bulbs good for bedside reading?**",
+              "A: Yes. Warm white E14 candles provide soft, intimate lighting perfect for bedside. The dimming feature lets you adjust brightness for reading or relaxation.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Candle E14 Bulb Specifications",
+        paragraphs: ["**GMEC candle E14 LED bulbs deliver:**"],
+        list: [
+          "**Authentic candle shape:** tapered design mimics traditional wax candles.",
+          "**Warm white (2700K):** genuine golden glow, classic ambiance.",
+          "**E14 small screw fitting:** standard for decorative fixtures.",
+          "**80% energy savings:** uses only 15% of incandescent power.",
+          "**25,000-hour lifespan:** 10-15 years of use.",
+          "**Dimmable options available:** full brightness control when needed.",
+          "**CRI 80+:** warm, flattering light quality.",
+          "**Cool to touch:** no heat (unlike incandescent candles).",
+          "**Available in multiple wattages:** 4W, 5W, 6W equivalents.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Compatible fixtures:** candle E14 bulbs work in chandeliers, wall sconces, table lamps, bedside lights, decorative pendant lights, candelabras, and any fixture with an E14 small screw socket where the bulb is visible.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Related Candle Products",
+        paragraphs: ["**Complete your decorative lighting:**"],
+        list: [
+          "[Candle B22 LED Bulbs](/shop/candle-b22-led-bulbs) — for UK ceiling chandeliers",
+          "[Candle LED Bulbs (All Types)](/shop/led-candle-bulbs) — browse entire candle range",
+          "[Cool White E14 LED Bulbs](/shop/cool-white-e14-led-bulbs) — bright daylight E14",
+          "[E14 LED Bulbs (All Types)](/shop?fitting=E14) — all E14 options",
+          "[LED Ceiling Lights](/shop/led-ceiling-lights) — complete fixtures",
+          "[LED 3 Colours in 1](/shop/led-3-colours-in-1) — flexible colour control",
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to Candle E14 LED Bulbs?",
+        paragraphs: [
+          "GMEC stocks 18+ candle E14 LED bulb variants perfect for chandeliers, sconces, and decorative fixtures. All deliver authentic candlelit ambiance with 80% energy savings and 10-15 year lifespans.",
+          "**Why choose GMEC candle E14 LED bulbs:**",
+        ],
+        list: [
+          "Authentic tapered candle shape",
+          "Warm white (2700K) genuine glow",
+          "E14 small screw fitting",
+          "80% energy savings",
+          "25,000-hour lifespan (10-15 years)",
+          "Dimmable options available",
+          "From £1.99 per bulb",
+          "Free UK delivery over £100",
+          "14-day money-back guarantee",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "Browse all E14 candle bulbs above and upgrade your chandeliers today.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  "candle-b22-led-bulbs": {
+    h1: "Candle B22 LED Bulbs",
+    title: "Candle B22 LED Bulbs UK | Warm White | Vintage Bayonet | GMEC",
+    description:
+      "Buy candle B22 LED bulbs from GMEC: warm white vintage-style candle bulbs for UK ceiling chandeliers. Energy efficient, 25,000-hour lifespan, dimmable. From £2.49. Free UK delivery.",
+    intro:
+      "GMEC supplies premium candle B22 LED bulbs for homes and businesses across the UK. Candle B22 bulbs are the decorative choice for ceiling chandeliers, period fixtures, and traditional UK lighting where the bulb's appearance matters. Our B22 candle bulbs combine authentic vintage-style tapered design with warm white (2700K) lighting, delivering the nostalgic glow of traditional candlelit chandeliers without the heat or energy waste. Every candle B22 LED bulb delivers 80% energy savings, lasts 25,000 hours (10-15 years), dimmable options are available, and is instantly compatible with your existing B22 ceiling fixtures. Over 12 candle B22 LED bulb variants in stock, from £2.49, free UK delivery over £100, 14-day returns.",
+    content: [
+      {
+        heading: "Why Choose Candle B22 LED Bulbs?",
+        paragraphs: [
+          "Candle B22 LED bulbs are the authentic choice for UK ceiling chandeliers and period fixtures. The B22 bayonet cap fitting is the standard for UK ceiling lights, and candle-style B22 bulbs deliver the elegance of traditional candlelit ambiance in a modern, efficient package. When your chandelier or decorative ceiling fixture is visible (not hidden above a ceiling), candle-style bulbs are the professional, timeless aesthetic choice.",
+          "**Why candle B22 bulbs are special:** B22 candle bulbs are less common than E14 candles but highly valued in UK homes with traditional ceiling chandeliers. Candle-style B22 bulbs have an authentic tapered shape that mimics traditional wax candles, creating genuine vintage elegance. Unlike hidden bulbs in modern fixtures, chandelier bulbs are on display, they need to look beautiful.",
+          "**Perfect for:**",
+        ],
+        list: [
+          "**Ceiling Chandeliers:** traditional, classic UK ceiling fixtures.",
+          "**Period/Vintage Homes:** authentic candlelit ambiance for older properties.",
+          "**Traditional Interiors:** Victorian, Georgian, farmhouse, period-appropriate lighting.",
+          "**Dining Room Chandeliers:** elegant lighting for formal dining.",
+          "**Entryway/Hall Chandeliers:** classic first impression for guests.",
+          "**Period Cottage Fixtures:** authentic rural/countryside lighting.",
+          "**Commercial/Boutique:** period-appropriate business lighting.",
+          "**Decorative Ceiling Fixtures:** any UK fixture where candle appearance matters.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Bayonet vs screw:** B22 uses the twist-lock (bayonet) fitting standard in UK ceiling fixtures. If your ceiling chandelier has bulbs that twist to lock/unlock, B22 candle is your solution. For wall sconces and table lamps, see [Candle E14 LED Bulbs](/shop/candle-e14-led-bulbs).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Candle B22 Warm White vs Cool White LED Bulbs",
+        paragraphs: [
+          "**Warm White (2700K), classic candlelit (standard choice):** produces the golden, intimate glow identical to traditional wax candles. This is the authentic candlelit aesthetic that makes ceiling chandeliers beautiful and timeless. Warm white B22 candles create cosy, welcoming, elegant atmospheres perfect for UK traditional homes. This is the most popular choice for B22 candle bulbs.",
+          "**Cool White (6500K), modern/bright (rare for candles):** produces bright, crisp daylight-like light. Not traditional for candle bulbs, but sometimes chosen for modern minimalist design or unusual applications. Cool white candle bulbs sacrifice the nostalgic warmth for contemporary brightness. Rarely chosen for B22 candle applications.",
+          "**Quick decision guide:**",
+        ],
+        table: {
+          headers: ["Use Case", "Best Choice", "Why"],
+          rows: [
+            ["Traditional Ceiling Chandelier", "Warm White (2700K)", "Authentic candlelit ambiance"],
+            ["Period Home", "Warm White (2700K)", "Period-appropriate elegance"],
+            ["Dining Room Chandelier", "Warm White (2700K)", "Elegant, welcoming dining"],
+            ["Entryway Chandelier", "Warm White (2700K)", "Classic, impressive entrance"],
+            ["Victorian/Georgian Fixture", "Warm White (2700K)", "Historically appropriate"],
+            ["Farmhouse/Cottage Lighting", "Warm White (2700K)", "Authentic rural elegance"],
+            ["Modern Contemporary Fixture", "Either", "Depends on aesthetic preference"],
+            ["Commercial Period Property", "Warm White (2700K)", "Professional period ambiance"],
+          ],
+        },
+        more: [
+          {
+            paragraphs: ["**Browse:** [Cool White B22 LED Bulbs](/shop/cool-white-b22-led-bulbs)"],
+          },
+        ],
+      },
+      {
+        heading: "Energy Savings: Candle B22 LED Bulbs",
+        paragraphs: [
+          "**Real savings example:** replace 6 old 40W incandescent B22 candle bulbs (typical ceiling chandelier) with 5W LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+          rows: [["Annual usage (6 bulbs)", "87 kWh (£24/year)", "11 kWh (£3/year)", "£21/year"]],
+        },
+        more: [
+          {
+            paragraphs: [
+              "10-year total: £210+ (energy £210 + no bulb replacements = £80+ saved).",
+              "**Multi-Chandelier Home (2 chandeliers = 12 candle bulbs):**",
+            ],
+          },
+          {
+            table: {
+              headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+              rows: [["Annual usage (12 bulbs)", "175 kWh (£49/year)", "22 kWh (£6/year)", "£43/year"]],
+            },
+          },
+          {
+            paragraphs: ["10-year saving: £430+.", "**Why candle LED saves so much money:**"],
+          },
+          {
+            numberedList: [
+              "**85% less energy:** LED uses only 15% of incandescent power.",
+              "**25,000-hour lifespan:** incandescent lasts 1,000 hours, LED lasts 10-15 years.",
+              "**No replacement costs:** candle bulbs are expensive and frequent replacements are disruptive.",
+              "**No heat:** incandescent candles get dangerously hot, LED stays cool.",
+              "**Always on display:** since you see them (ceiling chandeliers), aesthetics matter.",
+            ],
+          },
+          {
+            paragraphs: [
+              "A typical UK home with 1-2 ceiling chandeliers (6-12 candle bulbs) saves £21-43/year or £210-430+ over 10 years. Plus you never need to replace burnt-out candles in ceiling chandeliers again, pure convenience and safety.",
+              "Browse our complete candle B22 LED bulb range and start saving today.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dimmable Candle B22 LED Bulbs",
+        paragraphs: [
+          "**Can you dim candle B22 bulbs?** Yes! Dimmable candle B22 LED bulbs allow you to adjust brightness from 10% to 100% using a dimmer switch. This gives you complete control over ambiance, bright for entertaining, dimmed for intimate evenings. Perfect for ceiling chandeliers where mood control enhances the elegance.",
+          "**Non-dimmable vs dimmable:** non-dimmable candle B22 bulbs are cheaper and work fine with regular on/off switches. Dimmable versions cost £1-2 more but give you complete brightness control, creating different moods for different occasions.",
+          "**Dimmer compatibility:** modern LED-rated dimmer switches (post-2010) work perfectly with GMEC dimmable B22 candle bulbs. Older dimmer switches (pre-2010) may flicker. If flickering occurs, upgrade to an LED-compatible dimmer switch (£5-20).",
+          "**When to choose dimmable B22 candles:**",
+        ],
+        list: [
+          "Dining room ceiling chandelier (bright for cooking, dimmed for dining)",
+          "Entryway chandelier (bright for guests, dimmed for evening)",
+          "Traditional bedroom ceiling fixture (bright for getting ready, dimmed for bedtime)",
+          "Formal entertaining spaces (full brightness for events, soft for intimate evenings)",
+          "Period properties where mood control enhances elegance",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Browse [dimmable candle LED bulbs](/shop/led-candle-bulbs) for complete flexibility.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQ: Candle B22 LED Bulbs",
+        paragraphs: [
+          "**Q: What makes a \"candle\" B22 LED bulb different from a standard B22 bulb?**",
+          "A: Candle bulbs have an authentic tapered shape that mimics traditional wax candles. This decorative shape makes them perfect for visible fixtures like chandeliers. Standard B22 bulbs are round and less decorative. Candle-style is the classic choice for ceiling chandeliers.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: Are candle B22 LED bulbs really as warm as old incandescent candles?**",
+              "A: Yes. GMEC warm white B22 candle LED bulbs produce a genuine golden glow identical to traditional incandescent candles at 2700K colour temperature. You get authentic candlelit ambiance without the heat or danger.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use candle B22 LED bulbs in any ceiling chandelier?**",
+              "A: Yes, any UK ceiling chandelier with B22 sockets. B22 is the bayonet cap fitting, if your chandelier bulbs twist to lock/unlock, B22 candle is your solution. Check your existing bulb's base to confirm B22.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What wattage candle B22 LED replaces my old 40W incandescent?**",
+              "A: 40W incandescent is roughly equivalent to a 5W candle LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts. GMEC bulb listings show both old-style equivalents and actual lumens.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do candle B22 LED bulbs work with old dimmer switches?**",
+              "A: Older dimmers (pre-2010) may flicker with LED bulbs. Modern LED-rated dimmers work perfectly. If flickering occurs, upgrade to an LED-compatible dimmer (£5-20).",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do candle B22 LED bulbs last?**",
+              "A: GMEC candle B22 LED bulbs are rated for 25,000 hours, which equals 10-15 years of typical use. After that, they gradually dim but rarely fail. You'll likely never replace them during your time with that fixture.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How do I install a candle B22 LED bulb?**",
+              "A: Push the bulb into the ceiling socket and twist clockwise about a quarter turn until it locks. To remove, twist counterclockwise. Much simpler than screw bulbs and safer than climbing ladders frequently.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I mix candle and standard B22 bulbs in the same chandelier?**",
+              "A: Yes, you can, but aesthetically it looks unbalanced. For best appearance, use all the same style. If your chandelier takes multiple bulbs, use all candles for consistency.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are candle B22 bulbs safe for period/antique chandeliers?**",
+              "A: Yes, absolutely. LED bulbs run cool (no heat like incandescent), making them actually safer for delicate antique fixtures and old wiring. The traditional candlelight aesthetic is perfectly preserved.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Candle B22 Bulb Specifications",
+        paragraphs: ["**GMEC candle B22 LED bulbs deliver:**"],
+        list: [
+          "**Authentic candle shape:** tapered design mimics traditional wax candles.",
+          "**Warm white (2700K):** genuine golden glow, classic ambiance.",
+          "**B22 bayonet cap fitting:** UK ceiling fixture standard.",
+          "**80% energy savings:** uses only 15% of incandescent power.",
+          "**25,000-hour lifespan:** 10-15 years of use.",
+          "**Dimmable options available:** full brightness control when needed.",
+          "**CRI 80+:** warm, flattering light quality.",
+          "**Cool to the touch:** no heat (unlike incandescent candles).",
+          "**Safe for antique fixtures:** LEDs' cool operation protects delicate wiring.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Compatible fixtures:** candle B22 bulbs work in UK ceiling chandeliers, decorative ceiling fixtures, period properties, vintage lights, traditional UK fixtures, and any fixture with a visible B22 bayonet socket.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Related Candle Products",
+        paragraphs: ["**Complete your decorative lighting:**"],
+        list: [
+          "[Candle E14 LED Bulbs](/shop/candle-e14-led-bulbs) — for wall sconces and small fixtures",
+          "[Candle LED Bulbs (All Types)](/shop/led-candle-bulbs) — browse entire candle range",
+          "[Cool White B22 LED Bulbs](/shop/cool-white-b22-led-bulbs) — bright daylight B22",
+          "[B22 LED Bulbs (All Types)](/shop?fitting=B22) — all B22 options",
+          "[LED Ceiling Lights](/shop/led-ceiling-lights) — complete fixtures",
+          "[LED 3 Colours in 1](/shop/led-3-colours-in-1) — flexible colour control",
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to Candle B22 LED Bulbs?",
+        paragraphs: [
+          "GMEC stocks 12+ candle B22 LED bulb variants perfect for UK ceiling chandeliers and period fixtures. All deliver authentic candlelit ambiance with 80% energy savings and 10-15 year lifespans.",
+          "**Why choose GMEC candle B22 LED bulbs:**",
+        ],
+        list: [
+          "Authentic tapered candle shape",
+          "Warm white (2700K) genuine glow",
+          "B22 bayonet cap fitting",
+          "80% energy savings",
+          "25,000-hour lifespan (10-15 years)",
+          "Dimmable options available",
+          "Safe for antique fixtures",
+          "From £2.49 per bulb",
+          "Free UK delivery over £100",
+          "14-day money-back guarantee",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "Browse all candle B22 bulbs above and upgrade your ceiling chandeliers today.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  "filament-e27-led-bulbs": {
+    h1: "Filament E27 LED Bulbs",
+    title: "Filament E27 LED Bulbs UK | Warm White | Edison Style | GMEC",
+    description:
+      "Buy filament E27 LED bulbs from GMEC: authentic Edison-style warm white filament bulbs for table lamps, pendant lights. Energy efficient, 25,000-hour lifespan. From £2.79.",
+    intro:
+      "[GMEC Corporation](/) supplies authentic filament E27 LED bulbs for homes, offices, and hospitality venues across the UK. Filament E27 bulbs feature visible glowing filaments that mimic traditional incandescent bulbs, delivering genuine vintage-industrial aesthetic with modern LED efficiency. Our E27 filament bulbs combine authentic Edison-style design with warm white (2700K) lighting, creating trendy decorative ambiance in restaurants, cafes, living rooms, and home offices. Every filament E27 LED bulb delivers 80% energy savings, lasts 25,000 hours (10-15 years), dimmable options available, and is instantly compatible with your existing E27 fixtures. Over 8 filament E27 LED bulb variants in stock, from £2.79, free UK delivery over £100, 14-day returns.",
+    content: [
+      {
+        heading: "Why Choose Filament E27 LED Bulbs?",
+        paragraphs: [
+          "Filament E27 LED bulbs are the authentic choice for decorative, trendy lighting. The E27 is the standard large screw fitting used in most UK table lamps, pendant lights, desk lamps, and ceiling fixtures. Filament-style E27 bulbs deliver the distinctive look of vintage Edison bulbs with modern LED efficiency, creating a dramatic decorative impact that makes any space feel stylish and intentional.",
+          "**Why filament E27 bulbs are so popular:** filament E27 bulbs have experienced a design renaissance. The visible, glowing filament creates authentic vintage-industrial aesthetics that work in contemporary homes, trendy offices, hospitality venues, and creative spaces. Unlike hidden bulbs in modern fixtures, filament bulbs in exposed sockets (table lamps, pendant lights) are decorative statement pieces.",
+          "**Perfect for:**",
+        ],
+        list: [
+          "**Table Lamps:** bedside, living room, home office lighting with style.",
+          "**Pendant Lights:** kitchen islands, dining areas, trendy cafes.",
+          "**Desk Lamps:** home office, creative workspaces, studios.",
+          "**Exposed Ceiling Fixtures:** modern homes, loft spaces, contemporary design.",
+          "**Restaurants & Cafes:** trendy ambiance, Instagram-worthy aesthetics.",
+          "**Bars & Lounges:** upscale hospitality, vintage-modern design.",
+          "**Home Offices:** professional ambiance with decorative appeal.",
+          "**Modern/Contemporary Homes:** trendy, intentional design statements.",
+          "**Creative Spaces:** design studios, co-working spaces, galleries.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Filament style benefits:** filament E27 bulbs feature visible glowing filament strands inside the bulb that create dramatic, distinctive lighting. This aesthetic is fundamentally different from standard bulbs. When the bulb is visible (table lamps, pendant lights), filament-style delivers a premium, trendy, Instagram-worthy ambiance.",
+              "**Browse:** [All LED Filament Bulbs](/shop/led-filament-bulbs)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Filament E27 Warm White vs Cool White LED Bulbs",
+        paragraphs: [
+          "**Warm White (2700K), classic vintage ambiance (standard choice):** produces the golden, intimate glow identical to traditional incandescent filament bulbs. This is the authentic vintage-industrial aesthetic that makes filament E27 bulbs beautiful and trendy. Warm white creates cosy, welcoming, stylish atmospheres perfect for homes, restaurants, and cafes. This is the universally preferred choice for filament bulbs.",
+          "**Cool White (6500K), modern/bright (rare for filaments):** produces bright, crisp daylight-like light. Not traditional for filament bulbs, and rarely chosen because it defeats the aesthetic purpose. Cool white filament bulbs sacrifice the nostalgic warmth and vintage appeal for modern brightness. Almost never used for decorative filament applications.",
+          "**Quick decision guide:**",
+        ],
+        table: {
+          headers: ["Use Case", "Best Choice", "Why"],
+          rows: [
+            ["Table Lamp Ambiance", "Warm White (2700K)", "Authentic vintage glow"],
+            ["Pendant Light Kitchen", "Warm White (2700K)", "Trendy, warm aesthetic"],
+            ["Restaurant Lighting", "Warm White (2700K)", "Professional elegance"],
+            ["Home Office Desk", "Warm White (2700K)", "Stylish, welcoming workspace"],
+            ["Living Room Feature Lamp", "Warm White (2700K)", "Premium, Instagram-worthy"],
+            ["Bedroom Bedside", "Warm White (2700K)", "Intimate, relaxing"],
+            ["Cafe/Bar Ambiance", "Warm White (2700K)", "Upscale vintage aesthetic"],
+            ["Modern Industrial Space", "Warm White (2700K)", "Contemporary-vintage blend"],
+          ],
+        },
+        more: [
+          {
+            paragraphs: [
+              "**Result:** warm white E27 filament is virtually the only choice for decorative lighting. Cool white defeats the purpose of filament style.",
+              "**Browse:** [Warm White LED Bulbs](/shop/warm-white-led-bulbs) | [Cool White LED Bulbs](/shop/cool-white-led-bulbs)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Energy Savings: Filament E27 LED Bulbs",
+        paragraphs: [
+          "**Real savings example:** replace 4 old 40W incandescent E27 filament bulbs (typical home: 2 table lamps, 1 pendant, 1 desk lamp) with 5W LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+          rows: [["Annual usage (4 bulbs)", "146 kWh (£41/year)", "18 kWh (£5/year)", "£36/year"]],
+        },
+        more: [
+          {
+            paragraphs: [
+              "10-year total: £360+ (energy £360 + no bulb replacements = £100+ saved).",
+              "**Multi-Fixture Home (8 filament E27 bulbs):**",
+            ],
+          },
+          {
+            table: {
+              headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+              rows: [["Annual usage (8 bulbs)", "292 kWh (£82/year)", "37 kWh (£10/year)", "£72/year"]],
+            },
+          },
+          {
+            paragraphs: ["10-year saving: £720+.", "**Why filament E27 LED saves so much money:**"],
+          },
+          {
+            numberedList: [
+              "**85% less energy:** LED uses only 15% of incandescent power.",
+              "**25,000-hour lifespan:** incandescent lasts 1,000 hours, LED lasts 10-15 years.",
+              "**No replacement costs:** filament bulbs are premium-priced and frequent replacements add up.",
+              "**No heat:** incandescent filament gets dangerously hot, LED stays cool.",
+              "**Always on display:** since you see them (table lamps, pendant lights), premium efficiency matters.",
+            ],
+          },
+          {
+            paragraphs: [
+              "A typical home with 4-8 filament E27 bulbs saves £36-72/year or £360-720+ over 10 years. Plus you get authentic vintage ambiance without the guilt of energy waste. Restaurants and cafes save even more with 20-30 filament fixtures.",
+              "Browse our [complete filament LED bulb range](/shop/led-filament-bulbs) and upgrade your space today.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dimmable Filament E27 LED Bulbs",
+        paragraphs: [
+          "**Can you dim filament E27 bulbs?** Yes! Dimmable filament E27 LED bulbs allow you to adjust brightness from 10% to 100% using a dimmer switch. This creates complete control over ambiance, bright for entertaining and working, dimmed for intimate evenings. Perfect for table lamps, pendant lights, and home office setups where mood control enhances the aesthetic.",
+          "**Non-dimmable vs dimmable:** non-dimmable filament E27 bulbs are cheaper and work fine with regular on/off switches. Dimmable versions cost £1-2 more but give you complete brightness control, creating different moods for different occasions. For decorative filament bulbs, dimming is highly recommended.",
+          "**Dimmer compatibility:** modern LED-rated dimmer switches (post-2010) work perfectly with GMEC dimmable E27 filament bulbs. Older dimmer switches (pre-2010) may flicker. If flickering occurs, upgrade to an LED-compatible dimmer switch (£5-20).",
+          "**When to choose dimmable E27 filaments:**",
+        ],
+        list: [
+          "Table lamps (bright for work/reading, dimmed for relaxation)",
+          "Pendant lights (bright for cooking/entertaining, soft for dining)",
+          "Desk lamps (full brightness for work, dimmed for evening)",
+          "Home office (bright for focused work, softer for calls/meetings)",
+          "Bedroom table lamps (bright for getting ready, dimmed for bedtime)",
+          "Living room ambiance (bright for guests, soft for evenings)",
+          "Restaurants/cafes (bright for service, dimmed for ambiance)",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Browse [all filament LED bulbs](/shop/led-filament-bulbs) for dimmable options.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQ: Filament E27 LED Bulbs",
+        paragraphs: [
+          "**Q: What makes a \"filament\" LED bulb different from a standard LED bulb?**",
+          "A: Filament LED bulbs have visible glowing filament strands inside the bulb that mimic traditional incandescent Edison bulbs. This creates distinctive, decorative vintage-industrial aesthetics. Standard LED bulbs are simple and functional. Filament-style is chosen specifically for ambiance and design.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: Are filament E27 LED bulbs as warm as old incandescent bulbs?**",
+              "A: Yes. GMEC warm white E27 filament LED bulbs produce a genuine golden glow identical to traditional incandescent filament bulbs at 2700K colour temperature. You get authentic vintage ambiance without the heat, danger, or energy waste.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use filament E27 LED bulbs in any lamp?**",
+              "A: Yes, any lamp or fixture with an E27 socket. E27 is the large screw fitting, if your lamp's socket is approximately 27mm diameter, E27 filament is your solution. Check your existing bulb's base to confirm E27.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What wattage filament E27 LED replaces my old 40W incandescent?**",
+              "A: 40W incandescent is roughly equivalent to a 5W filament LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts. GMEC bulb listings show both old-style equivalents and actual lumens for accurate brightness comparison.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do filament E27 LED bulbs work with dimmer switches?**",
+              "A: Newer dimmers (post-2010) work perfectly. Older dimmers (pre-2010) may flicker. If flickering occurs, upgrade to an LED-compatible dimmer (£5-20). Dimmable filament bulbs are highly recommended.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do filament E27 LED bulbs last?**",
+              "A: GMEC filament E27 LED bulbs are rated for 25,000 hours, which equals 10-15 years of typical use. After that, they gradually dim but rarely fail. You'll likely never replace them during your ownership of the fixture.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are filament E27 bulbs good for table lamps and desk lighting?**",
+              "A: Yes, absolutely. Filament E27 bulbs are perfect for table lamps and desk lamps. The visible filament creates attractive, trendy ambiance while providing functional lighting. Dimmable options let you adjust brightness for work or relaxation.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What's the aesthetic difference between filament and standard LED bulbs?**",
+              "A: Filament bulbs have visible glowing strands that create distinctive, dramatic lighting. Standard LED bulbs are simple and plain. For decorative purposes, filament-style creates premium, Instagram-worthy ambiance that standard bulbs cannot match.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use filament E27 bulbs in pendant lights?**",
+              "A: Yes, perfect choice. Filament E27 bulbs are ideal for pendant lights where the bulb is visible. The decorative filament creates beautiful ambient lighting for kitchens, dining areas, and trendy hospitality spaces.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Filament E27 Bulb Specifications",
+        paragraphs: ["**GMEC filament E27 LED bulbs deliver:**"],
+        list: [
+          "**Authentic visible filament:** glowing strands mimic traditional Edison bulbs.",
+          "**Warm white (2700K):** genuine golden glow, vintage-industrial aesthetics.",
+          "**E27 large screw fitting:** standard for table lamps, pendant lights, most fixtures.",
+          "**80% energy savings:** uses only 15% of incandescent power.",
+          "**25,000-hour lifespan:** 10-15 years of use.",
+          "**Dimmable options available:** full brightness control when needed.",
+          "**CRI 80+:** warm, flattering light quality.",
+          "**Cool to touch:** no heat (unlike incandescent filament).",
+          "**Multiple wattages:** 5W, 6W, 8W equivalents available.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Compatible fixtures:** filament E27 bulbs work in table lamps, pendant lights, desk lamps, ceiling fixtures, exposed sockets, floor lamps, chandeliers, bars, restaurants, cafes, and any fixture with an E27 large screw socket where the bulb is visible.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Related Products & Services",
+        paragraphs: ["**Complete your decorative lighting:**"],
+        list: [
+          "[All LED Filament Bulbs](/shop/led-filament-bulbs) — browse entire filament range",
+          "[Warm White LED Bulbs](/shop/warm-white-led-bulbs) — all warm white types",
+          "[Cool White LED Bulbs](/shop/cool-white-led-bulbs) — bright daylight options",
+          "[LED Ceiling Lights](/shop/led-ceiling-lights) — complete fixtures",
+          "[LED 3 Colours in 1](/shop/led-3-colours-in-1) — flexible colour control",
+          "[LED Candle Bulbs](/shop/led-candle-bulbs) — decorative candle style",
+          "[LED Frosted Bulbs](/shop/led-frosted-bulbs) — soft frosted finish",
+          "[Contact GMEC](/contact) — expert lighting advice",
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to Filament E27 LED Bulbs?",
+        paragraphs: [
+          "GMEC stocks 8+ filament E27 LED bulb variants perfect for table lamps, pendant lights, desk lamps, and decorative fixtures. All deliver authentic Edison-style aesthetics with 80% energy savings and 10-15 year lifespans.",
+          "**Why choose GMEC filament E27 LED bulbs:**",
+        ],
+        list: [
+          "Authentic visible filament glowing strands",
+          "Warm white (2700K) genuine vintage glow",
+          "E27 large screw fitting",
+          "80% energy savings",
+          "25,000-hour lifespan (10-15 years)",
+          "Dimmable options available",
+          "Perfect for table lamps, pendant lights, home offices",
+          "From £2.79 per bulb",
+          "Free UK delivery over £100",
+          "14-day money-back guarantee",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "Browse all filament E27 bulbs above and create your vintage-industrial ambiance today.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  "filament-e14-led-bulbs": {
+    h1: "Filament E14 LED Bulbs",
+    title: "Filament E14 LED Bulbs UK | Warm White | Edison Style | GMEC",
+    description:
+      "Buy filament E14 LED bulbs from GMEC: authentic Edison-style warm white filament bulbs for wall sconces, chandeliers. Energy efficient, 25,000-hour lifespan. From £1.99.",
+    intro:
+      "GMEC supplies authentic filament E14 LED bulbs for homes, offices, and boutique hospitality venues across the UK. Filament E14 bulbs feature visible glowing filaments that mimic traditional incandescent bulbs, delivering genuine vintage-industrial aesthetic with modern LED efficiency. Our E14 filament bulbs combine authentic Edison-style design with warm white (2700K) lighting, creating trendy decorative ambiance in wall sconces, chandeliers, bedside lamps, and boutique cafes. Every filament E14 LED bulb delivers 80% energy savings, lasts 25,000 hours (10-15 years), dimmable options available, and is instantly compatible with your existing E14 fixtures. Over 6 filament E14 LED bulb variants in stock, from £1.99, free UK delivery over £100, 14-day returns.",
+    content: [
+      {
+        heading: "Why Choose Filament E14 LED Bulbs?",
+        paragraphs: [
+          "Filament E14 LED bulbs are the authentic choice for small decorative fixtures where vintage-industrial aesthetics matter. The E14 is the small screw fitting perfect for wall sconces, chandeliers, decorative table lamps, and petite fixtures. Filament-style E14 bulbs deliver the distinctive look of vintage Edison bulbs with modern LED efficiency, creating dramatic decorative impact in boutique and residential spaces.",
+          "**Why filament E14 bulbs are special:** filament E14 bulbs are a design statement. The visible, glowing filament creates authentic vintage-industrial aesthetics perfect for contemporary homes, trendy offices, boutique venues, and creative spaces. Unlike hidden bulbs in modern fixtures, filament bulbs in exposed small sockets (wall sconces, decorative chandeliers) are premium design elements.",
+          "**Perfect for:**",
+        ],
+        list: [
+          "**Wall Sconces:** bedroom, bathroom, hallway decorative lighting.",
+          "**Decorative Chandeliers:** small ornate fixtures, period properties.",
+          "**Bedside Lamps:** intimate lighting with style and ambiance.",
+          "**Boutique Fixtures:** creative spaces, trendy boutiques, galleries.",
+          "**Craft Room Lighting:** studios, creative workspaces, makers.",
+          "**Home Office:** professional ambiance with decorative appeal.",
+          "**Decorative Table Lamps:** accent lighting, designer pieces.",
+          "**Restaurants & Cafes:** upscale ambiance, intimate dining.",
+          "**Contemporary Homes:** trendy, intentional design statements.",
+          "**Vintage/Industrial Decor:** design-forward spaces, lofts.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Filament style benefits:** filament E14 bulbs feature visible glowing filament strands that create distinctive, dramatic decorative lighting. This aesthetic is fundamentally different from standard bulbs. When the bulb is visible (wall sconces, small chandeliers), filament-style delivers premium, trendy ambiance.",
+              "**Browse:** [All LED Filament Bulbs](/shop/led-filament-bulbs)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Filament E14 Warm White vs Cool White LED Bulbs",
+        paragraphs: [
+          "**Warm White (2700K), classic vintage ambiance (standard choice):** produces the golden, intimate glow identical to traditional incandescent filament bulbs. This is the authentic vintage-industrial aesthetic that makes filament E14 bulbs beautiful and trendy. Warm white creates cosy, welcoming, stylish atmospheres perfect for wall sconces, boutique venues, and bedside lighting. This is the universally preferred choice for filament E14 bulbs.",
+          "**Cool White (6500K), modern/bright (rarely used):** produces bright, crisp daylight-like light. Not traditional for filament bulbs, and rarely chosen because it defeats the entire aesthetic purpose. Cool white filament bulbs sacrifice the nostalgic warmth and vintage appeal for modern brightness. Almost never used for decorative filament applications.",
+          "**Quick decision guide:**",
+        ],
+        table: {
+          headers: ["Use Case", "Best Choice", "Why"],
+          rows: [
+            ["Wall Sconce Ambiance", "Warm White (2700K)", "Authentic vintage glow"],
+            ["Bedroom Bedside Lamp", "Warm White (2700K)", "Intimate, relaxing"],
+            ["Decorative Chandelier", "Warm White (2700K)", "Premium elegance"],
+            ["Bathroom Sconce", "Warm White (2700K)", "Flattering, warm light"],
+            ["Boutique/Cafe Lighting", "Warm White (2700K)", "Upscale atmosphere"],
+            ["Creative Studio", "Warm White (2700K)", "Inspiration + aesthetics"],
+            ["Contemporary Home Office", "Warm White (2700K)", "Stylish workspace"],
+            ["Hallway/Entryway", "Warm White (2700K)", "Welcoming ambiance"],
+          ],
+        },
+        more: [
+          {
+            paragraphs: [
+              "**Result:** warm white E14 filament is virtually the only choice for decorative lighting. Cool white defeats the aesthetic purpose.",
+              "**Browse:** [Warm White LED Bulbs](/shop/warm-white-led-bulbs) | [Cool White LED Bulbs](/shop/cool-white-led-bulbs)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Energy Savings: Filament E14 LED Bulbs",
+        paragraphs: [
+          "**Real savings example:** replace 4 old 40W incandescent E14 filament bulbs (typical: 2 wall sconces, 1 chandelier, 1 bedside) with 5W LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+          rows: [["Annual usage (4 bulbs)", "146 kWh (£41/year)", "18 kWh (£5/year)", "£36/year"]],
+        },
+        more: [
+          {
+            paragraphs: [
+              "10-year total: £360+ (energy £360 + no bulb replacements = £100+ saved).",
+              "**Multi-Fixture Home (6-8 filament E14 bulbs):**",
+            ],
+          },
+          {
+            table: {
+              headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+              rows: [["Annual usage (6-8 bulbs)", "219 kWh (£61/year)", "27 kWh (£7/year)", "£54/year"]],
+            },
+          },
+          {
+            paragraphs: ["10-year saving: £540+.", "**Why filament E14 LED saves so much money:**"],
+          },
+          {
+            numberedList: [
+              "**85% less energy:** LED uses only 15% of incandescent power.",
+              "**25,000-hour lifespan:** incandescent lasts 1,000 hours, LED lasts 10-15 years.",
+              "**No replacement costs:** filament E14 bulbs are premium-priced and frequent replacements add up.",
+              "**No heat:** incandescent gets dangerously hot, LED stays cool.",
+              "**Always visible:** since you see them (wall sconces, chandeliers), premium efficiency matters.",
+            ],
+          },
+          {
+            paragraphs: [
+              "A typical home with 4-8 filament E14 bulbs saves £36-54/year or £360-540+ over 10 years. Plus you get authentic vintage ambiance without the guilt of energy waste. Boutique venues save even more with 15-20 filament fixtures.",
+              "Browse our [complete filament LED bulb range](/shop/led-filament-bulbs) and upgrade your space today.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dimmable Filament E14 LED Bulbs",
+        paragraphs: [
+          "**Can you dim filament E14 bulbs?** Yes! Dimmable filament E14 LED bulbs allow you to adjust brightness from 10% to 100% using a dimmer switch. This creates complete control over ambiance, bright for entertaining and working, dimmed for intimate evenings. Perfect for wall sconces, bedside lamps, and decorative fixtures where mood control enhances the aesthetic.",
+          "**Non-dimmable vs dimmable:** non-dimmable filament E14 bulbs are cheaper and work fine with regular on/off switches. Dimmable versions cost £1-2 more but give you complete brightness control, creating different moods for different occasions. For decorative filament bulbs, dimming is highly recommended.",
+          "**Dimmer compatibility:** modern LED-rated dimmer switches (post-2010) work perfectly with GMEC dimmable E14 filament bulbs. Older dimmer switches (pre-2010) may flicker. If flickering occurs, upgrade to an LED-compatible dimmer switch (£5-20).",
+          "**When to choose dimmable E14 filaments:**",
+        ],
+        list: [
+          "Wall sconces (bright for tasks, dimmed for ambiance)",
+          "Bedside lamps (bright for reading, dimmed for sleep)",
+          "Decorative chandeliers (bright for entertaining, soft for evening)",
+          "Home office (bright for work, dimmed for calls/breaks)",
+          "Bathroom sconces (bright for grooming, soft for evening)",
+          "Living room accent lighting (bright for guests, soft for relaxation)",
+          "Boutique/cafe spaces (bright for service, dimmed for ambiance)",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Browse [all filament LED bulbs](/shop/led-filament-bulbs) for dimmable options.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQ: Filament E14 LED Bulbs",
+        paragraphs: [
+          "**Q: What makes a \"filament\" E14 LED bulb different from a standard LED bulb?**",
+          "A: Filament LED bulbs have visible glowing filament strands that mimic traditional Edison bulbs. This creates distinctive, decorative vintage-industrial aesthetics. Standard LED bulbs are simple and functional. Filament-style is chosen for ambiance and design impact.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: Are filament E14 LED bulbs as warm as old incandescent bulbs?**",
+              "A: Yes. GMEC warm white E14 filament LED bulbs produce a genuine golden glow identical to traditional incandescent filament at 2700K colour temperature. You get authentic vintage ambiance without the heat, danger, or energy waste.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use filament E14 LED bulbs in any wall sconce?**",
+              "A: Yes, any sconce or fixture with an E14 socket. E14 is the small screw fitting, if your fixture's socket is approximately 14mm diameter, E14 filament is your solution. Check your existing bulb's base to confirm E14.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What wattage filament E14 LED replaces my old 40W incandescent?**",
+              "A: 40W incandescent is roughly equivalent to a 5W filament LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts. GMEC bulb listings show both old-style equivalents and actual lumens for accurate brightness comparison.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do filament E14 LED bulbs work with dimmer switches?**",
+              "A: Newer dimmers (post-2010) work perfectly. Older dimmers (pre-2010) may flicker. If flickering occurs, upgrade to an LED-compatible dimmer (£5-20). Dimmable filament bulbs are highly recommended for wall sconces.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do filament E14 LED bulbs last?**",
+              "A: GMEC filament E14 LED bulbs are rated for 25,000 hours, which equals 10-15 years of typical use. After that, they gradually dim but rarely fail. You'll likely never replace them.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are filament E14 bulbs good for bedside lighting?**",
+              "A: Absolutely. Filament E14 bulbs are ideal for bedside lamps. The visible filament creates beautiful, intimate ambiance while providing functional lighting. Dimmable options let you adjust brightness for reading or sleep.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What's the difference between E14 and E27 filament bulbs?**",
+              "A: E14 is the small screw fitting (wall sconces, small chandeliers). E27 is the large screw fitting (table lamps, pendant lights). Choose based on your fixture's socket size. Both deliver authentic filament aesthetics.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I mix E14 filament and standard E14 bulbs in the same fixture?**",
+              "A: Yes, but it looks unbalanced aesthetically. For best appearance, use all filament or all standard. Filament bulbs are chosen specifically for their decorative impact, so mixing diminishes that effect.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Filament E14 Bulb Specifications",
+        paragraphs: ["**GMEC filament E14 LED bulbs deliver:**"],
+        list: [
+          "**Authentic visible filament:** glowing strands mimic traditional Edison bulbs.",
+          "**Warm white (2700K):** genuine golden glow, vintage-industrial aesthetics.",
+          "**E14 small screw fitting:** standard for wall sconces, small chandeliers.",
+          "**80% energy savings:** uses only 15% of incandescent power.",
+          "**25,000-hour lifespan:** 10-15 years of use.",
+          "**Dimmable options available:** full brightness control when needed.",
+          "**CRI 80+:** warm, flattering light quality.",
+          "**Cool to touch:** no heat (unlike incandescent filament).",
+          "**Multiple wattages:** 4W, 5W, 6W equivalents available.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Compatible fixtures:** filament E14 bulbs work in wall sconces, decorative chandeliers, bedside lamps, boutique fixtures, craft room lighting, home offices, designer table lamps, restaurants, cafes, and any fixture with an E14 small screw socket where the bulb is visible.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Related Products & Services",
+        paragraphs: ["**Complete your decorative lighting:**"],
+        list: [
+          "[All LED Filament Bulbs](/shop/led-filament-bulbs) — browse entire filament range",
+          "[Warm White LED Bulbs](/shop/warm-white-led-bulbs) — all warm white types",
+          "[Cool White LED Bulbs](/shop/cool-white-led-bulbs) — bright daylight options",
+          "[LED Ceiling Lights](/shop/led-ceiling-lights) — complete fixtures",
+          "[LED 3 Colours in 1](/shop/led-3-colours-in-1) — flexible colour control",
+          "[LED Candle Bulbs](/shop/led-candle-bulbs) — decorative candle style",
+          "[LED Frosted Bulbs](/shop/led-frosted-bulbs) — soft frosted finish",
+          "[Contact GMEC](/contact) — expert lighting advice",
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to Filament E14 LED Bulbs?",
+        paragraphs: [
+          "GMEC stocks 6+ filament E14 LED bulb variants perfect for wall sconces, chandeliers, bedside lamps, and boutique fixtures. All deliver authentic Edison-style aesthetics with 80% energy savings and 10-15 year lifespans.",
+          "**Why choose GMEC filament E14 LED bulbs:**",
+        ],
+        list: [
+          "Authentic visible filament glowing strands",
+          "Warm white (2700K) genuine vintage glow",
+          "E14 small screw fitting",
+          "80% energy savings",
+          "25,000-hour lifespan (10-15 years)",
+          "Dimmable options available",
+          "Perfect for wall sconces, chandeliers, bedside lamps",
+          "From £1.99 per bulb",
+          "Free UK delivery over £100",
+          "14-day money-back guarantee",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "Browse all filament E14 bulbs above and create your vintage-industrial ambiance today.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  "filament-b22-led-bulbs": {
+    h1: "Filament B22 LED Bulbs",
+    title: "Filament B22 LED Bulbs UK | Warm White | Edison Bayonet | GMEC",
+    description:
+      "Buy filament B22 LED bulbs from GMEC: authentic Edison-style warm white filament bulbs for UK ceiling fixtures. Energy efficient, 25,000-hour lifespan. From £2.49.",
+    intro:
+      "GMEC supplies authentic filament B22 LED bulbs for homes and hospitality venues across the UK. Filament B22 bulbs feature visible glowing filaments that mimic traditional incandescent bulbs, delivering genuine vintage-industrial aesthetic with modern LED efficiency. Our B22 filament bulbs combine authentic Edison-style design with warm white (2700K) lighting, creating trendy decorative ambiance in UK ceiling fixtures, pendant lights, and upscale hospitality spaces. Every filament B22 LED bulb delivers 80% energy savings, lasts 25,000 hours (10-15 years), dimmable options available, and is instantly compatible with your existing UK B22 bayonet fixtures. Over 5 filament B22 LED bulb variants in stock, from £2.49, free UK delivery over £100, 14-day returns.",
+    content: [
+      {
+        heading: "Why Choose Filament B22 LED Bulbs?",
+        paragraphs: [
+          "Filament B22 LED bulbs are the authentic choice for UK ceiling fixtures where vintage-industrial aesthetics matter. The B22 bayonet cap fitting is standard for UK ceiling lights, and filament-style B22 bulbs deliver the distinctive look of vintage Edison bulbs with modern LED efficiency. When your ceiling fixture or pendant is visible (not recessed), filament B22 bulbs create dramatic decorative impact.",
+          "**Why filament B22 bulbs are special:** filament B22 bulbs are less common than E27 filaments but highly valued in UK homes and hospitality venues with ceiling fixtures. The visible, glowing filament creates authentic vintage-industrial aesthetics perfect for contemporary homes, trendy offices, and upscale hospitality. These are decorative statement pieces, not simple functional bulbs.",
+          "**Perfect for:**",
+        ],
+        list: [
+          "**Ceiling Pendant Lights:** kitchens, dining areas, trendy cafes.",
+          "**Decorative Ceiling Fixtures:** visible UK ceiling bulbs, feature lights.",
+          "**Restaurants & Bars:** upscale hospitality, vintage-modern ambiance.",
+          "**Bistros & Cafes:** trendy ambiance, Instagram-worthy aesthetics.",
+          "**Modern Homes:** contemporary design with vintage aesthetic appeal.",
+          "**Loft Spaces:** industrial-style interiors, creative homes.",
+          "**Hotels & Boutiques:** upscale decorative lighting.",
+          "**Contemporary Offices:** professional ambiance with design flair.",
+          "**Trendy Retail Spaces:** fashion-forward retail environments.",
+          "**Feature Ceilings:** any UK ceiling fixture where design matters.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Bayonet vs screw:** B22 uses the twist-lock (bayonet) fitting standard in UK ceiling fixtures. If your ceiling bulb twists to lock/unlock, B22 filament is your solution. For table lamps and pendant lights with screw fittings, see [Filament E27 LED Bulbs](/shop/led-filament-bulbs).",
+              "**Browse:** [All LED Filament Bulbs](/shop/led-filament-bulbs)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Filament B22 Warm White vs Cool White LED Bulbs",
+        paragraphs: [
+          "**Warm White (2700K), classic vintage ambiance (standard choice):** produces the golden, intimate glow identical to traditional incandescent filament bulbs. This is the authentic vintage-industrial aesthetic that makes filament B22 bulbs beautiful and trendy. Warm white creates cosy, welcoming, stylish atmospheres perfect for restaurants, cafes, and ceiling fixtures. This is the universally preferred choice for filament B22 bulbs.",
+          "**Cool White (6500K), modern/bright (rarely used):** produces bright, crisp daylight-like light. Not traditional for filament bulbs, and rarely chosen because it defeats the entire aesthetic purpose. Cool white filament bulbs sacrifice the nostalgic warmth and vintage appeal for modern brightness. Almost never used for decorative filament applications.",
+          "**Quick decision guide:**",
+        ],
+        table: {
+          headers: ["Use Case", "Best Choice", "Why"],
+          rows: [
+            ["Ceiling Pendant Kitchen", "Warm White (2700K)", "Trendy, warm aesthetics"],
+            ["Restaurant Lighting", "Warm White (2700K)", "Upscale vintage ambiance"],
+            ["Bistro/Cafe Ambiance", "Warm White (2700K)", "Professional elegance"],
+            ["Dining Room Ceiling", "Warm White (2700K)", "Authentic vintage glow"],
+            ["Hotel Lobby Fixture", "Warm White (2700K)", "Luxurious ambiance"],
+            ["Modern Loft Space", "Warm White (2700K)", "Industrial-vintage blend"],
+            ["Retail/Boutique", "Warm White (2700K)", "Sophisticated atmosphere"],
+            ["Feature Ceiling", "Warm White (2700K)", "Decorative focal point"],
+          ],
+        },
+        more: [
+          {
+            paragraphs: [
+              "**Result:** warm white B22 filament is virtually the only choice for decorative ceiling lighting. Cool white defeats the aesthetic purpose.",
+              "**Browse:** [Warm White LED Bulbs](/shop/warm-white-led-bulbs) | [Cool White LED Bulbs](/shop/cool-white-led-bulbs)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Energy Savings: Filament B22 LED Bulbs",
+        paragraphs: [
+          "**Real savings example:** replace 4 old 40W incandescent B22 filament bulbs (typical: 2 ceiling pendants, 1 feature fixture, 1 dining room) with 5W LED equivalents.",
+        ],
+        table: {
+          headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+          rows: [["Annual usage (4 bulbs)", "146 kWh (£41/year)", "18 kWh (£5/year)", "£36/year"]],
+        },
+        more: [
+          {
+            paragraphs: [
+              "10-year total: £360+ (energy £360 + no bulb replacements = £100+ saved).",
+              "**Hospitality Venue (12-16 filament B22 bulbs):**",
+            ],
+          },
+          {
+            table: {
+              headers: ["Metric", "Old Incandescent (40W)", "New LED (5W)", "Annual Saving"],
+              rows: [["Annual usage (12-16 bulbs)", "438 kWh (£122/year)", "55 kWh (£15/year)", "£107/year"]],
+            },
+          },
+          {
+            paragraphs: ["10-year saving: £1,070+.", "**Why filament B22 LED saves so much money:**"],
+          },
+          {
+            numberedList: [
+              "**85% less energy:** LED uses only 15% of incandescent power.",
+              "**25,000-hour lifespan:** incandescent lasts 1,000 hours, LED lasts 10-15 years.",
+              "**No replacement costs:** filament B22 bulbs are premium-priced and frequent replacements are disruptive.",
+              "**No heat:** incandescent gets dangerously hot, LED stays cool and safe.",
+              "**Always visible:** since you see them (ceiling fixtures), premium efficiency matters.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**The bottom line:** a typical home with 4 filament B22 bulbs saves £36/year or £360+ over 10 years. Restaurants and cafes with 12-16 filament fixtures save £107+/year or £1,070+ over 10 years. Plus you get authentic vintage ambiance without the guilt of energy waste.",
+              "Browse our [complete filament LED bulb range](/shop/led-filament-bulbs) and upgrade your space today.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Dimmable Filament B22 LED Bulbs",
+        paragraphs: [
+          "**Can you dim filament B22 bulbs?** Yes! Dimmable filament B22 LED bulbs allow you to adjust brightness from 10% to 100% using a dimmer switch. This creates complete control over ambiance, bright for entertaining and working, dimmed for intimate evenings. Perfect for ceiling fixtures and hospitality spaces where mood control enhances the aesthetic.",
+          "**Non-dimmable vs dimmable:** non-dimmable filament B22 bulbs are cheaper and work fine with regular on/off switches. Dimmable versions cost £1-2 more but give you complete brightness control, creating different moods for different occasions. For decorative filament bulbs, dimming is highly recommended.",
+          "**Dimmer compatibility:** modern LED-rated dimmer switches (post-2010) work perfectly with GMEC dimmable B22 filament bulbs. Older dimmer switches (pre-2010) may flicker. If flickering occurs, upgrade to an LED-compatible dimmer switch (£5-20).",
+          "**When to choose dimmable B22 filaments:**",
+        ],
+        list: [
+          "Ceiling pendant lights (bright for work/entertaining, soft for dining)",
+          "Restaurant/cafe lighting (bright for service, dimmed for ambiance)",
+          "Feature ceiling fixtures (bright for guests, soft for evening)",
+          "Dining room ceiling lights (bright for cooking, dimmed for dining)",
+          "Hotel/boutique spaces (bright for operation, soft for luxury ambiance)",
+          "Modern homes (bright for entertaining, dimmed for relaxation)",
+          "Loft spaces (bright for work, soft for ambiance)",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Browse [all filament LED bulbs](/shop/led-filament-bulbs) for dimmable options.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "FAQ: Filament B22 LED Bulbs",
+        paragraphs: [
+          "**Q: What makes a \"filament\" B22 LED bulb different from a standard LED bulb?**",
+          "A: Filament LED bulbs have visible glowing filament strands that mimic traditional Edison bulbs. This creates distinctive, decorative vintage-industrial aesthetics. Standard LED bulbs are simple and functional. Filament-style is chosen for ambiance and design impact.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Q: Are filament B22 LED bulbs as warm as old incandescent bulbs?**",
+              "A: Yes. GMEC warm white B22 filament LED bulbs produce a genuine golden glow identical to traditional incandescent filament at 2700K colour temperature. You get authentic vintage ambiance without the heat, danger, or energy waste.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Can I use filament B22 LED bulbs in any UK ceiling fixture?**",
+              "A: Yes, any UK ceiling fixture with a B22 bayonet socket. B22 is the standard UK fitting, if your ceiling bulb twists to lock/unlock (not screw), B22 filament is your solution. Check your existing bulb's fitting to confirm B22.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What wattage filament B22 LED replaces my old 40W incandescent?**",
+              "A: 40W incandescent is roughly equivalent to a 5W filament LED. Check lumens (brightness) rather than wattage, LED lumens matter more than watts. GMEC bulb listings show both old-style equivalents and actual lumens for accurate brightness comparison.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Do filament B22 LED bulbs work with dimmer switches?**",
+              "A: Newer dimmers (post-2010) work perfectly. Older dimmers (pre-2010) may flicker. If flickering occurs, upgrade to an LED-compatible dimmer (£5-20). Dimmable filament bulbs are highly recommended for ceiling fixtures.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How long do filament B22 LED bulbs last?**",
+              "A: GMEC filament B22 LED bulbs are rated for 25,000 hours, which equals 10-15 years of typical use. After that, they gradually dim but rarely fail. You'll likely never replace them.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: Are filament B22 bulbs good for restaurants and hospitality?**",
+              "A: Absolutely, perfect choice. Filament B22 bulbs are ideal for upscale hospitality venues. The decorative filament creates trendy, Instagram-worthy ambiance while providing professional lighting. Dimmable options let venues control mood throughout service.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: What's the difference between B22 and E27 filament bulbs?**",
+              "A: B22 is the bayonet cap fitting (UK ceiling fixtures, twists to lock). E27 is the large screw fitting (table lamps, pendant lights, screws on). Choose based on your fixture's socket. Both deliver authentic filament aesthetics.",
+            ],
+          },
+          {
+            paragraphs: [
+              "**Q: How do I install a filament B22 LED bulb?**",
+              "A: Push the bulb into the ceiling socket and twist clockwise about a quarter turn until it locks. To remove, twist counterclockwise. Simple, safe, no ladder climbs for replacements.",
+            ],
+          },
+          {
+            paragraphs: [
+              "For more questions, [contact our lighting experts](/contact) on +44 7951 282482.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Filament B22 Bulb Specifications",
+        paragraphs: ["**GMEC filament B22 LED bulbs deliver:**"],
+        list: [
+          "**Authentic visible filament:** glowing strands mimic traditional Edison bulbs.",
+          "**Warm white (2700K):** genuine golden glow, vintage-industrial aesthetics.",
+          "**B22 bayonet cap fitting:** UK ceiling fixture standard.",
+          "**80% energy savings:** uses only 15% of incandescent power.",
+          "**25,000-hour lifespan:** 10-15 years of use.",
+          "**Dimmable options available:** full brightness control when needed.",
+          "**CRI 80+:** warm, flattering light quality.",
+          "**Cool to touch:** no heat (unlike incandescent filament).",
+          "**Multiple wattages:** 5W, 6W, 8W equivalents available.",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "**Compatible fixtures:** filament B22 bulbs work in UK ceiling pendant lights, decorative ceiling fixtures, restaurants, cafes, bars, hotels, boutiques, loft spaces, feature ceiling lights, and any fixture with a B22 bayonet socket where the bulb is visible.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Related Products & Services",
+        paragraphs: ["**Complete your decorative lighting:**"],
+        list: [
+          "[All LED Filament Bulbs](/shop/led-filament-bulbs) — browse entire filament range",
+          "[Warm White LED Bulbs](/shop/warm-white-led-bulbs) — all warm white types",
+          "[Cool White LED Bulbs](/shop/cool-white-led-bulbs) — bright daylight options",
+          "[LED Ceiling Lights](/shop/led-ceiling-lights) — complete fixtures",
+          "[LED 3 Colours in 1](/shop/led-3-colours-in-1) — flexible colour control",
+          "[LED Candle Bulbs](/shop/led-candle-bulbs) — decorative candle style",
+          "[LED Frosted Bulbs](/shop/led-frosted-bulbs) — soft frosted finish",
+          "[Contact GMEC](/contact) — expert lighting advice",
+        ],
+      },
+      {
+        heading: "Ready to Upgrade to Filament B22 LED Bulbs?",
+        paragraphs: [
+          "GMEC stocks 5+ filament B22 LED bulb variants perfect for UK ceiling fixtures, pendants, and hospitality spaces. All deliver authentic Edison-style aesthetics with 80% energy savings and 10-15 year lifespans.",
+          "**Why choose GMEC filament B22 LED bulbs:**",
+        ],
+        list: [
+          "Authentic visible filament glowing strands",
+          "Warm white (2700K) genuine vintage glow",
+          "B22 bayonet cap fitting (UK standard)",
+          "80% energy savings",
+          "25,000-hour lifespan (10-15 years)",
+          "Dimmable options available",
+          "Perfect for ceiling fixtures, restaurants, hospitality",
+          "From £2.49 per bulb",
+          "Free UK delivery over £100",
+          "14-day money-back guarantee",
+        ],
+        more: [
+          {
+            paragraphs: [
+              "Need personalized advice? [Contact us](/contact) or call +44 7951 282482.",
+              "Browse all filament B22 bulbs above and create your vintage-industrial ambiance today.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
   "gu10-downlights": {
     h1: "GU10 Downlights",
     title: "GU10 Downlights UK | Fire Rated, IP65 Bathroom & Adjustable | GMEC",
