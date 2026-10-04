@@ -44,32 +44,44 @@ export interface FittingNav {
   allFittingsHref?: string;
 }
 
-// Describes the fitting-navigation pills for any slug in a colour family
-// (the colour-only page and each of its per-fitting pages), so every page
-// in the family can show the same "All Fittings / E27 / B22 / …" row and
-// link straight to a sibling page instead of just filtering in place.
-// Returns null for a real (non-virtual) category, which keeps its existing
-// query-string-only fitting filter untouched.
+// Describes the fitting-navigation pills for any slug in a colour or
+// category family (the parent page and each of its per-fitting pages), so
+// every page in the family can show the same "All Fittings / E27 / B22 / …"
+// row and link straight to a sibling page instead of just filtering in
+// place. The parent can be a virtual colour page (cool-white-led-bulbs) or
+// a real Category page (led-candle-bulbs) — both work the same way here.
+// Returns null when `slug` has no fitting sub-pages at all, which keeps its
+// existing query-string-only fitting filter untouched.
 export function getFittingNav(slug: string): FittingNav | null {
   const entry = VIRTUAL_CATEGORY_SLUGS[slug];
-  if (!entry || (!entry.colour && !entry.category)) return null;
-
-  const fittingPages: Record<string, string> = {};
-  // A category-based family (e.g. candle bulbs) has a real page of its own
-  // to fall back to; a colour-based family's "parent" is itself virtual and
-  // found in the loop below.
-  let parentSlug: string | undefined = entry.category;
-  for (const [candidateSlug, candidate] of Object.entries(VIRTUAL_CATEGORY_SLUGS)) {
-    const sameFamily = entry.colour ? candidate.colour === entry.colour : candidate.category === entry.category;
-    if (!sameFamily) continue;
-    if (candidate.fitting) fittingPages[candidate.fitting] = `/shop/${candidateSlug}`;
-    else parentSlug = candidateSlug;
+  if (entry && (entry.colour || entry.category)) {
+    const fittingPages: Record<string, string> = {};
+    // A category-based family (e.g. candle bulbs) has a real page of its
+    // own to fall back to; a colour-based family's "parent" is itself
+    // virtual and found in the loop below.
+    let parentSlug: string | undefined = entry.category;
+    for (const [candidateSlug, candidate] of Object.entries(VIRTUAL_CATEGORY_SLUGS)) {
+      const sameFamily = entry.colour ? candidate.colour === entry.colour : candidate.category === entry.category;
+      if (!sameFamily) continue;
+      if (candidate.fitting) fittingPages[candidate.fitting] = `/shop/${candidateSlug}`;
+      else parentSlug = candidateSlug;
+    }
+    return {
+      fittingPages,
+      allFittingsHref: entry.fitting && parentSlug ? `/shop/${parentSlug}` : undefined,
+    };
   }
 
-  return {
-    fittingPages,
-    allFittingsHref: entry.fitting && parentSlug ? `/shop/${parentSlug}` : undefined,
-  };
+  // `slug` isn't virtual itself — check whether it's a real Category that
+  // one or more virtual fitting pages point back to (e.g. led-candle-bulbs
+  // is the real parent of candle-e14-led-bulbs and candle-b22-led-bulbs).
+  const fittingPages: Record<string, string> = {};
+  for (const [candidateSlug, candidate] of Object.entries(VIRTUAL_CATEGORY_SLUGS)) {
+    if (candidate.category === slug && candidate.fitting) {
+      fittingPages[candidate.fitting] = `/shop/${candidateSlug}`;
+    }
+  }
+  return Object.keys(fittingPages).length > 0 ? { fittingPages } : null;
 }
 
 export interface ShopSearchParams {

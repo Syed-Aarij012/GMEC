@@ -58,12 +58,20 @@ export default async function CategoryPage({
   const { products, total, page, totalPages, availableFittings } =
     await getFilteredProducts(sp, slug);
 
-  // Every page in a colour family (the colour-only page and each of its
-  // per-fitting pages) shows the same "All Fittings / E27 / B22 / …" row so
-  // visitors can jump straight between them, whichever one they land on.
+  // Every page in a colour or category family (the parent page and each of
+  // its per-fitting pages) shows the same "All Fittings / E27 / B22 / …"
+  // row so visitors can jump straight between them, whichever one they land
+  // on. A fitting-locked page (e.g. cool-white-e27-led-bulbs) only ever has
+  // one real fitting in its own product query, so it needs the full sibling
+  // set from fittingNav instead. A parent page (real or virtual) keeps its
+  // actual DB-derived fittings — merged with any that have dedicated pages
+  // — so a fitting with no dedicated page yet still shows as a filter pill
+  // rather than disappearing.
   const lockedFitting = VIRTUAL_CATEGORY_SLUGS[slug]?.fitting;
   const fittingNav = getFittingNav(slug);
-  const displayFittings = fittingNav ? Object.keys(fittingNav.fittingPages) : availableFittings;
+  const displayFittings = lockedFitting
+    ? Object.keys(fittingNav?.fittingPages ?? {})
+    : Array.from(new Set([...availableFittings, ...Object.keys(fittingNav?.fittingPages ?? {})]));
 
   function buildHref(p: number) {
     const usp = new URLSearchParams(sp as Record<string, string>);
