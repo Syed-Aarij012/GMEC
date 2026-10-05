@@ -7,10 +7,16 @@ export function isRoyalMailConfigured(): boolean {
   return Boolean(process.env.ROYAL_MAIL_API_KEY);
 }
 
+// Royal Mail OBA (On Account) carriers only accept the single generic
+// "parcel" package format — "smallParcel"/"mediumParcel"/"largeParcel"
+// aren't valid for OBA services like Tracked 24/48 and get rejected with
+// "Package size 'X' is not valid for the service". The SMALL/MEDIUM/LARGE
+// classification is still used for our own weight/price calculations
+// (see shipping.ts), just not sent to Royal Mail as the package format.
 const PACKAGE_FORMAT: Record<ParcelFormat, string> = {
-  SMALL: "smallParcel",
-  MEDIUM: "mediumParcel",
-  LARGE: "largeParcel",
+  SMALL: "parcel",
+  MEDIUM: "parcel",
+  LARGE: "parcel",
 };
 
 interface ShipmentItem extends ShippableItem {
