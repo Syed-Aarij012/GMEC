@@ -22,7 +22,7 @@ interface ShippingQuote {
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const { data: authSession, status: authStatus } = useSession();
+  const { data: authSession } = useSession();
   const mounted = useMounted();
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
@@ -72,13 +72,7 @@ export default function CheckoutPage() {
     }
   }, [mounted, items.length, router]);
 
-  useEffect(() => {
-    if (mounted && authStatus === "unauthenticated") {
-      router.replace("/login?callbackUrl=/checkout");
-    }
-  }, [mounted, authStatus, router]);
-
-  if (!mounted || items.length === 0 || authStatus !== "authenticated") return null;
+  if (!mounted || items.length === 0) return null;
 
   const shippingCost =
     quote?.shippingCost ?? (subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : ESTIMATED_SHIPPING_FALLBACK);

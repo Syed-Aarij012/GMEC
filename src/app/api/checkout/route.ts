@@ -17,10 +17,9 @@ export async function POST(req: Request) {
   }
   const { items, shipping, paymentMethod } = parsed.data;
 
+  // No login required — an unauthenticated checkout becomes a guest order
+  // (userId left unset, guestEmail used instead) further down.
   const session = await getServerSession(authOptions);
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Please sign in to place an order" }, { status: 401 });
-  }
 
   const products = await prisma.product.findMany({
     where: { id: { in: items.map((i) => i.productId) } },
