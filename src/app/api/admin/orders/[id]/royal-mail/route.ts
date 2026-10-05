@@ -22,6 +22,12 @@ export async function POST(_req: Request, { params }: { params: Promise<{ id: st
   });
 
   if (!order) return NextResponse.json({ error: "Order not found" }, { status: 404 });
+  if (order.status === "PENDING" || order.status === "CANCELLED") {
+    return NextResponse.json(
+      { error: "This order must be paid before a Royal Mail shipment can be created" },
+      { status: 400 }
+    );
+  }
   if (order.royalMailOrderId) {
     return NextResponse.json({ error: "A Royal Mail shipment already exists for this order" }, { status: 400 });
   }

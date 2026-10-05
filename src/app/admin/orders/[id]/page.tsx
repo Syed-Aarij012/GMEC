@@ -146,11 +146,19 @@ export default async function AdminOrderDetailPage({
             <h2 className="mb-3 flex items-center gap-2 text-lg font-bold text-text">
               <Truck className="h-4 w-4 text-text/40" /> Royal Mail
             </h2>
-            <RoyalMailShipment
-              orderId={order.id}
-              royalMailOrderId={order.royalMailOrderId}
-              trackingNumber={order.royalMailTrackingNumber}
-            />
+            {order.status === "PENDING" || order.status === "CANCELLED" ? (
+              <p className="text-sm text-text/50">
+                {order.status === "PENDING"
+                  ? "Royal Mail shipping becomes available once this order is paid."
+                  : "This order is cancelled, Royal Mail shipping isn't available."}
+              </p>
+            ) : (
+              <RoyalMailShipment
+                orderId={order.id}
+                royalMailOrderId={order.royalMailOrderId}
+                trackingNumber={order.royalMailTrackingNumber}
+              />
+            )}
           </Reveal>
         </div>
       </div>
