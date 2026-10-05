@@ -68,6 +68,16 @@
        <priority>0.8000</priority>
   </url>
   <url>
+       <loc>https://www.gmeccorporation.com/shop/candle-e14-led-bulbs</loc>
+       <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/shop/candle-b22-led-bulbs</loc>
+       <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
        <loc>https://www.gmeccorporation.com/shop/led-ceiling-lights</loc>
        <lastmod>2026-09-08T05:02:38+00:00</lastmod>
        <priority>0.8000</priority>
@@ -76,6 +86,21 @@
        <loc>https://www.gmeccorporation.com/shop/led-filament-bulbs</loc>
        <lastmod>2026-09-08T05:02:38+00:00</lastmod>
        <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/shop/filament-e27-led-bulbs</loc>
+       <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/shop/filament-e14-led-bulbs</loc>
+       <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/shop/filament-b22-led-bulbs</loc>
+       <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://www.gmeccorporation.com/shop/led-frosted-bulbs</loc>
