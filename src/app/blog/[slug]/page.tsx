@@ -115,6 +115,10 @@ const GUIDE_LAYOUT: Record<string, { ctaHref: string; ctaLabel: string }> = {
     ctaHref: "/shop/gu10-downlights",
     ctaLabel: "Shop GU10 downlights",
   },
+  "led-ceiling-lights-every-room-bright-energy-efficient": {
+    ctaHref: "/shop/led-ceiling-lights",
+    ctaLabel: "Shop LED ceiling lights",
+  },
 };
 
 // Posts listed here render with the "howto" layout: a light quick-facts
