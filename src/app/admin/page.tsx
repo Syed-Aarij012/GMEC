@@ -73,7 +73,7 @@ export default async function AdminDashboardPage() {
   ] = await Promise.all([
     prisma.product.count(),
     prisma.category.count(),
-    prisma.order.count(),
+    prisma.order.count({ where: { status: { in: [...PAID_STATUSES] } } }),
     prisma.order.findMany({
       where: { status: { in: [...PAID_STATUSES] } },
       orderBy: { createdAt: "desc" },
