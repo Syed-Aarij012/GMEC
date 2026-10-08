@@ -33,8 +33,12 @@ export async function POST(_req: Request, { params }: { params: Promise<{ id: st
   }
 
   try {
+    // Use the same short order number shown to the customer (invoice, order
+    // confirmation email, account page) as the reference sent to Royal Mail,
+    // instead of the full internal order id — so staff can match an order
+    // between our system and the Royal Mail dashboard at a glance.
     const result = await createRoyalMailShipment({
-      orderId: order.id,
+      orderId: order.id.slice(-8).toUpperCase(),
       orderDate: order.createdAt,
       subtotal: order.subtotal,
       shippingCost: order.shippingCost,
