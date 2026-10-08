@@ -14,6 +14,11 @@ export function buildOrdersWhere(params: OrdersSearchParams): Prisma.OrderWhereI
 
   if (params.status && ORDER_STATUSES.includes(params.status as OrderStatus)) {
     where.status = params.status as OrderStatus;
+  } else if (!params.status) {
+    // No status filter picked: default to orders that actually completed
+    // payment. Pending/cancelled orders are still reachable by explicitly
+    // selecting that status in the filter — just not shown by default.
+    where.status = { in: ["PAID", "FULFILLED"] };
   }
 
   if (params.from || params.to) {

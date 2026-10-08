@@ -55,7 +55,7 @@ export default function OrdersFilterBar() {
         onChange={(e) => updateParams({ status: e.target.value || null })}
         className="rounded-full border border-line/15 bg-canvas px-3.5 py-2 text-sm font-medium text-text outline-none focus:border-gold-500"
       >
-        <option value="">All statuses</option>
+        <option value="">Paid & Fulfilled (default)</option>
         {STATUSES.map((s) => (
           <option key={s} value={s}>
             {s}

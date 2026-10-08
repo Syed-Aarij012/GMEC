@@ -74,7 +74,11 @@ export default async function AdminDashboardPage() {
     prisma.product.count(),
     prisma.category.count(),
     prisma.order.count(),
-    prisma.order.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
+    prisma.order.findMany({
+      where: { status: { in: [...PAID_STATUSES] } },
+      orderBy: { createdAt: "desc" },
+      take: 5,
+    }),
     prisma.order.groupBy({ by: ["status"], _count: { _all: true } }),
     getRevenueSeries(),
     getTopProducts(),
