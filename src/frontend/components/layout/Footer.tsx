@@ -86,6 +86,11 @@ export default function Footer({ categories }: { categories: CategoryLink[] }) {
               </Link>
             </li>
             <li>
+              <Link href="/led-lighting-london" className="hover:text-gold-400">
+                Areas We Serve
+              </Link>
+            </li>
+            <li>
               <Link href="/account" className="hover:text-gold-400">
                 Track My Order
               </Link>

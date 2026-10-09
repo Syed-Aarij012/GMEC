@@ -11,6 +11,7 @@ import ThemeToggle from "./ThemeToggle";
 import { useCartStore } from "@/frontend/store/cart";
 import { useWishlistStore } from "@/frontend/store/wishlist";
 import { useMounted } from "@/frontend/hooks/useMounted";
+import { areaPages, areaPageOrder } from "@/backend/lib/areaPages";
 
 interface CategoryLink {
   slug: string;
@@ -211,6 +212,25 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
             <Link href="/blog" className="whitespace-nowrap hover:text-gold-400">
               Blog
             </Link>
+            <div className="group/areas relative shrink-0">
+              <Link
+                href="/led-lighting-london"
+                className="flex items-center gap-1 whitespace-nowrap hover:text-gold-400"
+              >
+                Areas We Serve <ChevronDown className="h-3.5 w-3.5" />
+              </Link>
+              <div className="invisible absolute right-0 top-full z-50 w-56 -translate-y-1 rounded-lg border border-line/10 bg-canvas py-2 opacity-0 shadow-lg transition-all duration-200 group-hover/areas:visible group-hover/areas:translate-y-0 group-hover/areas:opacity-100">
+                {areaPageOrder.map((slug) => (
+                  <Link
+                    key={slug}
+                    href={`/led-lighting-london/${slug}`}
+                    className="block px-4 py-2 text-sm text-text hover:bg-canvas-muted"
+                  >
+                    {areaPages[slug].name}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <Link href="/contact" className="whitespace-nowrap hover:text-gold-400">
               Contact Us
             </Link>
@@ -288,6 +308,19 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
               <Link href="/blog" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 hover:bg-canvas-muted">
                 Blog
               </Link>
+              <Link href="/led-lighting-london" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 font-semibold hover:bg-canvas-muted">
+                Areas We Serve
+              </Link>
+              {areaPageOrder.map((slug) => (
+                <Link
+                  key={slug}
+                  href={`/led-lighting-london/${slug}`}
+                  onClick={() => setMobileOpen(false)}
+                  className="rounded-lg py-1.5 pl-6 pr-3 text-text/70 hover:bg-canvas-muted"
+                >
+                  {areaPages[slug].name}
+                </Link>
+              ))}
               <Link href="/contact" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 hover:bg-canvas-muted">
                 Contact Us
               </Link>
