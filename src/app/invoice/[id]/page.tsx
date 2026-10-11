@@ -32,7 +32,7 @@ export default async function InvoicePage({
   const paymentMethod = order.paypalOrderId
     ? "PayPal"
     : order.stripeSessionId
-      ? "Credit / Debit Card"
+      ? "Card (Stripe) / Apple Pay"
       : "N/A";
   const customerName = order.user?.name ?? order.shippingName;
   const customerEmail = order.user?.email ?? order.guestEmail;
