@@ -98,6 +98,7 @@ model Review {
 
 model Order {
   id                      String      @id @default(cuid())
+  invoiceNumber           String?     @unique
   userId                  String?
   user                    User?       @relation(fields: [userId], references: [id])
   guestEmail              String?
@@ -118,6 +119,11 @@ model Order {
   royalMailTrackingNumber String?
   items                   OrderItem[]
   createdAt               DateTime    @default(now())
+}
+
+model InvoiceSequence {
+  year       Int @id
+  nextNumber Int
 }
 
 model OrderItem {

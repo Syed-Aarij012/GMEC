@@ -27,7 +27,8 @@ export default async function InvoicePage({
 
   if (!order) notFound();
 
-  const invoiceRef = order.id.slice(-8).toUpperCase();
+  const invoiceRef = order.invoiceNumber ?? order.id.slice(-8).toUpperCase();
+  const orderRef = order.id.slice(-8).toUpperCase();
   const paymentMethod = order.paypalOrderId
     ? "PayPal"
     : order.stripeSessionId
@@ -101,7 +102,7 @@ export default async function InvoicePage({
                   </p>
                   <p className="flex justify-between gap-4">
                     <span className="text-gray-500">Order Number</span>
-                    <span className="font-semibold text-gray-900">{invoiceRef}</span>
+                    <span className="font-semibold text-gray-900">{orderRef}</span>
                   </p>
                   <p className="flex justify-between gap-4">
                     <span className="text-gray-500">Order Date</span>

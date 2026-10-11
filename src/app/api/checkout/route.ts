@@ -63,24 +63,40 @@ export async function POST(req: Request) {
   // Stock is validated above but only decremented once payment is actually confirmed
   // (Stripe webhook / PayPal capture), so an abandoned or never-paid checkout never
   // reserves inventory.
+  const invoiceYear = new Date().getUTCFullYear();
   let order;
   try {
-    order = await prisma.order.create({
-      data: {
-        userId: session?.user?.id,
-        guestEmail: session?.user?.id ? undefined : shipping.email,
-        subtotal,
-        shippingCost,
-        total,
-        shippingName: shipping.fullName,
-        shippingLine1: shipping.line1,
-        shippingLine2: shipping.line2,
-        shippingCity: shipping.city,
-        shippingPostcode: shipping.postcode,
-        shippingCountry: shipping.country,
-        shippingPhone: shipping.phone,
-        items: { create: orderItemsData },
-      },
+    order = await prisma.$transaction(async (tx) => {
+      const [sequence] = await tx.$queryRaw<{ number: number }[]>`
+        INSERT INTO "InvoiceSequence" ("year", "nextNumber")
+        VALUES (${invoiceYear}, 6002)
+        ON CONFLICT ("year")
+        DO UPDATE SET "nextNumber" = "InvoiceSequence"."nextNumber" + 1
+        RETURNING "nextNumber" - 1 AS number
+      `;
+
+      if (!sequence) throw new Error("Could not allocate an invoice number");
+
+      const invoiceNumber = `GMEC - ${invoiceYear} - ${String(sequence.number).padStart(4, "0")}`;
+
+      return tx.order.create({
+        data: {
+          invoiceNumber,
+          userId: session?.user?.id,
+          guestEmail: session?.user?.id ? undefined : shipping.email,
+          subtotal,
+          shippingCost,
+          total,
+          shippingName: shipping.fullName,
+          shippingLine1: shipping.line1,
+          shippingLine2: shipping.line2,
+          shippingCity: shipping.city,
+          shippingPostcode: shipping.postcode,
+          shippingCountry: shipping.country,
+          shippingPhone: shipping.phone,
+          items: { create: orderItemsData },
+        },
+      });
     });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Could not place order";
