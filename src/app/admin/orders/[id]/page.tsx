@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronLeft, User as UserIcon, CreditCard, Truck } from "lucide-react";
 import { prisma } from "@/backend/lib/prisma";
+import { getOrderReference } from "@/backend/lib/orders";
 import { formatPrice } from "@/frontend/lib/utils";
 import OrderStatusSelect from "@/frontend/components/admin/OrderStatusSelect";
 import RoyalMailShipment from "@/frontend/components/admin/RoyalMailShipment";
@@ -21,6 +22,7 @@ export default async function AdminOrderDetailPage({
 
   if (!order) notFound();
 
+  const orderReference = getOrderReference(order.id, order.invoiceNumber);
   const paymentMethod = order.paypalOrderId ? "PayPal" : order.stripeSessionId ? "Stripe" : "Not started";
   const paymentReference = order.paypalOrderId ?? order.stripeSessionId ?? null;
 
@@ -36,7 +38,7 @@ export default async function AdminOrderDetailPage({
       <Reveal className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-extrabold text-text">
-            Order #{order.id.slice(-8).toUpperCase()}
+            Order {orderReference}
           </h1>
           <p className="mt-1 text-sm text-text/50">
             Placed on{" "}
@@ -58,7 +60,7 @@ export default async function AdminOrderDetailPage({
           <OrderStatusSelect orderId={order.id} status={order.status} />
           <DeleteButton
             url={`/api/admin/orders/${order.id}`}
-            confirmText={`Delete order #${order.id.slice(-8).toUpperCase()}? This cannot be undone.`}
+            confirmText={`Delete order ${orderReference}? This cannot be undone.`}
             redirectTo="/admin/orders"
           />
         </div>

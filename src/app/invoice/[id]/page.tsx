@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ChevronLeft, Sparkles } from "lucide-react";
 import { prisma } from "@/backend/lib/prisma";
+import { getOrderReference } from "@/backend/lib/orders";
 import { formatPrice } from "@/frontend/lib/utils";
 import PrintButton from "@/frontend/components/invoice/PrintButton";
 
@@ -27,8 +28,7 @@ export default async function InvoicePage({
 
   if (!order) notFound();
 
-  const invoiceRef = order.invoiceNumber ?? order.id.slice(-8).toUpperCase();
-  const orderRef = order.id.slice(-8).toUpperCase();
+  const invoiceRef = getOrderReference(order.id, order.invoiceNumber);
   const paymentMethod = order.paypalOrderId
     ? "PayPal"
     : order.stripeSessionId
@@ -102,7 +102,7 @@ export default async function InvoicePage({
                   </p>
                   <p className="flex justify-between gap-4">
                     <span className="text-gray-500">Order Number</span>
-                    <span className="font-semibold text-gray-900">{orderRef}</span>
+                    <span className="font-semibold text-gray-900">{invoiceRef}</span>
                   </p>
                   <p className="flex justify-between gap-4">
                     <span className="text-gray-500">Order Date</span>

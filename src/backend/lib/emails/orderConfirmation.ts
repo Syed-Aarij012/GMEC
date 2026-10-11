@@ -9,6 +9,7 @@ interface OrderConfirmationItem {
 
 interface OrderConfirmationParams {
   orderId: string;
+  orderReference: string;
   customerName: string;
   items: OrderConfirmationItem[];
   subtotal: number;
@@ -20,8 +21,7 @@ export function buildOrderConfirmationEmail(params: OrderConfirmationParams): {
   subject: string;
   html: string;
 } {
-  const { orderId, customerName, items, subtotal, shippingCost, total } = params;
-  const invoiceRef = orderId.slice(-8).toUpperCase();
+  const { orderId, orderReference, customerName, items, subtotal, shippingCost, total } = params;
   const invoiceUrl = `${getSiteUrl()}/invoice/${orderId}`;
 
   const itemRows = items
@@ -41,7 +41,7 @@ export function buildOrderConfirmationEmail(params: OrderConfirmationParams): {
       <div style="padding:32px;">
         <p style="margin:0;color:#d1900f;font-size:12px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;">GMEC Corporation</p>
         <h1 style="margin:8px 0 4px;color:#111827;font-size:22px;">Thanks for your order, ${escapeHtml(customerName)}!</h1>
-        <p style="margin:0 0 24px;color:#6b7280;font-size:14px;">Order reference #${invoiceRef} &middot; we're getting it ready to ship.</p>
+        <p style="margin:0 0 24px;color:#6b7280;font-size:14px;">Order reference ${escapeHtml(orderReference)} &middot; we're getting it ready to ship.</p>
 
         <table style="width:100%;border-collapse:collapse;">
           ${itemRows}
@@ -76,7 +76,7 @@ export function buildOrderConfirmationEmail(params: OrderConfirmationParams): {
   </div>`;
 
   return {
-    subject: `Your GMEC order #${invoiceRef} is confirmed`,
+    subject: `Your GMEC order ${orderReference} is confirmed`,
     html,
   };
 }

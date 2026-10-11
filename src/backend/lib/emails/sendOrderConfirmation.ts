@@ -1,4 +1,5 @@
 import { prisma } from "@/backend/lib/prisma";
+import { getOrderReference } from "@/backend/lib/orders";
 import { sendEmail, isMailerConfigured } from "@/backend/lib/mailer";
 import { buildOrderConfirmationEmail } from "@/backend/lib/emails/orderConfirmation";
 
@@ -17,6 +18,7 @@ export async function sendOrderConfirmationEmail(orderId: string): Promise<void>
 
     const { subject, html } = buildOrderConfirmationEmail({
       orderId: order.id,
+      orderReference: getOrderReference(order.id, order.invoiceNumber),
       customerName: order.user?.name ?? order.shippingName,
       items: order.items,
       subtotal: order.subtotal,

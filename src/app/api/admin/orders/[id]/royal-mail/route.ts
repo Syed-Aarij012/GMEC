@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/backend/lib/prisma";
+import { getOrderReference } from "@/backend/lib/orders";
 import { getAdminSession } from "@/backend/lib/admin";
 import { createRoyalMailShipment, cancelRoyalMailShipment, isRoyalMailConfigured } from "@/backend/lib/royalMail";
 import { toIsoAlpha3 } from "@/backend/lib/countryCode";
@@ -33,12 +34,8 @@ export async function POST(_req: Request, { params }: { params: Promise<{ id: st
   }
 
   try {
-    // Use the same short order number shown to the customer (invoice, order
-    // confirmation email, account page) as the reference sent to Royal Mail,
-    // instead of the full internal order id — so staff can match an order
-    // between our system and the Royal Mail dashboard at a glance.
     const result = await createRoyalMailShipment({
-      orderId: order.id.slice(-8).toUpperCase(),
+      orderId: getOrderReference(order.id, order.invoiceNumber),
       orderDate: order.createdAt,
       subtotal: order.subtotal,
       shippingCost: order.shippingCost,

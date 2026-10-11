@@ -4,6 +4,7 @@ import { getServerSession } from "next-auth";
 import { Package, ChevronRight } from "lucide-react";
 import { authOptions } from "@/backend/lib/auth";
 import { prisma } from "@/backend/lib/prisma";
+import { getOrderReference } from "@/backend/lib/orders";
 import { formatPrice } from "@/frontend/lib/utils";
 
 const statusStyles: Record<string, string> = {
@@ -50,7 +51,7 @@ export default async function AccountPage() {
             >
               <div>
                 <p className="font-semibold text-text">
-                  Order #{order.id.slice(-8).toUpperCase()}
+                  Order {getOrderReference(order.id, order.invoiceNumber)}
                 </p>
                 <p className="text-xs text-text/50">
                   {order.createdAt.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}

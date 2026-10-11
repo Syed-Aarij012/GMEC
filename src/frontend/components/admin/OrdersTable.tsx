@@ -13,6 +13,7 @@ const STATUSES = ["PENDING", "PAID", "FULFILLED", "CANCELLED"];
 
 export interface OrderRow {
   id: string;
+  orderReference: string;
   customer: string;
   itemCount: number;
   total: number;
@@ -123,7 +124,7 @@ export default function OrdersTable({ orders }: { orders: OrderRow[] }) {
                 </td>
                 <td className="px-4 py-3 font-medium text-text">
                   <Link href={`/admin/orders/${order.id}`} className="hover:text-gold-600">
-                    #{order.id.slice(-8).toUpperCase()}
+                    {order.orderReference}
                   </Link>
                 </td>
                 <td className="px-4 py-3 text-text/60">{order.customer}</td>
@@ -145,7 +146,7 @@ export default function OrdersTable({ orders }: { orders: OrderRow[] }) {
                     </Link>
                     <DeleteButton
                       url={`/api/admin/orders/${order.id}`}
-                      confirmText={`Delete order #${order.id.slice(-8).toUpperCase()}? This cannot be undone.`}
+                      confirmText={`Delete order ${order.orderReference}? This cannot be undone.`}
                     />
                   </div>
                 </td>

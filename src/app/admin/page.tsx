@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Package, ShoppingBag, PoundSterling, FolderTree, ArrowUpRight } from "lucide-react";
 import { prisma } from "@/backend/lib/prisma";
+import { getOrderReference } from "@/backend/lib/orders";
 import { formatPrice } from "@/frontend/lib/utils";
 import Reveal from "@/frontend/components/motion/Reveal";
 import StaggerGrid, { StaggerItem } from "@/frontend/components/motion/StaggerGrid";
@@ -163,7 +164,7 @@ export default async function AdminDashboardPage() {
                   href={`/admin/orders/${order.id}`}
                   className="-mx-2 flex items-center justify-between gap-3 rounded-lg px-2 py-3 text-sm transition-colors hover:bg-canvas-muted"
                 >
-                  <span className="font-medium text-text">#{order.id.slice(-8).toUpperCase()}</span>
+                  <span className="font-medium text-text">{getOrderReference(order.id, order.invoiceNumber)}</span>
                   <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${statusStyles[order.status]}`}>
                     {order.status}
                   </span>

@@ -1,6 +1,6 @@
 import { ShoppingBag } from "lucide-react";
 import { prisma } from "@/backend/lib/prisma";
-import { buildOrdersWhere, type OrdersSearchParams } from "@/backend/lib/orders";
+import { buildOrdersWhere, getOrderReference, type OrdersSearchParams } from "@/backend/lib/orders";
 import OrdersFilterBar from "@/frontend/components/admin/OrdersFilterBar";
 import OrdersTable, { type OrderRow } from "@/frontend/components/admin/OrdersTable";
 import Reveal from "@/frontend/components/motion/Reveal";
@@ -21,6 +21,7 @@ export default async function AdminOrdersPage({
 
   const rows: OrderRow[] = orders.map((order) => ({
     id: order.id,
+    orderReference: getOrderReference(order.id, order.invoiceNumber),
     customer: order.user?.name ?? order.user?.email ?? order.guestEmail ?? "Guest",
     itemCount: order.items.length,
     total: order.total,

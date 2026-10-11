@@ -2,6 +2,10 @@ import type { Prisma, OrderStatus } from "@prisma/client";
 
 export const ORDER_STATUSES: OrderStatus[] = ["PENDING", "PAID", "FULFILLED", "CANCELLED"];
 
+export function getOrderReference(orderId: string, invoiceNumber?: string | null): string {
+  return invoiceNumber ?? orderId.slice(-8).toUpperCase();
+}
+
 export interface OrdersSearchParams {
   q?: string;
   status?: string;
@@ -35,6 +39,7 @@ export function buildOrdersWhere(params: OrdersSearchParams): Prisma.OrderWhereI
       { shippingName: { contains: q, mode: "insensitive" } },
       { user: { is: { email: { contains: q, mode: "insensitive" } } } },
       { user: { is: { name: { contains: q, mode: "insensitive" } } } },
+      { invoiceNumber: { contains: q, mode: "insensitive" } },
       { id: { endsWith: q.toLowerCase() } },
     ];
   }

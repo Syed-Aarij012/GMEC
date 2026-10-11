@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/backend/lib/prisma";
 import { getAdminSession } from "@/backend/lib/admin";
-import { buildOrdersWhere, type OrdersSearchParams } from "@/backend/lib/orders";
+import { buildOrdersWhere, getOrderReference, type OrdersSearchParams } from "@/backend/lib/orders";
 
 function csvEscape(value: string): string {
   if (/[",\r\n]/.test(value)) return `"${value.replace(/"/g, '""')}"`;
@@ -42,7 +42,7 @@ export async function GET(req: Request) {
   ];
 
   const rows = orders.map((order) => [
-    order.id.slice(-8).toUpperCase(),
+    getOrderReference(order.id, order.invoiceNumber),
     order.createdAt.toISOString(),
     order.user?.name ?? order.shippingName,
     order.user?.email ?? order.guestEmail ?? "",

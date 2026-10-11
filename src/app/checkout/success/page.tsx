@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/backend/lib/prisma";
+import { getOrderReference } from "@/backend/lib/orders";
 import { formatPrice } from "@/frontend/lib/utils";
 import ClearCartOnMount from "@/frontend/components/checkout/ClearCartOnMount";
 import SuccessCheck from "@/frontend/components/checkout/SuccessCheck";
@@ -44,7 +45,7 @@ export default async function CheckoutSuccessPage({
           <h1 className="mt-4 text-3xl font-extrabold text-text">Thank you for your order!</h1>
           <p className="mt-2 text-text/60">
             Order confirmation has been sent. Your order reference is{" "}
-            <span className="font-semibold text-text">#{order.id.slice(-8).toUpperCase()}</span>.
+            <span className="font-semibold text-text">{getOrderReference(order.id, order.invoiceNumber)}</span>.
           </p>
         </Reveal>
       </div>

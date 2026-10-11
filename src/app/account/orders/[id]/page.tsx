@@ -4,6 +4,7 @@ import { getServerSession } from "next-auth";
 import { ChevronLeft } from "lucide-react";
 import { authOptions } from "@/backend/lib/auth";
 import { prisma } from "@/backend/lib/prisma";
+import { getOrderReference } from "@/backend/lib/orders";
 import { formatPrice } from "@/frontend/lib/utils";
 
 export default async function OrderDetailPage({
@@ -31,7 +32,7 @@ export default async function OrderDetailPage({
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h1 className="text-2xl font-extrabold text-text">
-            Order #{order.id.slice(-8).toUpperCase()}
+            Order {getOrderReference(order.id, order.invoiceNumber)}
           </h1>
           <p className="mt-1 text-sm text-text/50">
             Placed on {order.createdAt.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
