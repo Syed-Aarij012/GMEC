@@ -160,7 +160,7 @@ export default function CheckoutPage() {
                     onChange={() => setPaymentMethod("stripe")}
                     className="sr-only"
                   />
-                  Card (Stripe)
+                  Card (Stripe) / Apple Pay
                 </label>
                 <label
                   className={`flex cursor-pointer items-center justify-center rounded-lg border px-3.5 py-2.5 text-sm font-medium ${
