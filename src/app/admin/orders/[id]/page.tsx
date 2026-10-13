@@ -156,7 +156,6 @@ export default async function AdminOrderDetailPage({
               </p>
             ) : (
               <RoyalMailShipment
-                orderId={order.id}
                 royalMailOrderId={order.royalMailOrderId}
                 trackingNumber={order.royalMailTrackingNumber}
               />
