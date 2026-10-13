@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/backend/lib/prisma";
 import { capturePaypalOrder } from "@/backend/lib/paypal";
 import { sendOrderConfirmationEmail } from "@/backend/lib/emails/sendOrderConfirmation";
+import { autoCreateShipmentForOrder } from "@/backend/lib/royalMailShipment";
 
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -33,6 +34,7 @@ export async function GET(req: Request) {
         ),
       ]);
       await sendOrderConfirmationEmail(orderId);
+      await autoCreateShipmentForOrder(orderId);
       return NextResponse.redirect(`${url.origin}/checkout/success?order=${orderId}`);
     }
   } catch {

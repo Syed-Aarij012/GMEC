@@ -5,6 +5,7 @@ import { prisma } from "@/backend/lib/prisma";
 import { getStripe, isStripeConfigured } from "@/backend/lib/stripe";
 import { createPaypalOrder, isPaypalConfigured } from "@/backend/lib/paypal";
 import { sendOrderConfirmationEmail } from "@/backend/lib/emails/sendOrderConfirmation";
+import { autoCreateShipmentForOrder } from "@/backend/lib/royalMailShipment";
 import { calculateRoyalMailShipping, FREE_DELIVERY_THRESHOLD } from "@/backend/lib/shipping";
 import { roundMoney } from "@/backend/lib/money";
 import { checkoutSchema } from "@/backend/lib/validation";
@@ -143,6 +144,7 @@ export async function POST(req: Request) {
       ),
     ]);
     await sendOrderConfirmationEmail(order.id);
+    await autoCreateShipmentForOrder(order.id);
     return NextResponse.json({ url: `/checkout/success?order=${order.id}` });
   }
 

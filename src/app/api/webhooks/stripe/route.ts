@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/backend/lib/prisma";
 import { getStripe } from "@/backend/lib/stripe";
 import { sendOrderConfirmationEmail } from "@/backend/lib/emails/sendOrderConfirmation";
+import { autoCreateShipmentForOrder } from "@/backend/lib/royalMailShipment";
 
 export async function POST(req: Request) {
   const stripe = getStripe();
@@ -38,6 +39,7 @@ export async function POST(req: Request) {
           ),
         ]);
         await sendOrderConfirmationEmail(orderId);
+        await autoCreateShipmentForOrder(orderId);
       }
     }
   }
