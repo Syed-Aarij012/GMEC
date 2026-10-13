@@ -219,12 +219,12 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
               >
                 Areas We Serve <ChevronDown className="h-3.5 w-3.5" />
               </Link>
-              <div className="invisible absolute right-0 top-full z-50 w-56 -translate-y-1 rounded-lg border border-line/10 bg-canvas py-2 opacity-0 shadow-lg transition-all duration-200 group-hover/areas:visible group-hover/areas:translate-y-0 group-hover/areas:opacity-100">
+              <div className="invisible absolute right-0 top-full z-50 grid w-[26rem] -translate-y-1 grid-cols-2 gap-x-1 rounded-lg border border-line/10 bg-canvas p-2 opacity-0 shadow-lg transition-all duration-200 group-hover/areas:visible group-hover/areas:translate-y-0 group-hover/areas:opacity-100">
                 {areaPageOrder.map((slug) => (
                   <Link
                     key={slug}
                     href={`/led-lighting-london/${slug}`}
-                    className="block px-4 py-2 text-sm text-text hover:bg-canvas-muted"
+                    className="block whitespace-nowrap rounded-md px-3 py-2 text-sm text-text hover:bg-canvas-muted"
                   >
                     {areaPages[slug].name}
                   </Link>
