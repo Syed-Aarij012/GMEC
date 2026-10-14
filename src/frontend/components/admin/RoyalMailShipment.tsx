@@ -1,16 +1,23 @@
+import CreateShipmentButton from "@/frontend/components/admin/CreateShipmentButton";
+
 export default function RoyalMailShipment({
+  orderId,
   royalMailOrderId,
   trackingNumber,
 }: {
+  orderId: string;
   royalMailOrderId: string | null;
   trackingNumber: string | null;
 }) {
   if (!royalMailOrderId) {
     return (
-      <p className="text-sm text-text/50">
-        Not sent to Royal Mail yet. Orders are sent automatically once paid — if this one is missing,
-        create it directly in Click &amp; Drop.
-      </p>
+      <div>
+        <p className="text-sm text-text/50">
+          Not sent to Royal Mail yet. Orders are sent automatically once paid — if this one is missing,
+          create it directly in Click &amp; Drop, or use the button below.
+        </p>
+        <CreateShipmentButton orderId={orderId} />
+      </div>
     );
   }
 
