@@ -139,6 +139,21 @@ const products: SeedProduct[] = [
 ];
 
 async function main() {
+  // This script wipes orders, products and categories. Refuse to run against anything but a
+  // local database so it can never be pointed at production by mistake.
+  const dbHost = (() => {
+    try {
+      return new URL(process.env.DATABASE_URL ?? "").hostname;
+    } catch {
+      return "";
+    }
+  })();
+  if (!["localhost", "127.0.0.1", "::1"].includes(dbHost)) {
+    throw new Error(
+      `Refusing to seed: DATABASE_URL host "${dbHost || "unknown"}" is not local. This script deletes all orders.`
+    );
+  }
+
   console.log("Clearing old catalog data...");
   await prisma.orderItem.deleteMany();
   await prisma.order.deleteMany();
