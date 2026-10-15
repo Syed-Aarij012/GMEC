@@ -14,8 +14,12 @@ export interface CategoryCard extends AreaCard {
   image: string;
 }
 
+export type AreaRegion = "london" | "essex" | "kent";
+
 export interface AreaPageData {
   slug: string;
+  // Which URL section the page lives under; omitted means London.
+  region?: AreaRegion;
   name: string;
   title: string;
   description: string;
@@ -622,6 +626,281 @@ export const areaPages: Record<string, AreaPageData> = {
     tradeCtaIntro: "Planning maintenance or a new-home fit-out near Thamesmead? Our team can help with trade pricing, bulk quantities and repeat supply.",
     nearbyAreas: ["greenwich", "bexley", "barking-and-dagenham", "newham"],
   },
+
+  "chigwell": {
+    slug: "chigwell",
+    region: "essex",
+    name: "Chigwell",
+    title: "LED Lighting Supplier Near Chigwell | Ceiling, GU10, Smart",
+    description:
+      "LED ceiling lights, GU10 downlights, smart gadgets and decorative bulbs near Chigwell for renovations and larger homes. Free UK delivery over £100 +VAT.",
+    heroIntro: [
+      "[GMEC Corporation](/) supplies LED bulbs, downlights, ceiling lights and smart home gadgets to homeowners, builders and electricians near Chigwell. From our East Ham base we help with the renovations, extensions and kitchen upgrades that larger family homes across the Essex border often need.",
+      "Order online with free UK delivery on orders over £100 +VAT, or open a trade account for repeat supply on building and fit-out jobs.",
+    ],
+    heroImage: CATEGORY_IMAGES.ceiling,
+    heroAlt: "LED ceiling light fitted in a family home near Chigwell",
+    categoriesIntro: "Homeowners, builders and electricians near Chigwell often start with these categories.",
+    categories: [
+      { title: "LED Ceiling Lights for Large Hallways and Bedrooms", image: CATEGORY_IMAGES.ceiling, body: "Light generous hallways, landings and bedrooms with [LED ceiling lights](/shop/led-ceiling-lights). LED ceiling fixtures and LED ceiling lighting give even coverage for larger rooms near Chigwell and Grange Hill." },
+      { title: "GU10 Downlights for Kitchens, Extensions and Home Offices", image: CATEGORY_IMAGES.gu10, body: "Create layered light in open-plan kitchens, extensions and home offices with [GU10 downlights](/shop/gu10-downlights). A GU10 downlight is easy to replace, and a GU10 bathroom downlight suits en-suites near Buckhurst Hill." },
+      { title: "LED Candle Bulbs for Chandeliers and Statement Fittings", image: CATEGORY_IMAGES.candle, body: "Keep grand chandeliers and wall lights sparkling with [LED candle bulbs](/shop/led-candle-bulbs). Dimmable LED candle bulbs and candelabra bulbs suit formal dining rooms near Chigwell Row, with E14 and B22 options for different fittings." },
+      { title: "Smart Home Gadgets for Larger Homes", image: CATEGORY_IMAGES.smart, body: "Add peace of mind to bigger properties with [smart home gadgets](/shop/smart-gadgets), from smoke alarms to carbon monoxide detectors. Gadgets for a smart home help owners keep on top of safety across several floors." },
+      { title: "LED Filament Bulbs for Pendants and Kitchen Islands", image: CATEGORY_IMAGES.filament, body: "Hang decorative pendants over kitchen islands with [LED filament bulbs](/shop/led-filament-bulbs). Vintage filament bulbs and an E27 filament bulb give a warm, stylish glow with lower running costs." },
+      { title: "Frosted LED Bulbs for Bedrooms and Landings", image: CATEGORY_IMAGES.frosted, body: "Soften the light on landings and in bedrooms with [frosted LED bulbs](/shop/led-frosted-bulbs). Frosted dimmable LED bulbs give smooth, comfortable light where a dimmer is fitted." },
+      { title: "Cool White LED Bulbs for Garages and Utility Rooms", image: CATEGORY_IMAGES.coolWhite, body: "Wondering what colour is a cool white bulb? [Cool white LED bulbs](/shop/cool-white-led-bulbs) give a crisp, daylight-style white around 6500K, ideal for garages, utility rooms and home workshops near Chigwell." },
+      { title: "RGB LED Strip Lights for Home Cinemas and Games Rooms", image: CATEGORY_IMAGES.rgb, body: "Add colour behind TVs and shelving in home cinemas and games rooms with [RGB LED strip lights](/shop/led-rgb-lights). RGB LED lights and 12V RGB LED strip lights bring flexible accent lighting." },
+    ],
+    tradeTeamsHeading: "LED Lighting for Chigwell Homes, Builders and Property Teams",
+    tradeTeams: [
+      { title: "Homeowners Planning Renovations", body: "Extensions, loft conversions and kitchen refits all need the right lighting plan. Swap old halogen and incandescent bulbs for LED and cut running costs room by room." },
+      { title: "Builders and Extension Contractors", body: "Keep projects on schedule by ordering downlights, ceiling lights and bulbs online. Trade accounts make repeat orders simple for jobs near Chigwell and Buckhurst Hill." },
+      { title: "Electrical Contractors", body: "One supplier for downlights, bulbs and alarms saves time on site. Ask about a trade account for repeat supply." },
+      { title: "Landlords and Lettings Agents", body: "Keep rental homes bright and safe with affordable LED bulbs, ceiling lights and alarms for quick turnarounds." },
+      { title: "Offices and Small Businesses", body: "Bright, even lighting keeps workspaces comfortable. Explore ceiling lights and cool white bulbs for small commercial fit-outs." },
+    ],
+    areasWeSupply: [
+      { title: "Chigwell", body: "Larger family homes and local shops near Chigwell call for dependable ceiling lights, downlights and decorative bulbs." },
+      { title: "Grange Hill", body: "Homes and local businesses near Grange Hill need steady bulb replacements and fitting upgrades." },
+      { title: "Chigwell Row", body: "Detached homes near Chigwell Row often need chandelier bulbs, pendants and outdoor-style upgrades handled by a qualified electrician." },
+      { title: "Buckhurst Hill", body: "Renovation and extension work near Buckhurst Hill creates regular demand for downlights and kitchen lighting." },
+    ],
+    whyBuy: [
+      { title: "Trade and Retail Pricing", body: "Fair pricing for homeowners, builders and electricians. Ask about a trade account for ongoing supply." },
+      { title: "Free UK Delivery Over £100 +VAT", body: "Plan your whole project in one basket and unlock free delivery." },
+      { title: "14-Day Returns", body: "Easy returns give you confidence when choosing finishes and fittings." },
+      { title: "24/7 Support", body: "Friendly help on caps, wattage and colour temperature." },
+    ],
+    faqs: [
+      { title: "Do you supply builders and electricians near Chigwell?", body: "Yes. We supply builders, electricians and property teams. [Contact us](/contact) to open a trade account for repeat supply." },
+      { title: "How many bulbs does a large chandelier need?", body: "It depends on the fitting. Count the sockets in your chandelier and check the cap type, such as E14 or B22, before ordering." },
+      { title: "Which downlights suit a kitchen extension?", body: "Choose GU10 downlights spaced to give even light across the room, and consider fire rated versions where ceiling protection matters. A qualified electrician can plan the layout." },
+      { title: "Can I use smart gadgets across a large house?", body: "Yes. Smart home gadgets such as smoke alarms and carbon monoxide detectors can be placed across several floors. Follow the manufacturer's instructions." },
+      { title: "Is delivery free near Chigwell?", body: "We deliver across the UK, with free delivery on orders over £100 +VAT." },
+    ],
+    tradeCtaIntro: "Planning a renovation or extension near Chigwell? Speak to our team about trade pricing, bulk orders and repeat supply.",
+    nearbyAreas: ["redbridge", "waltham-forest", "havering", "brentwood"],
+  },
+
+  "brentwood": {
+    slug: "brentwood",
+    region: "essex",
+    name: "Brentwood",
+    title: "LED Lighting Supplier Near Brentwood | Filament, Candle",
+    description:
+      "LED filament bulbs, candle bulbs, GU10 downlights and ceiling lights near Brentwood for restaurants, shops and homes. Free UK delivery over £100 +VAT.",
+    heroIntro: [
+      "[GMEC Corporation](/) supplies LED bulbs, downlights, ceiling lights and smart home gadgets to restaurants, shops, builders, electricians and homeowners near Brentwood. From our East Ham base, we help with the high street venues, period cottages and new-build homes found around Brentwood, Shenfield and Warley.",
+      "Order online with free UK delivery on orders over £100 +VAT, or open a trade account for repeat supply on fit-outs and renovations.",
+    ],
+    heroImage: CATEGORY_IMAGES.filament,
+    heroAlt: "Vintage-style LED filament bulb in a pendant light near Brentwood",
+    categoriesIntro: "Venues, shops and homeowners near Brentwood often choose from these categories first.",
+    categories: [
+      { title: "LED Filament Bulbs for Restaurants, Bars and Pubs", image: CATEGORY_IMAGES.filament, body: "Give dining rooms and bars a warm, inviting glow with [LED filament bulbs](/shop/led-filament-bulbs). Filament light bulbs and vintage filament bulbs suit exposed pendants near Brentwood High Street, while an E27 filament bulb fits many statement fittings." },
+      { title: "LED Candle Bulbs for Period Cottages and Wall Lights", image: CATEGORY_IMAGES.candle, body: "Keep wall lights and lamps in period homes working beautifully with [LED candle bulbs](/shop/led-candle-bulbs). A dimmable LED candle bulb and candelabra bulbs suit cottages near Hutton and Warley, and a B22 bulb covers bayonet fittings." },
+      { title: "GU10 Downlights for Shops, Salons and Kitchens", image: CATEGORY_IMAGES.gu10, body: "Brighten shop floors, salons and kitchens with dependable [GU10 downlights](/shop/gu10-downlights). A GU10 downlight fitting is quick to replace, and fire rated GU10 downlights are popular for ceilings that need protection." },
+      { title: "LED Ceiling Lights for New-Build Homes and Offices", image: CATEGORY_IMAGES.ceiling, body: "Light new homes and small offices near Shenfield with [LED ceiling lights](/shop/led-ceiling-lights). Bedroom LED ceiling lights and living room ceiling lights LED options are simple to fit and easy to repeat across several units." },
+      { title: "Smart Home Gadgets for Safer Homes and Rentals", image: CATEGORY_IMAGES.smart, body: "Equip homes with [smart home gadgets](/shop/smart-gadgets), including smoke alarms and carbon monoxide detectors. Smart gadgets for home use suit landlords and owners near Brentwood who want simple safety upgrades." },
+      { title: "Frosted LED Bulbs for Gentle, Glare-Free Light", image: CATEGORY_IMAGES.frosted, body: "Choose [frosted LED bulbs](/shop/led-frosted-bulbs) for bedrooms, landings and treatment rooms. A frosted filament LED bulb keeps the vintage shape while softening the glow." },
+      { title: "Cool White LED Bulbs for Kitchens and Back Offices", image: CATEGORY_IMAGES.coolWhite, body: "Choose [cool white LED bulbs](/shop/cool-white-led-bulbs) for kitchens, stock rooms and back offices. The cool white colour temperature sits around 6500K, a bright, clean white that makes tasks easier." },
+      { title: "RGB LED Strip Lights for Shop Displays and Bedrooms", image: CATEGORY_IMAGES.rgb, body: "Add accent colour to shop displays, bar shelves and bedrooms with [RGB LED strip lights](/shop/led-rgb-lights). LED strip RGB lights bring simple, flexible effects near Brentwood town centre." },
+    ],
+    tradeTeamsHeading: "LED Lighting for Brentwood Venues, Builders and Property Teams",
+    tradeTeams: [
+      { title: "Restaurants, Bars and Hotels", body: "Hospitality teams near Brentwood and Shenfield need warm, dependable lighting that lasts. Our LED range helps cut replacement time and running costs." },
+      { title: "Shops and Salons", body: "Bright, welcoming interiors help customers feel comfortable. Choose downlights and ceiling lights that suit your layout." },
+      { title: "Electrical Contractors", body: "Independent electricians near Brentwood can use a trade account for repeat orders, from downlights to alarms." },
+      { title: "Builders and Developers", body: "New-build and conversion work near Warley and Hutton needs consistent lighting across units. Talk to us about bulk quantities." },
+      { title: "Homeowners and Landlords", body: "Swap old bulbs for LED equivalents and keep the character of your fittings while cutting energy use." },
+    ],
+    areasWeSupply: [
+      { title: "Brentwood", body: "A busy high street and town centre mean steady demand for decorative bulbs, downlights and everyday replacements." },
+      { title: "Shenfield", body: "Commuter homes and local shops near Shenfield suit ceiling lights, downlights and safety upgrades." },
+      { title: "Warley", body: "Family homes near Warley often need extension lighting and bulb replacements." },
+      { title: "Hutton", body: "Homes and small businesses near Hutton can order everyday LED lighting online." },
+    ],
+    whyBuy: [
+      { title: "Trade and Retail Pricing", body: "Competitive pricing for venues, shops and homeowners. Ask about a trade account for repeat orders." },
+      { title: "Free UK Delivery Over £100 +VAT", body: "Add everything you need to one basket and unlock free delivery." },
+      { title: "14-Day Returns", body: "Simple returns if something does not suit your fitting or space." },
+      { title: "24/7 Support", body: "Real people ready to help with caps, wattage and colour temperature." },
+    ],
+    faqs: [
+      { title: "Do you supply restaurants and shops near Brentwood?", body: "Yes. We supply hospitality and retail customers as well as trades. [Contact us](/contact) to discuss trade pricing and bulk orders." },
+      { title: "Are filament bulbs suitable for pubs and restaurants?", body: "Yes. Filament styles give a warm, decorative glow while using less energy than traditional bulbs. Check the cap type and whether a dimmer is fitted." },
+      { title: "Which colour temperature suits a shop or salon?", body: "Warm white feels welcoming, while cool white gives a bright, clean look. Check the colour temperature on each product page and test before fitting a whole space." },
+      { title: "Can builders open a trade account near Brentwood?", body: "Yes. [Contact our team](/contact) to discuss quantities, pricing and repeat supply." },
+      { title: "Is delivery free near Brentwood?", body: "We deliver across the UK, with free delivery on orders over £100 +VAT." },
+    ],
+    tradeCtaIntro: "Fitting out a venue or renovating near Brentwood? Our team can help with trade pricing, bulk quantities and repeat supply.",
+    nearbyAreas: ["havering", "chigwell", "basildon", "grays"],
+  },
+
+  "grays": {
+    slug: "grays",
+    region: "essex",
+    name: "Grays",
+    title: "LED Lighting Supplier Near Grays | Cool White, Ceiling, GU10",
+    description:
+      "Cool white LED bulbs, ceiling lights, GU10 downlights and smart gadgets near Grays and Thurrock for warehouses and homes. Free UK delivery over £100 +VAT.",
+    heroIntro: [
+      "[GMEC Corporation](/) supplies LED bulbs, downlights, ceiling lights and smart home gadgets to facilities managers, contractors, retailers and homeowners near Grays. From our East Ham base we help with the industrial units, logistics sites, retail parks and new-build homes around Grays, Chafford Hundred and West Thurrock.",
+      "Order online with free UK delivery on orders over £100 +VAT, or open a trade account for repeat supply on maintenance and fit-out work.",
+    ],
+    heroImage: CATEGORY_IMAGES.coolWhite,
+    heroAlt: "LED lighting near Grays",
+    categoriesIntro: "Facilities managers, contractors and homeowners near Grays often start with these categories.",
+    categories: [
+      { title: "Cool White LED Bulbs for Warehouses, Workshops and Garages", image: CATEGORY_IMAGES.coolWhite, body: "Wondering what colour is a cool white LED? [Cool white LED bulbs](/shop/cool-white-led-bulbs) give a bright, bluish-white light around 6500K, a popular choice for workshops, garages and utility spaces near West Thurrock." },
+      { title: "LED Ceiling Lights for Offices and Communal Areas", image: CATEGORY_IMAGES.ceiling, body: "Brighten offices, corridors and shared areas with [LED ceiling lights](/shop/led-ceiling-lights). LED ceiling lighting and LED ceiling fixtures give even coverage and fast installs for facilities teams near Grays." },
+      { title: "GU10 Downlights for Retail Units and New Homes", image: CATEGORY_IMAGES.gu10, body: "Light shop units, offices and new homes near Chafford Hundred with reliable [GU10 downlights](/shop/gu10-downlights). Fire rated downlights GU10 and a GU10 downlight fitting for each space keep fit-outs simple." },
+      { title: "Smart Home Gadgets for Homes and Rentals", image: CATEGORY_IMAGES.smart, body: "Support safety checks with [smart home gadgets](/shop/smart-gadgets), including smoke alarms and carbon monoxide detectors. Smart gadgets and gadgets for a smart home are handy for landlords and owners near Grays." },
+      { title: "LED Filament Bulbs for Cafes, Pubs and Living Rooms", image: CATEGORY_IMAGES.filament, body: "Bring warmth to cafes, pubs and lounges with [LED filament bulbs](/shop/led-filament-bulbs). Filament bulb styles and an E27 filament bulb replace old incandescent lamps and last far longer." },
+      { title: "Frosted LED Bulbs for Comfortable Everyday Light", image: CATEGORY_IMAGES.frosted, body: "Choose [frosted LED bulbs](/shop/led-frosted-bulbs) for bedrooms, hallways and reception areas. Frosted dimmable LED bulbs spread light softly and reduce glare where a dimmer is fitted." },
+      { title: "LED Candle Bulbs for Lamps and Decorative Fittings", image: CATEGORY_IMAGES.candle, body: "Refresh lamps and wall lights with [LED candle bulbs](/shop/led-candle-bulbs). A candle LED bulb in E14 suits many decorative fittings, and dimmable LED bulbs candle styles help set the mood." },
+      { title: "RGB LED Strip Lights for Retail Displays and Bedrooms", image: CATEGORY_IMAGES.rgb, body: "Add colour to displays, shelving and bedrooms with [RGB LED strip lights](/shop/led-rgb-lights). RGB LED lights and 12V RGB LED strip lights suit shop fittings and home projects near Lakeside." },
+    ],
+    tradeTeamsHeading: "LED Lighting for Grays Facilities Teams, Retailers and Contractors",
+    tradeTeams: [
+      { title: "Warehouse and Facilities Managers", body: "Large sites need dependable, low-maintenance lighting. Plan bulk orders of bulbs and ceiling lights to keep sites bright with fewer replacements." },
+      { title: "Electrical Contractors", body: "One supplier for downlights, bulbs and alarms keeps jobs on schedule near Grays and West Thurrock." },
+      { title: "Retailers and Leisure Venues", body: "Bright displays and welcoming interiors help customers feel at ease. LED upgrades cut energy costs and replacement visits." },
+      { title: "Property Developers", body: "New-build schemes near Chafford Hundred need consistent lighting across many homes. Contact us to plan quantities and repeat supply." },
+      { title: "Landlords and Homeowners", body: "Keep homes bright and safe with affordable LED replacements, ceiling lights and alarms." },
+    ],
+    areasWeSupply: [
+      { title: "Grays", body: "A busy town centre with shops, flats and local businesses that use everyday bulbs, ceiling lights and downlights." },
+      { title: "Chafford Hundred", body: "New-build family homes near Chafford Hundred need ceiling lights, downlights and safety devices." },
+      { title: "West Thurrock", body: "Retail, logistics and commercial sites near West Thurrock suit bulk orders of cool white bulbs and ceiling lights." },
+      { title: "Tilbury", body: "Homes, workshops and port-related businesses near Tilbury can order durable LED lighting online." },
+    ],
+    whyBuy: [
+      { title: "Trade and Retail Pricing", body: "Fair pricing for facilities teams, retailers and homeowners. Ask about trade accounts for repeat supply." },
+      { title: "Free UK Delivery Over £100 +VAT", body: "Combine items into one order to qualify for free delivery on larger jobs." },
+      { title: "14-Day Returns", body: "Straightforward returns give you confidence on bulk orders." },
+      { title: "24/7 Support", body: "Help from real people on fittings, wattage and colour temperature." },
+    ],
+    faqs: [
+      { title: "Do you supply commercial and industrial spaces near Grays?", body: "We supply LED bulbs, ceiling lights and downlights for many commercial spaces. [Contact us](/contact) to discuss your requirements and bulk quantities." },
+      { title: "What colour temperature suits a workshop or warehouse?", body: "Many workshops use cool white light, around 6500K, because it looks bright and clear. Check what suits your space and the tasks carried out there." },
+      { title: "How do I order in bulk near Grays?", body: "[Contact our team](/contact) to discuss quantities, pricing and repeat supply for your site." },
+      { title: "Can I return unused bulbs?", body: "Yes. We offer 14-day returns. See our [refund and returns policy](/refund-returns-policy) for details." },
+      { title: "Is delivery free near Grays?", body: "We deliver across the UK, with free delivery on orders over £100 +VAT." },
+    ],
+    tradeCtaIntro: "Managing a site or fit-out near Grays? Speak to our team about trade pricing, bulk orders and repeat supply.",
+    nearbyAreas: ["havering", "dartford", "basildon", "barking-and-dagenham"],
+  },
+
+  "basildon": {
+    slug: "basildon",
+    region: "essex",
+    name: "Basildon",
+    title: "LED Lighting Supplier Near Basildon | GU10, Ceiling, Smart",
+    description:
+      "GU10 downlights, LED ceiling lights, smart gadgets and bulbs near Basildon, Laindon and Pitsea for housing teams. Free UK delivery over £100 +VAT.",
+    heroIntro: [
+      "[GMEC Corporation](/) supplies LED bulbs, downlights, ceiling lights and smart home gadgets to housing teams, electricians, shop owners and homeowners near Basildon. From our East Ham base, we support the maintenance programmes, industrial estates and family homes found across Basildon, Laindon, Pitsea and Wickford.",
+      "Order online with free UK delivery on orders over £100 +VAT, or open a trade account for repeat supply on maintenance and building jobs.",
+    ],
+    heroImage: CATEGORY_IMAGES.gu10,
+    heroAlt: "Electrician fitting GU10 downlights near Basildon",
+    categoriesIntro: "Housing teams, contractors and homeowners near Basildon often choose from these categories first.",
+    categories: [
+      { title: "GU10 Downlights for Maintenance and Refurbishment", image: CATEGORY_IMAGES.gu10, body: "Keep repair schedules on track with dependable [GU10 downlights](/shop/gu10-downlights). A GU10 downlight is easy to swap, and fire rated GU10 downlights suit ceilings that need protection near Basildon and Pitsea." },
+      { title: "LED Ceiling Lights for Family Homes and Shared Spaces", image: CATEGORY_IMAGES.ceiling, body: "Brighten hallways, bedrooms and shared areas with simple [LED ceiling lights](/shop/led-ceiling-lights). Ceiling lights LED options and LED ceiling fixtures are quick to fit across many homes near Laindon." },
+      { title: "Smart Home Gadgets for Safer Housing", image: CATEGORY_IMAGES.smart, body: "Support safety checks with [smart home gadgets](/shop/smart-gadgets), including smoke alarms and carbon monoxide detectors. Smart gadgets for home use suit managed properties and owners near Wickford." },
+      { title: "Cool White LED Bulbs for Workshops and Industrial Units", image: CATEGORY_IMAGES.coolWhite, body: "Choose [cool white LED bulbs](/shop/cool-white-led-bulbs) for workshops, stock rooms and units near Basildon's industrial estates. Cool white colour temperature sits around 6500K, a clean, bright white for working spaces." },
+      { title: "Frosted LED Bulbs for Comfortable Rooms", image: CATEGORY_IMAGES.frosted, body: "Pick [frosted LED bulbs](/shop/led-frosted-bulbs) for bedrooms, landings and communal rooms. A frost LED bulb softens glare, and frosted dimmable LED bulbs add control where needed." },
+      { title: "LED Filament Bulbs for Cafes and Living Rooms", image: CATEGORY_IMAGES.filament, body: "Add a warm glow to cafes and living rooms with [LED filament bulbs](/shop/led-filament-bulbs). Filament light bulbs in E27 and E14 sizes replace old incandescent lamps and run for far longer." },
+      { title: "LED Candle Bulbs for Lamps and Wall Lights", image: CATEGORY_IMAGES.candle, body: "Refresh lamps and wall lights with [LED candle bulbs](/shop/led-candle-bulbs). A candle LED bulb in E14 suits many decorative fittings, and a B22 bulb covers common bayonet fittings." },
+      { title: "RGB LED Strip Lights for Bedrooms and Leisure Spaces", image: CATEGORY_IMAGES.rgb, body: "Create colourful accent lighting behind TVs, beds and shelving with [RGB LED strip lights](/shop/led-rgb-lights). LED strip RGB lights are a low-cost upgrade for bedrooms and leisure spaces." },
+    ],
+    tradeTeamsHeading: "LED Lighting for Basildon Housing Teams, Trades and Businesses",
+    tradeTeams: [
+      { title: "Housing Teams and Maintenance Crews", body: "Repair and void teams need predictable stock. Order bulbs, downlights and alarms in volume and keep vans ready for jobs near Basildon." },
+      { title: "Electrical Contractors", body: "Rewires, upgrades and repairs all need dependable parts. A trade account gives contractors one supplier for lighting and safety devices." },
+      { title: "Industrial Units and Workshops", body: "Reliable lighting helps teams work safely. LED upgrades cut energy costs and reduce replacement visits." },
+      { title: "Shops, Cafes and Leisure Venues", body: "Welcoming lighting supports a good customer experience. Choose downlights, ceiling lights and decorative bulbs to suit your space." },
+      { title: "Landlords and Homeowners", body: "Keep homes bright and safe with affordable LED replacements, ceiling lights and alarms." },
+    ],
+    areasWeSupply: [
+      { title: "Basildon Town Centre", body: "Shops, offices and flats near the town centre need dependable bulbs, ceiling lights and downlights." },
+      { title: "Laindon", body: "Family homes near Laindon call for regular lighting upkeep and safety upgrades." },
+      { title: "Pitsea", body: "Homes and local businesses near Pitsea can order everyday LED lighting online." },
+      { title: "Wickford", body: "Homes and small businesses near Wickford suit ceiling lights, downlights and smart safety devices." },
+    ],
+    whyBuy: [
+      { title: "Trade and Retail Pricing", body: "Fair pricing for housing teams, contractors and homeowners. Ask about trade accounts for ongoing supply." },
+      { title: "Free UK Delivery Over £100 +VAT", body: "Build a bigger basket and unlock free delivery." },
+      { title: "14-Day Returns", body: "Simple returns when ordering in quantity." },
+      { title: "24/7 Support", body: "Support from real people on caps, wattage and colour temperature." },
+    ],
+    faqs: [
+      { title: "Can housing teams open a trade account near Basildon?", body: "Yes. We support housing teams, contractors and developers. [Contact our team](/contact) to discuss bulk pricing and repeat orders." },
+      { title: "Are GU10 downlights easy to replace?", body: "A GU10 bulb uses a twist-lock cap and is simple to swap. Always turn off the power first, and use a qualified electrician for installation or changes to fittings." },
+      { title: "Do you supply schools and community buildings near Basildon?", body: "Yes. LED upgrades can cut running costs and replacement visits. [Contact us](/contact) to discuss quantities and pricing." },
+      { title: "How do smart gadgets help with safety checks?", body: "Smoke alarms and carbon monoxide detectors support safety routines in homes and managed properties. Follow the manufacturer's instructions for testing and replacement." },
+      { title: "Is delivery free near Basildon?", body: "We deliver across the UK, with free delivery on orders over £100 +VAT." },
+    ],
+    tradeCtaIntro: "Planning maintenance or a refit near Basildon? Our team can help with trade pricing, bulk quantities and repeat supply.",
+    nearbyAreas: ["brentwood", "grays", "havering", "thamesmead"],
+  },
+
+  "dartford": {
+    slug: "dartford",
+    region: "kent",
+    name: "Dartford",
+    title: "LED Lighting Supplier Near Dartford | RGB, Ceiling, GU10",
+    description:
+      "LED RGB strip lights, ceiling lights, GU10 downlights and smart gadgets near Dartford for retail, leisure and new homes. Free UK delivery over £100 +VAT.",
+    heroIntro: [
+      "[GMEC Corporation](/) supplies LED bulbs, downlights, ceiling lights and smart home gadgets to shop owners, leisure venues, builders and homeowners near Dartford. From our East Ham base, we support the retail, workshops and new-build schemes around Dartford, Bluewater and Swanscombe, just across the Kent border.",
+      "Order online with free UK delivery on orders over £100 +VAT, or open a trade account for repeat supply on fit-outs and building work.",
+    ],
+    heroImage: CATEGORY_IMAGES.rgb,
+    heroAlt: "LED lighting near Dartford",
+    categoriesIntro: "Retailers, leisure venues and homeowners near Dartford often start with these categories.",
+    categories: [
+      { title: "RGB LED Strip Lights for Retail Displays and Leisure Venues", image: CATEGORY_IMAGES.rgb, body: "Make displays and venues stand out with [RGB LED strip lights](/shop/led-rgb-lights). RGB LED lights, LED strip RGB lights and 12V RGB LED strip lights suit shop shelving, bar backs and entertainment spaces near Bluewater." },
+      { title: "LED Ceiling Lights for New Homes and Shops", image: CATEGORY_IMAGES.ceiling, body: "Fit out new homes and shop floors with [LED ceiling lights](/shop/led-ceiling-lights). Bedroom LED ceiling lights and living room ceiling lights give even light and fast installs near Dartford and Stone." },
+      { title: "GU10 Downlights for Kitchens, Shops and Extensions", image: CATEGORY_IMAGES.gu10, body: "Light kitchens, shops and extensions with reliable [GU10 downlights](/shop/gu10-downlights). A GU10 downlight fitting is quick to replace, and fire rated GU10 downlights help protect ceilings where needed." },
+      { title: "Smart Home Gadgets for Safer Homes", image: CATEGORY_IMAGES.smart, body: "Add everyday safety with [smart home gadgets](/shop/smart-gadgets) such as smoke alarms and carbon monoxide detectors. Smart gadgets for home use suit new-build owners and landlords near Swanscombe." },
+      { title: "LED Filament Bulbs for Pubs, Cafes and Restaurants", image: CATEGORY_IMAGES.filament, body: "Bring a warm, decorative glow to pubs, cafes and restaurants with [LED filament bulbs](/shop/led-filament-bulbs). Vintage filament bulbs and an E27 filament bulb fit many pendants near Dartford town centre." },
+      { title: "LED Candle Bulbs for Wall Lights and Chandeliers", image: CATEGORY_IMAGES.candle, body: "Swap out old wall light and chandelier bulbs for [LED candle bulbs](/shop/led-candle-bulbs). Dimmable LED candle bulbs set the mood in dining rooms, and E14 caps suit many decorative fittings." },
+      { title: "Frosted LED Bulbs for Soft, Even Light", image: CATEGORY_IMAGES.frosted, body: "Pick [frosted LED bulbs](/shop/led-frosted-bulbs) when you want gentle light without glare. Frosted filament LED bulbs keep a vintage look while softening the glow in bedrooms and hallways." },
+      { title: "Cool White LED Bulbs for Workshops and Stock Rooms", image: CATEGORY_IMAGES.coolWhite, body: "Looking for bright, clear light? [Cool white LED bulbs](/shop/cool-white-led-bulbs) sit around 6500K, a crisp white that suits workshops, stock rooms and garages near Dartford." },
+    ],
+    tradeTeamsHeading: "LED Lighting for Dartford Retailers, Builders and Property Teams",
+    tradeTeams: [
+      { title: "Retailers and Leisure Venues", body: "Bright displays and welcoming interiors help customers stay longer. LED upgrades cut energy costs and replacement visits for venues near Bluewater." },
+      { title: "Electrical Contractors", body: "One supplier for downlights, bulbs and alarms keeps jobs moving near Dartford and Stone. Ask about a trade account for repeat orders." },
+      { title: "Builders and Developers", body: "New-build schemes near Swanscombe need consistent lighting across many homes. Talk to us about bulk quantities for your next phase." },
+      { title: "Workshops and Small Businesses", body: "Reliable lighting helps teams work safely and comfortably. Choose cool white bulbs and ceiling lights to suit your space." },
+      { title: "Landlords and Homeowners", body: "Keep homes bright and safe with affordable LED replacements, ceiling lights and alarms." },
+    ],
+    areasWeSupply: [
+      { title: "Dartford Town Centre", body: "Shops, flats and local businesses near the town centre use everyday bulbs, ceiling lights and downlights." },
+      { title: "Bluewater", body: "Retail and leisure venues near Bluewater suit RGB strips, downlights and decorative bulbs." },
+      { title: "Stone", body: "Family homes near Stone call for ceiling lights, bulbs and safety devices." },
+      { title: "Swanscombe", body: "New-build and established homes near Swanscombe create steady demand for fit-out lighting." },
+    ],
+    whyBuy: [
+      { title: "Trade and Retail Pricing", body: "Fair pricing for retailers, builders and homeowners. Ask about a trade account for repeat supply." },
+      { title: "Free UK Delivery Over £100 +VAT", body: "Combine your bulbs, strips and fittings into one order to unlock free delivery." },
+      { title: "14-Day Returns", body: "Simple returns give you confidence on larger orders." },
+      { title: "24/7 Support", body: "Real people ready to help with fittings, wattage and colour temperature." },
+    ],
+    faqs: [
+      { title: "Do you supply shops and leisure venues near Dartford?", body: "Yes. We supply retail and leisure businesses as well as trades. [Contact us](/contact) to discuss trade pricing and bulk orders." },
+      { title: "Can I use LED bulbs in older light fittings?", body: "In most cases yes, once you match the cap type, such as GU10, E14, E27 or B22. Check your existing bulb or fitting before ordering." },
+      { title: "Which bulbs suit a shop display?", body: "Warm white feels inviting, while cool white looks bright and clean. RGB strips add colour accents for displays. Check the product page for colour temperature and details." },
+      { title: "Can contractors open a trade account near Dartford?", body: "Yes. [Contact our team](/contact) to discuss quantities, pricing and repeat supply." },
+      { title: "Do you deliver across the Kent border?", body: "We deliver across the UK, with free delivery on orders over £100 +VAT." },
+    ],
+    tradeCtaIntro: "Starting a fit-out or build near Dartford? Speak to our team about trade pricing, bulk orders and repeat supply.",
+    nearbyAreas: ["bexley", "greenwich", "thamesmead", "grays"],
+  },
 };
 
 export const areaPageOrder = [
@@ -636,4 +915,24 @@ export const areaPageOrder = [
   "havering",
   "islington",
   "thamesmead",
+  "chigwell",
+  "brentwood",
+  "grays",
+  "basildon",
+  "dartford",
 ];
+
+export const regionInfo: Record<AreaRegion, { label: string; base: string }> = {
+  london: { label: "London", base: "/led-lighting-london" },
+  essex: { label: "Essex", base: "/led-lighting-essex" },
+  kent: { label: "Kent", base: "/led-lighting-kent" },
+};
+
+export function areaHref(slug: string): string {
+  const region = areaPages[slug]?.region ?? "london";
+  return `${regionInfo[region].base}/${slug}`;
+}
+
+export function areaSlugsForRegion(region: AreaRegion): string[] {
+  return areaPageOrder.filter((s) => (areaPages[s].region ?? "london") === region);
+}

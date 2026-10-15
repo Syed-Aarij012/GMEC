@@ -11,7 +11,7 @@ import ThemeToggle from "./ThemeToggle";
 import { useCartStore } from "@/frontend/store/cart";
 import { useWishlistStore } from "@/frontend/store/wishlist";
 import { useMounted } from "@/frontend/hooks/useMounted";
-import { areaPages, areaPageOrder } from "@/backend/lib/areaPages";
+import { areaPages, areaPageOrder, areaHref } from "@/backend/lib/areaPages";
 
 interface CategoryLink {
   slug: string;
@@ -223,7 +223,7 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
                 {areaPageOrder.map((slug) => (
                   <Link
                     key={slug}
-                    href={`/led-lighting-london/${slug}`}
+                    href={areaHref(slug)}
                     className="block whitespace-nowrap rounded-md px-3 py-2 text-sm text-text hover:bg-canvas-muted"
                   >
                     {areaPages[slug].name}
@@ -314,7 +314,7 @@ export default function Header({ categories }: { categories: CategoryLink[] }) {
               {areaPageOrder.map((slug) => (
                 <Link
                   key={slug}
-                  href={`/led-lighting-london/${slug}`}
+                  href={areaHref(slug)}
                   onClick={() => setMobileOpen(false)}
                   className="rounded-lg py-1.5 pl-6 pr-3 text-text/70 hover:bg-canvas-muted"
                 >
