@@ -3,16 +3,21 @@
 //
 //   node scripts/backfill-invoice-numbers.mjs          # dry run, prints the plan
 //   node scripts/backfill-invoice-numbers.mjs --apply  # writes to the database
+//   add --paid-only to skip PENDING / CANCELLED orders (only PAID and FULFILLED)
 import { PrismaClient } from "@prisma/client";
 
 const APPLY = process.argv.includes("--apply");
+const PAID_ONLY = process.argv.includes("--paid-only");
 const FIRST_NUMBER = 6001;
 
 const prisma = new PrismaClient();
 
 async function main() {
   const orders = await prisma.order.findMany({
-    where: { invoiceNumber: null },
+    where: {
+      invoiceNumber: null,
+      ...(PAID_ONLY ? { status: { in: ["PAID", "FULFILLED"] } } : {}),
+    },
     orderBy: { createdAt: "asc" },
     select: { id: true, createdAt: true },
   });
