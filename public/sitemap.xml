@@ -203,6 +203,31 @@
        <priority>0.7000</priority>
   </url>
   <url>
+       <loc>https://www.gmeccorporation.com/led-lighting-london/city-of-london</loc>
+       <lastmod>2026-10-19T00:00:00+00:00</lastmod>
+       <priority>0.7000</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/led-lighting-london/camden</loc>
+       <lastmod>2026-10-19T00:00:00+00:00</lastmod>
+       <priority>0.7000</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/led-lighting-london/southwark</loc>
+       <lastmod>2026-10-19T00:00:00+00:00</lastmod>
+       <priority>0.7000</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/led-lighting-london/lambeth</loc>
+       <lastmod>2026-10-19T00:00:00+00:00</lastmod>
+       <priority>0.7000</priority>
+  </url>
+  <url>
+       <loc>https://www.gmeccorporation.com/led-lighting-london/westminster</loc>
+       <lastmod>2026-10-19T00:00:00+00:00</lastmod>
+       <priority>0.7000</priority>
+  </url>
+  <url>
        <loc>https://www.gmeccorporation.com/led-lighting-essex</loc>
        <lastmod>2026-10-15T00:00:00+00:00</lastmod>
        <priority>0.8000</priority>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, MapPin } from "lucide-react";
-import { areaPages, areaPageOrder } from "@/backend/lib/areaPages";
+import { areaPages, areaHref, areaSlugsForRegion } from "@/backend/lib/areaPages";
 import Reveal from "@/frontend/components/motion/Reveal";
 import StaggerGrid, { StaggerItem } from "@/frontend/components/motion/StaggerGrid";
 
@@ -32,12 +32,12 @@ export default function LondonHubPage() {
       </Reveal>
 
       <StaggerGrid className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {areaPageOrder.map((slug) => {
+        {areaSlugsForRegion("london").map((slug) => {
           const area = areaPages[slug];
           return (
             <StaggerItem key={slug} hoverLift>
               <Link
-                href={`/led-lighting-london/${slug}`}
+                href={areaHref(slug)}
                 className="group flex h-full flex-col gap-3 rounded-2xl border border-line/10 bg-canvas p-6 shadow-sm hover:border-gold-500"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-canvas-muted text-gold-600">
