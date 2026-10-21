@@ -18,6 +18,13 @@ const chormeToChromeSlugs = [
 ];
 
 const nextConfig: NextConfig = {
+  // The build host exposes many CPUs but enforces a low thread/process limit,
+  // so Next's default (one worker per CPU) aborts with "can't spawn worker
+  // thread". Keep the worker pool small.
+  experimental: {
+    cpus: 2,
+    staticGenerationMaxConcurrency: 4,
+  },
   async redirects() {
     return [
       // Permanent (301) host canonicalization: any request that arrives on
